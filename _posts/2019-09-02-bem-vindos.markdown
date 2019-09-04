@@ -13,6 +13,6 @@ Serão abordados os processos que englobam coleta, processamento, visualização
 
 Para cada projeto, será criada uma página neste site, com o objetivo de compartilhar os resultados obtidos nas análises. Todos os códigos utilizados serão publicados em meu [Github pessoal](https://github.com/Lubrum). Se houver tempo, também serão produzidos e publicados vídeos reproduzindo as análises desenvolvidas em meu [canal pessoal no Youtube](https://www.youtube.com/channel/UCAX8r-2riNaYslvOQjgM5PQ).<br />
 
-<iframe width="730" height="400" src="https://www.youtube.com/embed/YwuX569mQms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/YwuX569mQms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br />
 
 Desde já agradeço pelo interesse em meu site e estou a disposição para oportunidades de trabalho em todo o Brasil.<br />
