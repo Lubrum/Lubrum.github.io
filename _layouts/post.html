@@ -1,0 +1,28 @@
+---
+layout: default
+---
+{% include minutes-to-read.html %}
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0&appId=2337139719936629&autoLogAppEvents=1"></script>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      <span class="reading-time"> - {{ minutesText }} </span>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody" style="text-align: justify">
+    {{ content }}
+  </div>
+
+  <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="700" data-numposts="5"></div>
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

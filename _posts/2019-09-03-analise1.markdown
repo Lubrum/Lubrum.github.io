@@ -1,0 +1,22 @@
+---
+layout: post
+title: Análise da Produção Leiteira Brasileira e Gaúcha
+date: 2019-09-03 22:50:00 -0300
+categories: jekyll update
+---
+
+<h3> Resumo </h3>
+
+Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a Produção Leiteira Brasileira e Gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática).<br />
+
+<h3> Introdução </h3>
+
+Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a produção leiteira brasileira e gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da SIDRA (Sistema IBGE de Recuperação Automática).<br />
+
+<h3> Interpretação e Análise dos Resultados </h3>
+
+Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a produção leiteira brasileira e gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da SIDRA (Sistema IBGE de Recuperação Automática).<br />
+
+<h3> Considerações Finais </h3>
+
+Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a produção leiteira brasileira e gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da SIDRA (Sistema IBGE de Recuperação Automática).<br />
