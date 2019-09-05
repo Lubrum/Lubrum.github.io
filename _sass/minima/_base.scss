@@ -277,8 +277,8 @@ table {
 // Source from code below: https://codepen.io/omarsherifs/pen/KGLYYW (button)
 
 .searchBox {
-    position: absolute;
-    top: 11%;
+    position: relative;
+    top: 50%;
     left: 50%;
     transform:  translate(-50%,50%);
     background: #beeeec;
@@ -287,16 +287,23 @@ table {
     padding: 10px;
     border-width: 1px;
     border-style: solid;
+    transition: 0.5s background;
+    transition-delay: 0.5s;
 }
 
 .searchBox:hover > .searchInput {
-    width: 240px;
+    width: 80%;
     padding: 0 6px;
 }
 
 .searchBox:hover > .searchButton {
   background: white;
   color : #2f3640;
+}
+
+.searchBox:hover{
+  background: #fd9797;
+  transition-delay: 0s;
 }
 
 .searchButton {
@@ -322,13 +329,13 @@ table {
     font-size: 16px;
     transition: 0.4s;
     line-height: 40px;
-    width: 0px;
+    width: 80%;
 
 }
 
 @media screen and (max-width: 620px) {
 .searchBox:hover > .searchInput {
-    width: 150px;
+    width: 80%;
     padding: 0 6px;
 }
 }
