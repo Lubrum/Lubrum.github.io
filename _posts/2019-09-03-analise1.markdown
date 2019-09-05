@@ -2,7 +2,8 @@
 layout: post
 title: Análise da Produção Leiteira Brasileira e Gaúcha
 date: 2019-09-03 22:50:00 -0300
-categories: jekyll update
+categories: análise de dados
+linguagem: R
 ---
 
 <h3> Resumo </h3>
