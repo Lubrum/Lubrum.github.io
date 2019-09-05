@@ -10,21 +10,31 @@ layout: default
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <form action="{{site.baseurl}}/search.html" method="get">
+    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+        <div class="searchBox">
+            <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
+                <button class="searchButton">
+                    <i class="material-icons">search</i>
+                </button>
+        </div>
+    </form>
+    <br /><br /><br />
+    
     <ul class="post-list">
       {%- for post in site.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <li>
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-meta">{{ post.date | date: date_format }}</span>
+            <h3>
+                {{ post.title | escape }}
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </li>
+        </a>
       {%- endfor -%}
     </ul>
 

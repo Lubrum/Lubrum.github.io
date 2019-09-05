@@ -105,14 +105,17 @@ h1, h2, h3, h4, h5, h6 {
 a {
   color: $brand-color;
   text-decoration: none;
+  transition: 0.5s color;
+  transition-delay: 0.5s;
 
   &:visited {
     color: darken($brand-color, 15%);
   }
 
   &:hover {
-    color: $text-color;
+    color: rgb(256, 0, 0);
     text-decoration: underline;
+    transition-delay:0s;
   }
 
   .social-media-list &:hover {
@@ -175,8 +178,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: -webkit-calc(#{$content-width});
+  max-width:         calc(#{$content-width});
   margin-right: auto;
   margin-left: auto;
   padding-right: $spacing-unit;
@@ -191,7 +194,22 @@ pre {
   }
 }
 
+.wrapper-footer {
+  max-width: -webkit-calc(#{$content-width} + 200px);
+  max-width:         calc(#{$content-width} + 200px);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: $spacing-unit;
+  padding-left: $spacing-unit;
+  @extend %clearfix;
 
+  @include media-query($on-laptop) {
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
+    padding-right: $spacing-unit / 2;
+    padding-left: $spacing-unit / 2;
+  }
+}
 
 /**
  * Clearfix
@@ -209,15 +227,18 @@ pre {
  */
 
 .svg-icon {
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-    fill: #{$grey-color};
-    padding-right: 5px;
+    width: 30px;
+    height: 15px;
+    fill: #{$grey-color-dark};
+    padding-right: 10px;
     vertical-align: text-top;
+    &:hover {
+      fill: rgb(256, 0, 0);
+    }
 }
 
 .social-media-list {
+  //padding-left: 20px;
   li + li {
     padding-top: 5px;
   }
@@ -251,4 +272,88 @@ table {
   td {
     border: 1px solid $grey-color-light;
   }
+}
+
+// Source from code below: https://codepen.io/omarsherifs/pen/KGLYYW (button)
+
+.searchBox {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    transform:  translate(-50%,50%);
+    background: #beeeec;
+    height: 30px;
+    border-radius: 30px;
+    padding: 10px;
+    border-width: 1px;
+    border-style: solid;
+}
+
+.searchBox:hover > .searchInput {
+    width: 240px;
+    padding: 0 6px;
+}
+
+.searchBox:hover > .searchButton {
+  background: white;
+  color : #2f3640;
+}
+
+.searchButton {
+    color: white;
+    float: right;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+
+.searchInput {
+    border:none;
+    background: none;
+    outline:none;
+    float:left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px;
+
+}
+
+@media screen and (max-width: 620px) {
+.searchBox:hover > .searchInput {
+    width: 150px;
+    padding: 0 6px;
+}
+}
+
+//Source: https://fonts.googleapis.com/icon?family=Material+Icons
+/* fallback */
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  -webkit-font-feature-settings: 'liga';
+  -webkit-font-smoothing: antialiased;
 }
