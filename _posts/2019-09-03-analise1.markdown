@@ -5,18 +5,89 @@ date: 2019-09-03 22:50:00 -0300
 categories: análise de dados
 linguagem: R
 ---
-
+<style>
+hr { 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 4px;
+  width: 70%;
+  background: black;
+} 
+</style>
 <h3> Resumo </h3>
 
-Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a Produção Leiteira Brasileira e Gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática).<br />
+Saudações pessoal. A ideia deste artigo é explorar os dados públicos sobre a produção leiteira Brasileira e Gaúcha disponibilizados pelo [IBGE](https://ibge.gov.br/) (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática).<br />
 
-<h3> Introdução </h3>
+<h3> Obtenção dos dados </h3>
 
-Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a produção leiteira brasileira e gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da SIDRA (Sistema IBGE de Recuperação Automática).<br />
+Inicialmente serão obtidos os dados históricos da produção de leite no Brasil entre 1974 e 2017 da [Pesquisa da Pecuária Municipal (PPM), na SIDRA](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019), repositório com dados públicos brasileiros de setores como indústria, comércio, agricultura e pecuária.
 
-<h3> Interpretação e Análise dos Resultados </h3>
+Na sequência, será obtida a quantidade de estabelecimentos rurais que produziram leite no Rio Grande do Sul e no Brasil, além de outras informações pertinentes associadas. Tais informações, como a do número de estabelecimentos rurais que produziram leite, só estão disponíveis nos [Censos Agropecuários brasileiros](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017). Os censos agropecuários são executados no Brasil desde 1920, porém as informações disponíveis na SIDRA são dos anos/períodos de 1995, 2006 e 2017 (IBGE, 2019). <br />
 
-Saudações pessoal. A ideia deste projeto é explorar os dados públicos sobre a produção leiteira brasileira e gaúcha disponibilizados pelo IBGE (Instituto Brasileiro de Geografia e Estatística) através do portal da SIDRA (Sistema IBGE de Recuperação Automática).<br />
+<h3> Metodologia </h3>
+
+As seguintes ferramentas e linguagens foram utilizadas para a produção das análises e geração dos gráficos: R, Jupyter, Excel e Github.
+- [R](https://www.r-project.org/): Linguagem de Programação utilizada para Ciência de Dados. Em nosso caso, utilizada específicamente para as etapas de importação, organização, limpeza e visualização de dados;
+- [Jupyter](https://jupyter.org/): Ambiente de Programação Integrado para Ciência de Dados. Em nosso caso, é o ambiente utilizado para programar as soluções com o R;
+- [Excel](https://www.microsoft.com/pt-br/p/excel/cfq7ttc0k7dx?=&OCID=AID2000136_SEM_3UktixIi&MarinID=s3UktixIi%7c332912164231%7cexcel%7ce%7cc%7c%7c61607984835%7ckwd-11653021&lnkd=Google_O365SMB_NI&gclid=Cj0KCQjwh8jrBRDQARIsAH7BsXfampZOaH3te1KW3euwJG05G-wKqrLM4JSkmkMxUgluTRjKUVhITRQaAhIiEALw_wcB&activetab=pivot%3aoverviewtab) versão 2013: Programa de planilhas eletrônicas para armazenamento, manipulação e visualização de dados. Os dados são obtidos do IBGE no formato de planilha eletrônica e o software utilizado para manipulação destes dados é o Excel, que no nosso caso foi utilizado apenas para verificar o formato que os dados estão na planilha;
+- [Github](https://github.com/): Plataforma com comunidades de desenvolvedores para descoberta, compartilhamento e criação de códigos e soluções de software com controle de versão. O Github foi utilizado para compartilhar o código utilizado neste tutorial para garantir a reprodutibilidade dos experimentos e isenção na realização das análises dos dados.
+
+<h3> Descrição e Análise dos Resultados </h3>
+Na Figura abaixo, são comparadas e analisadas as produções leiteiras no Brasil e na Unidade Federativa (UF) do RS no período de 1974-2017.
+
+<img src="{{ site.baseurl }}/assets/img/figure1.png" alt="Gráfico de barras e linha de tendência com a série histórica da produção leiteira gaúcha e brasileira">
+
+As duas linhas no gráfico representam um modelo de regressão linear em que foi utilizada a produção leiteira como variável dependente e o ano como variável independente para o Brasil e o RS. É possível observar que o Brasil e o RS possuem uma produção leiteira com tendência de crescimento aproximadamente linear. Foi possível observar que nas faixas de anos de 1974-1984 e 2008-2017 houve uma produção leiteira acima do esperado, enquanto que entre 1985 e 2007 ela foi abaixo do esperado. Também observa-se que, considerando todo o período em análise, houve uma redução na produção leiteira apenas no período 2014-2017 (mais recente). No caso do RS, observa-se padrões semelhantes ao do cenário nacional. 
+<br />
+<br />
+<hr>
+<br />
+<br />
+O RS é o segundo estado com maior produção de leite no Brasil, conforme evidenciado na gif abaixo, que apresenta o histórico de 1974 até 2017 da produção leiteira nos 10 estados com maior produção do Brasil.
+
+<img src="{{ site.baseurl }}/assets/img/gif1.gif" alt="Histórico de 1974 até 2017 da produção leiteira nas UF do Brasil, exibidos no formato de barras por ano">
+
+Foi possível observar que o estado de Minas Gerais (MG) se manteve em primeiro no rank de produção leiteira em todo o histórico de 1974 até 2017. Também observa-se que os seis primeiros estados brasileiros no rank em 2017 foram responsáveis por aproximadamente 75% do leite produzido em 2017, representando aproximadamente 25.5 bilhões de litros. Também observa-se que destes seis estados, três são da região Sul (RS, SC e PR) e dois da região Sudeste (MG e SP) do Brasil.
+<br />
+<br />
+<hr>
+<br />
+<br />
+Observada a produção leiteira de forma isolada no Brasil e em suas Unidades federativas, é agora colocado em foco o número de estabelecimentos rurais que produziram leite, em nível nacional e municipal (apenas no estado do RS). As duas Figuras abaixo apresentam a variação absoluta e percentual dos estabelecimentos rurais que produziram leite entre 2006 e 2017 por faixa de área total no Brasil.
+
+<img src="{{ site.baseurl }}/assets/img/figure2.png" alt="Variação absoluta do número de estabelecimentos rurais que produziam leite entre 2006 e 2017 no Brasil">
+
+<img src="{{ site.baseurl }}/assets/img/figure3.png" alt="Variação percentual dos estabelecimentos rurais que produziam leite entre 2006 e 2017 no Brasil">
+
+O NA nos gráficos apontam o somatório de produtores que não souberam informar a área total do estabelecimento rural. É possível observar uma distribuição aproximadamente normal nos dados que evidenciam um padrão de desistência dos produtores rurais da atividade leiteira no período 2006-2017 na primeira Figura. A afirmação anterior é válida para as faixas de áreas disponibilizadas pelo IBGE. Percebe-se uma maior desistência de produtores de leite com estabelecimentos com tamanhos nas faixas de 5 até 50 hectares. Apesar da redução dos estabelecimentos entre 0 e 5 hectares não representarem um valor significativo perante às de 5 até 50 hectares, se observada a segunda Figura, é evidenciado que, percentualmente, os produtores de estabelecimentos rurais de menores tamanhos têm abandonado mais a atividade leiteira do que os de estabelecimentos maiores. Ainda sim, um percentual significativo dos responsáveis pelos maiores estabelecimentos rurais estão desistindo da atividade leiteira, evidência visualizada na segunda Figura. Em resumo, observa-se uma redução no número de estabelecimentos que produzem leite em todas as faixas de área disponibilizadas, sendo que:
+- A redução absoluta mais significativa foi a das propriedades rurais com área entre 5 e 50 hectares.
+- As reduções percentuais mais significativas foram as de propriedades rurais com áreas entre 0 e 20 hectares e as de mais de 200 hectares.
+<br />
+<br />
+<hr>
+<br />
+<br />
+Na Figura abaixo é análisada a variação de estabelecimentos rurais que produziram leite apenas nos municípios do estado do RS.
+
+<img src="{{ site.baseurl }}/assets/img/figure4.png" alt="Mapa com a variação percentual do número de estabelecimentos rurais que produziam leite entre 2006 e 2017 nos municípios do RS">
+
+
+
+<img src="{{ site.baseurl }}/assets/img/figure5.png" alt="Mapa com a variação percentual da produção de leite entre 2006 e 2017 nos municípios do RS">
+
+<img src="{{ site.baseurl }}/assets/img/gif2.gif" alt="Mapa animado com a variação absoluta da produção de leite na escala de milhões de litros entre 1974 e 2017 nos municípios do RS">
+
+
+
+
+
+
+
+
+
+
+<br />
 
 <h3> Considerações Finais </h3>
 
