@@ -34,7 +34,7 @@ Na Figura abaixo são comparadas as produções leiteiras do Brasil e do RS no p
 
 {% include widgets/figure1.html %}
 
-<br><br>
+<br>
 
 As duas linhas no gráfico representam um modelo de regressão linear em que foi utilizada a produção leiteira como variável dependente e o ano como variável independente para o Brasil e o RS. É possível observar que o Brasil e o RS possuem uma produção leiteira com tendência de crescimento aproximadamente linear. Foi possível observar que nas faixas de anos de 1974-1984 e 2008-2017 houve uma produção leiteira acima do esperado, enquanto que entre 1985 e 2007 ela foi abaixo do esperado. Também observa-se que, considerando todo o período em análise, houve uma redução na produção leiteira apenas no período 2014-2017 (mais recente). No caso do RS, observa-se padrões semelhantes ao do cenário nacional. 
 <br>
@@ -62,17 +62,18 @@ Observada a produção leiteira no Brasil e em suas UF, é agora colocado em foc
 
 {% include widgets/figure3.html %}
 
-<br><br>
+<br>
+
 O NA (Not Available) nos gráficos apontam o somatório de produtores que não souberam informar a área total do estabelecimento rural. É possível observar uma distribuição aproximadamente normal nos dados que evidenciam um padrão de desistência dos produtores rurais da atividade leiteira no período 2006-2017 na primeira Figura. A afirmação anterior é válida para as faixas de áreas disponibilizadas pelo IBGE. Percebe-se uma maior desistência de produtores de leite com estabelecimentos com tamanhos nas faixas de 5 até 50 hectares. Apesar da redução dos estabelecimentos entre 0 e 5 hectares não representarem um valor significativo perante às de 5 até 50 hectares, se observada a segunda Figura, é evidenciado que, percentualmente, os produtores de estabelecimentos rurais de menores tamanhos têm abandonado mais a atividade leiteira do que os de estabelecimentos maiores. Ainda sim, um percentual significativo dos responsáveis pelos maiores estabelecimentos rurais estão desistindo da atividade leiteira, evidência visualizada na segunda Figura. Em resumo, observa-se uma redução no número de estabelecimentos que produzem leite em todas as faixas de área disponibilizadas, sendo que:
 - A redução absoluta mais significativa foi a das propriedades rurais com área entre 5 e 50 hectares.
 - As reduções percentuais mais significativas foram as de propriedades rurais com áreas entre 0 e 20 hectares e as de mais de 200 hectares.
-<br />
-<br />
+<br>
+<br>
 <div class="skills">
     <hr class="hr-text" data-content="############">
 </div>
-<br />
-<br />
+<br>
+<br>
 Na Figura abaixo é análisada a variação de estabelecimentos rurais que produziram leite nos municípios do estado do RS entre 2006 e 2017. Tais dados também estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b).
 
 <img src="{{ site.baseurl }}/assets/img/figure4.png" alt="Mapa com a variação percentual do número de estabelecimentos rurais que produziam leite entre 2006 e 2017 nos municípios do RS">
@@ -83,13 +84,13 @@ Na Figura abaixo é análisada a variação de estabelecimentos rurais que produ
 - No ano de 2006 haviam 204920 estabelecimentos produtores de leite e em 2017 este valor foi reduzido para 129877 estabelecimentos (redução de 36.62%);
 
 Portanto, é possível verificar um cenário em que há uma forte tendência de abandono de produtores rurais da atividade leiteira na maioria dos municípios do RS e que o aumento de estabelecimentos em determinados municípios não representam uma quantidade significativa perante o cenário geral.  
-<br />
-<br />
+<br>
+<br>
 <div class="skills">
     <hr class="hr-text" data-content="############">
 </div>
-<br />
-<br />
+<br>
+<br>
 Na Figura abaixo é análisada a variação da produção leiteira nos municípios do estado do RS entre 2006 e 2017. Tais dados também estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b).
 
 <img src="{{ site.baseurl }}/assets/img/figure5.png" alt="Mapa com a variação percentual da produção de leite entre 2006 e 2017 nos municípios do RS">
@@ -101,37 +102,37 @@ De forma contrastante ao cenário anterior, é possível observar a tendência g
 
 Portanto, é possível verificar um cenário de aumento da produção leiteira na maioria dos municípios do RS e que a redução da produção leiteira em determinados municípios não representam uma quantidade significativa perante o cenário geral. Além disso, se combinada esta informação com a análise sobre a variação dos estabelecimentos rurais produtores de leite, observa-se que a produção de leite no RS aumentou em 62.86%, mesmo com a redução de 36.62% no número de estabelecimentos produtores de leite. Conclui-se, portanto, que tem ocorrido uma maior concentração da produção leiteira em um menor número de estabelecimentos rurais da atividade leiteira no estado do RS, observado o período 2006-2017. Em outras palavras, uma maior produção de leite por estabelecimento rural (um aumento de 11956 para 30721 litros de leite produzidos por estabelecimento no RS entre 2006 e 2017, um aumento de 156.95% na produção por estabelecimento).
 
-<br />
-<br />
+<br>
+<br>
 <div class="skills">
     <hr class="hr-text" data-content="############">
 </div>
-<br />
-<br />
+<br>
+<br>
 
 Na Gif abaixo é observado, de forma dinâmica, a variação da produção leiteira nos municípios do estado do RS entre 1974 e 2017, através do uso de dados da [PPM](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019a).
 
 <img src="{{ site.baseurl }}/assets/img/gif2.gif" alt="Mapa animado com a variação absoluta da produção de leite na escala de milhões de litros entre 1974 e 2017 nos municípios do RS">
 
-<br />
-<br />
+<br>
+<br>
 <div class="skills">
     <hr class="hr-text" data-content="############">
 </div>
-<br />
-<br />
+<br>
+<br>
 
 <h3> Considerações Finais </h3>
 
 Bom pessoal, foi possível observar de uma forma genérica e ampla o histórico e o atual cenário do setor leiteiro Brasileiro e Gaúcho do ponto de vista da produção, do número de estabelecimentos produtores de leite e de seu tamanho em hectares. Em uma próxima postagem, irei investigar em maior profundidade outras informações que os Censos Agropecuários nos oferecem publicamente. Abaixo vou citar as referências utilizadas para estas análises e, na sequência, algumas recomendações pessoais de leituras para o público que quiser conhecer um pouco melhor o setor leiteiro brasileiro através de pesquisas acadêmicas de pesquisadores no Brasil. Obrigado e até a próxima análise ! 
 
-<br />
-<br />
+<br>
+<br>
 <div class="skills">
     <hr class="hr-text" data-content="############">
 </div>
-<br />
-<br />
+<br>
+<br>
 
 <h3> Referências Bibliográficas </h3>
 
@@ -154,6 +155,8 @@ Bom pessoal, foi possível observar de uma forma genérica e ampla o histórico 
 [SCOT CONSULTORIA. Quem está correto o IBGE ou o IBGE? 2018. Acesso em: 09 set. 2019.](https://tecnoblog.net/247956/referencia-site-abnt-artigos/)
 
 <h3> Referências Recomendadas </h3>
+
+<br>
 
 [ABRANTES, M. R.; CAMPÊLO, C. S.; SILVA, J. B. Fraude em leite: Métodos de detecção
 e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3, p. 244-251, ago. 2014. Acesso em: 09 set. 2019.](https://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1611.pdf)
