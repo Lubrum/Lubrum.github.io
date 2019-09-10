@@ -98,24 +98,30 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-
+// <a> links Source: https://codepen.io/FelixRilling/pen/qzfoc
 /**
  * Links
  */
 a {
-  color: $brand-color;
   text-decoration: none;
-  transition: 0.5s color;
-  transition-delay: 0.5s;
-
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  color: #228DFF;
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    transition: transform .5s ease;
+  }
   &:visited {
-    color: darken($brand-color, 15%);
+    color: rgb(255, 167, 4);
   }
 
   &:hover {
-    color: rgb(256, 0, 0);
-    text-decoration: underline;
-    transition-delay:0s;
+    -webkit-animation: neon2 0.5s ease-in-out infinite alternate;
+    -moz-animation: neon2 0.5s ease-in-out infinite alternate;
+    animation: neon2 0.5s ease-in-out infinite alternate;
+    color: #ff0000;
   }
 
   .social-media-list &:hover {
@@ -127,6 +133,32 @@ a {
   }
 }
 
+@-webkit-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+@-moz-keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
+
+@keyframes neon2 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #228DFF, 0 0 70px #228DFF, 0 0 80px #228DFF, 0 0 100px #228DFF, 0 0 150px #228DFF;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #228DFF, 0 0 35px #228DFF, 0 0 40px #228DFF, 0 0 50px #228DFF, 0 0 75px #228DFF;
+  }
+}
 
 /**
  * Blockquotes
@@ -415,6 +447,7 @@ $text: #ffffff;
     }
 
 //Source: https://stackoverflow.com/questions/4326111/force-a-line-break-in-a-url
+
 .break {
   word-break: break-all;
 }
