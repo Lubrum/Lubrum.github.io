@@ -130,7 +130,7 @@ Bom pessoal, foi possível observar de uma forma genérica e ampla o histórico 
 
 <h3> Referências Bibliográficas </h3>
 
-BRUM, L. M. L.; SILVA, G. M. da; LAMPERT, V. do N. Análise de Aspectos Produtivos e Sociais da Atividade Leiteira Gaúcha e Brasileira. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, v. 10, n. 2, 2018. Disponível em: <a><http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522><a\>. Acesso em: 09 set. 2019.
+BRUM, L. M. L.; SILVA, G. M. da; LAMPERT, V. do N. Análise de Aspectos Produtivos e Sociais da Atividade Leiteira Gaúcha e Brasileira. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, v. 10, n. 2, 2018. Disponível em: <a class="break"><http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522></a>. Acesso em: 09 set. 2019.
 
 Github. Built for developers. Disponível em: <https://github.com/>. Acesso em: 08 set. 2019.
 
@@ -154,9 +154,9 @@ SCOT CONSULTORIA. Quem está correto o IBGE ou o IBGE? 2018. Disponível em: <ht
 <h3> Referências Recomendadas </h3>
 
 ABRANTES, M. R.; CAMPÊLO, C. S.; SILVA, J. B. Fraude em leite: Métodos de detecção
-e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3, p. 244-251, ago. 2014. Disponível em: <a><http://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1611.pdf></a>. Acesso em: 09 set. 2019.
+e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3, p. 244-251, ago. 2014. Disponível em: <a class="break"><http://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1611.pdf></a>. Acesso em: 09 set. 2019.
 
-ALVES, E. R. A.; LÍCIO, A.; CONTINI, E. Perspectivas do Brasil no comércio internacional de lácteos. In: VILELA, D.; FERREIRA, R. de P.; FERNANDES, E. N.; JUNTOLLI, F. V. (Ed.). A pecuária de leite no Brasil: cenários e avanços tecnológicos. Brasília, DF: Embrapa, 2016. 432 p. Disponível em: <a><https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1064579/1/PerspectivasdoBrasil.pdf></a>. Acesso em: 09 set. 2019.
+ALVES, E. R. A.; LÍCIO, A.; CONTINI, E. Perspectivas do Brasil no comércio internacional de lácteos. In: VILELA, D.; FERREIRA, R. de P.; FERNANDES, E. N.; JUNTOLLI, F. V. (Ed.). A pecuária de leite no Brasil: cenários e avanços tecnológicos. Brasília, DF: Embrapa, 2016. 432 p. Disponível em: <a class="break"><https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1064579/1/PerspectivasdoBrasil.pdf></a>. Acesso em: 09 set. 2019.
 
 BERRO, R.; BRANDÃO, J. B.; BREITENBACH, R. Sistema local de produção de leite em
 Itaqui, Rio Grande do Sul: caracterização e diferenciação dos estabelecimentos formais. In: 7º ENCONTRO DE ECONOMIA GAÚCHA ± FEE, 2014, Porto Alegre.
