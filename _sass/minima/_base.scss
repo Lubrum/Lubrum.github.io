@@ -413,3 +413,8 @@ $text: #ffffff;
         font-size: 7px;
       }
     }
+
+//Source: https://stackoverflow.com/questions/4326111/force-a-line-break-in-a-url
+.break {
+  word-break: break-all;
+}
