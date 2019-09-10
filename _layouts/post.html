@@ -7,21 +7,32 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline" style="text-align: center">{{ page.title | escape }}</h1>
     <p class="post-meta">
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
         {{ page.date | date: date_format }}
       </time>
       <span class="reading-time"> - {{ minutesText }} </span>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
+      <!-- Reference: https://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html -->
+      {% assign author = site.data.authors[page.author] %}
+      {% if author %}
+          <span>
+              - Escrito por <a href="{{ author.web }}">{{ author.name }}</a>
+          </span>
+      {% endif %}
+      <!--------------------------------------------------->
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="text-align: justify">
     {{ content }}
   </div>
+  <p class="post-meta">
+      {%- if page.last_modified_at -%}
+            Última atualização: {{ page.last_modified_at | date: date_format }}
+      {%- else -%}
+            Última atualização: {{ page.date | date: date_format }}
+      {%- endif -%}
 
   <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="100%" data-numposts="5"></div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
