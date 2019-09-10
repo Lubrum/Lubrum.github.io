@@ -134,31 +134,48 @@ Bom pessoal, foi possível observar de uma forma genérica e ampla o histórico 
     BRUM, L. M. L.; SILVA, G. M. da; LAMPERT, V. do N. Análise de Aspectos Produtivos e Sociais da Atividade Leiteira Gaúcha e Brasileira. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, v. 10, n. 2, 2018. Disponível em: <a class="break"><http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522></a>. Acesso em: 09 set. 2019.
 </div>
 
+<div class="break">
 Github. Built for developers. Disponível em: <https://github.com/>. Acesso em: 08 set. 2019.
+</div>
 
+<div class="break">
 INSTITUTO BRASILEIRO DE GEOGRAFIA E ESTATÍSTICA. Pesquisa Pecuária Municipal. Disponível em: <https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017>. Acesso em: 09 set. 2019a.
+</div>
 
+<div class="break">
 ______. Censo Agropecuário 2017. Disponível em:
 <https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017>. Acesso em: 09 set. 2019b.
+</div>
 
+<div class="break">
 ______. Pesquisas Agropecuárias. v. 6. 3° ed. Disponível
 em: <https://biblioteca.ibge.gov.br/visualizacao/livros/liv101552.pdf>. Acesso
 em: 09 set. 2019c. 
+</div>
 
+<div class="break">
 Jupyter. Jupyter. Disponível em: <https://jupyter.org/>. Acesso em: 08 set. 2019.
+</div>
 
+<div class="break">
 Microsoft Excel. Excel. Disponível em: <https://products.office.com/pt-br/excel>. Acesso em: 08 set. 2019.
+</div>
 
+<div class="break">
 R. The R Project for Statistical Computing. Disponível em: <https://www.r-project.org/>. Acesso em: 08 set. 2019.
+</div>
 
+<div class="break">
 SCOT CONSULTORIA. Quem está correto o IBGE ou o IBGE? 2018. Disponível em: <https://tecnoblog.net/247956/referencia-site-abnt-artigos/>. Acesso em: 09 set. 2019.
+</div>
 
 <h3> Referências Recomendadas </h3>
 
+<div class="break">
 ABRANTES, M. R.; CAMPÊLO, C. S.; SILVA, J. B. Fraude em leite: Métodos de detecção
-e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3, p. 244-251, ago. 2014. Disponível em: <a class="break"><http://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1611.pdf></a>. Acesso em: 09 set. 2019.
+e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3, p. 244-251, ago. 2014. Disponível em: <http://www.ial.sp.gov.br/resources/insituto-adolfo-lutz/publicacoes/rial/10/rial73_3_completa/artigos-separados/1611.pdf>. Acesso em: 09 set. 2019.
 
-ALVES, E. R. A.; LÍCIO, A.; CONTINI, E. Perspectivas do Brasil no comércio internacional de lácteos. In: VILELA, D.; FERREIRA, R. de P.; FERNANDES, E. N.; JUNTOLLI, F. V. (Ed.). A pecuária de leite no Brasil: cenários e avanços tecnológicos. Brasília, DF: Embrapa, 2016. 432 p. Disponível em: <a class="break"><https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1064579/1/PerspectivasdoBrasil.pdf></a>. Acesso em: 09 set. 2019.
+ALVES, E. R. A.; LÍCIO, A.; CONTINI, E. Perspectivas do Brasil no comércio internacional de lácteos. In: VILELA, D.; FERREIRA, R. de P.; FERNANDES, E. N.; JUNTOLLI, F. V. (Ed.). A pecuária de leite no Brasil: cenários e avanços tecnológicos. Brasília, DF: Embrapa, 2016. 432 p. Disponível em: <https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1064579/1/PerspectivasdoBrasil.pdf>. Acesso em: 09 set. 2019.
 
 BERRO, R.; BRANDÃO, J. B.; BREITENBACH, R. Sistema local de produção de leite em
 Itaqui, Rio Grande do Sul: caracterização e diferenciação dos estabelecimentos formais. In: 7º ENCONTRO DE ECONOMIA GAÚCHA ± FEE, 2014, Porto Alegre.
@@ -187,3 +204,4 @@ GOMES, S. T. Evolução recente e perspectivas da produção de leite no Brasil.
 MAIA, G. B. S. et al. Produção Leiteira no Brasil. BNDES Setorial, n. 37, p. 371-398, mar. 2013. Disponível em: [https://web.bndes.gov.br/bib/jspui/bitstream/1408/1514/1/A%20mar37_09_Produ%C3%A7%C3-%A3o%20leiteira%20no%20Brasil_P.pdf](https://web.bndes.gov.br/bib/jspui/bitstream/1408/1514/1/A%20mar37_09_Produ%C3%A7%C3%A3o%20leiteira%20no%20Brasil_P.pdf). Acesso em: 09 set. 2019.
 
 STROEHER, F. H. et al. Qualidade do Leite: Visão dos Produtores Rurais do município de São Martinho - RS. Revista Brasileira de Agropecuária Sustentável, v. 7, n. 4, p. 88-94, dez. 2017. Disponível em: <https://periodicos.ufv.br/ojs/rbas/article/view/2992/pdf>. Acesso em: 09 set. 2019.
+</div>
