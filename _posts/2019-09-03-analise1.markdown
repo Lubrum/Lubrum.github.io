@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Análise Preliminar da Produção Leiteira Brasileira e Gaúcha - Parte 1
-date: 2019-09-03 22:50:00 -0300
+date: 2019-09-10 00:50:00 -0300
 categories: análise de dados
 language: R
 author: luciano_brum
@@ -156,7 +156,7 @@ e implicações para o consumidor. Revista do Instituto Adolfo Lutz, v. 73, n. 3
 [ALVES, E. R. A.; LÍCIO, A.; CONTINI, E. Perspectivas do Brasil no comércio internacional de lácteos. In: VILELA, D.; FERREIRA, R. de P.; FERNANDES, E. N.; JUNTOLLI, F. V. (Ed.). A pecuária de leite no Brasil: cenários e avanços tecnológicos. Brasília, DF: Embrapa, 2016. 432 p. Acesso em: 09 set. 2019.](https://www.alice.cnptia.embrapa.br/alice/bitstream/doc/1064579/1/PerspectivasdoBrasil.pdf)
 
 [BERRO, R.; BRANDÃO, J. B.; BREITENBACH, R. Sistema local de produção de leite em
-Itaqui, Rio Grande do Sul: caracterização e diferenciação dos estabelecimentos formais. In: 7º ENCONTRO DE ECONOMIA GAÚCHA ± FEE, 2014, Porto Alegre. Acesso em: 22 ago. 2018.](https://www.fee.rs.gov.br/wp-content/uploads/2014/05/201405237eeg-mesa5-producaoleiteitaqui.pdf)
+Itaqui, Rio Grande do Sul: caracterização e diferenciação dos estabelecimentos formais. In: 7º ENCONTRO DE ECONOMIA GAÚCHA - FEE, 2014, Porto Alegre. Acesso em: 22 ago. 2018.](https://www.fee.rs.gov.br/wp-content/uploads/2014/05/201405237eeg-mesa5-producaoleiteitaqui.pdf)
 
 [BREITENBACH, R.; RODRIGUES, H.; BRANDÃO, J. B. Whose fault is it? Fraud scandal
 in the milk industry and its impact on product image and consumption - The case of Brazil. Food Research International, v. 108, p. 475-481, jun. 2018. Acesso em: 09 set. 2019.](https://www.sciencedirect.com/science/article/pii/S0963996918302552)
