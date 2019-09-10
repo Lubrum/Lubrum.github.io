@@ -130,7 +130,9 @@ Bom pessoal, foi possível observar de uma forma genérica e ampla o histórico 
 
 <h3> Referências Bibliográficas </h3>
 
-BRUM, L. M. L.; SILVA, G. M. da; LAMPERT, V. do N. Análise de Aspectos Produtivos e Sociais da Atividade Leiteira Gaúcha e Brasileira. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, v. 10, n. 2, 2018. Disponível em: <a class="break"><http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522></a>. Acesso em: 09 set. 2019.
+<div>
+    BRUM, L. M. L.; SILVA, G. M. da; LAMPERT, V. do N. Análise de Aspectos Produtivos e Sociais da Atividade Leiteira Gaúcha e Brasileira. Anais do Salão Internacional de Ensino, Pesquisa e Extensão, v. 10, n. 2, 2018. Disponível em: <a class="break"><http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522></a>. Acesso em: 09 set. 2019.
+</div>
 
 Github. Built for developers. Disponível em: <https://github.com/>. Acesso em: 08 set. 2019.
 
