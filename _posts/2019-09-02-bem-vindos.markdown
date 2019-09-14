@@ -1,11 +1,15 @@
 ---
 layout: post
-title: Bem vindo ao Data Science World!
+title: Bem vindo ao Data Science Broon!
+subtitle: No post é apresentado o propósito do site, além das ferramentas e ambientes que serão utilizados para apresentação de análises no âmbito do mundo de Data Science.
 date: 2019-09-01 12:00:00 -0300
 categories: jekyll update
+language: R
+author: luciano_brum
+last_modified_at: 2019-09-13 12:00:00 -0300
 ---
 
-Olá pessoal. Meu nome é Luciano Brum, e o objetivo deste site é compartilhar e divulgar projetos de Data Science com a comunidade em geral.<br />
+Olá pessoal. Meu nome é Luciano Brum, e o objetivo do site Data Science Broon é compartilhar e divulgar projetos de Ciência de Dados com a comunidade em geral.<br />
 
 Serão apresentados projetos aplicados em diferentes linguagens de programação (com foco em R e Python), com diferentes tecnologias e bibliotecas (TensorFlow, Pandas, Numpy, Sklearn, ...), com diferentes ferramentas e ambientes (Power BI, Tableau, Jupyter, RStudio) e nos mais variados assuntos e domínios.<br />
 

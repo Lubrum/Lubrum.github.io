@@ -1,14 +1,9 @@
 ---
 layout: default
 ---
-
 <div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
-
-  {{ content }}
-
+  <h1 class="post-home-title" style="text-align:center">Data Science Broon</h1>
+  {{ content }} 
   {%- if site.posts.size > 0 -%}
     <form action="{{site.baseurl}}/search.html" method="get">
     <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
@@ -19,25 +14,23 @@ layout: default
                 </button>
         </div>
     </form>
-    <br /><br />
-    
+    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="post-list">
       {%- for post in site.posts -%}
-        <a class="post-link" href="{{ post.url | relative_url }}">
-          <li>
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-meta">{{ post.date | date: date_format }}</span>
-            <h3>
-                {{ post.title | escape }}
-            </h3>
-            {%- if site.show_excerpts -%}
-              {{ post.excerpt }}
-            {%- endif -%}
+          <li class="post-li">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              <span class="post-meta">{{ post.date | date: date_format }}</span>
+              <h3> {{ post.title | escape }} </h3>
+              <h6> {{ post.subtitle | strip_html | strip_newlines }} </h6>
+              {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+              {%- endif -%}
+            </a>
           </li>
-        </a>
       {%- endfor -%}
     </ul>
-
+    </article>
     <!-- <p class="rss-subscribe">Inscreva-se <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
   {%- endif -%}
 

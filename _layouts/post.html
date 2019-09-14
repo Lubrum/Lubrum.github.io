@@ -17,23 +17,23 @@ layout: default
       <!-- Reference: https://blog.sorryapp.com/blogging-with-jekyll/2014/02/06/adding-authors-to-your-jekyll-site.html -->
       {% assign author = site.data.authors[page.author] %}
       {% if author %}
-          <span>
-              - Escrito por <a href="{{ author.web }}">{{ author.name }}</a>
-          </span>
+        <span> - Escrito por <a href="{{ author.web }}">{{ author.name }}</a></span>
       {% endif %}
       <!--------------------------------------------------->
+    </p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody" style="text-align: justify">
     {{ content }}
   </div>
+
   <p class="post-meta">
       {%- if page.last_modified_at -%}
             Última atualização: {{ page.last_modified_at | date: date_format }}
       {%- else -%}
             Última atualização: {{ page.date | date: date_format }}
       {%- endif -%}
-
+  </p>
   <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="100%" data-numposts="5"></div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

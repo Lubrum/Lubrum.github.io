@@ -1,0 +1,19 @@
+<div class="navigation-menu">
+    <div class="box">
+        <img class="profile-pic" src="{{ site.baseurl }}/assets/img/profile.jpg" alt="Foto do autor dos posts, Luciano Brum, sorrindo em uma parada de ônibus">
+    </div>
+    {%- if site.author -%}
+        <a class="author-name">{{ site.author | escape }}</p>
+    {%- else -%}
+        <p>{{ site.title | escape }}</p>
+    {%- endif -%}
+    {%- if site.email -%}
+        <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
+    {%- endif -%}   
+    <br>
+    {%- if site.description -%}     
+        <a class="author-description">{{- site.description | escape -}}</a>
+    {%- endif -%}  
+    <br>
+    {%- include social.html -%} 
+</div>

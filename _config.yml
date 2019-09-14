@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Data Science World
+author: Luciano Brum
+title: Data Science Broon
 email: lucianobrum18@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Este site tem o propósito de compartilhar projetos de Ciência de Dados e utilização de tecnologias para estudantes, profissionais, cientistas e pesquisadores em geral.
+description: Engenheiro de Computação, Mestre em Computação Aplicada, entusiasta de novas tecnologias e com interesse em Data Science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: Luciano Brum

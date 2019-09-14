@@ -1,29 +1,35 @@
 ---
-layout: search
+layout: default
 ---
-<form action="{{site.baseurl}}/search.html" method="get">
-<!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
-    <div class="searchBox">
-        <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
-            <button class="searchButton">
-                <i class="material-icons">search</i>
-            </button>
-    </div>
-</form>
-<br /><br />
-
-<ul id="search-results"></ul>
+<div class="home">
+  <h1 class="post-home-title" style="text-align:center">Data Science Broon</h1>
+  <form action="{{site.baseurl}}/search.html" method="get">
+  <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
+      <div class="searchBox">
+          <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
+              <button class="searchButton">
+                  <i class="material-icons">search</i>
+              </button>
+      </div>
+  </form>
+  <br /><br />
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+    <ul class="post-list">
+      <ul id="search-results"></ul>
+    </ul>
+  </article>
+</div>
 <script>
   window.store = {
     {% for post in site.posts %}
       "{{ post.url | slugify }}": {
-        "title": "{{ post.title | xml_escape }}",
-        "author": "{{ post.author | xml_escape }}",
-        "category": "{{ post.category | xml_escape }}",
-        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
-        "url": "{{ post.url | xml_escape }}"
-      }
-      {% unless forloop.last %},{% endunless %}
+      "title": "{{ post.title | xml_escape }}",
+      "author": "{{ post.author | xml_escape }}",
+      "category": "{{ post.category | xml_escape }}",
+      "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+      "url": "{{ post.url | xml_escape }}"
+    }
+    {% unless forloop.last %},{% endunless %}
     {% endfor %}
   };
 </script>
