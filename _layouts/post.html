@@ -27,8 +27,8 @@ layout: default
 
       <!-- share buttons -->
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flubrum.github.io%2F2019%2F09%2F01%2Fbem-vindos&layout=button_count&size=large&appId=2337139719936629&width=129&height=28" width="129" height="28" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="facebook-hashtag-button"></iframe>      <!--------------------------------------------------->
-      <a href="https://twitter.com/intent/tweet?button_hashtag=compartilhe&ref_src=twsrc%5Etfw" class="twitter-hashtag-button" data-show-count="false" data-text="{{ post.title }}"
-  data-url="{{ post.url | relative_url | escape }}" data-hashtags="R,DataScience">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
+      <a class="twitter-share-button" href="{{ post.url | relative_url | escape }}" data-show-count="false" data-text="{{ post.title }}" data-hashtags="R,DataScience">Tweet</a>
+      <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
       <script type="IN/Share" data-url="{{ post.url | relative_url | escape }}"> {{ post.title }} </script>
     
     </p>
