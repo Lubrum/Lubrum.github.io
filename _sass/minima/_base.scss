@@ -1,6 +1,7 @@
 /**
  * Reset some basic elements
  */
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -11,8 +12,9 @@ dl, dd, ol, ul, figure {
 /**
  * Basic styling
  */
+
 body, html {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font: $base-font-weight #{$base-font-size*0.7}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
@@ -21,13 +23,17 @@ body, html {
        -o-font-feature-settings: "kern" 1;
           font-feature-settings: "kern" 1;
   font-kerning: normal;
-  width: 100%;
-  height: 100%;
+}
+
+body {
+  display: block;
+  max-width: 100%;
 }
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
+
 h1, h2, h3, h4, h5, h6,
 p, blockquote, pre,
 ul, ol, dl, figure,
@@ -38,6 +44,7 @@ ul, ol, dl, figure,
 /**
  * Images
  */
+
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -46,6 +53,7 @@ img {
 /**
  * Figures
  */
+
 figure > img {
   display: block;
 }
@@ -68,23 +76,21 @@ li {
 /**
  * Headings
  */
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
 
 /*
- * Links Source: https://codepen.io/FelixRilling/pen/qzfoc
+ * Links 
  */
+
 a {
   text-decoration: none;
   -webkit-transition: all 1.5s;
   -moz-transition: all 1.5s;
   transition: all 1.5s;
-  color: rgb(126, 126, 126);
-  
-  &:visited {
-    color: rgb(53, 167, 167);
-  }
+  color: rgb(93, 99, 187);
 
   &:hover {
     color: #ff0000;
@@ -102,6 +108,7 @@ a {
 /**
  * Blockquotes
  */
+
 blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
@@ -118,6 +125,7 @@ blockquote {
 /**
  * Code formatting
  */
+
 pre,
 code {
   @include relative-font-size(0.9375);
@@ -144,6 +152,7 @@ pre {
 /**
  * Tables
  */
+ 
 table {
   margin-bottom: $spacing-unit;
   width: 100%;
@@ -171,4 +180,10 @@ table {
 
 form {
   padding: 15px 15px;
+}
+
+@media only screen and (min-width: 992px) {
+  body, html {
+    font: $base-font-weight #{$base-font-size * 1}/#{$base-line-height} $base-font-family;
+  }
 }

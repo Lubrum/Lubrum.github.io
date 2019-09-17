@@ -10,7 +10,7 @@ author: luciano_brum
 
 <h1> Resumo </h1>
 
-Saudações pessoal. A ideia deste artigo é explorar os dados públicos sobre a produção leiteira Brasileira e Gaúcha disponibilizados pelo [IBGE](https://ibge.gov.br/) (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática). Parte deste trabalho foi previamente publicado em um [resumo expandido](http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522) (BRUM; SILVA; LAMPERT, 2018). <br />
+Saudações pessoal. A ideia deste artigo é explorar os dados públicos sobre a produção leiteira Brasileira e Gaúcha disponibilizados pelo [IBGE](https://ibge.gov.br/) (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática). Parte deste trabalho foi previamente publicado em um [resumo expandido](http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522) (BRUM; SILVA; LAMPERT, 2018). <br>
 
 <h1> Obtenção dos dados </h1>
 
@@ -31,6 +31,8 @@ As seguintes ferramentas e linguagens foram utilizadas para a produção das an�
 <h1> Descrição e Análise dos Resultados</h1>
 Na Figura abaixo são comparadas as produções leiteiras do Brasil e do RS no período de 1974-2017, com o uso de dados da [PPM](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019a).
 
+<br>
+
 {% include widgets/figure1.html %}
 
 <br>
@@ -45,7 +47,11 @@ As duas linhas no gráfico representam um modelo de regressão linear em que foi
 
 O RS foi o segundo estado com maior produção de leite no Brasil em 2017, conforme evidenciado na Gif abaixo, que apresenta o histórico de 1974 até 2017 da produção leiteira nos 10 estados com maior produção do Brasil, através dos dados da [PPM](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019a).
 
+<br>
+
 <img src="{{ site.baseurl }}/assets/img/gif1.gif" alt="Histórico de 1974 até 2017 da produção leiteira nas UF do Brasil, exibidos no formato de barras por ano">
+
+<br>
 
 Foi possível observar que o estado de Minas Gerais (MG) se manteve em primeiro no rank de produção leiteira em todo o histórico de 1974 até 2017. Também observa-se que os seis primeiros estados brasileiros no rank em 2017 foram responsáveis por aproximadamente 75% do leite produzido em 2017, representando aproximadamente 25.5 bilhões de litros. Também observa-se que destes seis estados, três são da região Sul (RS, SC e PR) e dois da região Sudeste (MG e SP) do Brasil.
 
@@ -57,7 +63,11 @@ Foi possível observar que o estado de Minas Gerais (MG) se manteve em primeiro 
 
 Observada a produção leiteira no Brasil e em suas UF, é agora colocado em foco o número de estabelecimentos rurais que produziram leite, em nível nacional e municipal (apenas no estado do RS). Tais dados estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b). As duas Figuras abaixo apresentam a variação absoluta e percentual dos estabelecimentos rurais que produziram leite entre 2006 e 2017 por faixa de área total no Brasil.
 
+<br>
+
 {% include widgets/figure2.html %}
+
+<br>
 
 {% include widgets/figure3.html %}
 
@@ -75,7 +85,11 @@ O NA (Not Available) nos gráficos apontam o somatório de produtores que não s
 
 Na Figura abaixo é análisada a variação de estabelecimentos rurais que produziram leite nos municípios do estado do RS entre 2006 e 2017. Tais dados também estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b).
 
+<br>
+
 <img src="{{ site.baseurl }}/assets/img/figure4.png" alt="Mapa com a variação percentual do número de estabelecimentos rurais que produziam leite entre 2006 e 2017 nos municípios do RS">
+
+<br>
 
 É possível observar a tendência geral de redução de estabelecimentos rurais produtores de leite apresentada no bloco anterior, só que nos municípios do RS. A redução foi percentualmente mais significativa na metade sul do RS. Há municípios no RS em que houve um crescimento percentual de estabelecimentos produtores de leite, porém, quando observados os valores absolutos da variação entre 2006 e 2017, temos o seguinte cenário:
 - Um aumento de 2553 estabelecimentos produtores de leite em 59 municípios do RS;
@@ -92,7 +106,11 @@ Portanto, é possível verificar um cenário em que há uma forte tendência de 
 
 Na Figura abaixo é análisada a variação da produção leiteira nos municípios do estado do RS entre 2006 e 2017. Tais dados também estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b).
 
+<br>
+
 <img src="{{ site.baseurl }}/assets/img/figure5.png" alt="Mapa com a variação percentual da produção de leite entre 2006 e 2017 nos municípios do RS">
+
+<br>
 
 De forma contrastante ao cenário anterior, é possível observar a tendência geral de aumento de produção de leite nos municípios do RS. O aumento foi percentualmente mais significativo na metade norte do RS, principalmente na mesorregião noroeste. Há municípios no RS em que houve uma redução percentual significativa da produção de leite, porém, quando observados os valores absolutos da variação entre 2006 e 2017, temos o seguinte cenário:
 - Um crescimento na produção de leite de 1.6 bilhões em 381 municípios do RS;
@@ -109,7 +127,11 @@ Portanto, é possível verificar um cenário de aumento da produção leiteira n
 
 Na Gif abaixo é observado, de forma dinâmica, a variação da produção leiteira nos municípios do estado do RS entre 1974 e 2017, através do uso de dados da [PPM](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019a).
 
+<br>
+
 <img src="{{ site.baseurl }}/assets/img/gif2.gif" alt="Mapa animado com a variação absoluta da produção de leite na escala de milhões de litros entre 1974 e 2017 nos municípios do RS">
+
+<br>
 
 <br>
 <div class="skills">

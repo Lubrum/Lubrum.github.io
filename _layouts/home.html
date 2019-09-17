@@ -2,36 +2,34 @@
 layout: default
 ---
 <div class="home">
-  <h1 class="post-home-title" style="text-align:center">Data Science Broon</h1>
+  <h1 class="post-home-title">Data Science Broon</h1>
+  <h5 class="post-home-subtitle"> {{ page.subtitle }} </h5>
   {{ content }} 
   {%- if site.posts.size > 0 -%}
-    <form action="{{site.baseurl}}/search.html" method="get">
-    <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
-        <div class="searchBox">
-            <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
-                <button class="searchButton">
-                    <i class="material-icons">search</i>
-                </button>
-        </div>
-    </form>
-    <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <form action="{{site.baseurl}}/search.html" method="get">
+    <div class="searchBox">
+      <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
+         <button class="searchButton">
+            <i class="material-icons">search</i>
+          </button>
+    </div>
+  </form>
+  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="post-list">
       {%- for post in site.posts -%}
-          <li class="post-li">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-              <span class="post-meta">{{ post.date | date: date_format }}</span>
-              <h3> {{ post.title | escape }} </h3>
-              <h6> {{ post.subtitle | strip_html | strip_newlines }} </h6>
-              {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-              {%- endif -%}
-            </a>
-          </li>
+        <li class="post-li">
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span>{{ post.date | date: date_format }}</span>
+            <h3> {{ post.title | escape }} </h3>
+            <h6> {{ post.subtitle | strip_html | strip_newlines }} </h6>
+            {%- if site.show_excerpts -%}
+              {{ post.excerpt }}
+            {%- endif -%}
+          </a>
+        </li>
       {%- endfor -%}
     </ul>
-    </article>
-    <!-- <p class="rss-subscribe">Inscreva-se <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p> -->
+  </article>
   {%- endif -%}
-
 </div>
