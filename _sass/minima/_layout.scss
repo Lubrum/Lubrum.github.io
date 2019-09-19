@@ -523,7 +523,7 @@ table.paleBlueRows td, table.paleBlueRows th {
 }
 
 table.paleBlueRows tbody td {
-  font-size: 18px;
+  font-size: 14px;
 }
 
 table.paleBlueRows tr:nth-child(even) {
@@ -536,7 +536,7 @@ table.paleBlueRows thead {
 }
 
 table.paleBlueRows thead th {
-  font-size: 20px;
+  font-size: 16px;
   font-weight: bold;
   color: #FFFFFF;
   text-align: center;
@@ -689,6 +689,23 @@ table.paleBlueRows tfoot td {
   .post-link {
     @include relative-font-size(1.5);
   }
+
+  table.paleBlueRows tbody td {
+    font-size: 18px;
+  }
+
+  table.paleBlueRows thead th {
+    font-size: 20px;
+  }
+
+  table.paleBlueRows tfoot {
+    font-size: 14px;
+  }
+
+  table.paleBlueRows tfoot td {
+    font-size: 14px;
+  }
+
 }
 
 @media only screen and (min-width: 1150px) {
