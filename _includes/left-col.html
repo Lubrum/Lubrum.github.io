@@ -4,16 +4,16 @@
     </div>
 
     {%- if site.author -%}
-        <a class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</p>
-    {%- else -%}
-        <p>{{ site.title | escape }}</p>
+        <a class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</a>
     {%- endif -%}
 
+    <br>
+    
     {%- if site.email -%}
         <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
     {%- endif -%}  
 
-    <br><br> 
+    <br> 
 
     {%- if site.description -%}     
         <p class="author-description">{{- site.description | escape -}}</p>

@@ -1,0 +1,184 @@
+---
+layout: post
+title: Como fazer uma Revisão da Literatura? 
+subtitle: Foi realizada uma análise das publicações científicas sobre a aplicação de Business Intelligence e Data Warehouse no Setor Agrário internacional e diversos resultados interessantes são apresentados, assim como o how-to (como fazer) e ferramentas utilizadas.
+date: 2019-09-17 07:00:00 -0300
+categories: análise de dados
+language: R
+author: luciano_brum
+---
+
+<script src="{{ site.baseurl }}/js/jquery-3.4.1.js"></script> 
+<script> 
+    $(function(){
+      $("#includedContent").load("{{ site.baseurl }}/assets/data/post3/articles_table.html"); 
+    });
+</script> 
+
+<h1> Resumo </h1>
+
+Saudações pessoal. A ideia deste post é apresentar a metodologia e os resultados obtidos ao explorar dados sobre publicações científicas recentes (2008-2018) sobre a utilização de Business Intelligence (BI) e Data Warehouse (DW) no setor agrário, em nível internacional. Este trabalho foi previamente publicado em um [artigo completo](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109) na revista Journal of Agricultural Science (BRUM; CAMARGO; LAMPERT, 2019).
+
+<h1> Obtenção dos dados </h1>
+
+Os dados obtidos foram de artigos que tratam o tema de BI e DW através de bases de dados da área do conhecimento de Ciências Agrárias do [portal de periódicos da CAPES](http://www.periodicos.capes.gov.br/index.php?option=com_pmetabusca&mn=70&smn=78&base=find-db-1&type=b&Itemid=126) (Coordenação de Aperfeiçoamento de Pessoal de Ensino Superior). 
+
+<h1> Metodologia </h1>
+
+As seguintes ferramentas e linguagens foram utilizadas para a coleta dos dados, realização das análises e geração dos gráficos:
+
+- [R](https://www.r-project.org/) (R, 2019): Linguagem de Programação utilizada para Ciência de Dados. Em nosso caso, utilizada específicamente para as etapas de importação, organização, limpeza e visualização de dados;
+
+- [Excel](https://support.office.com/pt-br/excel) versão 2013 (MICROSOFT EXCEL, 2019): Programa de planilhas eletrônicas para armazenamento, manipulação e visualização de dados. No nosso caso, foi utilizado para armazenar as informações obtidas da internet sobre os artigos, autores e revistas mais relevantes sobre o tema, para posterior utilização nas análises;
+
+- [Github](https://github.com/) (GITHUB, 2019): Plataforma com comunidades de desenvolvedores para descoberta, compartilhamento e criação de códigos e soluções de software com controle de versão. O Github foi utilizado para compartilhar o código utilizado em partes deste trabalho para garantir a reprodutibilidade dos experimentos e isenção na realização das análises dos dados. Os códigos do projeto podem ser acessados [neste link](https://github.com/Lubrum/BI-and-DW-in-Agrarian-Sector).
+
+- [Mendeley](https://www.mendeley.com/?interaction_required=true) (ELSEVIER, 2019): Gerenciador bibliográfico e rede social acadêmica que permite organizar as pesquisas realizadas, colaborar com os pares e realizar descoberta de artigos recentes, entre diversas outras funções. O Mendeley online, a versão Desktop e o plugin para browsers foram utilizados para realizar o download dos metadados dos artigos nos repositórios de dados científicos. 
+
+- [WordArt](https://wordart.com/) (WORDART, 2019): Ferramenta de geração de nuvens de palavras online, foi utilizada para geração de um dos gráficos necessários.
+
+O método utilizado para desenvolver esta pesquisa foi o seguinte:
+
+(1) **Coleta de dados** 
+
+a. O Mendeley foi utilizado para buscar informações nas seguintes bases de dados: AGRIS, BDPA, EBSCO, Google Scholar, ProQuest, SciELO, ScienceDirect, SCOPUS, SpringerLink, Taylor & Francis Online, Web of Science and Wiley Online Library. 
+
+b. As seguintes restrições foram aplicadas para filtragem dos artigos: <br>
+*(i) artigos publicados em revistas e conferências; <br>
+(ii) artigos publicados em determinado escopo temporal (2008-2018); <br>
+(iii) poucas palavras-chave utilizadas e uma única busca em cada base de dados; <br>
+(iv) bases de dados e mecanismos de busca disponíveis no site da CAPES Periódicos com acesso gratuito aos artigos de Ciências Agrárias; <br>
+(v) alinhamento dos artigos ao tema de acordo com a percepção do próprio autor.*<br>
+
+c. Foi utilizada a seguinte combinação de palavras-chave para a busca dos artigos: ("business intelligence" OR "inteligencia de negocio" OR "data warehouse" OR "data warehousing" OR "armazem de dados" OR "almacen de datos") AND (agricultur* OR livestock OR pecuaria OR ganaderia OR agribusiness OR agronegocio OR agroindustria). A busca foi realizada nos campos título, resumo e palavra-chave, simultaneamente, na maioria dos casos em que tal operação fosse permitida.
+
+(2) **Armazenamento dos dados**: os dados e metadados dos artigos, que fora obtidos com o Mendeley, foram armazenados manualmente em planilhas do Excel para posterior realização de análises.
+
+(3) **Organização dos dados**: foram realizados cinco níveis de filtragem nos artigos obtidos. Para cada nível de filtragem foi criada uma nova aba na planilha com as informações filtradas.
+
+(4) **Análise dos dados**: em casos simples, o próprio Excel foi utilizado para geração de gráficos, e em casos onde era necessário gerar gráficos mais sofisticados, foi utilizada a ferramenta RStudio conjuntamente com a linguagem R.
+
+<h1> Descrição e Análise dos Resultados</h1>
+
+<h3> Filtragem de Artigos </h3>
+Na Figura abaixo é apresentada a quantidade de publicações encontradas por base de dados com as palavras-chave definidas anteriormente sem a aplicação de filtros. 
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure1.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+No total, foram encontrados 1435 trabalhos. No Google Scholar, foram encontrados 20200 resultados com as palavras-chave definidas, mas a ferramenta apresenta apenas as primeiras 100 páginas com resultados. Portanto, somente os trabalhos das primeiras 10 páginas foram importados, ordenados por relevância.
+
+Na sequência foram eliminados os artigos redundantes utilizando uma funcionalidade do próprio Mendeley. Neste processo foram removidos 166 trabalhos (11.57% do total), restando 1269 publicações. A Figura abaixo apresenta a quantidade de trabalhos resultantes por ano de publicação.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure2.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+A próxima filtragem realizada foi a remoção de trabalhos não relacionados com o tema de pesquisa, evidenciada através da leitura dos títulos e resumos dos trabalhos. Os trabalhos sem resumo disponível foram eliminados das análises. Tal filtragem foi a mais significativa, com 1112 trabalhos eliminados (87.63% dos trabalhos restantes eliminados), restando 157 trabalhos.
+
+Trabalhos em idiomas diferentes do inglês, português e espanhol, ou indisponíveis na versão gratuita, ou duplicados (através de detecção manual) foram eliminados das análises. Neste processo foram removidos 51 trabalhos (32.48% dos restantes, restando 106 trabalhos).
+
+A próxima filtragem foi a análise das citações e do ano de publicação dos artigos. O Google Scholar foi utilizado para a contagem das citações dos trabalhos. Artigos com pelo menos uma citação avançam para a próxima filtragem. Neste processo foram removidos 25 trabalhos, porém 8 destes foram reinseridos por serem muito recentes (2017 e 2018), não tendo tido ainda muitas oportunidades de serem citados. Portanto, 17 trabalhos foram removidos (16.04% dos restantes, restando 89 trabalhos).
+
+O último filtro aplicado foi a leitura completa dos 89 artigos restantes. 60 artigos foram eliminados da análise (67.42% dos restantes). Portanto, 29 artigos serão analisados em detalhes na sequência.
+
+<h3> Análise dos Artigos Selecionados </h3>
+
+Os seguintes artigos foram selecionados para a análise de citações, autores, referências bibliográficas e análise temporal ([em resumo, uma análise bibliométrica, que pode ser conferida na íntegra aqui](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109)).
+
+<div id="includedContent"></div>
+
+A Figura abaixo, em ordem decrescente, apresenta o número de citações de cada um dos artigos selecionados, assim como o acumulado de citações destes trabalhos.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure3.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+É importante observar que 13 artigos (45% do total) concentram 89% do total acumulado de citações aos 29 trabalhos selecionados.
+
+No gráfico abaixo é apresentado o número de artigos e o acumulado de citações por ano.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure4.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+Observa-se que artigos mais recentes possuem menos citações que trabalhos mais antigos. Tal comportamento já era esperado, já que trabalhos mais antigos tiveram mais tempo e oportunidades de serem citados do que os trabalhos mais recentes.
+
+Na figura abaixo, é apresentada a quantidade de trabalhos publicados por autor. Foram considerados apenas autores que publicaram no mínimo dois artigos.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure5.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+Na Figura abaixo, desenvolvida com a linguagem R, é apresentada a rede de colaboração entre os autores dos 29 artigos mais relevantes selecionados. A cor representa o país de filiação do primeiro autor, os nós representam os autores, as arestas representam uma publicação conjunta dos autores representados pelos nós conectados e o tamanho do nó representa a quantidade de colaborações do autor em questão. 
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+É possível observar o destaque da França e da Índia em publicações sobre BI e DW aplicados no setor agrário de uma forma geral. Também observa-se uma forte rede de colaboração em torno dos autores Bimonte, Miralles, Vernier e Molla, todos de instituições da França. As publicações da Índia e demais paises aparentemente possuem menos colaborações com instituições de outros paises. Claro que uma análise mais aprofundada, incluindo uma amostra maior de artigos, é necessária para revelar tendências e possíveis considerações sobre este fenômeno.
+
+<h3> Análise das Referências Bibliográficas dos Artigos Selecionados </h3>
+
+A Figura abaixo apresenta a distribuição temporal dos trabalhos citados nas referências bibliográficas dos artigos selecionados. Não foram verificadas as possíveis repetições de referências entre os trabalhos ou referências que não eram trabalhos científicos.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure7.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+É possível verificar uma grande concentração de publicações entre os anos 2000 e 2010. Também verifica-se um número muito pequeno de citações em trabalhos publicados antes de 1995.
+
+A Figura abaixo, desenvolvida com a linguagem R, apresenta a relação entre a quantidade de citações de cada artigo selecionado e o número de citações aos autores destes mesmos artigos nas referências bibliográficas (os mais citados).
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure8.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+Para exemplificar a informação da coordenada X, segue um exemplo abaixo: 
+- O artigo A tem os autores 1, 2 e 3 e o artigo B tem os autores 4, 5 e 6. <br>
+- O artigo A possui referências aos seguintes grupos de autores: {1, 2, 5}, {3}, {1, 2} e {1, 5}. <br>
+- O artigo B possui referências aos seguintes grupos de autores: {4, 5}, {3, 4} e {1, 6}. <br>
+- O autor mais citado do artigo A tem **4 citações** nas referências dos artigos A e B (autor 1 é mais citado). <br>
+- O autor mais citado do artigo B tem **3 citações** nas referências dos artigos A e B (autor 5 é mais citado). <br>
+
+Foi utilizado o **Princípio de Pareto**, ou regra do 80/20, para definir as retas que separam os grupos de citações dos artigos e dos autores das referências. O Princípio de Pareto diz que aproximadamente 80% dos efeitos vêm de 20% das causas. Neste caso, optou-se por destacar as causas (ou variáveis) 20% mais relevantes. 
+O gráfico acima, portanto, apresenta os grupos de artigos que possuem mais citações, os que possuem mais citações aos autores nas referências, os que são mais relevantes em ambos os aspectos e os que possuem poucas ou nenhuma citação tanto aos artigos como aos autores nas referências.
+
+A Figura abaixo, também desenvolvida com a linguagem R, apresenta a relação entre o número de artigos por revista/periódico e o número de citações a artigos destes periódicos nas referências bibliográficas dos trabalhos selecionados. Também foi destacado o fator de impacto de cada periódico através do tamanho de cada shape no gráfico.
+
+<img src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+
+Visualmente observa-se que a revista *Computers and Eletronics in Agriculture* possui não só uma maior quantidade de artigos sobre o tema como também um maior número de citações nas referências dos trabalhos selecionados. Já a *Environmental Modelling and Software* se destacou apenas nas referências, pois apenas um artigo do conjunto final selecionado era deste periódico (revista com maior fator de impacto das destacadas). A *Ecological Informatics* se destacou por ter dois trabalhos presentes no conjunto final selecionado. Os periódicos restantes foram agrupados no conjunto sem destaque relevante neste tipo de análise.
+
+A Figura a seguir apresenta uma nuvem de palavras (*Word Cloud*) em que foram utilizadas as palavras-chave dos 29 artigos. A Figura foi gerada com o auxílio da ferramenta online [WordArt](https://wordart.com/).
+
+<div class="imgbox">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure10.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+</div>
+
+Cabe destacar palavras como *multidimensional* e *OLAP*, extremamente relevantes no contexto de BI e que não foram incluídas no conjunto de termos de busca. Esta é uma sugestão de melhoria no processo de análise da literatura, em que podem ser ajustados os termos de busca com base nas palavras-chave dos artigos inicialmente selecionados.
+
+A Figura abaixo apresenta um compilado das tecnologias que foram mencionadas ou aplicadas nos artigos selecionados.
+
+<div class="imgbox">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure11.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+</div>
+
+É interessante observar que as tecnologias gratuitas e de código aberto tem maior predominância em comparação com soluções proprietárias nos trabalhos de BI e DW aplicados no setor agrário selecionados. É claro que tal afirmação é válida apenas para este caso, e não engloba, por exemplo, soluções desenvolvidas fora do ambiente acadêmico, como em setores governamentais ou empresas privadas.
+
+Por fim, a última Figura apresenta as principais áreas de estudo dos artigos selecionados.
+
+<div class="imgbox">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure12.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+</div>
+
+Observa-se uma predominância maior de soluções de BI e DW para análise de culturas, pecuária de corte, gerenciamento de pesticidas e análises da qualidade da água.
+
+<h1> Considerações Finais </h1>
+
+Bom pessoal, a ideia deste post foi apresentar de forma sucinta um exemplo objetivo de processo de revisão da literatura. Foi apresentada a forma de obtenção dos dados, orientação no uso das ferramentas necessárias, metodologia completa e apresentação e análise dos resultados. Outros resultados, trabalhos referenciados e as teorias que embasaram o estudo podem ser verificadas no [link deste artigo](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109). Abaixo cito as referências utilizadas para estas análises. Obrigado e até o próximo post !! 
+
+<div class="skills">
+    <hr class="hr-text" data-content="############">
+</div>
+
+<h1> Referências Bibliográficas </h1>
+
+[BRUM, L. M. da L.; LAMPERT, V. do N.; CAMARGO, S. da S. Business intelligence and data warehouse in agrarian sector: a bibliometric study. Journal of Agricultural Science, Richmond Hill, v. 11, n. 2, p. 353-368, 2019. Acesso em: 17 set. 2019.](https://doi.org/10.5539/jas.v11n2p353)
+
+[ELSEVIER. About Mendeley. Acesso em: Acesso em: 17 set. 2019.](https://www.mendeley.com/?interaction_required=true)
+
+[GITHUB. Built for developers. Acesso em: 17 set. 2019.](https://github.com/)
+
+[MICROSOFT EXCEL. Excel. Acesso em: 17 set. 2019.](https://products.office.com/pt-br/excel)
+
+[R. The R Project for Statistical Computing. Acesso em: 17 set. 2019.](https://www.r-project.org/)
+
+[WORDART. WordArt. Acesso em: 18 set. 2019.](https://wordart.com/)
+
+<script src="{{ site.baseurl }}/js/widgets.js"></script>
