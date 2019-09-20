@@ -50,11 +50,11 @@ b. As seguintes restrições foram aplicadas para filtragem dos artigos: <br>
 (iv) bases de dados e mecanismos de busca disponíveis no site da CAPES Periódicos com acesso gratuito aos artigos de Ciências Agrárias; <br>
 (v) alinhamento dos artigos ao tema de acordo com a percepção do próprio autor.*<br>
 
-c. Foi utilizada a seguinte combinação de palavras-chave para a busca dos artigos: ("business intelligence" OR "inteligencia de negocio" OR "data warehouse" OR "data warehousing" OR "armazem de dados" OR "almacen de datos") AND (agricultur* OR livestock OR pecuaria OR ganaderia OR agribusiness OR agronegocio OR agroindustria). A busca foi realizada nos campos título, resumo e palavra-chave, simultaneamente, na maioria dos casos em que tal operação fosse permitida.
+c. Foi utilizada a seguinte combinação de palavras-chave para a busca dos artigos: ("business intelligence" OR "inteligencia de negocio" OR "data warehouse" OR "data warehousing" OR "armazem de dados" OR "almacen de datos") AND (agricultur* OR livestock OR pecuaria OR ganaderia OR agribusiness OR agronegocio OR agroindustria). A busca foi realizada nos campos título, resumo e palavra-chave, simultaneamente, nos casos em que tal operação fosse permitida.
 
-(2) **Armazenamento dos dados**: os dados e metadados dos artigos, que fora obtidos com o Mendeley, foram armazenados manualmente em planilhas do Excel para posterior realização de análises.
+(2) **Armazenamento dos dados**: os dados e metadados dos artigos, que fora obtidos com o Mendeley, foram armazenados manualmente em planilhas do Excel para posterior realização de análises. Cabe ressaltar que foram salvas apenas as informações de artigos a partir da quarta filtragem (análise de citações e ano de publicação).
 
-(3) **Organização dos dados**: foram realizados cinco níveis de filtragem nos artigos obtidos. Para cada nível de filtragem foi criada uma nova aba na planilha com as informações filtradas.
+(3) **Organização dos dados**: foram realizados cinco níveis de filtragem nos artigos obtidos. Para cada nível de filtragem foi criada uma nova aba na planilha com as informações filtradas (as informações específicas dos artigos foram salvas a partir da quarta filtragem).
 
 (4) **Análise dos dados**: em casos simples, o próprio Excel foi utilizado para geração de gráficos, e em casos onde era necessário gerar gráficos mais sofisticados, foi utilizada a ferramenta RStudio conjuntamente com a linguagem R.
 
@@ -67,15 +67,25 @@ Na Figura abaixo é apresentada a quantidade de publicações encontradas por ba
 
 No total, foram encontrados 1435 trabalhos. No Google Scholar, foram encontrados 20200 resultados com as palavras-chave definidas, mas a ferramenta apresenta apenas as primeiras 100 páginas com resultados. Portanto, somente os trabalhos das primeiras 10 páginas foram importados, ordenados por relevância.
 
+1° filtragem:
+
 Na sequência foram eliminados os artigos redundantes utilizando uma funcionalidade do próprio Mendeley. Neste processo foram removidos 166 trabalhos (11.57% do total), restando 1269 publicações. A Figura abaixo apresenta a quantidade de trabalhos resultantes por ano de publicação.
 
 <img src="{{ site.baseurl }}/assets/img/post3/figure2.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
 
+2° filtragem:
+
 A próxima filtragem realizada foi a remoção de trabalhos não relacionados com o tema de pesquisa, evidenciada através da leitura dos títulos e resumos dos trabalhos. Os trabalhos sem resumo disponível foram eliminados das análises. Tal filtragem foi a mais significativa, com 1112 trabalhos eliminados (87.63% dos trabalhos restantes eliminados), restando 157 trabalhos.
+
+3° filtragem:
 
 Trabalhos em idiomas diferentes do inglês, português e espanhol, ou indisponíveis na versão gratuita, ou duplicados (através de detecção manual) foram eliminados das análises. Neste processo foram removidos 51 trabalhos (32.48% dos restantes, restando 106 trabalhos).
 
+4° filtragem:
+
 A próxima filtragem foi a análise das citações e do ano de publicação dos artigos. O Google Scholar foi utilizado para a contagem das citações dos trabalhos. Artigos com pelo menos uma citação avançam para a próxima filtragem. Neste processo foram removidos 25 trabalhos, porém 8 destes foram reinseridos por serem muito recentes (2017 e 2018), não tendo tido ainda muitas oportunidades de serem citados. Portanto, 17 trabalhos foram removidos (16.04% dos restantes, restando 89 trabalhos).
+
+5° filtragem:
 
 O último filtro aplicado foi a leitura completa dos 89 artigos restantes. 60 artigos foram eliminados da análise (67.42% dos restantes). Portanto, 29 artigos serão analisados em detalhes na sequência.
 
