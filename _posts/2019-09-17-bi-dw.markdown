@@ -63,7 +63,7 @@ c. Foi utilizada a seguinte combinação de palavras-chave para a busca dos arti
 <h3> Filtragem de Artigos </h3>
 Na Figura abaixo é apresentada a quantidade de publicações encontradas por base de dados com as palavras-chave definidas anteriormente sem a aplicação de filtros. 
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure1.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure1.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
 
 No total, foram encontrados 1435 trabalhos. No Google Scholar, foram encontrados 20200 resultados com as palavras-chave definidas, mas a ferramenta apresenta apenas as primeiras 100 páginas com resultados. Portanto, somente os trabalhos das primeiras 10 páginas foram importados, ordenados por relevância.
 
@@ -71,7 +71,7 @@ No total, foram encontrados 1435 trabalhos. No Google Scholar, foram encontrados
 
 Na sequência foram eliminados os artigos redundantes utilizando uma funcionalidade do próprio Mendeley. Neste processo foram removidos 166 trabalhos (11.57% do total), restando 1269 publicações. A Figura abaixo apresenta a quantidade de trabalhos resultantes por ano de publicação.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure2.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure2.png" alt="Número de publicações/artigos por ano em um gráfico de barras">
 
 2° filtragem:
 
@@ -97,23 +97,23 @@ Os seguintes artigos foram selecionados para a análise de citações, autores, 
 
 A Figura abaixo, em ordem decrescente, apresenta o número de citações de cada um dos artigos selecionados, assim como o acumulado de citações destes trabalhos.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure3.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure3.png" alt="Número de citações e acumulado de citações por publicação/artigo em um gráfico com barras (para as citações), uma linha curva(representando o acumulado de citações) e linha pontilhada (representando o limiar dos 13 artigos representando 89% do total das citações)">
 
 É importante observar que 13 artigos (45% do total) concentram 89% do total acumulado de citações aos 29 trabalhos selecionados.
 
 No gráfico abaixo é apresentado o número de artigos e o acumulado de citações por ano.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure4.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure4.png" alt="Número de publicações/artigos e total de citações dos mesmos por ano em um gráfico de barras e uma linha">
 
 Observa-se que artigos mais recentes possuem menos citações que trabalhos mais antigos. Tal comportamento já era esperado, já que trabalhos mais antigos tiveram mais tempo e oportunidades de serem citados do que os trabalhos mais recentes.
 
 Na figura abaixo, é apresentada a quantidade de trabalhos publicados por autor. Foram considerados apenas autores que publicaram no mínimo dois artigos.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure5.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure5.png" alt="Número de publicações/artigos por autor.">
 
 Na Figura abaixo, desenvolvida com a linguagem R, é apresentada a rede de colaboração entre os autores dos 29 artigos mais relevantes selecionados. A cor representa o país de filiação do primeiro autor, os nós representam os autores, as arestas representam uma publicação conjunta dos autores representados pelos nós conectados e o tamanho do nó representa a quantidade de colaborações do autor em questão. 
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Gráfico apresentando uma rede de colaboração entre autores, com nós representando o autor, arestas representando uma publicação conjunta entre autores, cor representando país de filiação do primeiro autor e tamanho do nó representando o número de colaborações.">
 
 É possível observar o destaque da França e da Índia em publicações sobre BI e DW aplicados no setor agrário de uma forma geral. Também observa-se uma forte rede de colaboração em torno dos autores Bimonte, Miralles, Vernier e Molla, todos de instituições da França. As publicações da Índia e demais paises aparentemente possuem menos colaborações com instituições de outros paises. Claro que uma análise mais aprofundada, incluindo uma amostra maior de artigos, é necessária para revelar tendências e possíveis considerações sobre este fenômeno.
 
@@ -121,13 +121,13 @@ Na Figura abaixo, desenvolvida com a linguagem R, é apresentada a rede de colab
 
 A Figura abaixo apresenta a distribuição temporal dos trabalhos citados nas referências bibliográficas dos artigos selecionados. Não foram verificadas as possíveis repetições de referências entre os trabalhos ou referências que não eram trabalhos científicos.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure7.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure7.png" alt="Número de publicações/artigos nas referências dos artigos selecionados por ano em um gráfico de barras.">
 
 É possível verificar uma grande concentração de publicações entre os anos 2000 e 2010. Também verifica-se um número muito pequeno de citações em trabalhos publicados antes de 1995.
 
 A Figura abaixo, desenvolvida com a linguagem R, apresenta a relação entre a quantidade de citações de cada artigo selecionado e o número de citações aos autores destes mesmos artigos nas referências bibliográficas (os mais citados).
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure8.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure8.png" alt="Citações aos artigos selecionados e citações aos autores mais citados nas referências dos artigos em um gráfico de pontos.">
 
 Para exemplificar a informação da coordenada X, segue um exemplo abaixo: 
 - O artigo A tem os autores 1, 2 e 3 e o artigo B tem os autores 4, 5 e 6. <br>
@@ -141,14 +141,14 @@ O gráfico acima, portanto, apresenta os grupos de artigos que possuem mais cita
 
 A Figura abaixo, também desenvolvida com a linguagem R, apresenta a relação entre o número de artigos por revista/periódico e o número de citações a artigos destes periódicos nas referências bibliográficas dos trabalhos selecionados. Também foi destacado o fator de impacto de cada periódico através do tamanho de cada shape no gráfico.
 
-<img src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos por periódico e número de publicações nas referências dos artigos, por periódico, com destaque para o tamanho dos círculos no gráfico representando o fator de impacto de cada periódico.">
 
 Visualmente observa-se que a revista *Computers and Eletronics in Agriculture* possui não só uma maior quantidade de artigos sobre o tema como também um maior número de citações nas referências dos trabalhos selecionados. Já a *Environmental Modelling and Software* se destacou apenas nas referências, pois apenas um artigo do conjunto final selecionado era deste periódico (revista com maior fator de impacto das destacadas). A *Ecological Informatics* se destacou por ter dois trabalhos presentes no conjunto final selecionado. Os periódicos restantes foram agrupados no conjunto sem destaque relevante neste tipo de análise.
 
 A Figura a seguir apresenta uma nuvem de palavras (*Word Cloud*) em que foram utilizadas as palavras-chave dos 29 artigos. A Figura foi gerada com o auxílio da ferramenta online [WordArt](https://wordart.com/).
 
 <div class="imgbox">
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure10.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure10.png" alt="Nuvem de palavras gerada com as palavras-chave dos artigos selecionados.">
 </div>
 
 Cabe destacar palavras como *multidimensional* e *OLAP*, extremamente relevantes no contexto de BI e que não foram incluídas no conjunto de termos de busca. Esta é uma sugestão de melhoria no processo de análise da literatura, em que podem ser ajustados os termos de busca com base nas palavras-chave dos artigos inicialmente selecionados.
@@ -156,7 +156,7 @@ Cabe destacar palavras como *multidimensional* e *OLAP*, extremamente relevantes
 A Figura abaixo apresenta um compilado das tecnologias que foram mencionadas ou aplicadas nos artigos selecionados.
 
 <div class="imgbox">
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure11.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure11.png" alt="Tecnologias open-source e proprietárias utilizadas como soluções em trabalhos envolvendo a temática BI e DW no setor agrário, em um gráfico de barras com cores distintas para tecnologias open e proprietárias.">
 </div>
 
 É interessante observar que as tecnologias gratuitas e de código aberto tem maior predominância em comparação com soluções proprietárias nos trabalhos de BI e DW aplicados no setor agrário selecionados. É claro que tal afirmação é válida apenas para este caso, e não engloba, por exemplo, soluções desenvolvidas fora do ambiente acadêmico, como em setores governamentais ou empresas privadas.
@@ -164,7 +164,7 @@ A Figura abaixo apresenta um compilado das tecnologias que foram mencionadas ou 
 Por fim, a última Figura apresenta as principais áreas de estudo dos artigos selecionados.
 
 <div class="imgbox">
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure12.png" alt="Número de publicações/artigos sobre BI e DW aplicados no setor agrário encontrados em cada bases de dados da CAPES em um gráfico de barras">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure12.png" alt="Tecnologias open-source e proprietárias utilizadas como soluções em trabalhos envolvendo a temática BI e DW no setor agrário, em um gráfico de barras com cores distintas para tecnologias open e proprietárias.">
 </div>
 
 Observa-se uma predominância maior de soluções de BI e DW para análise de culturas, pecuária de corte, gerenciamento de pesticidas e análises da qualidade da água.
