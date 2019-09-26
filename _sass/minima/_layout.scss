@@ -647,12 +647,34 @@ table.paleBlueRows tfoot td {
     }
   }
 
-  .profile-pic {
+  .box{
+    position: relative;
+    margin: auto;
+    left: 0%;
+    max-width: 50%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .box .profile-pic {
+    overflow: hidden;
+    -webkit-transition: all .4s ease;
+    -moz-transition: all .4s ease;
+    -ms-transition: all .4s ease;
+    -o-transition: all .4s ease;
+    transition: all .4s ease;
     display: inline;
     padding-top: $spacing-unit;
-    max-width: 50%;
+    max-width: 100%;
     vertical-align: middle;
     max-height: 100%;
+    &:hover{
+        -webkit-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        transform: scale(1.1);
+    }
   }
 
   .author-name {
