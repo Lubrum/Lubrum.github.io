@@ -12,7 +12,7 @@ author: luciano_brum
 
 Saudações pessoal. 
 
-A ideia deste post é compartilhar com vocês alguns códigos e resultados que gerei ao coletar, processar e analisar os dados dos Programas de Pós-Graduação do Brasil.
+A ideia deste post é compartilhar com vocês alguns códigos e resultados que gerei ao coletar, processar e analisar os dados dos Programas de Pós-Graduação em Computação do Brasil.
 
 <br>
 
