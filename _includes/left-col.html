@@ -1,6 +1,7 @@
 <div class="navigation-menu">
+
     <div class="box">
-            <img class="profile-pic" src="{{ site.baseurl }}/assets/img/profile.jpg" alt="Foto do autor dos posts, Luciano Brum, sorrindo em uma parada de ônibus">
+        <img class="profile-pic" src="{{ site.baseurl }}/assets/img/profile.jpg" alt="Foto do autor dos posts, Luciano Brum, sorrindo em uma parada de ônibus">
     </div>
 
     {%- if site.author -%}
@@ -16,10 +17,11 @@
     <br> 
 
     {%- if site.description -%}     
-        <p class="author-description">{{- site.description | escape -}}</p>
+        <a class="author-description">{{- site.description | escape -}}</a>
     {%- endif -%} 
 
     <br>
 
     {%- include social.html -%} 
+
 </div>

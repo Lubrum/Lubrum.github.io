@@ -4,7 +4,9 @@
     {%- assign page_paths = site.header_pages | default: default_paths -%}
 
     {%- if page_paths -%}
+    
     <nav class="site-nav">
+      <button class="openbtn" onclick="openNav()">☰</button> 
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">

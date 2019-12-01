@@ -1,4 +1,4 @@
-<p class="social-description">Me siga nas redes sociais</p>
+<a class="social-description">Me siga nas redes sociais</a>
 <ul class="social-media-list">
   {%- if site.dribbble_username -%}<a class="social-svg" href="https://dribbble.com/{{ site.dribbble_username| cgi_escape | escape }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#dribbble' | relative_url }}"></use></svg> <span class="username">{{ site.dribbble_username| escape }}</span></a>{%- endif -%}
   {%- if site.facebook_username -%}<a class="social-svg" href="https://www.facebook.com/{{ site.facebook_username| cgi_escape | escape }}"><svg class="svg-icon" id="facebook"><use xlink:href="{{ '/assets/minima-social-icons.svg#facebook' | relative_url }}"></use></svg> <span class="username">{{ site.facebook_username| escape }}</span></a>{%- endif -%}
