@@ -34,12 +34,9 @@
     position: relative;
     margin-left: 1%;
     margin-right: 1%;
-    height: 80%;
+    height: 95%;
     left: 0%;
-    top: 10%;
     background-color: inherit;
-    border: none;
-    border-radius: 0px;
     text-align: center;
     font-weight: 600;
   }
@@ -60,23 +57,20 @@
   
   input:checked ~ .trigger {
     display: block;
-    //padding-bottom: 5px;
   }
 
   .nav-buttons{
     position: relative;
     list-style: none;
-    vertical-align: middle;
     padding: 0px 5%;
   }
 
   .page-link {
+    vertical-align: middle;
+    white-space: nowrap;
     position: relative;
     font-size: 1.5vw;
-    border-radius: 0px;
-    border: none;
     color: #ffd6d6;
-    display: block;
     -webkit-transition: all 1.5s;
     -moz-transition: all 1.5s;
     transition: all 1.5s;
@@ -85,7 +79,6 @@
     }
     &:hover {
       color: #7e8bff;
-      background-color: inherit;
     }
   }
 
@@ -418,14 +411,6 @@
     src: url(https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2) format('woff2');
   }
 
-/*
-  @font-face {
-    font-family: 'Snell Roundhand';
-    font-style: normal;
-    font-weight: 400;
-    src: local('Snell Roundhand'), url('SnellRoundhand.woff') format('woff');
-  }
-*/
   .material-icons {
     font-family: 'Material Icons';
     font-weight: normal;
