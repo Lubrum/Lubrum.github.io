@@ -7,7 +7,7 @@
     
     <nav class="site-nav">
       <button class="openbtn" onclick="openNav()">☰</button> 
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <!--<input type="checkbox" id="nav-trigger" class="nav-trigger" />
         <label for="nav-trigger">
           <span class="menu-icon">
             <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -15,7 +15,7 @@
             </svg>
           </span>
         </label>
-
+      -->
         <ul class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
