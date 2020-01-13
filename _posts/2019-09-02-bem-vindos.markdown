@@ -25,5 +25,5 @@ Para cada projeto, será criada uma página neste site, com o objetivo de compar
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/YwuX569mQms" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br>
 
-Desde já agradeço pelo interesse em meu site e estou a disposição para oportunidades de trabalho em todo o Brasil.
+Desde já, agradeço pelo interesse em meu site e se alguém tiver alguma dúvida é só entrar em contato comigo :-).
 <br>
