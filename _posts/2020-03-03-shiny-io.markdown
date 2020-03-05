@@ -1,0 +1,213 @@
+---
+layout: post
+title: Como posso hospedar meu app no shinyapps.io ?
+subtitle: É apresentado o passo-a-passo necessário para hospedar o seu App desenvolvido com o R e o shiny de forma gratuita com o shinyapps.io, com algumas limitações para a versão gratuita.
+date: 2020-03-03 23:55:00 -0300
+categories: análise de dados
+language: R
+author: luciano_brum
+---
+
+<h1> Resumo </h1>
+
+Saudações pessoal. 
+
+A ideia deste post é compartilhar com vocês um passo a passo de como hospedar o seu app desenvolvido com o R e o shiny no shinyapps.io. Por conveniência, vou ilustrar o tutorial com base no Sistema Operacional Ubuntu versão 19.10 (versão lançada em 17 Out. 2019). 
+
+Vocês precisam minimamente do RStudio e do R instalados antes de começar.
+
+<h1> Tópicos </h1>
+
+  - Criando uma conta no [shinyapps.io](shinyapps.io);
+
+  - [RStudio](https://https://rstudio.com/) e instalação de pacotes necessários;
+
+  - Configuração do pacote rsconnect;
+
+  - Criação e execução de um App de Exemplo;
+
+  - Checando a aplicação no shinyapps.io;
+
+<br>
+
+<h1> Criando uma conta no shinyapps.io </h1>
+
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure1.png" alt="Print da página inicial do shinyapps.io.">
+
+A página acima é a inicial do shinyapps.io, onde você pode criar uma conta gratuitamente com um email e senha, ou você pode utilizar sua conta existente do [Google](https://www.google.com.br/) ou do [Github](https://github.com/).
+
+O shinyapps vai solicitar que você dê um nome para a sua conta, que também será o domínio do seu app (ou apps). Algumas restrições para o nome do domínio/conta: deve ter entre 4 e 63 caracteres, podendo ser letras, números e o símbolo - . O nome da conta não pode começar com números ou o símbolo -, e não podem terminar com o símbolo -.
+
+<br>
+
+<h1> RStudio e instalação de pacotes necessários; </h1>
+
+Com a linguagem R e o RStudio instalados e devidamente configurados, vamos agora instalar o pacote rsconnect. A figura abaixo apresenta este processo.
+
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure2.png" alt="Print do RStudio com a instalação do pacote rsconnect.">
+
+Após o êxito da instalação, utilize o comando library(rsconnect) para carregar a biblioteca para o ambiente do RStudio.
+
+<br>
+
+<h1> Configurando o pacote rsconnect </h1>
+
+Agora precisamos fornecer a autorização para o pacote rsconnect fazer o deploy de nossos apps. Para isso:
+
+- Na página inicial do shinyapps.io, clique no botão superior direito referente à conta e clique em <b>tokens</b>.
+
+- Clique no botão <b>show</b>. A aplicação vai apresentar o comando que você precisar executar localmente no seu RStudio/R para habilitar o deploy dos apps com o rsconnect. Clique em <b>Copy to clipboard</b> e cole o comando no seu RStudio e execute-o. O comando deve ser semelhante ao código abaixo.
+
+```R
+rsconnect::setAccountInfo(name='NOME-DA-MINHA-CONTA',
+			  token='MEU-TOKEN-SUPER-HIPER-MEGA-SECRETO',
+			  secret='SEGREDO-MAIS-SECRETO-DE-TODOS')
+```
+
+Se aparecer alguma mensagem de erro como:
+
+```R
+Error: HTTP 401
+GET https://api.shinyapps.io/v1/users/current/
+bad signature
+```
+É porque você não copiou o token da forma correta.
+
+Se tudo ocorrer da forma prevista, não será exibido nenhum erro ou mensagem.
+
+<br>
+
+<h1> Criando um App de Exemplo </h1>
+
+O código abaixo, um app de exemplo utilizando o shiny, foi retirado do próprio [tutorial de instalação e configuração do shinyapps.io](https://shiny.rstudio.com/articles/shinyapps.html). 
+
+Crie os arquivos <b>server.R e ui.R</b> em um diretório qualquer e adicionem o seguinte conteúdo nestes arquivos.
+
+<b>server.R</b>
+
+```R
+library(shiny)
+library(ggplot2)
+
+function(input, output) {
+
+  dataset <- reactive({
+    diamonds[sample(nrow(diamonds), input$sampleSize),]
+  })
+
+  output$plot <- renderPlot({
+
+    p <- ggplot(dataset(), aes_string(x=input$x, y=input$y)) + geom_point()
+
+    if (input$color != 'None')
+      p <- p + aes_string(color=input$color)
+
+    facets <- paste(input$facet_row, '~', input$facet_col)
+    if (facets != '. ~ .')
+      p <- p + facet_grid(facets)
+
+    if (input$jitter)
+      p <- p + geom_jitter()
+    if (input$smooth)
+      p <- p + geom_smooth()
+
+    print(p)
+
+  }, height=700)
+
+}
+```
+
+<b>ui.R</b>
+
+```R
+library(shiny)
+library(ggplot2)
+
+dataset <- diamonds
+
+fluidPage(
+
+  titlePanel("Diamonds Explorer"),
+
+  sidebarPanel(
+
+    sliderInput('sampleSize', 'Sample Size', min=1, max=nrow(dataset),
+                value=min(1000, nrow(dataset)), step=500, round=0),
+
+    selectInput('x', 'X', names(dataset)),
+    selectInput('y', 'Y', names(dataset), names(dataset)[[2]]),
+    selectInput('color', 'Color', c('None', names(dataset))),
+
+    checkboxInput('jitter', 'Jitter'),
+    checkboxInput('smooth', 'Smooth'),
+
+    selectInput('facet_row', 'Facet Row', c(None='.', names(dataset))),
+    selectInput('facet_col', 'Facet Column', c(None='.', names(dataset)))
+  ),
+
+  mainPanel(
+    plotOutput('plot')
+  )
+)
+```
+
+Certifique-se de que o <b>shiny</b> e o <b>ggplot2</b> estão instalados.Para executar o app localmente e verificar se está tudo ok, use os comandos abaixo no RStudio. Você deve estar no mesmo diretório dos arquivos para o comando runApp() funcionar.
+
+```R
+library(shiny)
+runApp()
+```
+
+Se tudo funcionou, basta fazer o Deploy da aplicação. Tão simples como os comandos abaixo:
+
+```R
+library(rsconnect)
+deployApp()
+```
+
+O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-).
+
+<br>
+
+<h3> Em caso de erros... </h3>
+
+Se surgir algum erro estranho, é provável que a pasta não tenha as permissões adequadas. Para isso, use o comando abaixo no terminal do ubuntu:
+
+```console
+chmod 777 caminho/completo/do/diretório/com/o/app
+```
+
+Obviamente, isso não é correto de numerosas formas, já que qualquer usuário poderá ler, modificar e executar o conteúdo da pasta. Para fins de teste e confirmar se a aplicação está funcionando, é uma abordagem válida. Porém, o correto é definir permissões com restrições e para os usuários adequados. Este é assunto já foi amplamente discutido em diversos fóruns, basta pesquisar um pouco sobre chmod e permissões no Ubuntu. Uma alternativa menos perigosa (permissão total para o usuário local apenas, para o diretório indicado e subdiretórios):
+
+```console
+chmod -R 700 caminho/completo/do/diretório/com/o/app
+```
+<br>
+<h1> Checando a aplicação no shinyapps.io </h1>
+
+É possível ter um nível de controle do serviço responsável pelo app no shinyapps.io. Algumas possibilidades:
+
+- É possível ter uma visão geral do app, no sentido de tempo online, acessos, datas de criação, atualização, tamanho da aplicação e outros.
+
+- Também é permitido analisar métricas computacionais da aplicação, como uso de memória, CPU, uso de rede e conexões simultâneas. 
+
+- Na versão paga, é possível customizar a URL. 
+
+- É possível ter fácil acesso aos logs da aplicação, sendo simples o processo de checar se ocorreu algum erro inesperado ao fazer o Deploy.
+
+Para mais detalhes, acesse [https://shiny.rstudio.com/articles/shinyapps.html](https://shiny.rstudio.com/articles/shinyapps.html).
+
+<br>
+
+<h1> Considerações Finais </h1>
+
+Bom pessoal, a ideia era apresentar um passo a passo bem resumido e sucinto sobre o processo de Deploy de um app em R com o shinyapps.io. Boa parte do tutorial já é disponibilizado no site do shinyapps.io, porém nem todas as pessoas possuem facilidade com o idioma em inglês.
+
+O próximo post será dedicado em apresentar a utilização do [RStudio Server Edição Open Source](https://rstudio.com/products/rstudio/#rstudio-server) para o seu app, com um exemplo funcional localmente na máquina.
+
+Valeu e até o próximo post !! :-)
+
+<div class="skills">
+    <hr class="hr-text" data-content="############">
+</div>
