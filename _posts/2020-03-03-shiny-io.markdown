@@ -166,7 +166,9 @@ library(rsconnect)
 deployApp()
 ```
 
-O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-).
+O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-). Deve ser semelhante com a imagem abaixo.
+
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
 
 <br>
 
