@@ -44,7 +44,7 @@
 
   .page-link {
     white-space: nowrap;
-    font-size: 1.5vw;
+    font-size: 1.5vh;
     color: $text-color;
     &:not(:last-child) {
       margin-right: 60px;
@@ -103,7 +103,7 @@
   }
 
   .social-description {
-    font-size: 2vw;
+    font-size: 2vh;
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     margin-right: $spacing-unit / 3;
@@ -572,24 +572,11 @@ table.paleBlueRows tfoot td {
   font-size: 14px;
 }
 
-@media only screen and (max-width: 900px) {
-  .page-link {
-    font-size: 2vh;
-  }
-  .trigger {
-    width: 100%;
-    left: 10%;
-  }   
-}
-
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 625px) {
 .searchInput {
     font-size: 2vh;
     width: 60%;
   }
-  .trigger {
-    left: 0%;
-  }   
 }
 
 @media only screen and (min-width: 1400px) {
