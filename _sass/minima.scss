@@ -1,14 +1,12 @@
 @charset "utf-8";
 
-// Define defaults for each variable.
-
 $base-font-family: Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace !default;
 $index-font-family: -apple-system, BlinkMacSystemFont, "Roboto Light", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
     
-$base-font-size:   20px !default; //16
-$base-font-weight: 500 !default; //400
+$base-font-size:   20px !default; 
+$base-font-weight: 500 !default; 
 $small-font-size:  $base-font-size * 0.7 !default;
-$base-line-height: 2 !default; //1
+$base-line-height: 2 !default; 
 
 $spacing-unit:     30px !default;
 
@@ -22,19 +20,11 @@ $grey-color-dark:  darken($grey-color, 25%) !default;
 
 $table-text-align: left !default;
 
-// Width of the content area
-$content-width:    1100px !default; //800px
+$content-width:    1100px !default; 
 
-$on-palm:          1100px !default; //600px
-$on-laptop:        1100px !default; //800px
+$on-palm:          1100px !default; 
+$on-laptop:        1100px !default; 
 
-// Use media queries like this:
-// @include media-query($on-palm) {
-//   .main-content {
-//     padding-right: $spacing-unit / 2;
-//     padding-left: $spacing-unit / 2;
-//   }
-// }
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
