@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Termos de Serviço
+title: Termos
 permalink: /termos-de-servico/
 ---
 

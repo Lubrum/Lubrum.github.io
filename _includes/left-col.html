@@ -7,14 +7,10 @@
     {%- if site.author -%}
         <a class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</a>
     {%- endif -%}
-
-    <br>
     
     {%- if site.email -%}
         <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a>
     {%- endif -%}  
-
-    <br> 
 
     {%- if site.description -%}     
         <a class="author-description">{{- site.description | escape -}}</a>

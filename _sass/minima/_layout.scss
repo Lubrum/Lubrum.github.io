@@ -46,7 +46,7 @@
 
   .page-link {
     white-space: nowrap;
-    font-size: 2vh;
+    font-size: 16px;
     color: $text-color;
     
     &:not(:last-child) {
@@ -195,16 +195,14 @@
   .post {
     margin-left: $spacing-unit;
     margin-right: $spacing-unit;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
-    padding-bottom: $spacing-unit;
-    padding-top: $spacing-unit;
+    padding-bottom: $spacing-unit / 8;
+    padding-top: $spacing-unit / 8;
   }
 
   .post-home-title {
     @include relative-font-size(1.5);
-    padding-top: $spacing-unit;
-    padding-bottom: $spacing-unit / 2;
+    padding-top: $spacing-unit / 8;
+    padding-bottom: $spacing-unit / 8;
     text-align: center;
     font-weight: 1000;
     line-height: 1;
@@ -214,8 +212,8 @@
   .post-home-subtitle {
     @include relative-font-size(0.8);
     color: $text-color;
-    padding-right: $spacing-unit;
-    padding-left: $spacing-unit;
+    padding-right: $spacing-unit / 8;
+    padding-left: $spacing-unit / 8;
     display: block;
     text-align: center;
     line-height: normal;
@@ -309,6 +307,7 @@
   }
 
   .post-li {
+    color: $text-color;
     padding-top: 15px;
     padding-bottom: 15px;
     padding-left: 40px;
@@ -335,18 +334,21 @@
 
   .post-link {
     @include relative-font-size(1);
-    text-decoration: none;
-    color: $text-color;
-    -webkit-transition: all 1.5s;
-    -moz-transition: all 1.5s;
-    transition: all 1.5s;
+    color: inherit;
+    -webkit-transition: all 5s ease-in-out;
+    -ms-transition: all 5s ease-in-out;
+    -o-transition: all 5s ease-in-out;
+    -moz-transition: all 5s ease-in-out;
+    transition: all 5s ease-in-out;
     &:hover {
-      -webkit-animation:rainbow2 15s infinite;
-      -ms-animation:rainbow2 15s infinite;
-      -o-animation:rainbow2 15s infinite;
-      animation:rainbow2 15s infinite;
-        @-webkit-keyframes rainbow2 {
-        0% {color: #ff0000;}
+      -webkit-animation: rr 15s infinite;
+      -ms-animation: rr 15s infinite;
+      -o-animation: rr 15s infinite;
+      -moz-animation: rr 15s infinite;
+      animation: rr 15s infinite;
+        @-webkit-keyframes rr {
+        0% {color: #ffffff;}
+        5% {color: #ff0000;}
         10% {color: #ff8000;}
         20% {color: #ffff00;}
         30% {color: #80ff00;}
@@ -358,8 +360,9 @@
         90% {color: #8000ff;}
         100% {color: #ff0080;}
         }
-        @-ms-keyframes rainbow {
-        0% {color: #ff0000;}
+        @-ms-keyframes rr {
+        0% {color: #fdfdfd;}
+        5% {color: #ff0000;}
         10% {color: #ff8000;}
         20% {color: #ffff00;}
         30% {color: #80ff00;}
@@ -371,8 +374,9 @@
         90% {color: #8000ff;}
         100% {color: #ff0080;}
         }
-        @-o-keyframes rainbow {
-        0% {color: #ff0000;}
+        @-o-keyframes rr {
+        0% {color: #ffffff;}
+        5% {color: #ff0000;}
         10% {color: #ff8000;}
         20% {color: #ffff00;}
         30% {color: #80ff00;}
@@ -384,8 +388,23 @@
         90% {color: #8000ff;}
         100% {color: #ff0080;}
         }
-        @keyframes rainbow {
-        0% {color: #ff0000;}
+        @-moz-keyframes rr {
+          0% {color: #ffffff;}
+          5% {color: #ff0000;}
+          10% {color: #ff8000;}
+          20% {color: #ffff00;}
+          30% {color: #80ff00;}
+          40% {color: #00ff00;}
+          50% {color: #00ff80;}
+          60% {color: #00ffff;}
+          70% {color: #0080ff;}
+          80% {color: #0000ff;}
+          90% {color: #8000ff;}
+          100% {color: #ff0080;}
+          }
+        @keyframes rr {
+        0% {color: #ffffff;}
+        5% {color: #ff0000;}
         10% {color: #ff8000;}
         20% {color: #ffff00;}
         30% {color: #80ff00;}
@@ -398,6 +417,7 @@
         100% {color: #ff0080;}
         }
     }
+
     span, h3, h6 {
       display: block;
       line-height: normal;
@@ -410,12 +430,19 @@
     span {
       @include relative-font-size(1);
     }
+    :not(:hover){
+      -webkit-animation: all 5s ease-in-out;
+      -ms-animation: all 5s ease-in-out;
+      -o-animation: all 5s ease-in-out;
+      -moz-animation: all 5s ease-in-out;
+      animation: all 5s ease-in-out;
+    }
   }
 
 /* ### Posts ### */
   
   .post-header {
-    margin-bottom: $spacing-unit;
+    margin-bottom: $spacing-unit / 8;
   }
 
   .post-title {
@@ -576,13 +603,40 @@ table.paleBlueRows tfoot td {
 }
 
 @media only screen and (max-width: 625px) {
-.searchInput {
+
+  .searchInput {
     font-size: 2vh;
     width: 60%;
   }
+
+}
+
+@media only screen and (min-width: 768px) {
+
+  .page-link {
+    @include relative-font-size(1.4);
+  }
+
+  .post-link {
+    @include relative-font-size(1.2);
+  }
+
+}
+
+@media only screen and (min-width: 1024px) {
+
+  .page-link {
+    @include relative-font-size(1.5);
+  }
+
+  .post-link {
+    @include relative-font-size(1.4);
+  }
+
 }
 
 @media only screen and (min-width: 1400px) {
+
   .container {
     grid-template-columns: 16% 1fr;
     grid-template-rows: 7% 1fr;
@@ -597,15 +651,20 @@ table.paleBlueRows tfoot td {
 
   .openbtn {
     display: inline-block;
-    position: absolute;
+    position: relative;
     font-size: 1.5vw;
     cursor: pointer;
-    background-color: #111;
+    background-color: $background-color;
     color: white;
-    left: 5%;
-    top: 2%;
-    width: 5%;
-    height: 88%;
+    left: 6%;
+    top: 11%;
+    width: 4%;
+    height: 75%;
+    border: none;
+    border-radius: 25%;
+    box-shadow:
+    #000000 4px 6px 10px,
+    #4d4d4d -2px -2px 10px;
   }
 
   .openbtn:hover {
@@ -619,9 +678,9 @@ table.paleBlueRows tfoot td {
 
   .navigation-menu {
     grid-template-columns: 1fr;
-    grid-template-rows: 50px 20% 10% 10% 15% 40px 40px 1fr;
+    grid-template-rows: 50px 30% 50px 50px 12.5% 40px 40px 1fr;
     position: fixed;
-    width: 16%;
+    width: 14%;
     height: 100%;
     left: 0%;
     top: 7.05%;
@@ -629,7 +688,7 @@ table.paleBlueRows tfoot td {
     -moz-transition: all 0.45s ease-in-out;
     -o-transition: all 0.45s ease-in-out;
     transition: all 0.45s ease-in-out;
-
+    padding: 1%;
     br{
       display: inline;
     }
@@ -654,13 +713,12 @@ table.paleBlueRows tfoot td {
 
   .box{
     position: relative;
-    left: 25%;
     display: inline-block;
     grid-row: 2 / 3;
-    width: 50%;
+    width: 70%;
+    left: 12%;
     height: auto;
     overflow: hidden;
-    align-items: center;
     border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
     box-shadow:
     #000000 8px 12px 20px,
@@ -798,15 +856,15 @@ table.paleBlueRows tfoot td {
   }
 
   .post-home-title {
-    @include relative-font-size(2);
+    @include relative-font-size(2.5);
   }
   
   .post-home-subtitle {
-    @include relative-font-size(1.2);
+    @include relative-font-size(1.8);
   }
 
   .post-link {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1.7);
   }
 
   table.paleBlueRows tbody td {
