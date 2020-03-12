@@ -180,7 +180,8 @@
   .home {
     position: relative;
     min-height: 100vh;
-    background-color: #1b1b1b;
+    //background-color: #1b1b1b;
+    background-image: url('../assets/img/post1/gif4.gif');
   }
 
   .home .post{
@@ -193,20 +194,21 @@
   }
 
   .post {
-    margin-left: $spacing-unit;
-    margin-right: $spacing-unit;
+    margin-left: 8%;
+    margin-right: 8%;
     padding-bottom: $spacing-unit / 8;
     padding-top: $spacing-unit / 8;
   }
 
   .post-home-title {
     @include relative-font-size(1.5);
-    padding-top: $spacing-unit / 8;
-    padding-bottom: $spacing-unit / 8;
+    padding-top: $spacing-unit / 3;
+    padding-bottom: $spacing-unit / 6;
     text-align: center;
     font-weight: 1000;
     line-height: 1;
     color: $text-color;
+    text-shadow:#000e91 0px 0px 24px;
   }
   
   .post-home-subtitle {
@@ -222,8 +224,8 @@
 // Source from code below: https://codepen.io/omarsherifs/pen/KGLYYW (searchBox)
 
   .searchBox {
-    margin-left: $spacing-unit;
-    margin-right: $spacing-unit;
+    margin-left: $spacing-unit / 4;
+    margin-right: $spacing-unit / 4;
     position: relative;
     left: 0%;
     height: 30px;
@@ -624,6 +626,13 @@ table.paleBlueRows tfoot td {
 }
 
 @media only screen and (min-width: 1024px) {
+
+  .post {
+    margin-left: $spacing-unit;
+    margin-right: $spacing-unit;
+    padding-bottom: $spacing-unit / 8;
+    padding-top: $spacing-unit / 8;
+  }
 
   .page-link {
     @include relative-font-size(1.5);
