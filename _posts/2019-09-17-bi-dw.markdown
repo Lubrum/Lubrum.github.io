@@ -43,12 +43,12 @@ O método utilizado para desenvolver esta pesquisa foi o seguinte:
 
 a. O Mendeley foi utilizado para buscar informações nas seguintes bases de dados: AGRIS, BDPA, EBSCO, Google Scholar, ProQuest, SciELO, ScienceDirect, SCOPUS, SpringerLink, Taylor & Francis Online, Web of Science and Wiley Online Library. 
 
-b. As seguintes restrições foram aplicadas para filtragem dos artigos: <br>
-*(i) artigos publicados em revistas e conferências; <br>
-(ii) artigos publicados em determinado escopo temporal (2008-2018); <br>
-(iii) poucas palavras-chave utilizadas e uma única busca em cada base de dados; <br>
-(iv) bases de dados e mecanismos de busca disponíveis no site da CAPES Periódicos com acesso gratuito aos artigos de Ciências Agrárias; <br>
-(v) alinhamento dos artigos ao tema de acordo com a percepção do próprio autor.*<br>
+b. As seguintes restrições foram aplicadas para filtragem dos artigos: 
+*(i) artigos publicados em revistas e conferências;
+(ii) artigos publicados em determinado escopo temporal (2008-2018);
+(iii) poucas palavras-chave utilizadas e uma única busca em cada base de dados; 
+(iv) bases de dados e mecanismos de busca disponíveis no site da CAPES Periódicos com acesso gratuito aos artigos de Ciências Agrárias; 
+(v) alinhamento dos artigos ao tema de acordo com a percepção do próprio autor.*
 
 c. Foi utilizada a seguinte combinação de palavras-chave para a busca dos artigos: ("business intelligence" OR "inteligencia de negocio" OR "data warehouse" OR "data warehousing" OR "armazem de dados" OR "almacen de datos") AND (agricultur* OR livestock OR pecuaria OR ganaderia OR agribusiness OR agronegocio OR agroindustria). A busca foi realizada nos campos título, resumo e palavra-chave, simultaneamente, nos casos em que tal operação fosse permitida.
 
@@ -130,11 +130,11 @@ A Figura abaixo, desenvolvida com a linguagem R, apresenta a relação entre a q
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure8.png" alt="Citações aos artigos selecionados e citações aos autores mais citados nas referências dos artigos em um gráfico de pontos.">
 
 Para exemplificar a informação da coordenada X, segue um exemplo abaixo: 
-- O artigo A tem os autores 1, 2 e 3 e o artigo B tem os autores 4, 5 e 6. <br>
-- O artigo A possui referências aos seguintes grupos de autores: {1, 2, 5}, {3}, {1, 2} e {1, 5}. <br>
-- O artigo B possui referências aos seguintes grupos de autores: {4, 5}, {3, 4} e {1, 6}. <br>
-- O autor mais citado do artigo A tem **4 citações** nas referências dos artigos A e B (autor 1 é mais citado). <br>
-- O autor mais citado do artigo B tem **3 citações** nas referências dos artigos A e B (autor 5 é mais citado). <br>
+- O artigo A tem os autores 1, 2 e 3 e o artigo B tem os autores 4, 5 e 6. 
+- O artigo A possui referências aos seguintes grupos de autores: {1, 2, 5}, {3}, {1, 2} e {1, 5}. 
+- O artigo B possui referências aos seguintes grupos de autores: {4, 5}, {3, 4} e {1, 6}. 
+- O autor mais citado do artigo A tem **4 citações** nas referências dos artigos A e B (autor 1 é mais citado).
+- O autor mais citado do artigo B tem **3 citações** nas referências dos artigos A e B (autor 5 é mais citado). 
 
 Foi utilizado o **Princípio de Pareto**, ou regra do 80/20, para definir as retas que separam os grupos de citações dos artigos e dos autores das referências. O Princípio de Pareto diz que aproximadamente 80% dos efeitos vêm de 20% das causas. Neste caso, optou-se por destacar as causas (ou variáveis) 20% mais relevantes. 
 O gráfico acima, portanto, apresenta os grupos de artigos que possuem mais citações, os que possuem mais citações aos autores nas referências, os que são mais relevantes em ambos os aspectos e os que possuem poucas ou nenhuma citação tanto aos artigos como aos autores nas referências.

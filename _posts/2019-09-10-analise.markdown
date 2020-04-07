@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Análise Preliminar da Produção Leiteira Brasileira e Gaúcha - Parte 1
+title: Análise da Produção Leiteira Brasileira e Gaúcha - Parte 1
 subtitle: Foram explorados dados publicos do IBGE sobre Pecuária Leiteira, específicamente informações dos Censos Agropecuários e da Pesquisa Pecuária Municipal.
 date: 2019-09-10 00:50:00 -0300
 categories: análise de dados
@@ -23,15 +23,23 @@ Cabe mencionar que há diferenças entre os valores de produção leiteira da PP
 <h1> Metodologia </h1>
 
 As seguintes ferramentas e linguagens foram utilizadas para a produção das análises e geração dos gráficos:
+
 - [R](https://www.r-project.org/) (R, 2019): Linguagem de Programação utilizada para Ciência de Dados. Em nosso caso, utilizada específicamente para as etapas de importação, organização, limpeza e visualização de dados;
+
 - [Jupyter](https://jupyter.org/) (Jupyter, 2019): Ambiente de Programação Integrado para Ciência de Dados. Em nosso caso, é o ambiente utilizado para programar as soluções com o R;
+  
 - [Excel](https://support.office.com/pt-br/excel) versão 2013 (Microsoft Excel, 2019): Programa de planilhas eletrônicas para armazenamento, manipulação e visualização de dados. Os dados são obtidos do IBGE no formato de planilha eletrônica e o software utilizado para manipulação destes dados é o Excel, que no nosso caso foi utilizado apenas para verificar o formato que os dados estão na planilha;
+ 
 - [Github](https://github.com/) (Github, 2019): Plataforma com comunidades de desenvolvedores para descoberta, compartilhamento e criação de códigos e soluções de software com controle de versão. O Github foi utilizado para compartilhar o código utilizado neste tutorial para garantir a reprodutibilidade dos experimentos e isenção na realização das análises dos dados. Os códigos do projeto podem ser acessados [neste link](https://github.com/Lubrum/Brazilian-Milk-Production).
 
 <h1> Descrição e Análise dos Resultados</h1>
 Na Figura abaixo são comparadas as produções leiteiras do Brasil e do RS no período de 1974-2017, com o uso de dados da [PPM](https://sidra.ibge.gov.br/pesquisa/ppm/tabelas/brasil/2017) (IBGE, 2019a).
 
+<br>
+
 {% include widgets/figure1.html %}
+
+<br>
 
 As duas linhas no gráfico representam um modelo de regressão linear em que foi utilizada a produção leiteira como variável dependente e o ano como variável independente para o Brasil e o RS. É possível observar que o Brasil e o RS possuem uma produção leiteira com tendência de crescimento aproximadamente linear. Foi possível observar que nas faixas de anos de 1974-1984 e 2008-2017 houve uma produção leiteira acima do esperado, enquanto que entre 1985 e 2007 ela foi abaixo do esperado. Também observa-se que, considerando todo o período em análise, houve uma redução na produção leiteira apenas no período 2014-2017 (mais recente). No caso do RS, observa-se padrões semelhantes ao do cenário nacional. 
 
@@ -51,11 +59,15 @@ Foi possível observar que o estado de Minas Gerais (MG) se manteve em primeiro 
 
 Observada a produção leiteira no Brasil e em suas UF, é agora colocado em foco o número de estabelecimentos rurais que produziram leite, em nível nacional e municipal (apenas no estado do RS). Tais dados estão disponíveis nos Censos Agropecuários de [2006](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2006/segunda-apuracao) e [2017](https://sidra.ibge.gov.br/pesquisa/censo-agropecuario/censo-agropecuario-2017) (IBGE, 2019b). As duas Figuras abaixo apresentam a variação absoluta e percentual dos estabelecimentos rurais que produziram leite entre 2006 e 2017 por faixa de área total no Brasil.
 
+<br>
+
 {% include widgets/figure2.html %}
 
 <br>
 
 {% include widgets/figure3.html %}
+
+<br>
 
 O NA (Not Available) nos gráficos apontam o somatório de produtores que não souberam informar a área total do estabelecimento rural. É possível observar uma distribuição aproximadamente normal nos dados que evidenciam um padrão de desistência dos produtores rurais da atividade leiteira no período 2006-2017 na primeira Figura. A afirmação anterior é válida para as faixas de áreas disponibilizadas pelo IBGE. Percebe-se uma maior desistência de produtores de leite com estabelecimentos com tamanhos nas faixas de 5 até 50 hectares. Apesar da redução dos estabelecimentos entre 0 e 5 hectares não representarem um valor significativo perante às de 5 até 50 hectares, se observada a segunda Figura, é evidenciado que, percentualmente, os produtores de estabelecimentos rurais de menores tamanhos têm abandonado mais a atividade leiteira do que os de estabelecimentos maiores. Ainda sim, um percentual significativo dos responsáveis pelos maiores estabelecimentos rurais estão desistindo da atividade leiteira, evidência visualizada na segunda Figura. Em resumo, observa-se uma redução no número de estabelecimentos que produzem leite em todas as faixas de área disponibilizadas, sendo que:
 - A redução absoluta mais significativa foi a das propriedades rurais com área entre 5 e 50 hectares.

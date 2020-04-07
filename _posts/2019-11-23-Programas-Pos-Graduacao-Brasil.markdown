@@ -127,19 +127,34 @@ Com os dados consolidados, foi necessário apenas importar, integrar e visualiza
 [O shapefile dos mapas pode ser obtido aqui](http://www.uel.br/laboratorios/lapege/pages/base-de-dados-shp-do-brasil.php) e os dados das cidades e estados do Brasil no [Github do kelvins](https://github.com/kelvins/Municipios-Brasileiros/tree/master/csv).
 
 ```R
-universities <- read.xlsx("csv/universities_after.xlsx", sheetIndex = 1, encoding = "UTF-8")
-brazilian_cities <- read.csv("csv/brazilian_cities.csv", sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
-brazilian_states <- read.csv("csv/brazilian_states.csv",sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
-research_names <- read.xlsx("csv/research_names.xlsx", sheetIndex = 1, encoding = "UTF-8")
-university_research <- read.xlsx("csv/university_research.xlsx", sheetIndex = 1, encoding = "UTF-8")
-graduation_level <- read.xlsx("csv/graduation_level.xlsx", sheetIndex = 1, encoding = "UTF-8")
-course_name <- read.xlsx("csv/course_name.xlsx", sheetIndex = 1, encoding = "UTF-8")
-concentration_area <- read.xlsx("csv/concentration_area.xlsx", sheetIndex = 1, encoding = "UTF-8")
-university_concentration_area <- read.xlsx("csv/university_concentration_area.xlsx", sheetIndex = 1, encoding = "UTF-8")
-shape_brazil <- readOGR("shapefile/Brazil.shp", "Brazil", use_iconv = TRUE)
+# reading data from csv
+universities_path <- "../csv/universities_after.xlsx"
+cities_path <- "../csv/brazilian_cities.csv"
+states_path <- "../csv/brazilian_states.csv"
+research_names_path <- "../csv/research_names.xlsx"
+university_research_path <- "../csv/university_research.xlsx"
+graduation_level_path <- "../csv/graduation_level.xlsx"
+course_name_path <- "../csv/course_name.xlsx"
+concentration_area_path <- "../csv/concentration_area.xlsx"
+university_concentration_area_path <- "../csv/university_concentration_area.xlsx"
 
-all_data <- universities %>% left_join(brazilian_cities, by = c("city_id" = "ibge_code"))
-all_data <- all_data %>% left_join(brazilian_states, by = c("state_id" = "state_id"))
+universities <- read.xlsx(universities_path, sheetIndex = 1, encoding = "UTF-8")
+cities <- read.csv(cities_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
+states <- read.csv(states_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
+research_names <- read.xlsx(research_names_path, sheetIndex = 1, encoding = "UTF-8")
+university_research <- read.xlsx(university_research_path, sheetIndex = 1, encoding = "UTF-8")
+graduation_level <- read.xlsx(graduation_level_path, sheetIndex = 1, encoding = "UTF-8")
+course_name <- read.xlsx(course_name_path, sheetIndex = 1, encoding = "UTF-8")
+concentration_area <- read.xlsx(concentration_area_path, sheetIndex = 1, encoding = "UTF-8")
+university_concentration_area <- read.xlsx(university_concentration_area_path, sheetIndex = 1, encoding = "UTF-8")
+
+# reading data from shapefile
+shape_brazil_path <- "../shapefile/Brazil.shp"
+shape_brazil <- readOGR(shape_brazil_path, "Brazil", encoding = "latin1")
+
+# joining data into one dataframe
+all_data <- universities %>% left_join(cities, by = c("city_id" = "ibge_code"))
+all_data <- all_data %>% left_join(states, by = c("state_id" = "state_id"))
 all_data <- all_data %>% left_join(university_research, by = c("id" = "university_id"))
 all_data <- all_data %>% left_join(research_names, by = c("research_id" = "id"))
 all_data <- all_data %>% left_join(graduation_level, by = c("level" = "id"))
@@ -147,58 +162,66 @@ all_data <- all_data %>% left_join(course_name, by = c("course" = "id"))
 all_data <- all_data %>% left_join(university_concentration_area, by = c("id" = "university_id"))
 all_data <- all_data %>% left_join(concentration_area, by = c("concentration_area_id" = "id"))
 
+# cleaning and preparing data
 all_data <- all_data[,-9]
-all_data <- all_data[,-13]
-all_data <- all_data[,-13]
-all_data <- all_data[,-15]
+all_data <- all_data[,-14]
+all_data <- all_data[,-16]
+all_data <- all_data[,-19]
 all_data$latitude <- as.numeric(as.character(all_data$latitude))
 all_data$longitude <- as.numeric(as.character(all_data$longitude))
 all_data$grade <- as.numeric(as.character(all_data$grade))
 
+# possible values for CAPES concept 
 mybreaks <- as.numeric(c(3, 4, 5, 6, 7))
 
+# black theme
 theme <- theme(axis.text = element_text(size = 16),
-              plot.caption = element_text(size = 12, face = "bold"),
-              axis.title = element_text(size = 18, face = "bold"),
-              legend.title = element_text(size = 18), 
-              legend.text = element_text(size = 14),
-              legend.key.size = unit(1.0, "cm"),
-              legend.key.width = unit(0.4,"cm"),
-              text = element_text(color = "#22211d"), 
-              legend.background = element_rect(fill = "#dddddd", color = "black"),
-              panel.background = element_rect(fill = "#BFD5E3", colour = "#6D9EC1"),
-              plot.title = element_text(size = 22, hjust = 0.5, color = "#4e4d47"))
+               plot.caption = element_text(size = 12, face = "bold", color = "white"),
+               axis.title = element_text(size = 18, face = "bold", color = "white"),
+               legend.title = element_text(size = 18, color = "white"), 
+               legend.text = element_text(size = 14, color = "white"),
+               legend.key.width = unit(0.4, "cm"),
+               legend.position = c(.95, .25),
+               legend.key.size = unit(0.8, "cm"),
+               legend.box.background = element_rect(color = "white", size = 0.5),
+               legend.justification = c("right", "top"),
+               legend.box.just = "right",
+               legend.margin = margin(6, 6, 6, 6)
+               text = element_text(color = "white"), 
+               legend.background = element_rect(fill = "black"),
+               panel.background = element_rect(fill = "black"),
+               plot.title = element_text(size = 19, hjust = 0.5, color = "white"),
+               panel.grid.minor.y = element_line(size =.1, color = "grey"),
+               panel.grid.minor.x = element_line(size =.1, color = "grey"),
+               panel.grid.major.y = element_line(size =.1, color = "grey"),
+               panel.grid.major.x = element_line(size =.1, color = "grey"),
+               plot.background = element_rect(fill = "black"),
+               axis.text.x = element_text(color = "white"),
+               axis.text.y = element_text(color = "white"),
+               axis.title.x = element_text(color = "white"),
+               axis.title.y = element_text(color = "white"))
 
-labs <- labs(x = "Longitude", y = "Latitude", 
-caption = "Data source: Computer Science Graduating Programs - Sucupira Website") 
 
-all_data_2 <- subset(all_data, all_data$graduation_level == "Mestrado e Doutorado Acadêmicos")
+labs <- labs(x = "Longitude", y = "Latitude", caption = "Fonte: Programas de Pós-Graduação em Computação - Plataforma Sucupira.") 
+
+
+all_data_2 <- subset(all_data, all_data$research_name == "Inteligencia Artificial")
 
 ggplot() + 
-geom_polygon(data = shape_brazil, aes(x = long, y = lat, group = group), fill = "white", color = "black", size = 0.15) +
-geom_point(data = all_data_2[!duplicated(all_data_2$id),], 
-aes(x = longitude, y = latitude, size = grade, color = grade, shape = 19, alpha = I(2/grade))) +
-geom_text_repel(data = all_data_2[all_data_2$longitude > -45 & 
-!duplicated(all_data_2$code),], 
-aes(x = longitude, y = latitude, label = code, size = 6), hjust = 0, 
-nudge_x = -34 - subset(all_data_2, all_data_2$longitude > -45 & 
-!duplicated(all_data_2$code))$longitude, direction = "y", show.legend = FALSE) +
-geom_text_repel(data = all_data_2[all_data_2$longitude <= -45 & 
-!duplicated(all_data_2$code),], 
-aes(x = longitude, y = latitude, label = code, size = 6), hjust = 1, 
-nudge_x = -72 - subset(all_data_2, all_data_2$longitude <= -45 & 
-!duplicated(all_data_2$code))$longitude, direction = "y", show.legend = FALSE) + 
-scale_shape_identity() +
-scale_color_viridis(name = "Conceito", breaks = mybreaks) +
-scale_size_continuous(name = "Conceito", breaks = mybreaks) +
+geom_polygon(data = shape_brazil, aes(x = long, y = lat, group = group), fill = "grey", size = 0.1, color = "black") +
+geom_point(data = all_data_2[!duplicated(all_data_2$id),], aes(x = longitude, y = latitude, size = as.factor(grade), color = as.factor(grade), alpha = I(2/grade))) +
+scale_colour_manual(name = "Conceito", values = c("red","blue","dark green","green","yellow")) +
+scale_size_manual(name = "Conceito", values = mybreaks) +
+geom_text_repel(data = all_data_2[all_data_2$longitude > -45 & !duplicated(all_data_2$code),], aes(x = longitude, y = latitude, label = code, size = as.factor(5)), hjust = 0, nudge_x = -34 - subset(all_data_2, all_data_2$longitude > -45 & !duplicated(all_data_2$code))$longitude, direction = "y", show.legend = FALSE, color = "white", segment.color = "white", segment.size  = 0.15) +
+geom_text_repel(data = all_data_2[all_data_2$longitude <= -45 & !duplicated(all_data_2$code),], aes(x = longitude, y = latitude, label = code, size = as.factor(5)), hjust = 1, nudge_x = -72 - subset(all_data_2, all_data_2$longitude <= -45 & !duplicated(all_data_2$code))$longitude, direction = "y", show.legend = FALSE, color = "white", segment.color = "white", segment.size  = 0.15) + 
 coord_map() + 
-guides(colour = guide_legend(), size = guide_legend()) +
-ggtitle("Programas de Pós-Graduação com Mestrado e Doutorado") +
+guides() +
+ggtitle("Programas de Pós-Graduação com Pesquisa em Inteligência Artificial") +
 labs + theme
 ```
 <br>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure4.png" alt="Mapa com os Programas de Pós-Graduação em Computação do Brasil com ambos mestrado e doutorado no mesmo programa, representados com pontos coloridos.">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure4.png" alt="Mapa com os Programas de Pós-Graduação em Computação do Brasil com pesquisa em Inteligência Artificial.">
  
 Também é possível gerar gifs como a apresentada abaixo, mostrando o surgimento dos Programas com o passar dos anos no Brasil.
 
