@@ -27,7 +27,7 @@ layout: default
 
       <!-- share buttons -->
       <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flubrum.github.io%2F2019%2F09%2F01%2Fbem-vindos&layout=button_count&size=large&appId=2337139719936629&width=129&height=28" width="129" height="28" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="facebook-hashtag-button"></iframe>      <!--------------------------------------------------->
-      <a class="twitter-share-button" href="{{ post.url | relative_url | escape }}" data-show-count="false" data-text="{{ post.title }}" data-hashtags="R,DataScience">Tweet</a>
+      <a class="twitter-share-button" href="{{ post.url | relative_url | escape }}" data-show-count="false" data-text="{{ post.title }}" data-size="large" data-hashtags="R,DataScience">Tweet</a>
       <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>    
       <script type="IN/Share" data-url="{{ post.url | relative_url | escape }}"> {{ post.title }} </script>
     
@@ -46,7 +46,9 @@ layout: default
     {%- endif -%}
   </p>
 
-  <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="100%" data-numposts="5"></div>
-  
+  <div id="fb-container">
+    <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="100%" data-colorscheme="dark" data-numposts="5"></div>
+  </div>
+
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

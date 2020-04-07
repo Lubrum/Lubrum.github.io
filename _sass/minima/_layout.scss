@@ -564,6 +564,7 @@ $text: #ffffff;
 
 }
 
+
 // tables //
 
 table.paleBlueRows {
@@ -627,7 +628,7 @@ table.paleBlueRows tfoot td {
 @media only screen and (min-width: 768px) {
 
   .page-link {
-    @include relative-font-size(1.4);
+    @include relative-font-size(1);
   }
 
   .post-link {
@@ -646,7 +647,7 @@ table.paleBlueRows tfoot td {
   }
 
   .page-link {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1);
   }
 
   .post-link {
@@ -853,7 +854,7 @@ table.paleBlueRows tfoot td {
     grid-row: 4 / 5;
     text-justify: distribute;
     word-spacing: -2px;
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.65);
     margin-right: $spacing-unit / 2;
     margin-left: $spacing-unit / 2;
     line-height: normal;
@@ -874,21 +875,21 @@ table.paleBlueRows tfoot td {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    box-shadow: -1px -1px 0px 1px #7c7c7c inset;
+    //box-shadow: -1px -1px 0px 1px #7c7c7c inset;
     display: block;
     overflow-x: auto;
   }
 
   .post-home-title {
-    @include relative-font-size(2.5);
+    @include relative-font-size(1.8);
   }
   
   .post-home-subtitle {
-    @include relative-font-size(1.8);
+    @include relative-font-size(1.2);
   }
 
   .post-link {
-    @include relative-font-size(1.7);
+    @include relative-font-size(1.6);
   }
 
   table.paleBlueRows tbody td {
@@ -913,7 +914,7 @@ table.paleBlueRows tfoot td {
     grid-column: 1 / 2;
     padding-right: $spacing-unit / 3;
     padding-left: $spacing-unit / 3;
-    @include relative-font-size(0.7);
+    @include relative-font-size(0.6);
     -webkit-transition: all 1.5s;
     -moz-transition: all 1.5s;
     transition: all 1.5s;
