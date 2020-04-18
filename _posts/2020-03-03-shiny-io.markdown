@@ -32,7 +32,9 @@ Vocês precisam minimamente do RStudio e do R instalados antes de começar.
 
 <h1> Criando uma conta no shinyapps.io </h1>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure1.png" alt="Print da página inicial do shinyapps.io.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+  <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure1.png" alt="Print da página inicial do shinyapps.io.">
+</figure>
 
 A página acima é a inicial do shinyapps.io, onde você pode criar uma conta gratuitamente com um email e senha, ou você pode utilizar sua conta existente do [Google](https://www.google.com.br/) ou do [Github](https://github.com/).
 
@@ -44,7 +46,9 @@ O shinyapps vai solicitar que você dê um nome para a sua conta, que também se
 
 Com a linguagem R e o RStudio instalados e devidamente configurados, vamos agora instalar o pacote rsconnect. A figura abaixo apresenta este processo.
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure2.png" alt="Print do RStudio com a instalação do pacote rsconnect.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+  <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure2.png" alt="Print do RStudio com a instalação do pacote rsconnect.">
+</figure>
 
 Após o êxito da instalação, utilize o comando library(rsconnect) para carregar a biblioteca para o ambiente do RStudio.
 
@@ -168,7 +172,9 @@ deployApp()
 
 O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-). Deve ser semelhante com a imagem abaixo.
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+  <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
+</figure>
 
 <br>
 

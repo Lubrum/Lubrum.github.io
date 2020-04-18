@@ -556,10 +556,9 @@ $text: #ffffff;
 .img_content {
   position: relative;
   transform: translate(-50%,0%);
-  top: 0%;
   left: 50%;
-  padding: 2% 0%;
-
+  width: 100%;
+  //padding: 2% 0%;
 }
 
 
@@ -718,7 +717,7 @@ table.paleBlueRows tfoot td {
   } 
 
   .animate .main-content{
-    width: calc(104% + 16%);
+    width: calc(119%);
     transform: translateX(-16%);
   }
   

@@ -39,7 +39,6 @@ ul, ol, dl, figure,
 /**
  * Images
  */
-
 img {
   max-width: 100%;
   vertical-align: middle;
@@ -55,6 +54,22 @@ figure > img {
 
 figcaption {
   font-size: $small-font-size;
+}
+
+figure.zoom {
+  & img:hover {
+    opacity: 0;
+  }
+  img {
+    transition: opacity .5s;
+    display: block;
+    width: 100%;
+  }
+  background-position: 50% 50%;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  cursor: zoom-in;
 }
 
 /**
@@ -133,6 +148,8 @@ code {
 pre {
   padding: 8px 12px;
   overflow-x: auto;
+  overflow-y: auto;
+  max-height: 600px;
   box-shadow:
     #000000 4px 4px 8px,
     #4d4d4d -4px -4px 8px;
@@ -181,6 +198,6 @@ p {
 
 @media only screen and (min-width: 992px) {
   body, html {
-    font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+    font: $base-font-weight #{$base-font-size*0.9}/#{$base-line-height} $base-font-family;
   }
 }

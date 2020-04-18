@@ -30,7 +30,9 @@ Inicialmente, os dados dos Programas de Pós-Graduação em Computação foram e
 
 <br>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure1.png" alt="Print do PDF com dados dos Programas de Pós-Graduação em Computação do Brasil.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure1.png" alt="Print do PDF com dados dos Programas de Pós-Graduação em Computação do Brasil.">
+</figure>
 
 <br>
 
@@ -102,7 +104,9 @@ Porém, descobri posteriormente sobre a existência do site [Sucupira](https://s
 
 <br>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure2.png" alt="Print do site Sucupira com dados dos Programas de Pós-Graduação em Computação do Brasil.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure2.png" alt="Print do site Sucupira com dados dos Programas de Pós-Graduação em Computação do Brasil.">
+</figure>
 
 <br>
 
@@ -114,7 +118,9 @@ O resultado deste processo pode ser conferido abaixo.
 
 <br>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure3.png" alt="Print da planilha Excel com os dados dos Programas de Pós-Graduação em Computação do Brasil.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure3.png" alt="Print da planilha Excel com os dados dos Programas de Pós-Graduação em Computação do Brasil.">
+</figure>
 
 <br>
 
@@ -222,7 +228,7 @@ labs + theme
 <br>
 
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure4.png" alt="Mapa com os Programas de Pós-Graduação em Computação do Brasil com pesquisa em Inteligência Artificial.">
- 
+
 Também é possível gerar gifs como a apresentada abaixo, mostrando o surgimento dos Programas com o passar dos anos no Brasil.
 
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure5.gif" alt="Mapa animado com o surgimento, com o passar dos anos, dos Programas de Pós-Graduação em Computação do Brasil, representados com pontos coloridos.">

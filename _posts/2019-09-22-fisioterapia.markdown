@@ -33,25 +33,31 @@ As seguintes ferramentas e linguagens foram utilizadas para a extração e organ
 
 Os dados presentes no PDF estavam no seguinte formato:
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure1.png" alt="Print do arquivo no formato PDF disponibilizado pelo CREFITO.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure1.png" alt="Print do arquivo no formato PDF disponibilizado pelo CREFITO.">
+</figure>
 
 Após a importação no ambiente do RStudio (através das funções pdf_text e read_lines do R), os dados ficaram no seguinte formato:
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure2.png" alt="Print dos dados lidos do arquivo PDF do CREFITO no ambiente do RStudio.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure2.png" alt="Print dos dados lidos do arquivo PDF do CREFITO no ambiente do RStudio.">
+</figure>
 
 A dificuldade evidente é a de se extrair dados de um PDF que não possui um padrão no formato da tabela. Cada município pode ter ou não, por exemplo, consultórios de fisioterapia, e na ausência desta informação, nada era apresentado na tabela. Outro problema que ficou evidente ao realizar a integração com os dados do shapefile foi a nomeação diferenciada (e incorreta) de algumas cidades. A última página também possuia um formato distinto do restante do PDF, portanto foi necessário dar um tratamento especial para a última página do PDF. Por fim, mesmo com estratégias definidas para uma leitura algoritmica dos dados, as informações de algumas cidades não eram lidas da forma correta. Foi necessário realizar uma correção manual destes registros, através de comparações visuais com o arquivo PDF original. O formato final dos dados no RStudio é apresentado abaixo.
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure3.png" alt="Print dos dados lidos do arquivo PDF após a organização e tratamentos adequados, no formato de dataframe.">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+    <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure3.png" alt="Print dos dados lidos do arquivo PDF após a organização e tratamentos adequados, no formato de dataframe.">
+</figure>
 
 Após uma série de tratamentos nos dados, envolvendo manipulação de strings, uso de estruturas condicionais e de repetição, manipulação de dataframes, integração de dados com shapefiles e conversão do formatos dos dados, foi possível gerar dois mapas sobre:
 
 <h3> 1 - Número de fisioterapeutas nos municípios do Rio Grande do Sul.</h3>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure4.jpeg" alt="Mapa com cinco categorias de números de fisioterapeutas por município no estado do Rio Grande do Sul, Brasil.">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure4.png" alt="Mapa com cinco categorias de números de fisioterapeutas por município no estado do Rio Grande do Sul, Brasil.">
 
 <h3> 2 - Taxa população/fisioterapeuta nos municípios do Rio Grande do Sul.</h3>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure5.jpeg" alt="Mapa com cinco categorias de taxas de fisioterapeutas/população, por município, no estado do Rio Grande do Sul, Brasil.">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure5.png" alt="Mapa com cinco categorias de taxas de fisioterapeutas/população, por município, no estado do Rio Grande do Sul, Brasil.">
 
 É possível também gerar outras informações envolvendo o número de terapeutas ocupacionais, consultórios, entidades filantrópicas, órgaõs públicos e empresas, além da relação destas variáveis com o número de fisioterapeutas.
 
