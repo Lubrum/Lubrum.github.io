@@ -136,7 +136,7 @@ blockquote {
 
 pre,
 code {
-  @include relative-font-size(0.9375);
+  @include relative-font-size(0.5);
   color: rgb(68, 148, 36);
   background-color: rgb(0, 0, 0);
 }
@@ -149,7 +149,7 @@ pre {
   padding: 8px 12px;
   overflow-x: auto;
   overflow-y: auto;
-  max-height: 600px;
+  max-height: 200px;
   box-shadow:
     #000000 4px 4px 8px,
     #4d4d4d -4px -4px 8px;
@@ -196,8 +196,19 @@ p {
   padding-top: 10px;
 }
 
-@media only screen and (min-width: 992px) {
-  body, html {
-    font: $base-font-weight #{$base-font-size*0.9}/#{$base-line-height} $base-font-family;
+@media only screen and (min-width: 768px) { 
+  pre, code {
+    @include relative-font-size(0.6);
+  }
+
+  pre {
+    max-height: 600px;  
   }
 }
+
+@media only screen and (min-width: 992px) {
+  body, html {
+    font: $base-font-weight #{$base-font-size*0.8}/#{$base-line-height} $base-font-family;
+  }
+}
+

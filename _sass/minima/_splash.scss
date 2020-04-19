@@ -110,8 +110,8 @@
           height: 100%;
           fill: $background;
           stroke: 0;
-          -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
-          clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+          -webkit-clip-path: polygon(25vw 40vh, 75vw 40vh, 75vw 60vh, 25vw 60vh);
+          clip-path: polygon(25vw 40vh, 75vw 40vh, 75vw 60vh, 25vw 60vh);
           @include animation('expand .7s ease-in forwards 2.7s');
         }
       }
@@ -145,8 +145,8 @@
   
   @include keyframes(scale) {
     100% {
-      -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
-      clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+      -webkit-clip-path: polygon(25vw 40vh, 75vw 40vh, 75vw 60vh, 25vw 60vh);
+      clip-path: polygon(25vw 40vh, 75vw 40vh, 75vw 60vh, 25vw 60vh);
     }
   }
   
@@ -208,4 +208,24 @@
 
   .hide {
     display: none;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    .splash {
+      &_svg {
+        svg {
+          rect {
+            -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+            clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+          }
+        }
+      }
+    }
+    
+    @include keyframes(scale) {
+      100% {
+        -webkit-clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+        clip-path: polygon(45vw 40vh, 55vw 40vh, 55vw 60vh, 45vw 60vh);
+      }
+    }
   }

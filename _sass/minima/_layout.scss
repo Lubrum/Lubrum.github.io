@@ -201,9 +201,9 @@
   }
 
   .post-home-title {
-    @include relative-font-size(1.2);
-    padding-top: $spacing-unit / 4;
-    padding-bottom: $spacing-unit / 12;
+    @include relative-font-size(1);
+    padding-top: $spacing-unit / 2;
+    padding-bottom: $spacing-unit / 8;
     text-align: center;
     font-weight: 1000;
     line-height: 1;
@@ -212,10 +212,9 @@
   }
   
   .post-home-subtitle {
-    @include relative-font-size(0.8);
+    @include relative-font-size(0.7);
     color: $text-color;
-    padding-right: $spacing-unit / 8;
-    padding-left: $spacing-unit / 8;
+    padding: $spacing-unit / 4;
     display: block;
     text-align: center;
     line-height: normal;
@@ -331,7 +330,15 @@
   }
 
   .post-meta {
-    font-size: $small-font-size;
+    font-size: $small-font-size * 0.4;
+  }
+
+  iframe {
+    display: none;
+  }
+
+  .IN-widget{
+    display: none !important;
   }
 
   .post-link {
@@ -439,7 +446,7 @@
     }
 
     span {
-      @include relative-font-size(1);
+      @include relative-font-size(0.7);
     }
 
     :not(:hover){
@@ -459,12 +466,12 @@
   }
 
   .post-title {
-    @include relative-font-size(1.5);
+    @include relative-font-size(1);
     letter-spacing: -1px;
     line-height: 1.5;
     color: white;
     @include media-query($on-laptop) {
-      @include relative-font-size(1.2);
+      @include relative-font-size(0.8);
     }
   }
 
@@ -625,11 +632,11 @@ table.paleBlueRows tfoot td {
 @media only screen and (min-width: 768px) {
 
   .page-link {
-    @include relative-font-size(1);
+    @include relative-font-size(0.8);
   }
 
   .post-link {
-    @include relative-font-size(1.2);
+    @include relative-font-size(1);
   }
 
 }
@@ -644,11 +651,11 @@ table.paleBlueRows tfoot td {
   }
 
   .page-link {
-    @include relative-font-size(1);
+    @include relative-font-size(0.8);
   }
 
   .post-link {
-    @include relative-font-size(1.4);
+    @include relative-font-size(1);
   }
 
 }
@@ -669,13 +676,13 @@ table.paleBlueRows tfoot td {
 
   .openbtn {
     display: inline-block;
-    position: relative;
+    position: absolute;
     font-size: 1.5vw;
     cursor: pointer;
     background-color: $background-color;
     color: white;
     left: 6%;
-    top: 11%;
+    top: 9%;
     width: 4%;
     height: 75%;
     border: none;
@@ -716,12 +723,12 @@ table.paleBlueRows tfoot td {
     .navigation-menu { top: 7.2%;}
   } 
 
-  .animate .main-content{
+  .without-sidebar .main-content{
     width: calc(119%);
     transform: translateX(-16%);
   }
   
-  .animate .navigation-menu{
+  .without-sidebar .navigation-menu{
     -webkit-transition: all 0.55s ease-in-out;
     -moz-transition: all 0.55s ease-in-out;
     -o-transition: all 0.55s ease-in-out;
@@ -769,7 +776,7 @@ table.paleBlueRows tfoot td {
   }
 
   .social-description {
-    font-size: $small-font-size * 0.9;
+    font-size: $small-font-size * 0.7;
     grid-column: 1 / 2;
     grid-row: 6 / 7;
     margin-right: $spacing-unit / 3;
@@ -782,7 +789,7 @@ table.paleBlueRows tfoot td {
 
   .author-name {
     display: block;
-    font-size: $base-font-size;
+    font-size: $base-font-size * 0.8;
     grid-row: 3 / 4;
     color: $text-color;
 
@@ -851,7 +858,7 @@ table.paleBlueRows tfoot td {
     grid-row: 4 / 5;
     text-justify: distribute;
     word-spacing: -2px;
-    @include relative-font-size(0.65);
+    @include relative-font-size(0.6);
     margin-right: $spacing-unit / 2;
     margin-left: $spacing-unit / 2;
     line-height: normal;
@@ -878,15 +885,30 @@ table.paleBlueRows tfoot td {
   }
 
   .post-home-title {
-    @include relative-font-size(1.8);
+    @include relative-font-size(1.6);
+    padding-top: $spacing-unit / 4;
+    padding-bottom: $spacing-unit / 12;
   }
   
   .post-home-subtitle {
-    @include relative-font-size(1.2);
+    @include relative-font-size(1);
+    padding: $spacing-unit / 8;
+  }
+
+  .post-meta {
+    @include relative-font-size(0.5);
+  }
+
+  iframe {
+    display: inline-block;
+  }
+
+  .IN-widget{
+    display: inline-block !important;
   }
 
   .post-link {
-    @include relative-font-size(1.6);
+    @include relative-font-size(1.1);
   }
 
   table.paleBlueRows tbody td {
@@ -911,7 +933,7 @@ table.paleBlueRows tfoot td {
     grid-column: 1 / 2;
     padding-right: $spacing-unit / 3;
     padding-left: $spacing-unit / 3;
-    @include relative-font-size(0.6);
+    @include relative-font-size(0.5);
     -webkit-transition: all 1.5s;
     -moz-transition: all 1.5s;
     transition: all 1.5s;

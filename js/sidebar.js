@@ -12,8 +12,15 @@ $(document).ready(function () {
 });
 
 function openNav() {
-  if(document.querySelector(".container").classList.contains("animate"))
-    document.querySelector(".container").classList.remove("animate");
+  if(document.querySelector(".container").classList.contains("without-sidebar"))
+    document.querySelector(".container").classList.remove("without-sidebar");
   else
-    document.querySelector(".container").classList.add("animate");
+    document.querySelector(".container").classList.add("without-sidebar");
+}
+
+function getCook(cookiename) {
+  
+  var cookiestring=RegExp(cookiename+"=[^;]+").exec(document.cookie);
+  return decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
+  
 }
