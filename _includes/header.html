@@ -5,7 +5,7 @@
 
     {%- if page_paths -%}
     
-      <button class="openbtn" onclick="openNav()">☰</button> 
+      <button class="show-hide-sidebar" onclick="open_sidebar()">☰</button> 
         <ul class="trigger">
           {%- for path in page_paths -%}
             {%- assign my_page = site.pages | where: "path", path | first -%}
