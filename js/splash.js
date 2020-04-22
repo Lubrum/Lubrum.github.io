@@ -1,4 +1,3 @@
-let box = document.getElementById('splash');
 
 function getCook(cookiename) {
   
@@ -8,7 +7,7 @@ function getCook(cookiename) {
 }
 
 document.addEventListener("DOMContentLoaded", function(event) {
-  
+  let box = document.getElementById('splash');
   if( window.location.pathname === "/" ) {
    
     if ( getCook('valid') != 'true' ) {

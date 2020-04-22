@@ -2,10 +2,7 @@
 layout: default
 ---
 {% include minutes-to-read.html %}
-<div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v4.0&appId=2337139719936629&autoLogAppEvents=1"></script>
 
-<div id="fb-root"></div>
 
 <article class="post">
   <header class="post-header">
@@ -42,10 +39,8 @@ layout: default
       Última atualização: {{ page.date | date: date_format }}
     {%- endif -%}
   </p>
-
-  <div id="fb-container">
-    <div class="fb-comments" data-href="https://lubrum.github.io/2019/09/03/analise1" data-width="100%" data-colorscheme="dark" data-numposts="5"></div>
-  </div>
-
+  
+  <div id="disqus_thread"></div>
+    
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>

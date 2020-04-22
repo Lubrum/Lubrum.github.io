@@ -464,6 +464,13 @@
     margin-bottom: $spacing-unit / 10;
   }
 
+  #disqus_thread { 
+    width: 90%;
+    max-width: 90%;
+    margin: 0 auto; 
+    padding: 18px; 
+}
+
   /* search icon Source: https://fonts.googleapis.com/icon?family=Material+Icons 
   https://fonts.gstatic.com/s/materialicons/v48/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2*/
   
@@ -720,7 +727,7 @@ table.paleBlueRows tfoot td {
     position: fixed;
     width: 15%;
     height: 100%;
-    left: 0%;
+    //left: 0%;
     top: 7.05%;
     -webkit-transition: all 0.45s ease-in-out;
     -moz-transition: all 0.45s ease-in-out;
