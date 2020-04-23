@@ -1,4 +1,3 @@
-
 // sourcecode : https://activebridge.org/blog/image-zoom-on-pure-css //
 function zoom(e){
   var zoomer = e.currentTarget;
