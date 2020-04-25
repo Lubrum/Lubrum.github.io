@@ -102,15 +102,15 @@ Inicialmente, vamos importar e organizar esses dados para obter as informações
 
 ```R
 # importação dos dados
-universities_path <- "../../csv/universities_after.xlsx"
-cities_path <- "../../csv/brazilian_cities.csv"
-states_path <- "../../csv/brazilian_states.csv"
-research_names_path <- "../../csv/research_names.xlsx"
-university_research_path <- "../../csv/university_research.xlsx"
-graduation_level_path <- "../../csv/graduation_level.xlsx"
-course_name_path <- "../../csv/course_name.xlsx"
-concentration_area_path <- "../../csv/concentration_area.xlsx"
-university_concentration_area_path <- "../../csv/university_concentration_area.xlsx"
+universities_path <- "../csv/universities_after.xlsx"
+cities_path <- "../csv/brazilian_cities.csv"
+states_path <- "../csv/brazilian_states.csv"
+research_names_path <- "../csv/research_names.xlsx"
+university_research_path <- "../csv/university_research.xlsx"
+graduation_level_path <- "../csv/graduation_level.xlsx"
+course_name_path <- "../csv/course_name.xlsx"
+concentration_area_path <- "../csv/concentration_area.xlsx"
+university_concentration_area_path <- "../csv/university_concentration_area.xlsx"
 
 universities <- read.xlsx(universities_path, stringsAsFactors = FALSE, sheetIndex = 1, encoding = "UTF-8")
 brazilian_cities <- read.csv(cities_path, sep = ",", stringsAsFactors = FALSE, encoding = "UTF-8")
