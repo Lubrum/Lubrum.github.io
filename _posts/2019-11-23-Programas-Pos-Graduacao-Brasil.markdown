@@ -130,7 +130,7 @@ Também foram geradas outras planilhas com dados de área de concentração, lin
 
 Com os dados consolidados, foi necessário apenas importar, integrar e visualizar os mesmos. Segue abaixo parte do código para a integração dos dados (sem a importação das bibliotecas) e geração do primeiro mapa com algumas informações dos Programas :D. 
 
-[O shapefile dos mapas pode ser obtido aqui](http://www.uel.br/laboratorios/lapege/pages/base-de-dados-shp-do-brasil.php) e os dados das cidades e estados do Brasil no [Github do kelvins](https://github.com/kelvins/Municipios-Brasileiros/tree/master/csv).
+[O shapefile dos mapas pode ser obtido aqui](http://www.uel.br/laboratorios/lapege/pages/base-de-dados-br.php) e os dados das cidades e estados do Brasil no [Github do kelvins](https://github.com/kelvins/Municipios-Brasileiros/tree/master/csv).
 
 ```R
 # reading data from csv
