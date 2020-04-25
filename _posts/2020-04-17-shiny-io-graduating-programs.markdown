@@ -50,7 +50,7 @@ Portanto, foram elencadas as seguintes propostas de informações:
 
 - Quantitativo de Programas por estado (gráfico de barras);
 
-- Total de Programas com os top 10 temas de pesquisa (gráfico de barras);
+- Total de Programas por temas de pesquisa (gráfico de barras);
 
 - Número de Programas com determinado tema de pesquisa com o passar dos anos (com possibilidade de comparação com outro tema) (gráfico de linhas);
 
@@ -165,7 +165,7 @@ barplot_1_data <- as.data.frame(
   mutate(state_code = fct_reorder(state_code, -id))
 )
 
-# dados agrupados por tópico de pesquisa e id, apenas os top 10 em ordem decrescente de n° de Programas por tópico
+# dados agrupados por tópico de pesquisa e id, especificamente os tópicos que aparecem no mínimo 10 vezes, em ordem decrescente de n° de Programas por tópico
 barplot_2_data <- as.data.frame(
   all_data %>%
   group_by(research_name) %>%
@@ -505,7 +505,7 @@ Em resumo:
 
 - Aba **Mapas**: essa tela possuirá um componente sidebar (barra lateral) onde serão inseridos os inputs (entrada de dados) para a geração dos mapas e o restante da tela é onde o mapa será apresentado. **titlePanel** é o título da barra lateral, **sidebarLayout** é o layout da página (com barra lateral) e **sidebarPanel** terá os componentes que desejamos para essa barra lateral (inputs para seleção dos Programas por estado, universidade, linha de pesquisa e conceito da CAPES).
 
-- Aba **Gráficos**: essa tela terá três gráficos. Um gráfico de barras verticais para a exibição do total de Programas por estado, um gráfico com barras horizontais com as top 10 linhas de pesquisa no Brasil em número de Programas e um gráfico de linhas com a evolução do número de Programas para as linhas de pesquisa selecionadas (uma ou duas linhas de pesquisa por vez).
+- Aba **Gráficos**: essa tela terá três gráficos. Um gráfico de barras verticais para a exibição do total de Programas por estado, um gráfico com barras horizontais com as linhas de pesquisa no Brasil com no mínimo 10 em número de Programas (com no mínimo 10) e um gráfico de linhas com a evolução do número de Programas para as linhas de pesquisa selecionadas (uma ou duas linhas de pesquisa por vez).
 
 A UI se resume a isso. Agora vamos para o server xD (parte mais complicada, em termos de lógica).
 
@@ -722,7 +722,7 @@ E **theme** foi utilizado para aplicar propriedades específicas deste gráfico.
 
  Vale destacar o uso do **geom_bar** para gerar gráfico de barras e o uso do **scale_y_continuous** para definir que a escala Y seja sempre uma sequência entre 0 e o estado com o maior número de programas, somado de 2 em 2. **geom_text** vai exibir na barra o número de programas daquele estado. O restante é semelhante ao gráfico do mapa.
 
-<h2> 3- Gráfico de barras com o número de Programas de Pós em Computação por linha de pesquisa (top 10). </h2>
+<h2> 3- Gráfico de barras com o número de Programas de Pós em Computação por linha de pesquisa (apenas tópicos de pesquisa com mais de 10 Programas de Pós). </h2>
 
 <br />
 
