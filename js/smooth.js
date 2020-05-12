@@ -1,6 +1,7 @@
 // Some code is of source: https://www.smashingmagazine.com/2016/07/improving-user-flow-through-page-transitions/
 var sync = 1
 var container = document.querySelector('.container')
+var currentPathname = null // Prevent popstate on hashtags: https://gist.github.com/mahemoff/1591495
 
 function animate(oldContent, newContent, newHead, oldHead) {
   var fadeOut = oldContent.className += " " + "animated fadeOut"
@@ -8,9 +9,7 @@ function animate(oldContent, newContent, newHead, oldHead) {
     $('.old').remove();
     oldContent.parentNode.removeChild(oldContent)
   }, 1100);
-  
   var fadeIn = newContent.className += " " + "animated fadeIn"
-  
   setTimeout(function (){ 
     newContent.classList.remove("animated")
     newContent.classList.remove("fadeIn")
@@ -65,6 +64,9 @@ $(document).on("click", "a.page-link,a.post-link" , function(e) {
 });
 
 window.addEventListener('popstate', function (e){
+  history.replaceState(null, null, ' '); // https://www.tutorialspoint.com/how-to-remove-the-hash-from-window-location-url-with-javascript-without-page-refresh
+  if (document.location.pathname == currentPathname || currentPathname == null) return;  
+  currentPathname = document.location.pathname
   if(sync == 0){
     e.stopPropagation()
     e.preventDefault()
@@ -80,6 +82,7 @@ window.addEventListener('popstate', function (e){
   var t = this, href = t.href
   history.pushState(null, null, t.href)
   changePage()
+
 });
 
 var reset = function (pageUrl) {
@@ -91,5 +94,3 @@ var reset = function (pageUrl) {
     }
   });
 };
-
-
