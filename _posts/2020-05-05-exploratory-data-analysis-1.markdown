@@ -1588,7 +1588,7 @@ O <- cldList(P.adj ~ Comparison,
           remove.zero = FALSE)
 ```
 <br />
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure28.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure29.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure29.png" alt="Resultados do teste de Dunncan.">
 </figure>
 <br />
