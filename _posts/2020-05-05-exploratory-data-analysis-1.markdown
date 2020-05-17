@@ -1765,6 +1765,8 @@ O que pudemos extrair destas análises?
 
 - Removidos os dados de reprovados por frequência, BAEC supera BAEQ em Desenho II;
 
+- Os grupos possuem um número muito diferente de amostras;
+
 - A diferença entre as médias é significativa entre anos e semestres, anos, e em alguns casos, em semestres distintos, tanto em Desenho I como Desenho II. 
 
 - Há uma tendência de redução geral do desempenho em Desenho II;
@@ -1773,19 +1775,19 @@ O que pudemos extrair destas análises?
 
 - Uma quantidade significativa dos estudantes que reprovam por frequência em Desenho I e II acabam desistindo do curso, e uma parcela muito pequena acaba se formando ou permanecendo nos cursos;
 
-- As reprovações são maiores no 1° semestre para Desenho I e no 2° para Desenho II. Faz sentido por Desenho I ser pré-requisito de Desenho II;
+- A quantidade de reprovações são maiores no 1° semestre para Desenho I e no 2° para Desenho II. Faz sentido por Desenho I ser pré-requisito de Desenho II;
 
-- O desempenho em Desenho II é superior que em Desenho I em geral, e a quantidade de reprovados por frequência e por nota em Desenho II é menor do que em Desenho II.
+- O desempenho em Desenho II é superior que em Desenho I em geral, e a quantidade de reprovados por frequência e por nota em Desenho II é menor do que em Desenho I.
 
-- Não há um padrão muito claro no desempenho se considerarmos apenas o ano/tempo como variável;
+- Não há um padrão evidente na variação do desempenho se considerarmos apenas o ano/tempo como variável;
 
 O que seria possível agregar para enriquecermos estes resultados?
 
-- informações do docente que ministrou a disciplina, assim como suas características (mestrado/doutorado/substituto/graduação/...);
+- Informações do docente que ministrou a disciplina, assim como suas características (mestrado/doutorado/substituto/graduação/...);
 
-- demais informações dos estudantes, como forma de ingresso, notas no enem por área de estudo, se o estudante trabalha, etc;
+- Demais informações dos estudantes, como forma de ingresso, notas no enem por área de estudo, se o estudante trabalha, etc;
 
-- incluir a forma de avaliação e formato de atividades adotado na disciplina;
+- Inclusão da forma de avaliação e formato de atividades adotado nas disciplinas;
 
 # Considerações Finais
 
