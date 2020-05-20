@@ -1759,13 +1759,13 @@ O <- cldList(P.adj ~ Comparison,
 
 Os resultados até o momento são compatíveis com o que visualizamos na etapa dos gráficos, não é mesmo? Essa é uma das numerosas importâncias da estatística em nossas vidas: extrair valiosas informações de amostras de um universo de infinitas possibilidades, e esboçar possíveis considerações sobre elas.
 
-O que pudemos extrair destas análises?
+O que foi possível extrair destas análises?
 
-- O curso de BAEQ tem médias superiores nos Desenhos comparada com outros cursos, enquanto que BALF possui desempenho inferior;
+- O curso de BAEQ tem médias superiores nos Desenhos comparada com outros cursos, enquanto que BALF possui desempenho inferior (e menor número de amostras);
 
-- Removidos os dados de reprovados por frequência, BAEC supera BAEQ em Desenho II;
+- Removidos os dados de reprovados por frequência, BAEC supera BAEQ em Desenho II nas estatísticas descritivas (porém, BAEC possui bem menos amostras que outros cursos);
 
-- Os grupos possuem um número muito diferente de amostras;
+- Os grupos possuem um número muito diferente de amostras e isto não foi apresentado nos boxplots/violin plots;
 
 - A diferença entre as médias é significativa entre anos e semestres, anos, e em alguns casos, em semestres distintos, tanto em Desenho I como Desenho II. 
 
@@ -1777,7 +1777,7 @@ O que pudemos extrair destas análises?
 
 - A quantidade de reprovações são maiores no 1° semestre para Desenho I e no 2° para Desenho II. Faz sentido por Desenho I ser pré-requisito de Desenho II;
 
-- O desempenho em Desenho II é superior que em Desenho I em geral, e a quantidade de reprovados por frequência e por nota em Desenho II é menor do que em Desenho I.
+- O desempenho médio em Desenho II é superior que em Desenho I em geral, e a quantidade de reprovados por frequência e por nota em Desenho II é menor do que em Desenho I;
 
 - Não há um padrão evidente na variação do desempenho se considerarmos apenas o ano/tempo como variável;
 
