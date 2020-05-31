@@ -29,12 +29,14 @@ github_username:  Lubrum
 youtube_username: Luciano Brum
 youtube_link: channel/UCAX8r-2riNaYslvOQjgM5PQ
 instagram_username: lucianobrum18
+#paginate: 5
 
 # Build settings
 theme: minima
-permalink: /:year/:month/:day/:title
+permalink: /:title
 plugins:
   - jekyll-feed
+#  - jekyll-paginate
 
 
 # Exclude from processing.

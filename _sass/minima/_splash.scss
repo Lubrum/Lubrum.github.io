@@ -112,7 +112,7 @@
           stroke: 0;
           -webkit-clip-path: polygon(25% 40%, 75% 40%, 75% 60%, 25% 60%);
           clip-path: polygon(25% 40%, 75% 40%, 75% 60%, 25% 60%);
-          @include animation('expand .7s ease-in forwards 2.7s');
+          //@include animation('expand .7s ease-in forwards 2.7s');
         }
       }
     }
@@ -134,7 +134,7 @@
           height: 100%;
           -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
           clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
-          @include animation('scale .2s ease-out forwards 1s, hide 1.3s ease-out forwards 1.2s');
+          @include animation('scale 1.2s ease-out forwards 1s, hide 0.8s ease-out forwards 1.2s');
         }
       }
     }

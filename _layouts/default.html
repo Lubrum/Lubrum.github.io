@@ -3,7 +3,10 @@
   {%- include head.html -%}
   <body>
   
+    <script>document.write("<script type='text/javascript' src='{{site.baseurl}}/js/splash.js?v=" + Date.now() + "'><\/script>");</script>
+    
     {%- include splash.html -%}
+    
     <div class="container">
 
       {%- include header.html -%}
@@ -22,4 +25,5 @@
   <script>document.write("<script type='text/javascript' src='{{site.baseurl}}/js/zoom.js?v=" + Date.now() + "'><\/script>");</script>
   <script>document.write("<script type='text/javascript' src='{{site.baseurl}}/js/disqus.js?v=" + Date.now() + "'><\/script>");</script>
   <script>document.write("<script type='text/javascript' src='{{site.baseurl}}/js/smooth.js?v=" + Date.now() + "'><\/script>");</script>
+  
 </html>

@@ -4,7 +4,7 @@ function getCook(cookiename) {
   return decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
 }
 
-document.addEventListener("DOMContentLoaded", function(event) {
+function splash_screen() {
   let box = document.getElementById('splash');
   if( window.location.pathname === "/" ) {
     if ( getCook('valid') != 'true' ) {   
@@ -20,4 +20,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
   } else { 
     box.classList.add('hide');  
   }
-});
+}
