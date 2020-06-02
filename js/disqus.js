@@ -8,8 +8,11 @@
     };
     */
    (function() { // DON'T EDIT BELOW THIS LINE
-   var d = document, s = d.createElement('script');
-   s.src = 'https://https-lubrum-github-io.disqus.com/embed.js';
-   s.setAttribute('data-timestamp', +new Date());
-   (d.head || d.body).appendChild(s);
+    if(document.getElementById("disqus_thread") != null) {
+        alert("ok")
+        var d = document, s = d.createElement('script');
+        s.src = 'https://https-lubrum-github-io.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    }
    })();
