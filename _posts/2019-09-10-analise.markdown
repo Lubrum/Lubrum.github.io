@@ -6,6 +6,7 @@ date: 2019-09-10 00:50:00 -0300
 categories: análise de dados
 language: R
 author: luciano_brum
+widget: true
 ---
 
 <h1> Resumo </h1>
@@ -183,4 +184,3 @@ leiteira no Brasil. Boletim do Departamento de Estudos Socioeconômicos Rurais. 
 
 [STROEHER, F. H. et al. Qualidade do Leite: Visão dos Produtores Rurais do município de São Martinho - RS. Revista Brasileira de Agropecuária Sustentável, v. 7, n. 4, p. 88-94, dez. 2017. Acesso em: 09 set. 2019.](https://periodicos.ufv.br/ojs/rbas/article/view/2992/pdf)
 
-<script src="{{ site.baseurl }}/js/widgets.js"></script>

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+<html lang="{{ page.lang | default: site.lang | default: "pt" }}">
   {%- include head.html -%}
   <body>
   
-    <script type='text/javascript' src='{{site.baseurl}}/js/splash.js?v=" + Date.now() + "'></script>
+    <script type='text/javascript' src='{{site.baseurl}}/js/splash.js'></script>
     
     {%- include splash.html -%}
     
@@ -13,16 +13,16 @@
 
       {%- include left-col.html -%}
 
-      <div class="main-content">
+      <div data-router-wrapper class="main-content">
         {{ content }}  
       </div>
-      <script type='text/javascript' src='{{site.baseurl}}/js/jquery-3.4.1.js?v=" + Date.now() + "'></script>
-      <script type='text/javascript' src='{{site.baseurl}}/js/sidebar.js?v=" + Date.now() + "'></script>
-      <script type='text/javascript' src='{{site.baseurl}}/js/smooth.js?v=" + Date.now() + "'></script>
-      <script type='text/javascript' src='{{site.baseurl}}/js/zoom.js?v=" + Date.now() + "'></script>
-      <script type='text/javascript' src='{{site.baseurl}}/js/disqus.js?v=" + Date.now() + "'></script>
+      
     </div>
-  
+    
+    <script type='text/javascript' src='{{site.baseurl}}/js/jquery-3.4.1.js'></script>
+    <script type='text/javascript' src='{{site.baseurl}}/js/sidebar.js'></script>
+    <script data-no-reload type='text/javascript' src='/assets/js/main.js'></script>
+    <script type='text/javascript' src='{{site.baseurl}}/js/zoom.js'></script>
+    <script type='text/javascript' src='{{site.baseurl}}/js/disqus.js'></script>
   </body>
-
 </html>
