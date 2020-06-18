@@ -25,6 +25,7 @@ class Fade extends Highway.Transition {
         onComplete: function () {
           window.scrollTo(0, 0);
           from.remove();
+          
           done();
         }
       }
@@ -117,13 +118,4 @@ window.addEventListener('popstate', function (e){
 });
 
 
-
-var reset = function (pageUrl) {
-  DISQUS.reset({
-    reload: true,
-    config: function () {
-      this.page.identifier = pageUrl;
-      this.page.url = pageUrl;
-    }
-  });
-};*/
+*/

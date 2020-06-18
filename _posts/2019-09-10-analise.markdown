@@ -9,6 +9,8 @@ author: luciano_brum
 widget: true
 ---
 
+<script type='text/javascript' src='{{site.baseurl}}/js/widgets.js'></script>
+
 <h1> Resumo </h1>
 
 Saudações pessoal. A ideia deste artigo é explorar os dados públicos sobre a produção leiteira Brasileira e Gaúcha disponibilizados pelo [IBGE](https://ibge.gov.br/) (Instituto Brasileiro de Geografia e Estatística) através do portal da [SIDRA](https://sidra.ibge.gov.br/home/pimpfbr/brasil) (Sistema IBGE de Recuperação Automática). Parte deste trabalho foi previamente publicado em um [resumo expandido](http://publicase.unipampa.edu.br/index.php/siepe/article/view/40708/25522) (BRUM; SILVA; LAMPERT, 2018). <br>
