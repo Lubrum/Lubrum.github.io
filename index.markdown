@@ -21,7 +21,7 @@ subtitle: Um blog sobre Ciência de Dados, Desenvolvimento de Software e tecnolo
       {%- for post in site.posts -%}
         <li class="post-li">
           {%- if post.widget -%}
-          <a class="post-link" href="{{ post.url | relative_url }}" target="_blank"> 
+          <a class="post-link" href="{{ post.url | relative_url }}" target="_self"> 
           {%- else -%}
           <a class="post-link" href="{{ post.url | relative_url }}">
           {%- endif -%}
