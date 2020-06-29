@@ -20,10 +20,3 @@ function open_sidebar() {
     document.cookie = "without-sidebar=true";
   }
 }
-
-function getCook(cookiename) {
-  
-  var cookiestring=RegExp(cookiename+"=[^;]+").exec(document.cookie);
-  return decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
-  
-}

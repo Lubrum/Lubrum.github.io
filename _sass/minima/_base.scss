@@ -16,7 +16,7 @@ dl, dd, ol, ul, figure {
 body, html {
   font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
-  //background-color: $background-color;
+  background-color: #111;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
      -moz-font-feature-settings: "kern" 1;
@@ -191,8 +191,8 @@ form {
 }
 
 p {
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding-bottom: 20px;
+  padding-top: 20px;
 }
 
 @media only screen and (min-width: 768px) { 
