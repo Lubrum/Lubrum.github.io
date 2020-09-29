@@ -148,25 +148,37 @@ Selecionar opção avançada.
 Inicialmente será criada a partição principal (root). Selecione o "espaço livre" e clique no "+". Nas configurações da partição, selecione as opções abaixo e clique em aplicar:
 
 Tamanho = pelo menos 20000 MB
+
 Tipo da nova partição = Primary
+
 Localização para a nova partição = Início deste espaço
+
 Usar como = Sistema de arquivos EXT4
+
 Ponto de Montagem = /
 
 Agora será criada a partição de swap. Essa partição é utilizada quando o computador vai para a hibernação ou quando a memória RAM fica cheia (em resumo). Selecione o "espaço livre" restante e clique no "+". Nas configurações da partição, selecione as opções abaixo e clique em aplicar. *Uma regra empírica para o tamanho do swap é a de utilizar um valor entre a RAM da sua máquina e o dobro da RAM*.
 
 Tamanho = 16000 MB 
+
 Tipo da nova partição = Primary
+
 Localização para a nova partição = Início deste espaço
+
 Usar como = Sistema de arquivos EXT4
+
 Ponto de Montagem = /home
 
 Agora será criada a partição *home*. Selecione o "espaço livre" restante e clique no "+". Nas configurações da partição, selecione as opções abaixo e clique em aplicar:
 
 Tamanho = **Todo tamanho restante**
+
 Tipo da nova partição = Primary
+
 Localização para a nova partição = Início deste espaço
+
 Usar como = Sistema de arquivos EXT4
+
 Ponto de Montagem = /home
 
 <br />
