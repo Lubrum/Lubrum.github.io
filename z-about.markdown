@@ -33,7 +33,7 @@ Em 2019 recebi o prêmio de melhor Dissertação na área de Tecnologia da Infor
 
 Resumidamente, na minha trajetória acadêmica trabalhei com as seguintes tecnologias e ferramentas: C, Java, VHDL, Realidade Aumentada, Blender, HTML, CSS, PostgreSQL, SQL, MySQL, JavaScript, PHP, R, Python, TensorFlow, Data Warehousing, Business Intelligence, Pacote Office (Word, Excel e Power Point), Linux Ubuntu, suíte Pentaho, Saiku Analytics, Github, Mendeley, Latex, Ionic Framework 3.0 e Yii Framework 2.0. 
 
-Após a jornada acadêmica [2011-2019], fui contratato e estou atualmente trabalhando na empresa [Wplex Software](https://www.wplex.com.br/), onde atuo no desenvolvimento de soluções para o Transporte Público Brasileiro. Estou alocado no WPLEX-CO, módulo de monitoramento e controle da operação das frotas de veículos.
+Após a jornada acadêmica [2011-2019], fui contratato como Analista Desenvolvedor III na empresa [Wplex Software](https://www.wplex.com.br/), onde atuo no desenvolvimento de soluções para o Transporte Público Brasileiro. Estou alocado no WPLEX-CO, módulo de monitoramento e controle da operação das frotas de veículos.
 
 Tenho interesse nos seguintes assuntos de pesquisa e trabalho: Ciência de Dados, Business Intelligence aplicado, boas práticas de Engenharia de Software, novas tendências de tecnologias em IA e desenvolvimento de soluções de Software, em especial para os setores da Agricultura/Pecuária e Transporte Público. 
 
