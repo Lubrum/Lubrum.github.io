@@ -4,7 +4,7 @@
     display: grid;
     height: 100vh;
     width: 100%;
-    overflow-x: hidden;
+    //overflow-x: hidden;
   }
 
   // header content //
@@ -922,7 +922,7 @@ table.paleBlueRows tfoot td {
     transition: all 0.5s ease-in-out;
     //box-shadow: -1px -1px 0px 1px #7c7c7c inset;
     display: block;
-    overflow-x: auto;
+    //overflow-x: auto;
   }
 
   .post-home-title {

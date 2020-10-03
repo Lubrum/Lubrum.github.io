@@ -1,0 +1,19 @@
+- name: Liderança
+  percentage: 70
+  color: info
+
+- name: Empatia
+  percentage: 90
+  color: success
+
+- name: Resiliência
+  percentage: 80
+  color: danger
+
+- name: Lógica
+  percentage: 90
+  color: Light
+
+- name: Proatividade
+  percentage: 90
+  color: secondary
