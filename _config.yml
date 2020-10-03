@@ -31,8 +31,11 @@ youtube_link: channel/UCAX8r-2riNaYslvOQjgM5PQ
 instagram_username: lucianobrum18
 #paginate: 5
 
+sass:
+    sass_dir: _sass
+    
 # Build settings
-theme: minima
+# theme: minima
 permalink: /:title
 plugins:
   - jekyll-feed

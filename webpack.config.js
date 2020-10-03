@@ -7,11 +7,11 @@ const path = require('path');
 // Configuration
 module.exports = {
   mode: 'production',
-  entry: path.resolve(__dirname, 'js/main.js'),
+  entry: path.resolve(__dirname, 'assets/js/main-transitions.js'),
   output: {
     path: path.resolve(__dirname, 'assets', 'js'),
     publicPath: '{{ site.url }}/assets/js/',
-    filename: 'main.js'
+    filename: 'main-transitions.js'
   },
   module: {
     rules: [
