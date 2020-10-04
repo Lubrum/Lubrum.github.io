@@ -1,0 +1,422 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  //background-color: #1b1b1b;
+  background-image: url('../img/post1/gif4.gif');
+}
+
+.home .post {
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.post {
+  margin-left: 8%;
+  margin-right: 8%;
+  padding-bottom: $spacing-unit / 8;
+  padding-top: $spacing-unit / 8;
+}
+
+.post-home-title {
+  @include relative-font-size(1.8);
+  padding-top: $spacing-unit / 2;
+  padding-bottom: $spacing-unit / 8;
+  text-align: center;
+  font-weight: 1000;
+  line-height: 1;
+  color: $text-color;
+  text-shadow: #000e91 0px 0px 24px;
+}
+
+.post-home-subtitle {
+  @include relative-font-size(1.2);
+  color: $text-color;
+  padding: $spacing-unit / 4;
+  display: block;
+  text-align: center;
+  line-height: normal;
+}
+
+// home content //
+
+.post-list {
+  margin-left: 15px;
+  margin-right: 15px;
+  list-style: none;
+}
+
+.post-block {
+  color: $text-color;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin-top: 20px;
+  text-align: justify;
+  -webkit-transition: all 1.5s;
+  -moz-transition: all 1.5s;
+  transition: all 1.5s;
+  background-color: $background-color;
+  box-shadow:
+    #000000 4px 4px 8px,
+    #4d4d4d -4px -4px 8px;
+  font-family: $index-font-family;
+
+  &:hover {
+    color: #b1b9fc;
+  }
+}
+
+.post-meta {
+  font-size: $small-font-size;
+}
+
+.post-link {
+  @include relative-font-size(1.2);
+  color: inherit;
+  -webkit-transition: all 5s ease-in-out;
+  -ms-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
+  -moz-transition: all 5s ease-in-out;
+  transition: all 5s ease-in-out;
+
+  &:hover {
+    -webkit-animation: rr 15s infinite;
+    -ms-animation: rr 15s infinite;
+    -o-animation: rr 15s infinite;
+    -moz-animation: rr 15s infinite;
+    animation: rr 15s infinite;
+
+    @-webkit-keyframes rr {
+      0% {
+        color: #ffffff;
+      }
+
+      5% {
+        color: #ff0000;
+      }
+
+      10% {
+        color: #ff8000;
+      }
+
+      20% {
+        color: #ffff00;
+      }
+
+      30% {
+        color: #80ff00;
+      }
+
+      40% {
+        color: #00ff00;
+      }
+
+      50% {
+        color: #00ff80;
+      }
+
+      60% {
+        color: #00ffff;
+      }
+
+      70% {
+        color: #0080ff;
+      }
+
+      80% {
+        color: #0000ff;
+      }
+
+      90% {
+        color: #8000ff;
+      }
+
+      100% {
+        color: #ff0080;
+      }
+    }
+
+    @-ms-keyframes rr {
+      0% {
+        color: #fdfdfd;
+      }
+
+      5% {
+        color: #ff0000;
+      }
+
+      10% {
+        color: #ff8000;
+      }
+
+      20% {
+        color: #ffff00;
+      }
+
+      30% {
+        color: #80ff00;
+      }
+
+      40% {
+        color: #00ff00;
+      }
+
+      50% {
+        color: #00ff80;
+      }
+
+      60% {
+        color: #00ffff;
+      }
+
+      70% {
+        color: #0080ff;
+      }
+
+      80% {
+        color: #0000ff;
+      }
+
+      90% {
+        color: #8000ff;
+      }
+
+      100% {
+        color: #ff0080;
+      }
+    }
+
+    @-o-keyframes rr {
+      0% {
+        color: #ffffff;
+      }
+
+      5% {
+        color: #ff0000;
+      }
+
+      10% {
+        color: #ff8000;
+      }
+
+      20% {
+        color: #ffff00;
+      }
+
+      30% {
+        color: #80ff00;
+      }
+
+      40% {
+        color: #00ff00;
+      }
+
+      50% {
+        color: #00ff80;
+      }
+
+      60% {
+        color: #00ffff;
+      }
+
+      70% {
+        color: #0080ff;
+      }
+
+      80% {
+        color: #0000ff;
+      }
+
+      90% {
+        color: #8000ff;
+      }
+
+      100% {
+        color: #ff0080;
+      }
+    }
+
+    @-moz-keyframes rr {
+      0% {
+        color: #ffffff;
+      }
+
+      5% {
+        color: #ff0000;
+      }
+
+      10% {
+        color: #ff8000;
+      }
+
+      20% {
+        color: #ffff00;
+      }
+
+      30% {
+        color: #80ff00;
+      }
+
+      40% {
+        color: #00ff00;
+      }
+
+      50% {
+        color: #00ff80;
+      }
+
+      60% {
+        color: #00ffff;
+      }
+
+      70% {
+        color: #0080ff;
+      }
+
+      80% {
+        color: #0000ff;
+      }
+
+      90% {
+        color: #8000ff;
+      }
+
+      100% {
+        color: #ff0080;
+      }
+    }
+
+    @keyframes rr {
+      0% {
+        color: #ffffff;
+      }
+
+      5% {
+        color: #ff0000;
+      }
+
+      10% {
+        color: #ff8000;
+      }
+
+      20% {
+        color: #ffff00;
+      }
+
+      30% {
+        color: #80ff00;
+      }
+
+      40% {
+        color: #00ff00;
+      }
+
+      50% {
+        color: #00ff80;
+      }
+
+      60% {
+        color: #00ffff;
+      }
+
+      70% {
+        color: #0080ff;
+      }
+
+      80% {
+        color: #0000ff;
+      }
+
+      90% {
+        color: #8000ff;
+      }
+
+      100% {
+        color: #ff0080;
+      }
+    }
+  }
+
+  span,
+  h3,
+  h6 {
+    display: block;
+    line-height: normal;
+    padding: 0px;
+  }
+
+  h3 {
+    font-weight: 600;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  span {
+    @include relative-font-size(0.7);
+  }
+
+  :not(:hover) {
+    -webkit-animation: all 5s ease-in-out;
+    -ms-animation: all 5s ease-in-out;
+    -o-animation: all 5s ease-in-out;
+    -moz-animation: all 5s ease-in-out;
+    animation: all 5s ease-in-out;
+  }
+
+}
+
+
+@media only screen and (min-width: 768px) {
+
+  .post-link {
+    @include relative-font-size(1);
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
+
+  .post-home-title {
+    @include relative-font-size(3.2);
+    padding-top: $spacing-unit / 4;
+    padding-bottom: $spacing-unit / 12;
+  }
+
+  .post-home-subtitle {
+    @include relative-font-size(2);
+    padding: $spacing-unit / 8;
+  }
+
+  .post-link {
+    @include relative-font-size(2.2);
+  }
+
+  .post-link span {
+    @include relative-font-size(1.6);
+  }
+
+}
+
+@media only screen and (min-width: 1200px) {
+
+  .post-home-title {
+    @include relative-font-size(3.4);
+    padding-top: $spacing-unit / 4;
+    padding-bottom: $spacing-unit / 12;
+  }
+
+  .post-home-subtitle {
+    @include relative-font-size(2.2);
+    padding: $spacing-unit / 8;
+  }
+
+  .post-link {
+    @include relative-font-size(1.9);
+  }
+
+}

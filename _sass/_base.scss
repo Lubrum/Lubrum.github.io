@@ -186,6 +186,58 @@ table {
   }
 }
 
+// tables //
+
+table.paleBlueRows {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+  position: relative;
+}
+
+table.paleBlueRows td,
+table.paleBlueRows th {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 3px 2px;
+}
+
+table.paleBlueRows tbody td {
+  font-size: 14px;
+}
+
+table.paleBlueRows tr:nth-child(even) {
+  background: rgb(46, 51, 56);
+}
+
+table.paleBlueRows thead {
+  background: #0B6FA4;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+table.paleBlueRows thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid rgb(0, 0, 0);
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+
+table.paleBlueRows tfoot td {
+  font-size: 14px;
+}
+
 form {
   padding: 15px 15px;
 }
@@ -199,6 +251,7 @@ p {
   pre {
     max-height: 600px;  
   }
+  
   body, html {
     font: $base-font-weight #{$base-font-size*1.2}/#{$base-line-height} $base-font-family;
   }
@@ -208,6 +261,7 @@ p {
   body, html {
     font: $base-font-weight #{$base-font-size*2}/#{$base-line-height} $base-font-family;
   }
+
   pre, code {
     @include relative-font-size(1.4);
   }
@@ -217,8 +271,29 @@ p {
   body, html {
     font: $base-font-weight #{$base-font-size*1.6}/#{$base-line-height} $base-font-family;
   }
+
   pre, code {
     @include relative-font-size(1.6);
+  }
+
+  iframe {
+    display: inline-block;
+  }
+
+  table.paleBlueRows tbody td {
+    font-size: 18px;
+  }
+
+  table.paleBlueRows thead th {
+    font-size: 20px;
+  }
+
+  table.paleBlueRows tfoot {
+    font-size: 14px;
+  }
+
+  table.paleBlueRows tfoot td {
+    font-size: 14px;
   }
 }
 

@@ -17,7 +17,7 @@ subtitle: Um blog sobre Ciência de Dados, Desenvolvimento de Software e tecnolo
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="post-list">
       {%- for post in site.posts -%}
-        <li class="post-li">
+        <li class="post-block">
           {%- if post.widget -%}
           <a class="post-link" href="{{ post.url | relative_url }}" target="_self"> 
           {%- else -%}
