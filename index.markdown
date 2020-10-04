@@ -11,15 +11,13 @@ subtitle: Um blog sobre Ciência de Dados, Desenvolvimento de Software e tecnolo
   <form action="{{site.baseurl}}/search.html" method="get">
     <div class="searchBox">
       <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
-         <button class="searchButton">
-            <i class="material-icons">search</i>
-          </button>
+         <button class="searchButton"></button>
     </div>
   </form>
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="post-list">
       {%- for post in site.posts -%}
-        <li class="post-li">
+        <li class="post-block">
           {%- if post.widget -%}
           <a class="post-link" href="{{ post.url | relative_url }}" target="_self"> 
           {%- else -%}

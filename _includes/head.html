@@ -11,13 +11,12 @@
   {%- if jekyll.environment == 'production' and site.google_analytics -%}
     {%- include google-analytics.html -%}
   {%- endif -%}
-  
-  <script type='text/javascript' src='{{site.baseurl}}/assets/js/jquery-3.4.1.js'></script>
+
   <script type='text/javascript' src='{{site.baseurl}}/assets/js/sidebar.js'></script>
   <script type='text/javascript' src='{{site.baseurl}}/assets/js/zoom.js'></script>
   <script type='text/javascript' src='{{site.baseurl}}/assets/js/splash.js'></script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script> new WOW({
   animateClass: 'animate__animated'
 }).init(); </script>
