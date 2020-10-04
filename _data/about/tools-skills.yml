@@ -45,3 +45,11 @@
 - name: Gitlab
   percentage: 90
   color: info
+
+- name: Maven
+  percentage: 80
+  color: secondary
+
+- name: Overleaf
+  percentage: 70
+  color: warning
