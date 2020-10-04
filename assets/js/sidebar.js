@@ -1,11 +1,13 @@
 $(document).ready(function () {
   $(window).resize(function() { 
     if($(window).width() < 1200){
-      document.getElementsByClassName("main-content")[0].style = "grid-column: 1 / 3";
+      document.getElementsByClassName("main-content")[0].style = "grid-column: 1 / 2";
     }
     else{
       if(document.getElementsByClassName("navigation-menu")[0].style.display != "none"){
         document.getElementsByClassName("main-content")[0].style = "grid-column: 2 / 3";
+      } else {
+        document.getElementsByClassName("main-content")[0].style = "grid-column: 1 / 3";
       }
     }
   });
