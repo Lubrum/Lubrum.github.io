@@ -8,7 +8,7 @@ language: R
 author: luciano_brum
 ---
 
-<script src="{{ site.baseurl }}/js/jquery-3.4.1.js"></script> 
+<script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.js"></script> 
 <script> 
     $(function(){
       $("#includedContent").load("{{ site.baseurl }}/assets/data/post3/articles_table.html"); 
@@ -195,4 +195,4 @@ Bom pessoal, a ideia deste post foi apresentar de forma sucinta um exemplo objet
 
 [WORDART. WordArt. Acesso em: 18 set. 2019.](https://wordart.com/)
 
-<script src="{{ site.baseurl }}/js/widgets.js"></script>
+<script src="{{ site.baseurl }}/assets/js/widgets.js"></script>

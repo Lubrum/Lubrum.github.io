@@ -1,10 +1,10 @@
   .container {
     grid-template-rows: 7% auto 100px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     display: grid;
     height: 100vh;
     width: 100%;
-    overflow-x: hidden;
+    //overflow-x: hidden;
   }
 
   // header content //
@@ -180,7 +180,7 @@
     position: relative;
     min-height: 100vh;
     //background-color: #1b1b1b;
-    background-image: url('../assets/img/post1/gif4.gif');
+    background-image: url('../img/post1/gif4.gif');
   }
 
   .home .post{
@@ -461,6 +461,7 @@
   }
 
   .post-content {
+    overflow-x: unset;
     margin-bottom: $spacing-unit / 10;
   }
 
@@ -683,8 +684,8 @@ table.paleBlueRows tfoot td {
 @media only screen and (min-width: 1200px) {
 
   .container {
-    grid-template-columns: 16% 1fr;
-    grid-template-rows: 7% 1fr;
+    grid-template-columns: 16% 84%;
+    grid-template-rows: 7% 93%;
   }
 
   .site-header {
@@ -722,7 +723,7 @@ table.paleBlueRows tfoot td {
   }
 
   .navigation-menu {
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 50px 30% 50px 20% 100px 7% 7%;
     position: fixed;
     width: 15%;
@@ -920,9 +921,7 @@ table.paleBlueRows tfoot td {
     -moz-transition: all 0.5s ease-in-out;
     -o-transition: all 0.5s ease-in-out;
     transition: all 0.5s ease-in-out;
-    //box-shadow: -1px -1px 0px 1px #7c7c7c inset;
     display: block;
-    overflow-x: auto;
   }
 
   .post-home-title {
