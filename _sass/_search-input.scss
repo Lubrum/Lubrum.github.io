@@ -1,0 +1,87 @@
+// Based on: https://codepen.io/omarsherifs/pen/KGLYYW
+
+.searchBox {
+  margin-left: $spacing-unit / 4;
+  margin-right: $spacing-unit / 4;
+  position: relative;
+  left: 0%;
+  height: 30px;
+  border-radius: 30px;
+  padding: 10px;
+  background-color: $background-color;
+  transition: 0.5s;
+  box-shadow:
+    0px 0px 0px 0px rgba(54, 54, 54, 0.6),
+    0px 0px 0px 0px rgba(56, 56, 56, 0.6),
+    0px 0px 0px 0px #0001,
+    0px 0px 0px 0px #0001,
+    inset -2px -2px 20px 0px rgba(167, 167, 167, 0.6),
+    inset -5px -5px 6px 0px rgba(34, 34, 34, 0.6),
+    inset 8px 8px 20px 0px #0003,
+    inset 5px 5px 6px 0px #0001;
+
+  &:hover {
+    background: #ffffff;
+  }
+}
+
+.searchInput {
+  font-weight: 700;
+  letter-spacing: 2px;
+  border: none;
+  background: none;
+  outline: none;
+  float: left;
+  padding-left: 5px;
+  font-size: $base-font-size;
+  transition: 0.4s;
+  line-height: 40px;
+  height: 100%;
+  width: 85%;
+  color: $text-color;
+
+  &:hover {
+    color: black;
+  }
+}
+
+input::-webkit-input-placeholder {
+  color: $text-color;
+}
+
+input:hover::-webkit-input-placeholder {
+  color: black;
+}
+
+input::placeholder {
+  color: $text-color;
+}
+
+input:hover::placeholder {
+  color: black;
+}
+
+.searchButton {
+  color: white;
+  float: right;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #2f3640;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.4s;
+}
+
+.searchBox:hover>.searchButton {
+  background: white;
+  color: #2f3640;
+}
+
+@media only screen and (min-width: 480px) {
+  .searchInput {
+    font-size: 2vh;
+    width: 60%;
+  }
+}
