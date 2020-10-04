@@ -1,5 +1,5 @@
 - name: Java
-  percentage: 70
+  percentage: 80
   color: danger
 
 - name: R
@@ -11,7 +11,7 @@
   color: dark
 
 - name: C
-  percentage: 70
+  percentage: 75
   color: Light
 
 - name: CSS3 
@@ -19,9 +19,9 @@
   color: info
 
 - name: HTML5
-  percentage: 70
+  percentage: 80
   color: secondary
 
-- name: Android
-  percentage: 60
+- name: Python
+  percentage: 50
   color: warning
