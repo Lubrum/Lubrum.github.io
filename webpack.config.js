@@ -11,7 +11,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'assets', 'js'),
     publicPath: '{{ site.url }}/assets/js/',
-    filename: 'main-transitions.js'
+    filename: 'main.js'
   },
   module: {
     rules: [

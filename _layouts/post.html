@@ -6,7 +6,7 @@ layout: default
 <article data-router-view="post" class="post">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline" style="text-align: center">{{ page.title | escape }}</h1>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
     <p class="post-meta">
 
       <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
@@ -22,13 +22,10 @@ layout: default
         <span> - Escrito por <a href="{{ author.web }}">{{ author.name }} - </a></span>
       {% endif %}
 
-      <!-- share buttons -->
-      <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Flubrum.github.io%2F2019%2F09%2F01%2Fbem-vindos&layout=button_count&size=large&appId=2337139719936629&width=129&height=28" width="129" height="28" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" class="facebook-hashtag-button"></iframe> 
-    
     </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody" style="text-align: justify">
+  <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
   </div>
 

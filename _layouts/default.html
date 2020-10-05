@@ -1,20 +1,30 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "pt" }}">
-  {%- include head.html -%}
-  <body>
-    {%- include splash.html -%}
-    
-    <div class="container">
+{%- include head.html -%}
 
-      {%- include header.html -%}
+<body>
 
-      {%- include left-col.html -%}
+  {%- include splash.html -%}
 
-      <div data-router-wrapper class="main-content">
-        {{ content }}  
-      </div>
-      
+  <div class="container">
+
+    {%- include header.html -%}
+
+    {%- include left-col.html -%}
+
+    <div data-router-wrapper class="main-content">
+      {{ content }}
     </div>
-    <script data-no-reload type='text/javascript' src='/assets/js/main-transitions.js'></script>
-  </body>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+  <script> new WOW({
+      animateClass: 'animate__animated'
+    }).init();
+  </script>
+  <script async type='text/javascript' src='{{site.baseurl}}/assets/js/sidebar.js'></script>
+  <script async type='text/javascript' src='{{site.baseurl}}/assets/js/zoom.js'></script>
+  <script async data-no-reload type='text/javascript' src='/assets/js/main.js'></script>
+</body>
+
 </html>

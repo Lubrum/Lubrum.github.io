@@ -1,8 +1,24 @@
 <a class="social-description">Me siga nas redes sociais</a>
 <ul class="social-media-list">
-  {%- if site.github_username -%}<a class="social-svg" href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon" id="github"><use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use></svg> </a>{%- endif -%}
-  {%- if site.instagram_username -%}<a class="social-svg" href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><svg class="svg-icon" id="instagram"><use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use></svg> </a>{%- endif -%}
-  {%- if site.linkedin_username -%}<a class="social-svg" href="https://www.linkedin.com/in/{{ site.linkedin_link| cgi_escape | escape }}"><svg class="svg-icon" id="linkedin"><use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use></svg> </a>{%- endif -%}
-  {%- if site.youtube_username -%}<a class="social-svg" href="https://youtube.com/{{ site.youtube_link }}"><svg class="svg-icon" id="youtube"><use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use></svg> </a>{%- endif -%}
-  {%- if site.rss -%}<a class="social-svg" href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use></svg> <span>{{ site.rss | escape }}</span></a>{%- endif -%}
+  {%- if site.github_username -%}<a class="social-svg"
+    href="https://github.com/{{ site.github_username| cgi_escape | escape }}"><svg class="svg-icon" id="github">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#github' | relative_url }}"></use>
+    </svg> </a>{%- endif -%}
+  {%- if site.instagram_username -%}<a class="social-svg"
+    href="https://instagram.com/{{ site.instagram_username| cgi_escape | escape }}"><svg class="svg-icon"
+      id="instagram">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#instagram' | relative_url }}"></use>
+    </svg> </a>{%- endif -%}
+  {%- if site.linkedin_username -%}<a class="social-svg"
+    href="https://www.linkedin.com/in/{{ site.linkedin_link| cgi_escape | escape }}"><svg class="svg-icon"
+      id="linkedin">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#linkedin' | relative_url }}"></use>
+    </svg> </a>{%- endif -%}
+  {%- if site.youtube_username -%}<a class="social-svg" href="https://youtube.com/{{ site.youtube_link }}"><svg
+      class="svg-icon" id="youtube">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#youtube' | relative_url }}"></use>
+    </svg> </a>{%- endif -%}
+  {%- if site.rss -%}<a class="social-svg" href="{{ 'feed.xml' | relative_url }}"><svg class="svg-icon">
+      <use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+    </svg> <span>{{ site.rss | escape }}</span></a>{%- endif -%}
 </ul>
