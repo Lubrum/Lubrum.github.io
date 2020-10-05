@@ -17,11 +17,13 @@
   letter-spacing: -1px;
   line-height: 1.5;
   color: white;
+  text-align: center;
 }
 
 .post-content {
   overflow-x: unset;
   margin-bottom: $spacing-unit / 10;
+  text-align: justify;
 }
 
 .img_content {
