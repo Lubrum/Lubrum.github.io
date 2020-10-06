@@ -64,10 +64,6 @@
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-}
-
 .post-link {
   @include relative-font-size(1.2);
   color: inherit;

@@ -1,18 +1,10 @@
 - name: Eclipse
   percentage: 80
-  color: danger
+  color: success
 
 - name: Android Studio
   percentage: 50
-  color: secondary
-
-- name: XCode
-  percentage: 10
-  color: dark
-
-- name: Visual Studio
-  percentage: 40
-  color: Light
+  color: warning
 
 - name: Postman 
   percentage: 70
@@ -20,36 +12,24 @@
 
 - name: PgAdmin
   percentage: 80
-  color: secondary
-
-- name: Android
-  percentage: 60
-  color: warning
+  color: success
 
 - name: Office
   percentage: 80
-  color: danger
+  color: success
 
 - name: RStudio
   percentage: 80
-  color: secondary
-
-- name: Realm Studio
-  percentage: 30
-  color: dark
+  color: success
 
 - name: Github
   percentage: 80
-  color: Light
+  color: success
 
 - name: Gitlab
   percentage: 90
-  color: info
+  color: success
 
 - name: Maven
   percentage: 80
-  color: secondary
-
-- name: Overleaf
-  percentage: 70
-  color: warning
+  color: success

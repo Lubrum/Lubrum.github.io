@@ -1,15 +1,15 @@
 - name: Slack
   percentage: 90
-  color: danger
+  color: success
 
 - name: Jira
   percentage: 70
-  color: secondary
+  color: info
 
 - name: Confluence
   percentage: 85
-  color: dark
+  color: success
 
 - name: Miro
   percentage: 50
-  color: Light
+  color: warning

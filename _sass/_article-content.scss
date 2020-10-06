@@ -2,6 +2,7 @@
   width: 100%;
   grid-column: 1 / 2;
   grid-row: 2 / 3;
+  background-color: #111;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
@@ -39,6 +40,10 @@
   margin-right: 8%;
   padding-bottom: $spacing-unit / 8;
   padding-top: $spacing-unit / 8;
+}
+
+.post-meta {
+  font-size: $small-font-size;
 }
 
 @media only screen and (min-width: 992px) {

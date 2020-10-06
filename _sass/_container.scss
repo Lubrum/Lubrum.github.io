@@ -1,4 +1,16 @@
-.container {
+* {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+*:before,
+*:after {
+  -webkit-box-sizing: content-box;
+     -moz-box-sizing: content-box;
+          box-sizing: content-box;
+}
+
+.cosmos-container {
   grid-template-rows: 7% auto 100px;
   grid-template-columns: 100%;
   display: grid;
@@ -7,7 +19,7 @@
 }
 
 @media only screen and (min-width: 1200px) {
-  .container {
+  .cosmos-container {
     grid-template-columns: 16% 84%;
     grid-template-rows: 7% 93%;
   }

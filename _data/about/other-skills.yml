@@ -8,12 +8,8 @@
 
 - name: Resiliência
   percentage: 80
-  color: danger
-
-- name: Lógica
-  percentage: 90
-  color: Light
+  color: success
 
 - name: Proatividade
   percentage: 90
-  color: secondary
+  color: success

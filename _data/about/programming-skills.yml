@@ -1,18 +1,18 @@
 - name: Java
   percentage: 80
-  color: danger
+  color: success
 
 - name: R
   percentage: 80
-  color: secondary
+  color: success
 
 - name: Javascript
   percentage: 50
-  color: dark
+  color: warning
 
 - name: C
   percentage: 75
-  color: Light
+  color: info
 
 - name: CSS3 
   percentage: 70
@@ -20,8 +20,16 @@
 
 - name: HTML5
   percentage: 80
-  color: secondary
+  color: success
 
 - name: Python
   percentage: 50
-  color: warning
+  color: danger
+
+- name: Shell
+  percentage: 50
+  color: danger
+
+- name: Markdown
+  percentage: 60
+  color: info

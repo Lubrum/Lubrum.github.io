@@ -12,11 +12,11 @@ window.addEventListener('resize', function(event){
 });
 
 function open_sidebar() {
-  if(document.querySelector(".container").classList.contains("without-sidebar")) {
-    document.querySelector(".container").classList.remove("without-sidebar");
+  if(document.querySelector(".cosmos-container").classList.contains("without-sidebar")) {
+    document.querySelector(".cosmos-container").classList.remove("without-sidebar");
     document.cookie = "without-sidebar=false";
   } else {
-    document.querySelector(".container").classList.add("without-sidebar");
+    document.querySelector(".cosmos-container").classList.add("without-sidebar");
     document.cookie = "without-sidebar=true";
   }
 }
