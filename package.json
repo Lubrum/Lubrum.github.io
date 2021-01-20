@@ -19,7 +19,7 @@
   "homepage": "https://github.com/Lubrum/Lubrum.github.io#readme",
   "dependencies": {
     "@dogstudio/highway": "^2.2.1",
-    "gsap": "^3.3.3"
+    "gsap": "^3.6.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
