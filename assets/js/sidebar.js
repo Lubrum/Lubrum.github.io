@@ -15,11 +15,11 @@ function open_sidebar() {
         document.querySelector(".navigation-menu").classList.remove("element-ready")
         if (document.querySelector(".cosmos-container").classList.contains("without-sidebar")) {
             document.querySelector(".cosmos-container").classList.remove("without-sidebar");
-            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 1000);
+            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 800);
             document.cookie = "without-sidebar=false";
         } else {
             document.querySelector(".cosmos-container").classList.add("without-sidebar");
-            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 1000);
+            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 800);
             document.cookie = "without-sidebar=true";
         }
     }
