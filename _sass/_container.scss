@@ -1,26 +1,28 @@
 * {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
+
 *:before,
 *:after {
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
-          box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
 }
 
 .cosmos-container {
-  grid-template-rows: 7% auto 100px;
-  grid-template-columns: 100%;
-  display: grid;
-  height: 100vh;
-  width: 100%;
+    grid-template-rows: 7% auto 100px;
+    grid-template-columns: 100%;
+    display: grid;
+    height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 @media only screen and (min-width: 1200px) {
-  .cosmos-container {
-    grid-template-columns: 16% 84%;
-    grid-template-rows: 7% 93%;
-  }
+    .cosmos-container {
+        grid-template-columns: 16% 84%;
+        grid-template-rows: 7% 93%;
+    }
 }
