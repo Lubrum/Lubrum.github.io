@@ -8,13 +8,6 @@ language: R
 author: luciano_brum
 ---
 
-<script src="{{ site.baseurl }}/assets/js/jquery-3.4.1.js"></script> 
-<script> 
-    $(function(){
-      $("#includedContent").load("{{ site.baseurl }}/assets/data/post3/articles_table.html"); 
-    });
-</script> 
-
 <h1> Resumo </h1>
 
 Saudações pessoal. A ideia deste post é apresentar a metodologia e os resultados obtidos ao explorar dados sobre publicações científicas recentes (2008-2018) sobre a utilização de Business Intelligence (BI) e Data Warehouse (DW) no setor agrário, em nível internacional. Este trabalho foi previamente publicado em um [artigo completo](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109) na revista Journal of Agricultural Science (BRUM; CAMARGO; LAMPERT, 2019).
@@ -93,7 +86,9 @@ O último filtro aplicado foi a leitura completa dos 89 artigos restantes. 60 ar
 
 Os seguintes artigos foram selecionados para a análise de citações, autores, referências bibliográficas e análise temporal ([em resumo, uma análise bibliométrica, que pode ser conferida na íntegra aqui](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109)).
 
-<div id="includedContent"></div>
+<div id="includedContent">
+    {% include /revisao-literatura/articles_table.html %}
+</div>
 
 A Figura abaixo, em ordem decrescente, apresenta o número de citações de cada um dos artigos selecionados, assim como o acumulado de citações destes trabalhos.
 

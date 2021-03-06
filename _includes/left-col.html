@@ -5,12 +5,12 @@
     </div>
 
     {%- if site.author -%}
-    <a class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</a> {%- endif -%} {%- if site.email -%}
+    <p class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</p> {%- endif -%} {%- if site.email -%}
     <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a> {%- endif -%}
 
-    <a class="author-description">
+    <p class="author-description">
         Engenheiro de Computação, Mestre em Computação Aplicada, Interesse em Data Science e Software Development
-    </a>
+    </p>
 
 
     <br> {%- include social.html -%}
