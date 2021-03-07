@@ -1,17 +1,18 @@
 <div class="navigation-menu element-ready">
 
     <div class="box">
-        <img class="profile-pic" src="{{ site.baseurl }}/assets/img/profile.jpg" alt="Foto do autor dos posts, Luciano Brum, sorrindo em uma parada de ônibus">
+        <img class="profile-pic" src="{{ site.baseurl }}/assets/img/jpg/profile.jpg" alt="Foto do autor dos posts, Luciano Brum, sorrindo em uma parada de ônibus">
     </div>
 
     {%- if site.author -%}
-    <a class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</a> {%- endif -%} {%- if site.email -%}
-    <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a> {%- endif -%}
+    <p class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</p> 
+    {%- endif -%} 
 
-    <a class="author-description">
-        Engenheiro de Computação, Mestre em Computação Aplicada, Interesse em Data Science e Software Development
-    </a>
+    {%- if site.email -%}
+    <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a> 
+    {%- endif -%}
 
+    <p id="author-description" class="author-description"></p>
 
     <br> {%- include social.html -%}
 
