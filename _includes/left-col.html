@@ -1,3 +1,6 @@
+<script type='text/javascript' src='{{site.baseurl}}/assets/js/typewritter-effect.js'>
+    twe_author_description();
+</script>
 <div class="navigation-menu element-ready">
 
     <div class="box">
@@ -5,13 +8,14 @@
     </div>
 
     {%- if site.author -%}
-    <p class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</p> {%- endif -%} {%- if site.email -%}
-    <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a> {%- endif -%}
+    <p class="author-name" href="mailto:{{ site.email }}">{{ site.author | escape }}</p> 
+    {%- endif -%} 
 
-    <p class="author-description">
-        Engenheiro de Computação, Mestre em Computação Aplicada, Interesse em Data Science e Software Development
-    </p>
+    {%- if site.email -%}
+    <a class="author-email" href="mailto:{{ site.email }}">{{ site.email }}</a> 
+    {%- endif -%}
 
+    <p id="author-description" class="author-description"></p>
 
     <br> {%- include social.html -%}
 
