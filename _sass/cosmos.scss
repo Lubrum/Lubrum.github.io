@@ -1,5 +1,16 @@
 @charset "utf-8";
 
+/* Extra Small devices (up to 600px) */
+$max-width-extra-small-devices: 600px !default;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$min-width-small-devices: 600px !default;
+/* Medium devices (landscape tablets, 768px and up) */
+$min-width-medium-devices: 768px !default;
+/* Large devices (laptops/desktops, 992px and up) */
+$min-width-large-devices: 992px !default;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$min-width-extra-large-devices: 1200px !default;
+
 $base-font-family: Consolas,
 Monaco,
 Andale Mono,
@@ -49,8 +60,55 @@ $on-laptop: 1100px !default;
   font-size: $base-font-size * $ratio;
 }
 
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+/// Source: https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/// Responsive font size with Mixins and SASS. 
+/// @param {Number} $minFont - Minimun font size
+/// @param {Number} $maxFont - Maximum font size
+/// @param {Number} $minBreakpoint - Minimum breakpoint to do calculations
+/// @param {Number} $maxBreakpoint - Maximum breakpoint to do calculations
+/// @return {Number} - font-size with adapted size
+/// Source: https://ryanfeigenbaum.com/easy-responsive-typography/ 
+@mixin fluid-typography($minFont, $maxFont, $minBreakpoint, $maxBreakpoint) {
+
+  $minBreakpoint: strip-unit($minBreakpoint);
+  $maxBreakpoint: strip-unit($maxBreakpoint);
+  /* Define variable for media query */
+  $maxLessOne: $maxBreakpoint - 1;
+  
+  /* Define variable for fallback */
+  $avg: ($maxFont + $minFont) / 2;
+ 
+  /* Base font size */
+  font-size: #{$minFont}px;
+  
+  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
+    
+    /* Adds a fallback for unsupported browsers */
+    font-size: #{$avg}px;
+      
+    /* The fluid typography magic 🌟  */
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint}))
+  }
+  
+  @media (min-width: #{$maxBreakpoint}px) {
+    font-size: #{$maxFont}px;
+  }
+}
+
 // Import partials.
-@import "base",
+@import 
+"base",
 "search-input",
 "header",
 "sidebar",
