@@ -12,7 +12,7 @@
     width: 100%;
   }
 
-  .searchBox {
+  .search-box {
     margin-left: $spacing-unit / 4;
     margin-right: $spacing-unit / 4;
     position: relative;
@@ -36,7 +36,7 @@
     }
   }
 
-  .searchInput {
+  .search-input {
     font-weight: 700;
     letter-spacing: 2px;
     border: none;
@@ -72,7 +72,7 @@
     color: black;
   }
 
-  .searchButton {
+  .search-button {
     float: right;
     width: 30px;
     height: 30px;
@@ -87,7 +87,7 @@
     -webkit-background-size: 100% 100%;
   }
 
-  .searchBox:hover>.searchButton {
+  .search-box:hover>.search-button {
     color: #2f3640;
   }
 }

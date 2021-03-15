@@ -14,7 +14,7 @@
 }
 
 .post-title {
-    @include relative-font-size(1.8);
+    @include fluid-typography(50, 60, $max-width-extra-small-devices, 1600);
     letter-spacing: -1px;
     line-height: 1.5;
     color: white;
@@ -32,7 +32,6 @@
     transform: translate(-50%, 0%);
     left: 50%;
     width: 100%;
-    //padding: 2% 0%;
 }
 
 .post {
@@ -43,25 +42,30 @@
 }
 
 .post-meta {
-    font-size: $small-font-size;
+    @include fluid-typography(15, 20, $max-width-extra-small-devices, 1600);
 }
 
-@media only screen and (min-width: 992px) {
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $min-width-small-devices) {
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $min-width-medium-devices) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $min-width-large-devices) {
     .post {
         margin-left: $spacing-unit;
         margin-right: $spacing-unit;
         padding-bottom: $spacing-unit / 8;
         padding-top: $spacing-unit / 8;
     }
-    .post-title {
-        @include relative-font-size(2.8);
-    }
-    .post-meta {
-        @include relative-font-size(1);
-    }
 }
 
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $min-width-extra-large-devices) {
     .without-sidebar .main-content {
         width: calc(119%);
         transform: translateX(-16%);
@@ -77,8 +81,5 @@
         -o-transition: all 0.3s ease-in-out;
         transition: all 0.3s ease-in-out;
         display: block;
-    }
-    .post-meta {
-        @include relative-font-size(1);
     }
 }

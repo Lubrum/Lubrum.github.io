@@ -14,7 +14,10 @@ dl, dd, ol, ul, figure {
  */
 
 body, html {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+  font-weight: $base-font-weight;
+  font-family: $base-font-family;
+  line-height: $base-line-height;
+  @include fluid-typography(18, 28, 300, 1600);
   color: $text-color;
   background-color: #111;
   -webkit-text-size-adjust: 100%;
@@ -135,7 +138,7 @@ blockquote {
  */
 
 pre, code {
-  font-size: $base-font-size;
+  @include fluid-typography(12, 20, 300, 1600);
   color: rgb(68, 148, 36);
   background-color: rgb(0, 0, 0);
 }
@@ -243,34 +246,23 @@ p {
   padding-top: 20px;
 }
 
-@media only screen and (min-width: 768px) { 
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $min-width-small-devices) {
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $min-width-medium-devices) {
   pre {
     max-height: 600px;  
   }
-  
-  body, html {
-    font: $base-font-weight #{$base-font-size*1.2}/#{$base-line-height} $base-font-family;
-  }
 }
 
-@media only screen and (min-width: 992px) {
-  body, html {
-    font: $base-font-weight #{$base-font-size*2}/#{$base-line-height} $base-font-family;
-  }
-
-  pre, code {
-    @include relative-font-size(1.4);
-  }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $min-width-large-devices) {
 }
 
-@media only screen and (min-width: 1200px) {
-  body, html {
-    font: $base-font-weight #{$base-font-size*1.6}/#{$base-line-height} $base-font-family;
-  }
-
-  pre, code {
-    @include relative-font-size(1.6);
-  }
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $min-width-extra-large-devices) {
 
   iframe {
     display: inline-block;

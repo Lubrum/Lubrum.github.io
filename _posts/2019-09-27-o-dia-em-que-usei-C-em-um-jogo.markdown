@@ -16,7 +16,7 @@ Vou compartilhar com vocês algo inusitado que encontrei em meu HD externo enqua
 
 Durante a graduação, no tempo livre que eu tinha *(que era escasso, já que eu tinha que viajar 2 horas e meia por dia para o campus em outra cidade)*, eu jogava **Tibia** (*"você pode sair do tibia mas o tibia nunca sai de você... rsrs"*).
 
-<br>
+
 
 <h1> Sobre o Jogo </h1>
 
@@ -24,21 +24,21 @@ Durante a graduação, no tempo livre que eu tinha *(que era escasso, já que eu
 
 O jogo se resume em criar um personagem de uma das **quatro vocações** (*knight, paladin, sorcerer ou druid*) e explorar o que o jogo oferece. Entenda **explorar** como **o objetivo indivual de cada jogador** para o Tibia, além do **tipo de servidor** onde o personagem foi criado (que pode ser PVP, non-PVP e Hardcore PVP). Em outras palavras, você pode jogar **Tibia** para colecionar itens raros, upar níveis, matar jogadores, dominar servidores ou aparecer em algum rank específico do jogo.
 
-<br>
+
 
 <h1> Algo que me perturbava... </h1>
 
 Eu sempre joguei o **Tibia** com o objetivo de upar níveis e acessar novos desafios e lugares no jogo. Só que para isso, eu precisava **upar níveis**, e para fazer isso de forma eficiente, é necessário ter **dinheiro no jogo**. E para ter **dinheiro**, você precisa ir em lugares (ou cavs) que os monstros que você derrota carreguem **itens valiosos**. Eis então que percebi algo que faltava no jogo na época:
 
-<br>
+
 
 - **Como eu vou saber se, durante a minha caçada (hunt) de uma hora, eu obtive lucro ou prejuízo**?  
 
-<br>
+
 
 Ao derrotar os monstros, você pode coletar os **itens** que ele derruba (dropa), porém, não havia mecanismo simples no jogo que permitisse que soubessemos os valores dos itens no próprio jogo. Pior que isso, para saber se a hunt foi lucro ou prejuízo, era necessário sempre **somar o preço individual** de cada item e fazer uma **estimativa** do loot obtido. Porém esse processo era **oneroso** e **desgastante**.
 
-<br>
+
 
 <h1> Então surgiu uma ideia... </h1>
 
@@ -56,7 +56,7 @@ Uma função interessante, porém que nunca havia me despertado a atenção, é 
 
 Até que lembrei das minhas aulas em linguagem C...
 
-<br>
+
 
 <h1> A Solução </h1>
 
@@ -110,7 +110,7 @@ Tempos depois eu descobri que já existiam ferramentas online como o [Tibia Stat
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure3.png" alt="Print do Tibia Stats na ferramenta count loot.">
 </figure>
 
-<br>
+
 
 <h1> Hunting Session Analyzer </h1>
 
@@ -122,7 +122,7 @@ Com este recurso, é possível saber agora se a hunt é lucrativa, se você est�
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure4.png" alt="Print do Tibia Stats na ferramenta count loot.">
 </figure>
 
-<br>
+
 
 <h1> Considerações Finais </h1>
 
