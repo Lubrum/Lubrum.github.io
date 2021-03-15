@@ -8,10 +8,10 @@ subtitle: Um blog sobre Ciência de Dados, Desenvolvimento de Software e tecnolo
   <h5 class="post-home-subtitle"> {{ page.subtitle }} </h5>
 
   {%- if site.posts.size > 0 -%}
-  <form action="{{site.baseurl}}/search.html" method="get">
+  <form class="search-form" action="{{site.baseurl}}/search.html" method="get">
     <div class="searchBox">
-      <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
-         <button class="searchButton"></button>
+      <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts" />
+         <button class="searchButton" />
     </div>
   </form>
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
