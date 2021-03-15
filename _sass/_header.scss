@@ -31,7 +31,7 @@
 
 .page-link {
     white-space: nowrap;
-    font-size: $small-font-size;
+    @include fluid-typography(15, 25, 300, 1600);
     color: $text-color;
     &:not(:last-child) {
         margin-right: 60px;
@@ -45,19 +45,21 @@
     display: block;
 }
 
-@media only screen and (min-width: 768px) {
-    .page-link {
-        @include relative-font-size(0.8);
-    }
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $min-width-small-devices) {
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $min-width-medium-devices) {
 }
 
-@media only screen and (min-width: 992px) {
-    .page-link {
-        @include relative-font-size(1.6);
-    }
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $min-width-large-devices) {
 }
 
-@media only screen and (min-width: 1200px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $min-width-extra-large-devices) {
+
     .site-header {
         position: fixed;
         width: 100%;
