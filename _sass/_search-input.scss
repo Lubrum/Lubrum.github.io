@@ -77,14 +77,18 @@
     width: 30px;
     height: 30px;
     border-radius: 50%;
+    //background-image: url(../img/png/search-icon.png);
     background-image: url(../img/png/search-icon.png);
+    background-color: #262626;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: 0.4s;
-    background-size: 100% 100%;
-    -o-background-size: 100% 100%;
-    -webkit-background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    background-position: center;
+    -o-background-size: 80% 100%;
+    -webkit-background-size: 80% 100%;
   }
 
   .search-box:hover>.search-button {
