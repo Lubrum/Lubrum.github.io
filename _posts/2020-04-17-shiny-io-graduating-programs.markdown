@@ -38,7 +38,7 @@ O que eu preciso para reproduzir este experimento?
 
   - Publicando o app no shinyapps.io;
 
-<br>
+
 
 <h1> Quais informações vamos trazer aos usuários? </h1>
 
@@ -68,7 +68,7 @@ Antes de começar, você tem duas alternativas: **Clonar o meu projeto do github
 
 Abaixo são apresentados os pacotes utilizados na primeira parte do tutorial. O [código fonte completo está disponível no Github](https://github.com/Lubrum/Graduating-Programs-Brazil/tree/master/R). 
 
-<br />
+
 
 ```R
 # loading / installing packages
@@ -95,10 +95,10 @@ library(dplyr)
 if (!require(forcats)) install.packages("forcats")
 library(forcats)
 ```
-<br /> 
+ 
 Inicialmente, vamos importar e organizar esses dados para obter as informações necessárias para a UI. 
 
-<br />
+
 
 ```R
 # importação dos dados
@@ -150,10 +150,10 @@ shape_brazil$id <- rownames(as.data.frame(shape_brazil))
 coordinates_brazil <- fortify(shape_brazil, region = "id") # apenas coordenadas
 shape_brasil_df <- merge(coordinates_brazil, shape_brazil, by = "id", type = 'left') # acréscimo de atributos restantes
 ```
-<br />
+
 Com os dados importados e organizados em dataframes, agora vamos criar dataframes específicos para cada um dos gráficos na UI. Isso fará com que a aplicação consuma mais memória, mas por outro lado tornará a lógica de processamento e acesso aos dados mais simples.
 
-<br />
+
 
 ```R
 # dados agrupados por estado e id, ordem decrescente de n° de Programas por estado
@@ -187,7 +187,7 @@ lineplot_1_data <- as.data.frame(
 # valores possíveis de notas da CAPES 
 mybreaks <- c("3", "4", "5", "6", "7")
 ```
-<br />
+
 O código acima (em lineplot_1_data) tem um problema: é feito o agrupamento do n° de Programas por linha de pesquisa e por ano, porém não são gerados registros para os anos em que não houve variação do n° de Programas. Abaixo um exemplo:
 
 1995 surgiu 1 novo tópico de pesquisa em IA e havia 12 tópicos de pesquisa em IA. Portanto, 1995 passou a ter 13 Programas em IA.
@@ -198,7 +198,7 @@ O código acima (em lineplot_1_data) tem um problema: é feito o agrupamento do 
 
 O algoritmo abaixo foi feito para gerar registros nos anos em que o número de tópicos de pesquisa não variou, para todos anos e tópicos de pesquisa.
 
-<br />
+
 
 ```R
 # gerando registros para os anos sem variação no n° de Programas para cada tópico de pesquisa
@@ -222,10 +222,10 @@ lineplot_1_data$id <- as.numeric(lineplot_1_data$id)
 lineplot_1_data$cumsum <- as.numeric(lineplot_1_data$cumsum)
 lineplot_1_data <- lineplot_1_data[order(lineplot_1_data$year),]
 ```
-<br />
+
 Também foram realizadas customizações para cada gráfico que será gerado na UI. Abaixo é apresentado o código para customizar o tema (dark theme) e layout dos gráficos. O nome das variáveis já indica em qual gráfico que será aplicado o tema. Também são definidos os textos das escalas X e Y de cada gráfico.
 
-<br />
+
 
 ```R
 geral_1_theme <- theme(
@@ -268,22 +268,22 @@ lineplot_1_labs <- labs(
   caption = "\nFonte: Programas de Pós-Graduação em Computação - Plataforma Sucupira."
 ) 
 ```
-<br />
+
 Agora salvamos nosso ambiente (variáveis, dados e pacotes) em um arquivo RData. Depois ele será importado no servidor da aplicação (entenda o servidor/server como o backend, responsável pela lógica do app, processamento de inputs e geração dos gráficos com as informações processadas) e na interface da aplicação (para a geração de alguns menus para inputs do usuário).
 
-<br />
+
 
 ```R
 save.image(file = "R/data/all_data.RData")
 ```
 
-<br />
+
 
 <h1> Elaboração da Interface do Usuário (User Interface - UI) </h1>
 
 Agora devemos preparar a UI com os gráficos para o usuário. Abaixo o código utilizado para gerar a UI.
 
-<br />
+
 
 ```R
 if (!require(shiny)) install.packages("shiny")
@@ -405,7 +405,7 @@ ui <- navbarPage(
   )
 )
 ```
-<br />
+
 Antes de explicar em detalhes cada componente da UI, cabe mostrar o que é cada um destes componentes na tela final do shinyapp. Abaixo são apresentadas duas telas do nosso app final, com destaque para cada componente da UI.
 
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
@@ -461,7 +461,7 @@ Cabe destacar três elementos em especial:
 
 **includeCSS("css/styles.css"))** este trecho de código permite customizar o estilo da nossa página. Nesse caso, alteramos a página original para um **dark theme**.
 
-<br />
+
 
 ```css
 #fluidPage { 
@@ -497,7 +497,7 @@ body {
   background-color: #222222 !important;
 }
 ```
-<br />
+
 
 Em resumo:
 
@@ -509,7 +509,7 @@ Em resumo:
 
 A UI se resume a isso. Agora vamos para o server xD (parte mais complicada, em termos de lógica).
 
-<br>
+
 
 <h1>Elaboração da lógica do servidor (Server);</h1>
 
@@ -517,7 +517,7 @@ O nosso server será responsável por processar os inputs do usuário para gerar
 
 Vamos criar um arquivo com o nome **server.R** e instalar/importar os seguintes pacotes, além de carregar os dados que organizamos no início do tutorial:
 
-<br />
+
 
 ```R
 if (!require(dplyr)) install.packages("dplyr")
@@ -552,13 +552,13 @@ library(stringr)
 
 load(file = "data/all_data.RData")
 ```
-<br />
+
 O primeiro trecho de código em **observe** trata o princípio de modificar o input da página dos mapas nas seguintes situações:
 - Ao selecionar **"Todos os Estados"**, o input de Universidade é desabilitado;
 - Ao selecionar um estado específico, o input de Universidade deve conter apenas opções de universidade para o estado selecionado;
 - Se uma universidade específica for selecionada, o input de Estado é desabilitado;
 
-<br />
+
 
 ```R
 # Server logic ----
@@ -579,14 +579,14 @@ server <- function(input, output, session) {
     }
   })
 ```
-<br />
+
 Agora precisamos modificar o conjunto de dados que será plotado na tela de acordo com os inputs do usuário. 
 
 A variável **map_data** armazenará o conjunto de dados adequado para exibição no nosso mapa. Vamos utilizar o **reactive** do shiny para realizar essa tarefa: sempre que algum input for alterado na interface, o código em **reactive** no **server** irá executar e atualizar o conjunto de dados. 
 
 Essa lógica se resume a uma série de condicionais (if else), considerando todas as possibilidades de input do usuário (estado, universidade, linha de pesquisa e intervalo de notas da CAPES). A lógica pode ser analisada logo abaixo. 
 
-<br />
+
 
 ```R
  map_data <- reactive({ 
@@ -621,10 +621,10 @@ Essa lógica se resume a uma série de condicionais (if else), considerando toda
     }   
   })
 ```
-<br />
+
 Também vamos customizar o formato do mapa quando um estado específico for selecionado. Para isso, vamos utilizar novamente o **reactive** do shiny para selecionar apenas o shape do estado selecionado ou o shape de todo o Brasil caso a opção **"Todos"** seja selecionada. O shape será salvo na variável **map_shapes**.
 
-<br />
+
 
 ```R
 map_shapes <- reactive({ 
@@ -635,13 +635,13 @@ map_shapes <- reactive({
   }
 })
 ```
-<br />
+
 Na outra tela teremos um gráfico da evolução de uma determinada linha de pesquisa (ou duas, se o usuário desejar) com o passar dos anos. Por padrão, apenas uma será exibida. Para isso, haverão dois inputs do estilo select para a seleção das linhas de pesquisa. Portanto, para determinar se o gráfico deve possuir uma ou duas linhas, será utilizado o dado informado no select do usuário. A opção "Nenhum" foi definida como padrão para a segunda linha de pesquisa (ver código da UI) e indica que o gráfico deve exibir apenas uma linha. Qualquer outra opção neste mesmo menu acarreta na exibição de duas linhas (uma para cada linha de pesquisa selecionada).
 
 Um detalhe importante: repare o dataframe está sendo utilizado no ifelse...
 Não é o **all_data**, que contém todos os dados. É o **lineplot_1_data**. Aquele dataframe com os dados já processados para o gráfico com análise de dados anuais das linhas de pesquisa no Brasil.
 
-<br />
+
 
 ```R
 line_data <- reactive({ 
@@ -649,12 +649,12 @@ line_data <- reactive({
   else lineplot_1_data[lineplot_1_data$research_name == input$input_research_1 | lineplot_1_data$research_name == input$input_research_2,]    
 })
 ```
-<br />
+
 Por fim, as variáveis **output** apresentadas na sequência vão receber o conteúdo de **renderPlot**, que são os gráficos para cada situação. 
 
 <h2> 1- Mapa dos Programas de Pós-Graduação em Computação do Brasil </h2>
 
-<br />
+
 
 ```R
   output$map <- renderPlot({  
@@ -679,7 +679,7 @@ Por fim, as variáveis **output** apresentadas na sequência vão receber o cont
                                       legend.key = element_rect(color = "black", fill = "black"))
   }, bg = "transparent", execOnResize = TRUE)
 ```
-<br />
+
 
 A função **validate** serve para validar determinadas variáveis. No nosso caso, verificamos se **map_data**, o dataframe com os dados processados anteriormente no server, possui registros. Se não possuir, o app vai exibir a mensagem *'Para esta(s) universidade(s) não há o selecionado tema de pesquisa!'*. Também é verificado se map_shapes foi atribuido corretamente, caso contrário a mensagem *'Selecione um estado válido.'* é exibida.
 
@@ -707,7 +707,7 @@ E **theme** foi utilizado para aplicar propriedades específicas deste gráfico.
 
 <h2> 2- Gráfico de barras com o número de Programas de Pós em Computação por estado. </h2>
 
-<br />
+
 
 ```R
   output$bar_1 <- renderPlot({ 
@@ -718,13 +718,13 @@ E **theme** foi utilizado para aplicar propriedades específicas deste gráfico.
       barplot_1_labs + geral_1_theme + theme(axis.text.y = element_blank(), axis.ticks.y = element_blank())
   })
  ```
-<br />
+
 
  Vale destacar o uso do **geom_bar** para gerar gráfico de barras e o uso do **scale_y_continuous** para definir que a escala Y seja sempre uma sequência entre 0 e o estado com o maior número de programas, somado de 2 em 2. **geom_text** vai exibir na barra o número de programas daquele estado. O restante é semelhante ao gráfico do mapa.
 
 <h2> 3- Gráfico de barras com o número de Programas de Pós em Computação por linha de pesquisa (apenas tópicos de pesquisa com mais de 10 Programas de Pós). </h2>
 
-<br />
+
 
 ```R
   output$bar_2 <- renderPlot({ 
@@ -736,13 +736,13 @@ E **theme** foi utilizado para aplicar propriedades específicas deste gráfico.
       barplot_2_labs + geral_1_theme +  theme(axis.title.y = element_blank(), axis.text.x = element_blank(), axis.ticks.x = element_blank())
   })
    ```
-<br />
+
 
 Vale destacar novamente o **scale_y_continuous** para definir que a escala Y seja sempre uma sequência entre 0 e o estado com o maior número de programas, somado de 5 em 5. **coord_flip()** inverte as coordenadas X e Y. O restante já foi abordado.
 
 <h2> 4- Gráfico de linhas com o número de Programas de Pós em Computação por linha de pesquisa por ano. </h2>
 
-<br />
+
 
 ```R
   output$line_1 <- renderPlot({ 
@@ -756,7 +756,7 @@ Vale destacar novamente o **scale_y_continuous** para definir que a escala Y sej
   })
 }
 ```
-<br />
+
 
 Foi usado o **geom_line** para gerar o gráfico de linhas. O **scale_x_continuous** foi usado para definir que a escala X seja sempre uma sequência entre o menor e o maior ano, somados de 2 em 2, com limites em 1965 e 2030. **geom_dl()** foi utilizado para plotar o nome da linha de pesquisa no último ponto na coordanada X, no final da linha.
 
@@ -786,12 +786,12 @@ Não vamos incluir o arquivo que gerou os temas e dataframes a partir dos csvs, 
 
 Para rodar o app, basta abrir o RStudio no diretório do app, carregar o pacote **shiny** e executar o seguinte comando:
 
-<br />
+
 
 ```R
 runApp()
 ```
-<br />
+
 
 Se foi exibida uma tela com um mapa, semelhante a primeira figura do mapa deste tutorial, parabéns !! Este é o app que vocês desenvolveram comigo em pleno funcionamento !! Façam alguns testes com os inputs para verificar se está tudo ok ou se não há bugs :-).
 
@@ -811,25 +811,25 @@ Agora precisamos fornecer a autorização para o pacote rsconnect fazer o deploy
 
 - Cliquem no botão <b>show</b>. A aplicação vai apresentar o comando que vocês precisam executar localmente no RStudio/R para habilitar o deploy dos apps com o **rsconnect**. Cliquem em <b>Copy to clipboard</b> e colem o comando no RStudio e executem. O comando deve ser semelhante ao código abaixo.
 
-<br />
+
 
 ```R
 rsconnect::setAccountInfo(name='NOME-DA-MINHA-CONTA',
 			  token='MEU-TOKEN-SUPER-HIPER-MEGA-SECRETO',
 			  secret='SEGREDO-MAIS-SECRETO-DE-TODOS')
 ```
-<br />
+
 
 Se aparecer alguma mensagem de erro como:
 
-<br />
+
 
 ```R
 Error: HTTP 401
 GET https://api.shinyapps.io/v1/users/current/
 bad signature
 ```
-<br />
+
 
 É porque o token ou o secret não foram copiados da forma correta. 
 
@@ -839,14 +839,14 @@ Se tudo ocorrer da forma prevista, não será exibido nenhum erro ou mensagem.
 
 Se tudo funcionou, basta fazer o Deploy da aplicação. Tão simples como os comandos abaixo:
 
-<br />
+
 
 ```R
 library(rsconnect)
 deployApp()
 ```
 
-<br />
+
 
 O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-). Deve ser semelhante com a imagem abaixo.
 
@@ -856,12 +856,12 @@ O navegador padrão da sua máquina será aberto exibindo a aplicação online f
 
 Se surgir algum erro estranho, é provável que a pasta não tenha as permissões adequadas. Para isso, use o comando abaixo no terminal do ubuntu
 
-<br />
+
 
 ```console
 chmod -R 700 caminho/completo/do/diretório/com/o/app
 ```
-<br />
+
 
 O comando acima fornece permissão total para o usuário local no diretório indicado e subdiretórios.
 

@@ -1,13 +1,13 @@
 function open_sidebar() {
-    if (document.querySelector(".navigation-menu").classList.contains("element-ready")) {
-        document.querySelector(".navigation-menu").classList.remove("element-ready")
+    if (document.querySelector(".sidebar").classList.contains("element-ready")) {
+        document.querySelector(".sidebar").classList.remove("element-ready")
         if (document.querySelector(".cosmos-container").classList.contains("without-sidebar")) {
             document.querySelector(".cosmos-container").classList.remove("without-sidebar");
-            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 800);
+            setTimeout(() => { document.querySelector(".sidebar").classList.add("element-ready"); }, 800);
             document.cookie = "without-sidebar=false";
         } else {
             document.querySelector(".cosmos-container").classList.add("without-sidebar");
-            setTimeout(() => { document.querySelector(".navigation-menu").classList.add("element-ready"); }, 800);
+            setTimeout(() => { document.querySelector(".sidebar").classList.add("element-ready"); }, 800);
             document.cookie = "without-sidebar=true";
         }
     }
@@ -49,14 +49,14 @@ window.onload = function() {
 
     twe_author_description();
 
-    const sidebar = document.getElementsByClassName("navigation-menu")[0];
+    const sidebar = document.getElementsByClassName("sidebar")[0];
     sidebar.addEventListener("transitionstart", function(event) {
-        if (event.target.classList.contains('navigation-menu') && event.propertyName === 'transform') {
+        if (event.target.classList.contains('sidebar') && event.propertyName === 'transform') {
             setOverflowX()
         }
     })
     sidebar.addEventListener("transitionend", function(event) {
-        if (event.target.classList.contains('navigation-menu') && event.propertyName === 'transform') {
+        if (event.target.classList.contains('sidebar') && event.propertyName === 'transform') {
             setTimeout(() => {
                 unsetOverflowX()
             }, 100);
@@ -68,7 +68,7 @@ window.addEventListener('resize', function(event) {
     if (window.innerWidth < 1200) {
         document.getElementsByClassName("main-content")[0].style = "grid-column: 1 / 2";
     } else {
-        if (document.getElementsByClassName("navigation-menu")[0].style.display != "none") {
+        if (document.getElementsByClassName("sidebar")[0].style.display != "none") {
             document.getElementsByClassName("main-content")[0].style = "grid-column: 2 / 3";
         } else {
             document.getElementsByClassName("main-content")[0].style = "grid-column: 1 / 3";

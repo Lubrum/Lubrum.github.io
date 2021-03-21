@@ -14,7 +14,7 @@ Saudações pessoal.
 
 A ideia deste post é compartilhar com vocês alguns códigos e resultados que gerei ao coletar, processar e analisar os dados dos Programas de Pós-Graduação em Computação do Brasil.
 
-<br>
+
 
 <h1> Metodologia </h1>
 
@@ -28,20 +28,20 @@ As seguintes ferramentas e linguagens foram utilizadas para a produção das an�
 
 Inicialmente, os dados dos Programas de Pós-Graduação em Computação foram extraídos de um arquivo em PDF, obtido neste [link](https://capes.gov.br/images/stories/download/avaliacao/relatorios-finais-quadrienal-2017/20122017-CIENCIA-DA-COMPUTACAO-quadrienal.pdf). Abaixo, é apresentada a forma que os dados estavam armazenados no PDF.
 
-<br>
+
 
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure1.png" alt="Print do PDF com dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 
-<br>
+
 
 Eu tinha como objetivo gerar um vídeo e apresentar a metodologia de como se extrair dados de arquivos em PDF e gerar análises visuais destes dados, e como estudo de caso, os dados dos Programas de Computação. 
 
 Olhem só como ficou o script para realizar a extração do PDF para uma planilha excel... 
 Para entender em detalhes a sequência lógica dos comandos e metodologia adotada, acessem meu **Github -> [Lubrum](https://github.com/Lubrum/Graduating-Programs-Brazil)**).
 
-<br>
+
 
 ```R
 if (!require(pdftools)) install.packages("pdftools", repos = "http://cran.us.r-project.org")
@@ -98,17 +98,17 @@ for(i in seq(from = 2, to = length(list_pdf), by = 5)){
 write.xlsx(data_pdf, file = "../pdf/universities_before.xlsx", col.names = TRUE, row.names = TRUE, append = FALSE)
 ```
 
-<br>
+
 
 Porém, descobri posteriormente sobre a existência do site [Sucupira](https://sucupira.capes.gov.br/sucupira/public/consultas/coleta/programa/quantitativos/quantitativoIes.jsf?areaAvaliacao=2&areaConhecimento=10300007). O **Sucupira** possui os dados de todos os Programas de Pós-Graduação do Brasil. Abaixo, uma foto da página dos Programas de Pós em Computação do Brasil. É possível clicar em cada um dos Programas e obter informações mais específicas de cada um.
 
-<br>
+
 
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure2.png" alt="Print do site Sucupira com dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 
-<br>
+
 
 Então decidi expandir o horizonte dos meus objetivos. Primeiro realizei a metodologia de extração dos dados do PDF, e na sequência realizei uma validação e integração com os dados da plataforma Sucupira. O processo de integração e validação foi manual, conferindo caso a caso, entre os dados do PDF e os do Sucupira. Dados faltantes foram inseridos na base de dados, que no momento eram planilhas eletrônicas (Excel).
 
@@ -116,13 +116,13 @@ Posteriormente, pensei: já que estou coletando dados dos Programas, por que nã
 
 O resultado deste processo pode ser conferido abaixo.
 
-<br>
+
 
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure3.png" alt="Print da planilha Excel com os dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 
-<br>
+
 
 Também foram geradas outras planilhas com dados de área de concentração, linhas de pesquisa, temas de pesquisa e nível do Programa. 
 
@@ -225,7 +225,7 @@ guides() +
 ggtitle("Programas de Pós-Graduação com Pesquisa em Inteligência Artificial") +
 labs + theme
 ```
-<br>
+
 
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure4.png" alt="Mapa com os Programas de Pós-Graduação em Computação do Brasil com pesquisa em Inteligência Artificial.">
 

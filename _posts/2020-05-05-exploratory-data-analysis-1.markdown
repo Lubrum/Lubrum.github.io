@@ -26,7 +26,7 @@ Este trabalho foi desenvolvido no Sistema Operacional Ubuntu versão 18.10 LTS 6
 
   - [Considerações finais](#considerações-finais);
 
-<br>
+
 
 # Parte I - Fonte dos dados
 
@@ -65,7 +65,7 @@ Todas as informações sensíveis dos conjuntos de dados foram removidas antes d
 
 Inicialmente, vamos importar os pacotes necessários para a execução de nossas análises.
 
-<br />
+
 
 ```R
 if (!require(dplyr)) install.packages("dplyr")
@@ -107,11 +107,11 @@ library(rcompanion)
 if (!require(FSA))install.packages("FSA")
 library(FSA)
 ```
-<br />
+
 
 Inicialmente, vamos importar os dados de cada uma das planilhas com dados.
 
-<br />
+
 
 ```R
 # importação dos dados
@@ -130,7 +130,7 @@ BAEQ <- read.csv(BAEQ_path, sep = ";", stringsAsFactors = FALSE, encoding = "lat
 BALF <- read.csv(BALF_path, sep = ";", stringsAsFactors = FALSE, encoding = "latin1")
 ```
 
-<br />
+
 O que significa cada Sigla?
 - BAEE: Bacharelado em Engenharia de Energias Renováveis e Ambiente;
 - BAEA: Bacharelado em Engenharia de Alimentos;
@@ -141,17 +141,17 @@ O que significa cada Sigla?
 
 Com os dados importados e organizados em dataframes, podemos observar que o dataframe BAEA possui uma coluna de informações a mais. É possível verificar com uma rápida visualização no RStudio, no ***Global Environment***. Como a informação não possui contexto que agregue em nossas análises, vamos removê-la.
 
-<br />
+
 
 ```R
 BAEA <- BAEA[,-10]
 ```
 
-<br />
+
 
 Vamos checar o nome das colunas de cada dataframe, para confirmar se são as mesmas informações.
 
-<br />
+
 
 ```R
 > colnames(BAEA) == colnames(BAEE)
@@ -166,21 +166,21 @@ Vamos checar o nome das colunas de cada dataframe, para confirmar se são as mes
  [1] TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE TRUE
 ```
 
-<br />
+
 
 BAEC possui um nome diferente na coluna de carga horária, então vamos deixar o nome igual ao dos outros dataframes.
 
-<br />
+
 
 ```R
 colnames(BAEC)[10] <- colnames(BAEA)[10]
 ```
 
-<br />
+
 
 Agora podemos concatenar todos os dados com o comando rbind. Todos os dados estão agora no dataframe *all_data*. A concanetação com rbind é feita pelas linhas.
 
-<br />
+
 
 ```R
 all_data <- rbind(BAEA, BAEE)
@@ -190,11 +190,11 @@ all_data <- rbind(all_data, BAEQ)
 all_data <- rbind(all_data, BALF)
 ```
 
-<br />
+
 
 Também vamos reduzir o nome de algumas colunas para facilitar o desenvolvimento na sequência.
 
-<br />
+
 
 ```R
 colnames(all_data)[10] <- "CARGA_HORARIA"
@@ -202,11 +202,11 @@ colnames(all_data)[9] <- "SITUACAO"
 colnames(all_data)[5] <- "COD_DISCIPLINA"
 colnames(all_data)[6] <- "DISCIPLINA"
 ```
-<br />
+
 
 Feita a junção dos dados, vamos analisar individualmente o conteúdo único das colunas que contém categorias (Strings). Também vamos verificar em cada coluna se existem NaNs (*Not a Number* - Não-Números) ou campos vazios.
 
-<br />
+
 
 ```R
 > all_data$MATR_ALUNO[is.na(all_data$MATR_ALUNO)]
@@ -259,11 +259,11 @@ numeric(0)
  ...
 ```
 
-<br />
+
 
 Olhem só, existe uma porção dos dados em que a nota na **média final** está com um valor incorreto e constante de 100000. Vamos transformar em 0 e remover os registros posteriormente.
 
-<br />
+
 
 ```R
 > all_data$MEDIA_FINAL[all_data$MEDIA_FINAL > 10 | all_data$MEDIA_FINAL < 0] <- 0
@@ -331,11 +331,11 @@ character(0)
  [ reached getOption("max.print") -- omitted X entries ]
 ```
 
-<br />
+
 
 Mais dados inconsistentes. O ano de evasão registrado como NA (*Not Available* - Não disponível) em muitos registros, provavelmente indicando casos de alunos que não evadiram da universidade. Vamos transformar em zeros.
 
-<br />
+
 
 ```R
 > all_data$ANO_EVASAO[is.na(all_data$ANO_EVASAO)] <- 0
@@ -343,7 +343,7 @@ Mais dados inconsistentes. O ano de evasão registrado como NA (*Not Available* 
  [1] 2009 2016 2008 2011 2007 2015 2014 2013 2012 2010 2018 2017 2019    0
 ```
 
-<br />
+
 
 Agora vamos descartar casos de alunos nas seguintes situações:
 - Dispensados sem nota (todos neste caso ficaram com média zero);
@@ -359,7 +359,7 @@ Os alunos aprovados e reprovados por nota ou frequência possuem a informação 
 
 Vamos também aproveitar para dar um nome mais conciso para algumas formas de evasão.
 
-<br />
+
 
 ```R
 > all_data <- all_data[all_data$SITUACAO != "Dispensado sem nota",]
@@ -378,11 +378,11 @@ Vamos também aproveitar para dar um nome mais conciso para algumas formas de ev
 > all_data$FORMA_EVASAO[(all_data$FORMA_EVASAO == "Transferência Interna")] <- "Transf. Interna"
 ```
 
-<br />
+
 
 Agora que temos nosso conjunto de dados tratado e integrado em um único dataframe, vamos iniciar as análises gerando diversas estatísticas sobre esses dados. Para isso, vamos reutilizar a função abaixo:
 
-<br />
+
 
 ```R
  statistics <- function(dataframe, response, ...) {
@@ -405,11 +405,11 @@ Agora que temos nosso conjunto de dados tratado e integrado em um único datafra
 }
 ```
 
-<br />
+
 
 Na sequência, vamos observar os resultados para cada agregação possível dos nossos dados.
 
-<br />
+
 
 ```R
 DT1 <- all_data[all_data$DISCIPLINA == "DESENHO TECNICO I",]
@@ -458,7 +458,7 @@ DT1 <- all_data[all_data$DISCIPLINA == "DESENHO TECNICO I",]
 6      BALF 3.647069   3.80 3.209636   0  9.8  58       0.000      6.4500 6.4500
 ```
 
-<br />
+
 
 Observando o primeiro caso (média, mediana, desvio padrão, mínimo, máximo, n° de amostras, 1° e 3° quartis e IQR (*Interquartil Range* - Distância Interquartil) dos dados agrupados por curso de graduação), percebemos que a melhor média e menor desvio padrão é do BAEQ, enquanto que a pior média e alto valor de desvio é do BALF. Por outro lado, BALF tem 1/10 das amostras de BAEQ, evidenciando que o resultado discrepante em BALF pode ser devido ao número de amostras. Cabe ressaltar que neste conjunto estão incluídos alunos aprovados, reprovados por nota e frequência (que a nota sempre fica em zero). Os outros cursos aparentemente possuem as médias mais próximas uns dos outros.
 
@@ -466,63 +466,63 @@ Tudo bem. Analisamos um caso. Porém temos outros numerosos casos. Podemos salva
 
 Vamos tirar proveito do poder dos gráficos do R para verificarmos visualmente esses resultados.
 
-<br />
+
 
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure1.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação.">
 </figure>
 
-<br />
+
 
 Podemos confirmar o que foi dito anteriormente através deste gráfico. Se você não sabe como interpretar um boxplot, [eu sugiro este link, que explica em detalhes cada um dos componentes do boxplot](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51).
 
 Vamos verificar outros casos.
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure2.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure3.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure4.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure4.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure5.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure5.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure6.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure6.png" alt="Gráfico de violino com médias dos alunos em Desenho II por ano e semestre.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure7.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure7.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure8.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure8.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano, sem notas de alunos reprovados pro frequência.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure9.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure9.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure10.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure10.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure11.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure11.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure12.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure12.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por semestre e ano, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 
 ```R
 #dark theme
@@ -876,7 +876,7 @@ fig <- ggplot(partial_data[partial_data$DISCIPLINA == "DESENHO TECNICO II",],
 ggbackground(fig, img)
 savePlot(filename = "../images/figure12.png", type = "png", device = dev.cur())
 ```
-<br />
+
 
 Resumindo um pouco dos gráficos acima:
 
@@ -894,89 +894,89 @@ Resumindo um pouco dos gráficos acima:
 
 Agora vamos observar outros aspectos do nosso dataset...
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure13.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure13.png" alt="Gráficos de barras com reprovados por sexo.">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure14.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure14.png" alt="Gráficos de barras com reprovados por sexo e disciplina (n° e %).">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure15.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure15.png" alt="Gráficos de barras com reprovados por sexo, disciplina e ano (n° e %).">
 </figure>
-<br />
+
 
 Interessante observação que as estudantes do sexo feminino reprovam menos em quantidade e percentual se comparadas aos estudantes do sexo masculino. O percentual apresentado nos gráficos é relativo ao universo de estudantes do sexo em questão, e não do total de alunos. Exemplo: se de uma turma de 100, 50 foram reprovados e 10 destes são estudantes do sexo feminino, então 20% dos estudantes do sexo feminimo reprovaram, e não 10%. O percentual é relacionado com o universo de reprovados, e não do total de alunos.
 
 O mesmo acontece se observamos as reprovações por ano e por disciplina. Existem raríssimas exceções onde estudantes do sexo feminino reprovaram mais em quantidade/percentual do que do sexo masculino (2008 em Desenho I e 2014 em Desenho II).
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure16.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure16.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (n°).">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure17.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure17.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (%).">
 </figure>
-<br />
+
 
 Outro caso interessante são as reprovações por disciplina, semestre e ano. Na maioria dos anos, as reprovações em percentual e absolutas são maiores no 1° semestre para Desenho I e no 2° semestre para Desenho II. 
 
 Faz sentido, já que Desenho I é pré-requisito para cursar Desenho II, que geralmente é no semestre subsequente. 
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure18.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure18.png" alt="Gráficos de barras com reprovados por disciplina e forma de evasão (n°).">
 </figure>
-<br />
+
 
 A maior parte dos reprovados por frequência em Desenho I acaba abandonando o curso de origem. Esta é uma realidade preocupante evidenciada pelo gráfico acima. O cenário é menos intenso em Desenho II, porém ainda preocupante. Vejam que uma parcela muito pequena dos estudantes que reprovaram nos Desenhos I e II se formaram ou são alunos regulares.
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure19.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure19.png" alt="Gráficos de barras com número de estudantes por situação atual, disciplina e ano (n°).">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure20.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure20.png" alt="Gráfico de linha com número de estudantes por situação atual, disciplina e ano (n°).">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure21.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure21.png" alt="Gráfico de linha com percentual de estudantes por situação atual, disciplina e ano.">
 </figure>
-<br />
+
 
 A diferença das reprovações por frequência e aprovações entre os Desenhos é evidenciada acima. Estudantes de Desenho I e II aparentemente tem mantido constante o seu desempenho nos últimos anos, de uma forma geral, apesar do cenário não ser satisfatório. Houveram variações significativas na quantidade de estudantes neste período analisado.
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure22.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure22.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho I, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure23.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure23.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho II, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 
 A distribuição das médias por ano e semestre, tanto em Desenho I como II, se concentram na nota 6, que é a nota mínima para aprovação. Em Desenho II, o desempenho dos estudantes tem sido muito superior ao de Desenho I.
 
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure24.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure24.png" alt="Gráfico de densidade 2d de médias finais por ano e disciplina, sem notas de alunos reprovados por frequência.">
 </figure>
-<br />
+
 
 Aqui novamente observamos a maior concentração das médias entre as notas 6 e 7, em Desenho I e II. O cenário é mais positivo em Desenho II, apesar de aparentemente ter piorado nos últimos anos (pois ocorreu maior concentração das médias em torno do 6 e 7, e menor concentração em notas mais altas, como aconteceu em anos entre 2007 e 2014).
 
-<br />
+
 
 ```R
 # Bar plot - reprovados por frequência por sexo (n e %)
@@ -1380,7 +1380,7 @@ fig1 <- ggplot(partial_data,
 ggbackground(fig1, img)
 savePlot(filename = "../images/figure24.png", type = "png", device = dev.cur())
 ```
-<br />
+
 
 Apesar dos resultados das análises serem visíveis, temos que corroborar com o uso de métodos estatísticos.
 
@@ -1390,7 +1390,7 @@ Vamos testar hipóteses sobre as variáveis ​​independentes e a nota final d
 
 Primeiro, transformamos os dados da coluna do período para números, representando o primeiro e o segundo semestres. Na sequência, o período e o ano são transformados em fatores, para trabalharmos na sequência com este formato.
 
-<br />
+
 
 ```R
 all_data$PERIODO[all_data$PERIODO == "1. Semestre"] <- 1
@@ -1399,7 +1399,7 @@ all_data$PERIODO <- as.factor(all_data$PERIODO)
 all_data$ANO <- as.factor(all_data$ANO)
 DT1 <- all_data[all_data$DISCIPLINA == "DESENHO TECNICO I",]
 ```
-<br />
+
 
 ### Caso I: Performance dos Estudantes por Semestre e Ano em Desenho Técnico I 
 
@@ -1424,7 +1424,7 @@ No caso de (1): podemos assumir que cada estudante é responsável por seu respe
 <p style = "color: #d2ff4d">
 No caso de (2): realizar o <b>teste de shapiro-walk</b>, para checar se os resíduos/erros possuem uma distribuição normal. Para isso, vamos antes executar uma análise de variância com o <b>aov</b> no R
 </p>
-<br />
+
 
 ```R
 #              |  var. indep. | var. depend. | conjunto de dados
@@ -1436,12 +1436,12 @@ Shapiro-Wilk normality test
 data:  residuals(aov_result)
 W = 0.93032, p-value < 2.2e-16
 ```
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure25.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure25.png" alt="Gráficos de caixa e violino com médias dos alunos por curso de graduação.">
 </figure>
 
-<br />
+
 <p style = "color: #d2ff4d">
 p-value < 0.05 : H0 (Hipótese Nula) rejeitada, a evidência de que a distribuição de resíduos não segue uma distribuição normal é estatisticamente significante.
 
@@ -1450,14 +1450,14 @@ Resultado: os resíduos não têm uma distribuição normal.
 <p style = "color: #b3c6ff">
 No caso de (3): teste de homogeneidade da variância entre grupos. Primeiro manualmente e depois com o <b>teste de Levene</b>.
 </p>
-<br />
+
 
 ```R
 max(aggregate(MEDIA_FINAL ~ ANO + PERIODO, DT1, var)$MEDIA_FINAL)/min(aggregate(MEDIA_FINAL ~ ANO + PERIODO, DT1, var)$MEDIA_FINAL)
 
 [1] 1.620751
 ```
-<br />
+
 
 
 [Regra empírica: Variações que não excedem a taxa de 1.5:1 entre a variância máxima e mínima não violam o pressuposto.](https://doi.org/10.3758/s13428-017-0918-2) 
@@ -1465,7 +1465,7 @@ max(aggregate(MEDIA_FINAL ~ ANO + PERIODO, DT1, var)$MEDIA_FINAL)/min(aggregate(
 Resultado: 1.62. A variação entre os grupos possui discrepâncias. Vamos confirmar com testes de Levene.
 </p>
 
-<br />
+
 
 ```R
 leveneTest(MEDIA_FINAL ~ ANO, DT1, center = median)
@@ -1495,7 +1495,7 @@ Levenes Test for Homogeneity of Variance (center = median)
  ---
  Signif. codes:  0 "***" 0.001 "**" 0.01 "*" 0.05 "." 0.1 " " 1
 ```
-<br />
+
 
 <p style = "color: #b3c6ff">
 p-value < 0,05: H0 rejeitado em todos os testes de Levene, a evidência de que as variações entre os grupos (anos, semestres e ambos) são diferentes é estatisticamente significante.
@@ -1507,7 +1507,7 @@ p-value < 0,05: H0 rejeitado em todos os testes de Levene, a evidência de que a
 <p style = "color: #ffccff">
 Uma das técnicas que é possível utilizar com violações das pressuposições da anova é o teste de Kruskal-Wallis. É testado se a função de distribuição das médias entre os grupos é igual (H0).
 </p>
-<br />
+
 
 ```R
 kruskal.test(MEDIA_FINAL ~ ANO, DT1)
@@ -1528,25 +1528,25 @@ Kruskal-Wallis rank sum test
 data:  MEDIA_FINAL by interaction(ANO, PERIODO)
 Kruskal-Wallis chi-squared = 172.89, df = 24, p-value < 2.2e-16
 ```
-<br />
+
 <p style = "color: #ffccff">
 p-value < 0,05: H0 rejeitado em todos os testes de Kruskal-Wallis. Portanto, a diferença de distribuição das médias em pelo menos um dos grupos de anos e semestres é estatisticamente significante.
 </p>
 
 Vamos observar graficamente estes dados.
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure26.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure26.png" alt="Distribuição de médias dos alunos por ano.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure27.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure27.png" alt="Distribuição de médias dos alunos por semestre.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure28.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure28.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 </figure>
-<br />
+
 
 É possível observar que no caso dos semestres, as distribuições possuem alguma semelhança. Por isso o p-value dos semestres como tratamento resultou em um valor mais próximo de 0.05. Ao verificarmos ano e ambos ano e semestre, as diferenças entre os grupos se mostraram mais significativas. 
 
@@ -1556,7 +1556,7 @@ Antes vamos aplicar o teste de **size effect** com a função **multiVDA**. O te
 
 [Resultados: o VDA varia de 0 a 1, com 0.5 indicando igualdade estocástica e 1 indicando que o primeiro grupo domina o segundo. O CD varia de -1 a 1, com 0 indicando igualdade estocástica e 1 indicando que o primeiro grupo domina o segundo. r varia de aproximadamente -0,86 a 0,86, dependendo do tamanho da amostra, com 0 indicando nenhum efeito e um resultado positivo indicando que os valores no primeiro grupo são maiores que no segundo.](https://www.rdocumentation.org/packages/rcompanion/versions/2.3.0/topics/multiVDA)
 
-<br />
+
 
 ```R
 multiVDA(MEDIA_FINAL ~ ANO, data = DT1)
@@ -1571,11 +1571,11 @@ multiVDA(MEDIA_FINAL ~ SEX, data = DT1)
 multiVDA(MEDIA_FINAL ~ COD_CURSO, data = DT1)
 # Par de grupos mais distinto: 60.1% de probabilidade de valores do curso BAEQ serem superiores aos do curso BALF.
 ```
-<br />
+
 
 Agora para finalizar vamos aplicar o teste de dunncan (dunnTest) para checar quais grupos de atributos pertencem a mesma classe de médias. Em outras palavras, quais grupos não possuem diferença estatística significante comparado com outros.
 
-<br />
+
 
 ```R
 PT = dunnTest(MEDIA_FINAL ~ ANO,
@@ -1587,17 +1587,17 @@ O <- cldList(P.adj ~ Comparison,
           threshold = 0.05,
           remove.zero = FALSE)
 ```
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure29.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure29.png" alt="Resultados do teste de Dunncan.">
 </figure>
-<br />
+
 
 As médias dos alunos em anos que pertencem a mesma label não possuem diferença estatística significativa. Este é o resultado que o teste nos trouxe. 
 
 Infelizmente não é possível utilizar mais de uma variável dependente neste teste, mas a solução do problema é uma simples manipulação do dataframe, conforme apresento abaixo.
 
-<br />
+
 
 ```R
 merged_data <- transform(DT1, ANO_PERIODO = paste(ANO, '.', PERIODO))
@@ -1611,11 +1611,11 @@ O <- cldList(P.adj ~ Comparison,
              threshold = 0.05,
              remove.zero = FALSE)
 ```
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure30.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure30.png" alt="Resultados do teste de Dunncan.">
 </figure>
-<br />
+
 
 Agora vamos proceder as mesmas análises, porém com os alunos de Desenho Técnico II.
 
@@ -1627,7 +1627,7 @@ Caso (1): podemos assumir que cada estudante é responsável por seu respectivo 
 Caso (2): Os resíduos seguem uma distribuição normal?
 </p>
 
-<br />
+
 
 ```R
 > DT2 <- all_data[all_data$DISCIPLINA == "DESENHO TECNICO II",]
@@ -1641,11 +1641,11 @@ Caso (2): Os resíduos seguem uma distribuição normal?
 data:  residuals(aov_result)
 W = 0.88, p-value <0.0000000000000002
 ```
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure31.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure31.png" alt="Histograma dos resíduos.">
 </figure>
-<br />
+
 
 <p style = "color: #d2ff4d">
 p-value < 0.05 : H0 (Hipótese Nula) rejeitada, a evidência de que a distribuição de resíduos não segue uma distribuição normal é estatisticamente significante.
@@ -1656,7 +1656,7 @@ Resultado: os resíduos não têm uma distribuição normal.
 Caso (3): teste de homogeneidade da variância entre grupos. 
 </p>
 
-<br />
+
 
 ```R
 > max(aggregate(MEDIA_FINAL ~ ANO + PERIODO, DT2, var)$MEDIA_FINAL)/min(aggregate(MEDIA_FINAL ~ ANO + PERIODO, DT2, var)$MEDIA_FINAL)
@@ -1684,17 +1684,17 @@ group   23    2.67 0.000033 ***
 ---
 Signif. codes:  0 "***" 0.001 "**" 0.01 "*" 0.05 "." 0.1 " " 1
 ```
-<br />
+
 
 <p style = "color: #b3c6ff">
 Onde p-value < 0,05: H0 rejeitado, a evidência de que as variações das médias entre os grupos (anos, e ambos semestres e anos) são diferentes é estatisticamente significante.
-<br>
+
 Onde p-value >= 0,05: H0 é aceita, a evidência de que as variações das médias entre os grupos de semestres são diferentes não é estatisticamente significante.
 </p>
 
 Como houveram violações dos pressupostos, vamos recorrer novamente aos métodos não-paramétricos.
 
-<br />
+
 
 ```R
 > kruskal.test(MEDIA_FINAL ~ ANO, DT2)
@@ -1718,25 +1718,25 @@ Kruskal-Wallis chi-squared = 9.3, df = 1, p-value = 0.002
 data:  MEDIA_FINAL by interaction(ANO, PERIODO)
 Kruskal-Wallis chi-squared = 142, df = 23, p-value <0.0000000000000002
 ```
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure32.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure32.png" alt="Distribuição de médias dos alunos por ano.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure33.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure33.png" alt="Distribuição de médias dos alunos por semestre.">
 </figure>
-<br />
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure34.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure34.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 </figure>
-<br />
+
 
 No caso dos semestres, as distribuições das médias possuem alguma semelhança. Ao verificarmos ano e ambos ano e semestre, as diferenças entre os grupos se mostraram mais significativas. Um resultado semelhante ao de Desenho Técnico I.
 
 Agora vamos verificar quais grupos possuem semelhanças significativas.
 
-<br />
+
 
 ```R
 merged_data <- transform(DT2, ANO_PERIODO = paste(ANO, '.', PERIODO))
@@ -1750,12 +1750,12 @@ O <- cldList(P.adj ~ Comparison,
              threshold = 0.05,
              remove.zero = FALSE)
 ```
-<br />
-<br />
+
+
 <figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure35.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure35.png" alt="Resultados do teste de Dunncan.">
 </figure>
-<br />
+
 
 Os resultados até o momento são compatíveis com o que visualizamos na etapa dos gráficos, não é mesmo? Essa é uma das numerosas importâncias da estatística em nossas vidas: extrair valiosas informações de amostras de um universo de infinitas possibilidades, e esboçar possíveis considerações sobre elas.
 

@@ -1,41 +1,37 @@
 @charset "utf-8";
 
-$base-font-family: Consolas,
-Monaco,
-Andale Mono,
-Ubuntu Mono,
-monospace !default;
-$index-font-family: -apple-system,
-BlinkMacSystemFont,
-"Roboto Light",
-Roboto,
-Helvetica,
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol" !default;
+/* Extra Small devices (up to 600px) */
+$max-width-extra-small-devices: 600px !default;
+/* Small devices (portrait tablets and large phones, 600px and up) */
+$min-width-small-devices: 600px !default;
+/* Medium devices (landscape tablets, 768px and up) */
+$min-width-medium-devices: 768px !default;
+/* Large devices (laptops/desktops, 992px and up) */
+$min-width-large-devices: 992px !default;
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+$min-width-extra-large-devices: 1200px !default;
 
+$base-font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
 $base-font-size: 16px !default;
-$base-font-weight: 270 !default;
-
-$small-font-size: $base-font-size * 0.7 !default;
+$base-font-weight: 400 !default;
+$base-letter-spacing: 0.01em;
 $base-line-height: 1.5 !default;
-
 $spacing-unit: 20% !default;
+$text-color: rgba(255, 255, 255, 0.8) !default;
 
-$text-color: rgba(255, 255, 255, 0.918) !default;
 $background-color: #262626 !default;
+$article-background-color: #111;
 $brand-color: #2a7ae2 !default;
-
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
 
+$base-box-shadow:
+#000000 4px 4px 8px,
+#4d4d4d -4px -4px 8px;
+
 $table-text-align: left !default;
-
 $content-width: 1100px !default;
-
 $on-palm: 1100px !default;
 $on-laptop: 1100px !default;
 
@@ -49,8 +45,56 @@ $on-laptop: 1100px !default;
   font-size: $base-font-size * $ratio;
 }
 
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+/// Source: https://css-tricks.com/snippets/sass/strip-unit-function/
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+
+  @return $number;
+}
+
+/// Responsive font size with Mixins and SASS. 
+/// @param {Number} $minFont - Minimun font size
+/// @param {Number} $maxFont - Maximum font size
+/// @param {Number} $minBreakpoint - Minimum breakpoint to do calculations
+/// @param {Number} $maxBreakpoint - Maximum breakpoint to do calculations
+/// @return {Number} - font-size with adapted size
+/// Source: https://ryanfeigenbaum.com/easy-responsive-typography/ 
+@mixin fluid-typography($minFont, $maxFont, $minBreakpoint, $maxBreakpoint) {
+
+  $minBreakpoint: strip-unit($minBreakpoint);
+  $maxBreakpoint: strip-unit($maxBreakpoint);
+
+  /* Define variable for media query */
+  $maxLessOne: $maxBreakpoint - 1;
+  
+  /* Define variable for fallback */
+  $avg: ($maxFont + $minFont) / 2;
+ 
+  /* Base font size */
+  font-size: #{$minFont}px;
+  
+  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
+    
+    /* Adds a fallback for unsupported browsers */
+    font-size: #{$avg}px;
+      
+    /* The fluid typography magic 🌟  */
+    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint}))
+  }
+  
+  @media (min-width: #{$maxBreakpoint}px) {
+    font-size: #{$maxFont}px;
+  }
+}
+
 // Import partials.
-@import "base",
+@import 
+"base",
 "search-input",
 "header",
 "sidebar",

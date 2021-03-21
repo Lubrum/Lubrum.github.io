@@ -28,7 +28,7 @@ Vocês precisam minimamente do RStudio e do R instalados antes de começar.
 
   - Checando a aplicação no shinyapps.io;
 
-<br>
+
 
 <h1> Criando uma conta no shinyapps.io </h1>
 
@@ -40,7 +40,7 @@ A página acima é a inicial do shinyapps.io, onde você pode criar uma conta gr
 
 O shinyapps vai solicitar que você dê um nome para a sua conta, que também será o domínio do seu app (ou apps). Algumas restrições para o nome do domínio/conta: deve ter entre 4 e 63 caracteres, podendo ser letras, números e o símbolo - . O nome da conta não pode começar com números ou o símbolo -, e não podem terminar com o símbolo -.
 
-<br>
+
 
 <h1> RStudio e instalação de pacotes necessários; </h1>
 
@@ -52,7 +52,7 @@ Com a linguagem R e o RStudio instalados e devidamente configurados, vamos agora
 
 Após o êxito da instalação, utilize o comando library(rsconnect) para carregar a biblioteca para o ambiente do RStudio.
 
-<br>
+
 
 <h1> Configurando o pacote rsconnect </h1>
 
@@ -79,7 +79,7 @@ bad signature
 
 Se tudo ocorrer da forma prevista, não será exibido nenhum erro ou mensagem.
 
-<br>
+
 
 <h1> Criando um App de Exemplo </h1>
 
@@ -176,7 +176,7 @@ O navegador padrão da sua máquina será aberto exibindo a aplicação online f
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
 </figure>
 
-<br>
+
 
 <h3> Em caso de erros... </h3>
 
@@ -191,7 +191,7 @@ Obviamente, isso não é correto de numerosas formas, já que qualquer usuário 
 ```console
 chmod -R 700 caminho/completo/do/diretório/com/o/app
 ```
-<br>
+
 <h1> Checando a aplicação no shinyapps.io </h1>
 
 É possível ter um nível de controle do serviço responsável pelo app no shinyapps.io. Algumas possibilidades:
@@ -206,7 +206,7 @@ chmod -R 700 caminho/completo/do/diretório/com/o/app
 
 Para mais detalhes, acesse [https://shiny.rstudio.com/articles/shinyapps.html](https://shiny.rstudio.com/articles/shinyapps.html).
 
-<br>
+
 
 <h1> Considerações Finais </h1>
 
