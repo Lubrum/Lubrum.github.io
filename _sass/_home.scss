@@ -43,10 +43,8 @@
   -moz-transition: all 1.5s;
   transition: all 1.5s;
   background-color: $background-color;
-  box-shadow:
-    #000000 4px 4px 8px,
-    #4d4d4d -4px -4px 8px;
-  font-family: $index-font-family;
+  box-shadow: $base-box-shadow;
+  font-family: $base-font-family;
 
   &:hover {
     color: #b1b9fc;

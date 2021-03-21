@@ -11,42 +11,27 @@ $min-width-large-devices: 992px !default;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 $min-width-extra-large-devices: 1200px !default;
 
-$base-font-family: Consolas,
-Monaco,
-Andale Mono,
-Ubuntu Mono,
-monospace !default;
-$index-font-family: -apple-system,
-BlinkMacSystemFont,
-"Roboto Light",
-Roboto,
-Helvetica,
-Arial,
-sans-serif,
-"Apple Color Emoji",
-"Segoe UI Emoji",
-"Segoe UI Symbol" !default;
-
+$base-font-family: charter, Georgia, Cambria, "Times New Roman", Times, serif;
 $base-font-size: 16px !default;
-$base-font-weight: 270 !default;
-
-$small-font-size: $base-font-size * 0.7 !default;
+$base-font-weight: 400 !default;
+$base-letter-spacing: 0.01em;
 $base-line-height: 1.5 !default;
-
 $spacing-unit: 20% !default;
+$text-color: rgba(255, 255, 255, 0.8) !default;
 
-$text-color: rgba(255, 255, 255, 0.918) !default;
 $background-color: #262626 !default;
+$article-background-color: #111;
 $brand-color: #2a7ae2 !default;
-
 $grey-color: #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
 $grey-color-dark: darken($grey-color, 25%) !default;
 
+$base-box-shadow:
+#000000 4px 4px 8px,
+#4d4d4d -4px -4px 8px;
+
 $table-text-align: left !default;
-
 $content-width: 1100px !default;
-
 $on-palm: 1100px !default;
 $on-laptop: 1100px !default;
 
@@ -83,6 +68,7 @@ $on-laptop: 1100px !default;
 
   $minBreakpoint: strip-unit($minBreakpoint);
   $maxBreakpoint: strip-unit($maxBreakpoint);
+
   /* Define variable for media query */
   $maxLessOne: $maxBreakpoint - 1;
   

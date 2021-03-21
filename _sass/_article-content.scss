@@ -2,7 +2,7 @@
     width: 100%;
     grid-column: 1 / 2;
     grid-row: 2 / 3;
-    background-color: #111;
+    background-color: $article-background-color;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
