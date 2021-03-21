@@ -143,9 +143,10 @@
         position: relative;
         display: inline-block;
         grid-row: 2 / 3;
-        width: 70%;
-        left: 12%;
-        height: auto;
+        width: 60%;
+        margin-left: 20%;
+        margin-right: 20%;
+        align-content: center;
         overflow: hidden;
         border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
         box-shadow: #000000 8px 12px 20px, #4d4d4d -4px -4px 20px;
@@ -157,6 +158,8 @@
         -o-transition: all .2s ease;
         transition: all .2s ease;
         display: block;
+        width: 100%;
+        height: auto;
         box-shadow: #000000 4px 4px 8px, #4d4d4d -4px -4px 8px;
         &:hover {
             -webkit-transform: scale(1.3);
