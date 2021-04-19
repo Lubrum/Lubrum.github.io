@@ -36,12 +36,14 @@ function twe_author_description() {
 }
 
 function setOverflowX() {
-    let cosmosContainer = document.getElementsByClassName("cosmos-container")[0];
+
+    let cosmosContainer = document.getElementsByTagName("body")[0];
     cosmosContainer.style.overflowX = "hidden";
 }
 
 function unsetOverflowX() {
-    let cosmosContainer = document.getElementsByClassName("cosmos-container")[0];
+
+    let cosmosContainer = document.getElementsByTagName("body")[0];
     cosmosContainer.style.overflowX = "visible";
 }
 
