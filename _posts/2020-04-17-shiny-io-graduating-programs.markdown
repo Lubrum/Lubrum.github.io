@@ -295,7 +295,7 @@ library(shinydashboard)
 load(file = "data/all_data.RData")
 
 ui <- navbarPage(
-  "Data Science Broom",
+  "Tek Broom",
   tabPanel(
     "Mapas",
     fluidPage(id = 'fluidPage', 
@@ -408,7 +408,7 @@ ui <- navbarPage(
 
 Antes de explicar em detalhes cada componente da UI, cabe mostrar o que é cada um destes componentes na tela final do shinyapp. Abaixo são apresentadas duas telas do nosso app final, com destaque para cada componente da UI.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure1.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post8/figure1.png" alt="Print da tela com a aplicação em execução na aba mapas.">
 </figure>
 **navbarPage** - cria uma página com a possibilidade de menus no topo;
@@ -433,7 +433,7 @@ Antes de explicar em detalhes cada componente da UI, cabe mostrar o que é cada 
 
 Na página dos gráficos, apenas para fins didáticos e de autoaprendizado, utilizei o shiny dashboards. Abaixo uma breve explicação de cada componente. 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure2.png)" >
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post8/figure2.png" alt="Print da tela com a aplicação em execução na aba gráficos.">
 </figure>
 
@@ -850,7 +850,7 @@ deployApp()
 
 O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-). Deve ser semelhante com a imagem abaixo.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post8/figure3.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post8/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
 </figure>
 

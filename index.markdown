@@ -1,10 +1,10 @@
 ---
 layout: default
 title: Home
-subtitle: Um blog sobre Ciência de Dados, Desenvolvimento de Software e tecnologias recentes 
+subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnologias recentes 
 ---
 <div data-router-view="name" class="home">
-  <h1 class="post-home-title">Data Science Broon</h1>
+  <h1 class="post-home-title">Tek Broon</h1>
   <h5 class="post-home-subtitle"> {{ page.subtitle }} </h5>
 
   {%- if site.posts.size > 0 -%}

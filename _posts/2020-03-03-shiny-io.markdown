@@ -32,7 +32,7 @@ Vocês precisam minimamente do RStudio e do R instalados antes de começar.
 
 <h1> Criando uma conta no shinyapps.io </h1>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure1.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure1.png" alt="Print da página inicial do shinyapps.io.">
 </figure>
 
@@ -46,7 +46,7 @@ O shinyapps vai solicitar que você dê um nome para a sua conta, que também se
 
 Com a linguagem R e o RStudio instalados e devidamente configurados, vamos agora instalar o pacote rsconnect. A figura abaixo apresenta este processo.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure2.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure2.png" alt="Print do RStudio com a instalação do pacote rsconnect.">
 </figure>
 
@@ -172,7 +172,7 @@ deployApp()
 
 O navegador padrão da sua máquina será aberto exibindo a aplicação online funcionando bonitinho :-). Deve ser semelhante com a imagem abaixo.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post7/figure3.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post7/figure3.png" alt="Print da tela com a aplicação em execução no shinyapps.io.">
 </figure>
 

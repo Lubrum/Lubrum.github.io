@@ -108,7 +108,7 @@ Na figura abaixo, é apresentada a quantidade de trabalhos publicados por autor.
 
 Na Figura abaixo, desenvolvida com a linguagem R, é apresentada a rede de colaboração entre os autores dos 29 artigos mais relevantes selecionados. A cor representa o país de filiação do primeiro autor, os nós representam os autores, as arestas representam uma publicação conjunta dos autores representados pelos nós conectados e o tamanho do nó representa a quantidade de colaborações do autor em questão. 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure6.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure6.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Gráfico apresentando uma rede de colaboração entre autores, com nós representando o autor, arestas representando uma publicação conjunta entre autores, cor representando país de filiação do primeiro autor e tamanho do nó representando o número de colaborações.">
 </figure>
 
@@ -138,7 +138,7 @@ O gráfico acima, portanto, apresenta os grupos de artigos que possuem mais cita
 
 A Figura abaixo, também desenvolvida com a linguagem R, apresenta a relação entre o número de artigos por revista/periódico e o número de citações a artigos destes periódicos nas referências bibliográficas dos trabalhos selecionados. Também foi destacado o fator de impacto de cada periódico através do tamanho de cada shape no gráfico.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure9.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure9.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos por periódico e número de publicações nas referências dos artigos, por periódico, com destaque para o tamanho dos círculos no gráfico representando o fator de impacto de cada periódico.">
 </figure>
 

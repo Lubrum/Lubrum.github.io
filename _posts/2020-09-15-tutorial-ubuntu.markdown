@@ -37,7 +37,7 @@ O download do Ubuntu pode ser feito neste [link](https://ubuntu.com/download/des
 Com o download realizado, execute-o. 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure1.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure1.png" alt="Software Rufus.">
 </figure>
 
@@ -77,7 +77,7 @@ Conecte o pendrive no computador e reinicie a máquina. Antes da máquina inicia
 Para acessar o menu de boot ou o setup da BIOS, pressione a tecla que aparecer na primeira tela de boot. Essa tecla muda de fabricante para fabricante, pode ser f2, f8, f10, f12, etc. No caso da minha máquina, Dell, a tecla é f2.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure2.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure2.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure2.jpeg" alt="Tela exibida após pressionar f2.">
 </figure>
 
@@ -85,7 +85,7 @@ Para acessar o menu de boot ou o setup da BIOS, pressione a tecla que aparecer n
 A tela acima é exibida no meu caso. O próximo passo é encontrar o menu com as opções de sequência de boot. No meu caso, é a opção destacada em vermelho.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure3.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure3.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure3.jpeg" alt="Ordem das opções de boot.">
 </figure>
 
@@ -97,7 +97,7 @@ Se a opção UEFI não aparecer, verifique se ela está presente no menu *Boot L
 O que é preciso fazer? alterar a ordem do boot de forma que o UEFI seja a primeira opção. Basta utilizar as setas para mudar a ordem. Feito isso, basta pressionar *Exit* e salvar as modificações. O computador vai reiniciar, só que em vez de iniciar no Windows, vai inicializar no Pen-drive.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure4.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure4.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure4.jpeg" alt="Idioma.">
 </figure>
 
@@ -105,7 +105,7 @@ O que é preciso fazer? alterar a ordem do boot de forma que o UEFI seja a prime
 Idioma de instalação: Português.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure5.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure5.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure5.jpeg" alt="Layout do Teclado.">
 </figure>
 
@@ -113,7 +113,7 @@ Idioma de instalação: Português.
 Layout do teclado: Português.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure6.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure6.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure6.png" alt="Conexão de rede.">
 </figure>
 
@@ -121,7 +121,7 @@ Layout do teclado: Português.
 Se você desejar realizar atualizações durante a instalação, conecte-se na sua rede. Caso contrário, apenas não se conectar nesse momento.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure7.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure7.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure7.jpeg" alt="Atualizações durante a instalação.">
 </figure>
 
@@ -131,7 +131,7 @@ Instalação normal, incluindo softwares básicos.
 Eu prefiro instalar software de terceiros, pra evitar algum problema com falta de drivers, mas caso desejar, você pode desabilitar essa opção.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure8.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure8.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure8.png" alt="Tipo de instalação.">
 </figure>
 
@@ -140,7 +140,7 @@ Selecionar opção avançada.
 <p style = "color: #ff1111"> Pelo amor de Deus, não marque Apagar disco... </p>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure9.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure9.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure9.png" alt="Detalhes das partições do sistema.">
 </figure>
 
@@ -182,7 +182,7 @@ Usar como = Sistema de arquivos EXT4
 Ponto de Montagem = /home
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure10.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure10.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure10.png" alt="Detalhes das partições do sistema.">
 </figure>
 
@@ -190,7 +190,7 @@ Ponto de Montagem = /home
 Clique no botão "Instalar Agora" para aplicar as mudanças nos discos e iniciar a instalação. Ao aparecer uma mensagem de alerta, clique em "Continuar". 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure11.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure11.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure11.jpeg" alt="Fuso Horário.">
 </figure>
 
@@ -198,7 +198,7 @@ Clique no botão "Instalar Agora" para aplicar as mudanças nos discos e iniciar
 Selecione o fuso horário e clique em "Continuar".
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure12.jpeg)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure12.jpeg)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure12.jpeg" alt="Credenciais para a máquina.">
 </figure>
 
@@ -208,7 +208,7 @@ Defina um nome para o usuário, para a máquina, e login e senha (se desejar). A
 Ao reiniciar a máquina, deverá aparecer o menu do Grub por dez segundos, onde você poderá escolher o Windows ou Ubuntu para inicializar. Por padrão, o Ubuntu é selecionado após os dez segundos.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure13.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post10/figure13.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post10/figure13.png" alt="Credenciais para a máquina.">
 </figure>
 

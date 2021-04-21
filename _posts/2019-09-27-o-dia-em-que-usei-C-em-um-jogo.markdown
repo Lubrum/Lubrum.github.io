@@ -44,7 +44,7 @@ Ao derrotar os monstros, você pode coletar os **itens** que ele derruba (dropa)
 
 A Figura abaixo mostra uma foto do jogo atualmente, porém apenas com as funcionalidades (*features*) do jogo na época (2014~2015).
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure1.png)" >
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure1.png" alt="Print do jogo online Tibia.">
 </figure>
 
@@ -64,7 +64,7 @@ Então eu criei um **código simples em linguagem C** para, por exemplo, estimar
 
 A Figura abaixo mostra o conteúdo de um Server Log da época que eu jogava.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure2.png)" >
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure2.png" alt="Print do server log de uma hunt do tibia.">
 </figure>
 
@@ -106,7 +106,7 @@ Bastaria identificar a palavra inicial **Loot** por linha do Server Log, criar u
 
 Tempos depois eu descobri que já existiam ferramentas online como o [Tibia Stats](http://www.tibia-stats.com/index.php?akcja=1) que, ao você copiar e colar o texto do Server Log, ela lhe trazia todas as informações e estatísticas que o jogo falhava em fornecer. A Figura abaixo apresenta a ferramenta em operação.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure3.png)" >
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure3.png" alt="Print do Tibia Stats na ferramenta count loot.">
 </figure>
 
@@ -118,7 +118,7 @@ Em 2017, o jogo implementou os recursos de análise (*analytics*) em tempo real 
 
 Com este recurso, é possível saber agora se a hunt é lucrativa, se você está tomando muitos danos, ou gastando muitos recursos na hunt, entre diversas outras estatísticas. A Figura abaixo mostra o Analyzer durante uma hunt (na 1° e 3° coluna da foto do jogo).
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure4.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post5/figure4.png)" >
 	<img class="img_content" src="{{ site.baseurl }}/assets/img/post5/figure4.png" alt="Print do Tibia Stats na ferramenta count loot.">
 </figure>
 
