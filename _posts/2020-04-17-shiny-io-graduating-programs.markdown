@@ -295,7 +295,7 @@ library(shinydashboard)
 load(file = "data/all_data.RData")
 
 ui <- navbarPage(
-  "Data Science Broom",
+  "Tek Broom",
   tabPanel(
     "Mapas",
     fluidPage(id = 'fluidPage', 
