@@ -33,19 +33,19 @@ As seguintes ferramentas e linguagens foram utilizadas para a extração e organ
 
 Os dados presentes no PDF estavam no seguinte formato:
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure1.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure1.png" alt="Print do arquivo no formato PDF disponibilizado pelo CREFITO.">
 </figure>
 
 Após a importação no ambiente do RStudio (através das funções pdf_text e read_lines do R), os dados ficaram no seguinte formato:
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure2.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure2.png" alt="Print dos dados lidos do arquivo PDF do CREFITO no ambiente do RStudio.">
 </figure>
 
 A dificuldade evidente é a de se extrair dados de um PDF que não possui um padrão no formato da tabela. Cada município pode ter ou não, por exemplo, consultórios de fisioterapia, e na ausência desta informação, nada era apresentado na tabela. Outro problema que ficou evidente ao realizar a integração com os dados do shapefile foi a nomeação diferenciada (e incorreta) de algumas cidades. A última página também possuia um formato distinto do restante do PDF, portanto foi necessário dar um tratamento especial para a última página do PDF. Por fim, mesmo com estratégias definidas para uma leitura algoritmica dos dados, as informações de algumas cidades não eram lidas da forma correta. Foi necessário realizar uma correção manual destes registros, através de comparações visuais com o arquivo PDF original. O formato final dos dados no RStudio é apresentado abaixo.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post4/figure3.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure3.png" alt="Print dos dados lidos do arquivo PDF após a organização e tratamentos adequados, no formato de dataframe.">
 </figure>
 

@@ -30,7 +30,7 @@ Inicialmente, os dados dos Programas de Pós-Graduação em Computação foram e
 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure1.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure1.png" alt="Print do PDF com dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 
@@ -104,7 +104,7 @@ Porém, descobri posteriormente sobre a existência do site [Sucupira](https://s
 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure2.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure2.png" alt="Print do site Sucupira com dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 
@@ -118,7 +118,7 @@ O resultado deste processo pode ser conferido abaixo.
 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post6/figure3.png)" >
     <img class="img_content" src="{{ site.baseurl }}/assets/img/post6/figure3.png" alt="Print da planilha Excel com os dados dos Programas de Pós-Graduação em Computação do Brasil.">
 </figure>
 

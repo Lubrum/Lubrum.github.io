@@ -468,7 +468,7 @@ Vamos tirar proveito do poder dos gráficos do R para verificarmos visualmente e
 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure1.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure1.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure1.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação.">
 </figure>
 
@@ -479,47 +479,47 @@ Podemos confirmar o que foi dito anteriormente através deste gráfico. Se você
 Vamos verificar outros casos.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure2.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure2.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure2.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure3.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure3.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure3.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure4.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure4.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure4.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure5.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure5.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure5.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure6.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure6.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure6.png" alt="Gráfico de violino com médias dos alunos em Desenho II por ano e semestre.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure7.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure7.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure7.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação, sem notas de alunos reprovados por frequência.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure8.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure8.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure8.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano, sem notas de alunos reprovados pro frequência.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure9.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure9.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure9.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre, sem notas de alunos reprovados por frequência.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure10.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure10.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure10.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação, sem notas de alunos reprovados por frequência.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure11.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure11.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure11.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano, sem notas de alunos reprovados por frequência.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure12.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure12.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure12.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por semestre e ano, sem notas de alunos reprovados por frequência.">
 </figure>
 
@@ -895,17 +895,17 @@ Resumindo um pouco dos gráficos acima:
 Agora vamos observar outros aspectos do nosso dataset...
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure13.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure13.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure13.png" alt="Gráficos de barras com reprovados por sexo.">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure14.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure14.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure14.png" alt="Gráficos de barras com reprovados por sexo e disciplina (n° e %).">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure15.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure15.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure15.png" alt="Gráficos de barras com reprovados por sexo, disciplina e ano (n° e %).">
 </figure>
 
@@ -915,12 +915,12 @@ Interessante observação que as estudantes do sexo feminino reprovam menos em q
 O mesmo acontece se observamos as reprovações por ano e por disciplina. Existem raríssimas exceções onde estudantes do sexo feminino reprovaram mais em quantidade/percentual do que do sexo masculino (2008 em Desenho I e 2014 em Desenho II).
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure16.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure16.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure16.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (n°).">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure17.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure17.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure17.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (%).">
 </figure>
 
@@ -930,7 +930,7 @@ Outro caso interessante são as reprovações por disciplina, semestre e ano. Na
 Faz sentido, já que Desenho I é pré-requisito para cursar Desenho II, que geralmente é no semestre subsequente. 
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure18.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure18.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure18.png" alt="Gráficos de barras com reprovados por disciplina e forma de evasão (n°).">
 </figure>
 
@@ -938,17 +938,17 @@ Faz sentido, já que Desenho I é pré-requisito para cursar Desenho II, que ger
 A maior parte dos reprovados por frequência em Desenho I acaba abandonando o curso de origem. Esta é uma realidade preocupante evidenciada pelo gráfico acima. O cenário é menos intenso em Desenho II, porém ainda preocupante. Vejam que uma parcela muito pequena dos estudantes que reprovaram nos Desenhos I e II se formaram ou são alunos regulares.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure19.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure19.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure19.png" alt="Gráficos de barras com número de estudantes por situação atual, disciplina e ano (n°).">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure20.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure20.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure20.png" alt="Gráfico de linha com número de estudantes por situação atual, disciplina e ano (n°).">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure21.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure21.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure21.png" alt="Gráfico de linha com percentual de estudantes por situação atual, disciplina e ano.">
 </figure>
 
@@ -956,12 +956,12 @@ A maior parte dos reprovados por frequência em Desenho I acaba abandonando o cu
 A diferença das reprovações por frequência e aprovações entre os Desenhos é evidenciada acima. Estudantes de Desenho I e II aparentemente tem mantido constante o seu desempenho nos últimos anos, de uma forma geral, apesar do cenário não ser satisfatório. Houveram variações significativas na quantidade de estudantes neste período analisado.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure22.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure22.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure22.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho I, sem notas de alunos reprovados por frequência.">
 </figure>
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure23.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure23.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure23.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho II, sem notas de alunos reprovados por frequência.">
 </figure>
 
@@ -969,7 +969,7 @@ A diferença das reprovações por frequência e aprovações entre os Desenhos 
 A distribuição das médias por ano e semestre, tanto em Desenho I como II, se concentram na nota 6, que é a nota mínima para aprovação. Em Desenho II, o desempenho dos estudantes tem sido muito superior ao de Desenho I.
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure24.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure24.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure24.png" alt="Gráfico de densidade 2d de médias finais por ano e disciplina, sem notas de alunos reprovados por frequência.">
 </figure>
 
@@ -1437,7 +1437,7 @@ data:  residuals(aov_result)
 W = 0.93032, p-value < 2.2e-16
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure25.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure25.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure25.png" alt="Gráficos de caixa e violino com médias dos alunos por curso de graduação.">
 </figure>
 
@@ -1535,15 +1535,15 @@ p-value < 0,05: H0 rejeitado em todos os testes de Kruskal-Wallis. Portanto, a d
 
 Vamos observar graficamente estes dados.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure26.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure26.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure26.png" alt="Distribuição de médias dos alunos por ano.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure27.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure27.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure27.png" alt="Distribuição de médias dos alunos por semestre.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure28.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure28.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure28.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 </figure>
 
@@ -1588,7 +1588,7 @@ O <- cldList(P.adj ~ Comparison,
           remove.zero = FALSE)
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure29.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure29.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure29.png" alt="Resultados do teste de Dunncan.">
 </figure>
 
@@ -1612,7 +1612,7 @@ O <- cldList(P.adj ~ Comparison,
              remove.zero = FALSE)
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure30.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure30.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure30.png" alt="Resultados do teste de Dunncan.">
 </figure>
 
@@ -1642,7 +1642,7 @@ data:  residuals(aov_result)
 W = 0.88, p-value <0.0000000000000002
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure31.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure31.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure31.png" alt="Histograma dos resíduos.">
 </figure>
 
@@ -1719,15 +1719,15 @@ data:  MEDIA_FINAL by interaction(ANO, PERIODO)
 Kruskal-Wallis chi-squared = 142, df = 23, p-value <0.0000000000000002
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure32.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure32.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure32.png" alt="Distribuição de médias dos alunos por ano.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure33.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure33.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure33.png" alt="Distribuição de médias dos alunos por semestre.">
 </figure>
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure34.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure34.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure34.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 </figure>
 
@@ -1752,7 +1752,7 @@ O <- cldList(P.adj ~ Comparison,
 ```
 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure35.png)" onmousemove="zoom(event)" ontouchmove="zoom(event)">
+<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure35.png)" >
   <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure35.png" alt="Resultados do teste de Dunncan.">
 </figure>
 

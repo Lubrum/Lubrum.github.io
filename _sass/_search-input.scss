@@ -17,8 +17,8 @@
     margin-right: $spacing-unit / 4;
     position: relative;
     height: 30px;
-    border-radius: 30px;
-    padding: 10px;
+    border-radius: 15px;
+    padding: 5px;
     background-color: $background-color;
     transition: 0.5s;
     box-shadow:
@@ -73,16 +73,14 @@
   }
 
   .search-button {
-    float: right;
+    float: right;   
     width: 30px;
-    height: 30px;
+    height: 90%;
+    line-height: 30px;
     border-radius: 50%;
     // icon source: https://www.iconsdb.com/white-icons/search-3-icon.html
     background-image: url(../img/png/search-icon.png);
     background-color: #262626;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.4s;
     background-repeat: no-repeat;
     background-size: 80% 100%;
