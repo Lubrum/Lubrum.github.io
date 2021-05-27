@@ -114,7 +114,7 @@
 @media only screen and (min-width: $min-width-extra-large-devices) {
     .sidebar {
         grid-template-columns: 100%;
-        grid-template-rows: 10% 30% 10% 20% 10% 10% 10%;
+        grid-template-rows: 10% 25% 8% 27% 10% 10% 10%;
         position: fixed;
         width: 15%;
         height: 100%;
@@ -179,7 +179,7 @@
         grid-row: 7 / 8;
     }
     .social-description {
-        @include fluid-typography(15, 20, $min-width-extra-large-devices, 1600);
+        @include fluid-typography(13, 18, $min-width-extra-large-devices, 1600);
         grid-column: 1 / 2;
         grid-row: 6 / 7;
         margin-right: $spacing-unit / 3;
@@ -200,7 +200,7 @@
         grid-row: 4 / 5;
         text-justify: distribute;
         word-spacing: -2px;
-        @include fluid-typography(13, 18, $min-width-extra-large-devices, 1600);
+        @include fluid-typography(12, 17, $min-width-extra-large-devices, 1600);
         margin-top: $spacing-unit / 2;
         margin-right: $spacing-unit / 3;
         margin-left: $spacing-unit / 3;
@@ -216,7 +216,7 @@
         grid-column: 1 / 2;
         padding-right: $spacing-unit / 3;
         padding-left: $spacing-unit / 3;
-        @include fluid-typography(13, 18, $min-width-extra-large-devices, 1600);
+        @include fluid-typography(12, 16, $min-width-extra-large-devices, 1600);
         -webkit-transition: all 1.5s;
         -moz-transition: all 1.5s;
         transition: all 1.5s;
