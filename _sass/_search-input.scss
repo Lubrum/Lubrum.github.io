@@ -13,8 +13,8 @@
   }
 
   .search-box {
-    margin-left: $spacing-unit * 2;
-    margin-right: $spacing-unit * 2;
+    margin-left: $spacing-unit / 2;
+    margin-right: $spacing-unit / 2;
     position: relative;
     height: 30px;
     border-radius: 15px;
@@ -47,7 +47,7 @@
     outline: none;
     float: left;
     padding-left: 8px;
-    @include fluid-typography(15, 22, 300, 1600);
+    @include fluid-typography(12, 18, 300, 1600);
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
     -o-transition: 0.4s;

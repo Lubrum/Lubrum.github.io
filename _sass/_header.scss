@@ -31,7 +31,7 @@
 
 .page-link {
     white-space: nowrap;
-    @include fluid-typography(15, 25, 300, 1600);
+    @include fluid-typography(12, 25, 300, 1600);
     color: $text-color;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
