@@ -271,11 +271,6 @@ p {
  
 ::-webkit-scrollbar-thumb {
   border-radius: 8px;
-  -webkit-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
-  -moz-transition: 0.5s;
-  transition: 0.5s;
   background-color: rgb(170, 170, 170);
 	background-image: -webkit-linear-gradient(90deg,
 	                      rgb(37, 37, 37) 0%,
