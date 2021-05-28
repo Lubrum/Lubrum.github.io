@@ -10,7 +10,7 @@ subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnolo
   {%- if site.posts.size > 0 -%}
   <form class="search-form" action="{{site.baseurl}}/search.html" method="get">
     <div class="search-box">
-      <input class="search-input" type="text" id="search-box" name="query" placeholder="Busca por Posts" />
+      <input class="search-input" type="text" id="search-box" name="query" placeholder="Digite o termo de busca" />
          <button class="search-button" />
     </div>
   </form>

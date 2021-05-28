@@ -6,8 +6,8 @@
 
 .post-home-title {
   @include fluid-typography(25, 60, 300, 1600);
-  padding-top: $spacing-unit / 2;
-  padding-bottom: $spacing-unit / 4;
+  padding-top: $spacing-unit;
+  padding-bottom: 0;
   text-align: center;
   font-weight: 1000;
   line-height: 1;
@@ -18,7 +18,7 @@
 .post-home-subtitle {
   @include fluid-typography(18, 35, 300, 1600);
   color: $text-color;
-  padding: $spacing-unit / 4;
+  padding: $spacing-unit;
   display: block;
   text-align: center;
   line-height: normal;
@@ -27,7 +27,7 @@
 // home content //
 
 .post-list {
-  margin: 15px;
+  margin: $spacing-unit / 2;
   list-style: none;
 }
 
@@ -41,6 +41,7 @@
   text-align: justify;
   -webkit-transition: all 1.5s;
   -moz-transition: all 1.5s;
+  -o-transition: all 1.5s;
   transition: all 1.5s;
   background-color: $background-color;
   box-shadow: $base-box-shadow;
@@ -55,16 +56,14 @@
   @include fluid-typography(20, 35, 300, 1600);
   color: inherit;
   -webkit-transition: all 5s ease-in-out;
-  -ms-transition: all 5s ease-in-out;
-  -o-transition: all 5s ease-in-out;
   -moz-transition: all 5s ease-in-out;
+  -o-transition: all 5s ease-in-out;
   transition: all 5s ease-in-out;
-
   &:hover {
     -webkit-animation: rr 15s infinite;
+    -moz-animation: rr 15s infinite;
     -ms-animation: rr 15s infinite;
     -o-animation: rr 15s infinite;
-    -moz-animation: rr 15s infinite;
     animation: rr 15s infinite;
 
     @-webkit-keyframes rr {
@@ -363,13 +362,10 @@
 
   .post-home-title {
     @include relative-font-size(3.4);
-    padding-top: $spacing-unit / 4;
-    padding-bottom: $spacing-unit / 12;
   }
 
   .post-home-subtitle {
     @include relative-font-size(2.2);
-    padding: $spacing-unit / 8;
   }
 
 }

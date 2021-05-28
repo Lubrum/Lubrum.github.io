@@ -13,13 +13,16 @@
   }
 
   .search-box {
-    margin-left: $spacing-unit / 4;
-    margin-right: $spacing-unit / 4;
+    margin-left: $spacing-unit * 2;
+    margin-right: $spacing-unit * 2;
     position: relative;
     height: 30px;
     border-radius: 15px;
     padding: 5px;
     background-color: $background-color;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
     transition: 0.5s;
     box-shadow:
       0px 0px 0px 0px rgba(54, 54, 54, 0.6),
@@ -37,14 +40,17 @@
   }
 
   .search-input {
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 2px;
     border: none;
     background: none;
     outline: none;
     float: left;
-    padding-left: 5px;
-    @include fluid-typography(15, 25, 300, 1600);
+    padding-left: 8px;
+    @include fluid-typography(15, 22, 300, 1600);
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
     line-height: 40px;
     height: 100%;
@@ -81,6 +87,9 @@
     // icon source: https://www.iconsdb.com/white-icons/search-3-icon.html
     background-image: url(../img/png/search-icon.png);
     background-color: #262626;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
     transition: 0.4s;
     background-repeat: no-repeat;
     background-size: 80% 100%;

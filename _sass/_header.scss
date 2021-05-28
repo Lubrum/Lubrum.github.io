@@ -33,6 +33,10 @@
     white-space: nowrap;
     @include fluid-typography(15, 25, 300, 1600);
     color: $text-color;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
     &:not(:last-child) {
         margin-right: 60px;
     }
@@ -80,6 +84,9 @@
         border: none;
         border-radius: 25%;
         box-shadow: $base-box-shadow;
+        -webkit-transition: 0.4s;
+        -moz-transition: 0.4s;
+        -o-transition: 0.4s;
         transition: 0.4s;
         &:hover {
             background-color: #444;
