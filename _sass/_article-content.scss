@@ -38,8 +38,7 @@
 .post {
     margin-left: 8%;
     margin-right: 8%;
-    padding-bottom: $spacing-unit / 8;
-    padding-top: $spacing-unit / 8;
+    padding-bottom: 3%;
 }
 
 .post-meta {
@@ -58,10 +57,10 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $min-width-large-devices) {
     .post {
-        margin-left: $spacing-unit;
-        margin-right: $spacing-unit;
-        padding-bottom: $spacing-unit / 8;
-        padding-top: $spacing-unit / 8;
+        margin-left: 20%;
+        margin-right: 20%;
+        padding-bottom: 3%;
+        padding-top: 0;
     }
 }
 
