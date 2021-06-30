@@ -6,7 +6,7 @@
 
 .post-home-title {
   @include fluid-typography(25, 60, 300, 1600);
-  padding-top: $spacing-unit;
+  padding-top: $spacing-unit / 8;
   padding-bottom: 0;
   text-align: center;
   font-weight: 1000;
@@ -18,7 +18,10 @@
 .post-home-subtitle {
   @include fluid-typography(18, 35, 300, 1600);
   color: $text-color;
-  padding: $spacing-unit;
+  padding-left: $spacing-unit / 4;
+  padding-right: $spacing-unit / 4;
+  padding-top: $spacing-unit / 8;
+  padding-bottom: $spacing-unit / 8;
   display: block;
   text-align: center;
   line-height: normal;
@@ -27,7 +30,7 @@
 // home content //
 
 .post-list {
-  margin: $spacing-unit / 2;
+  margin: 15px;
   list-style: none;
 }
 
