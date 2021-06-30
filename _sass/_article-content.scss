@@ -15,7 +15,6 @@
 
 .post-title {
     @include fluid-typography(50, 60, $max-width-extra-small-devices, 1600);
-    padding-top: $spacing-unit;
     letter-spacing: -1px;
     line-height: 1.5;
     color: white;
