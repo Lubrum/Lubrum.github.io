@@ -1145,7 +1145,7 @@ mvn install
 
 Podemos verificar nas mensagens que o Maven executou as fases anteriores ao **deploy**, e logo após, executou a fase **deploy**. 
 
-Para verificar se o arquivo foi para o repositório archiva, abrir o link [http://localhost:8080/repository/internal](http://localhost:8080/repository/internal).
+Para verificar se o arquivo foi para o repositório archiva, [abrir este link](http://localhost:8080/repository/internal).
 
 <img class="img_content" src="{{ site.baseurl }}/assets/img/post11/figure12.png" alt="Imagem do Archiva na url do repositório 'internal'.">
 
