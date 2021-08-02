@@ -466,62 +466,33 @@ Tudo bem. Analisamos um caso. Porém temos outros numerosos casos. Podemos salva
 
 Vamos tirar proveito do poder dos gráficos do R para verificarmos visualmente esses resultados.
 
-
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure1.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure1.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação.">
-</figure>
-
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure1.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação.">
 
 Podemos confirmar o que foi dito anteriormente através deste gráfico. Se você não sabe como interpretar um boxplot, [eu sugiro este link, que explica em detalhes cada um dos componentes do boxplot](https://towardsdatascience.com/understanding-boxplots-5e2df7bcbd51).
 
 Vamos verificar outros casos.
 
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure2.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure2.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure2.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure3.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure3.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure3.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure4.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure4.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure4.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure5.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure5.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure5.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure6.png" alt="Gráfico de violino com médias dos alunos em Desenho II por ano e semestre.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure6.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure6.png" alt="Gráfico de violino com médias dos alunos em Desenho II por ano e semestre.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure7.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação, sem notas de alunos reprovados por frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure7.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure7.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por curso de graduação, sem notas de alunos reprovados por frequência.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure8.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano, sem notas de alunos reprovados pro frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure8.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure8.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho I por ano, sem notas de alunos reprovados pro frequência.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure9.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre, sem notas de alunos reprovados por frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure9.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure9.png" alt="Gráfico de violino com médias dos alunos em Desenho I por ano e semestre, sem notas de alunos reprovados por frequência.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure10.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação, sem notas de alunos reprovados por frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure10.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure10.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por curso de graduação, sem notas de alunos reprovados por frequência.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure11.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano, sem notas de alunos reprovados por frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure11.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure11.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por ano, sem notas de alunos reprovados por frequência.">
-</figure>
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure12.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure12.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por semestre e ano, sem notas de alunos reprovados por frequência.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure12.png" alt="Gráficos de caixa e violino com médias dos alunos em Desenho II por semestre e ano, sem notas de alunos reprovados por frequência.">
 
 
 ```R
@@ -894,89 +865,45 @@ Resumindo um pouco dos gráficos acima:
 
 Agora vamos observar outros aspectos do nosso dataset...
 
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure13.png" alt="Gráficos de barras com reprovados por sexo.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure13.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure13.png" alt="Gráficos de barras com reprovados por sexo.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure14.png" alt="Gráficos de barras com reprovados por sexo e disciplina (n° e %).">
 
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure14.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure14.png" alt="Gráficos de barras com reprovados por sexo e disciplina (n° e %).">
-</figure>
-
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure15.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure15.png" alt="Gráficos de barras com reprovados por sexo, disciplina e ano (n° e %).">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure15.png" alt="Gráficos de barras com reprovados por sexo, disciplina e ano (n° e %).">
 
 Interessante observação que as estudantes do sexo feminino reprovam menos em quantidade e percentual se comparadas aos estudantes do sexo masculino. O percentual apresentado nos gráficos é relativo ao universo de estudantes do sexo em questão, e não do total de alunos. Exemplo: se de uma turma de 100, 50 foram reprovados e 10 destes são estudantes do sexo feminino, então 20% dos estudantes do sexo feminimo reprovaram, e não 10%. O percentual é relacionado com o universo de reprovados, e não do total de alunos.
 
 O mesmo acontece se observamos as reprovações por ano e por disciplina. Existem raríssimas exceções onde estudantes do sexo feminino reprovaram mais em quantidade/percentual do que do sexo masculino (2008 em Desenho I e 2014 em Desenho II).
 
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure16.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (n°).">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure16.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure16.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (n°).">
-</figure>
-
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure17.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure17.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (%).">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure17.png" alt="Gráficos de barras com reprovados por semestre, ano e disciplina (%).">
 
 Outro caso interessante são as reprovações por disciplina, semestre e ano. Na maioria dos anos, as reprovações em percentual e absolutas são maiores no 1° semestre para Desenho I e no 2° semestre para Desenho II. 
 
 Faz sentido, já que Desenho I é pré-requisito para cursar Desenho II, que geralmente é no semestre subsequente. 
 
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure18.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure18.png" alt="Gráficos de barras com reprovados por disciplina e forma de evasão (n°).">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure18.png" alt="Gráficos de barras com reprovados por disciplina e forma de evasão (n°).">
 
 A maior parte dos reprovados por frequência em Desenho I acaba abandonando o curso de origem. Esta é uma realidade preocupante evidenciada pelo gráfico acima. O cenário é menos intenso em Desenho II, porém ainda preocupante. Vejam que uma parcela muito pequena dos estudantes que reprovaram nos Desenhos I e II se formaram ou são alunos regulares.
 
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure19.png" alt="Gráficos de barras com número de estudantes por situação atual, disciplina e ano (n°).">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure19.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure19.png" alt="Gráficos de barras com número de estudantes por situação atual, disciplina e ano (n°).">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure20.png" alt="Gráfico de linha com número de estudantes por situação atual, disciplina e ano (n°).">
 
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure20.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure20.png" alt="Gráfico de linha com número de estudantes por situação atual, disciplina e ano (n°).">
-</figure>
-
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure21.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure21.png" alt="Gráfico de linha com percentual de estudantes por situação atual, disciplina e ano.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure21.png" alt="Gráfico de linha com percentual de estudantes por situação atual, disciplina e ano.">
 
 A diferença das reprovações por frequência e aprovações entre os Desenhos é evidenciada acima. Estudantes de Desenho I e II aparentemente tem mantido constante o seu desempenho nos últimos anos, de uma forma geral, apesar do cenário não ser satisfatório. Houveram variações significativas na quantidade de estudantes neste período analisado.
 
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure22.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho I, sem notas de alunos reprovados por frequência.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure22.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure22.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho I, sem notas de alunos reprovados por frequência.">
-</figure>
-
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure23.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure23.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho II, sem notas de alunos reprovados por frequência.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure23.png" alt="Gráfico de distribuição de médias finais dos alunos por semestre e ano em Desenho II, sem notas de alunos reprovados por frequência.">
 
 A distribuição das médias por ano e semestre, tanto em Desenho I como II, se concentram na nota 6, que é a nota mínima para aprovação. Em Desenho II, o desempenho dos estudantes tem sido muito superior ao de Desenho I.
 
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure24.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure24.png" alt="Gráfico de densidade 2d de médias finais por ano e disciplina, sem notas de alunos reprovados por frequência.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure24.png" alt="Gráfico de densidade 2d de médias finais por ano e disciplina, sem notas de alunos reprovados por frequência.">
 
 Aqui novamente observamos a maior concentração das médias entre as notas 6 e 7, em Desenho I e II. O cenário é mais positivo em Desenho II, apesar de aparentemente ter piorado nos últimos anos (pois ocorreu maior concentração das médias em torno do 6 e 7, e menor concentração em notas mais altas, como aconteceu em anos entre 2007 e 2014).
-
-
 
 ```R
 # Bar plot - reprovados por frequência por sexo (n e %)
@@ -1437,10 +1364,7 @@ data:  residuals(aov_result)
 W = 0.93032, p-value < 2.2e-16
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure25.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure25.png" alt="Gráficos de caixa e violino com médias dos alunos por curso de graduação.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure25.png" alt="Gráficos de caixa e violino com médias dos alunos por curso de graduação.">
 
 <p style = "color: #d2ff4d">
 p-value < 0.05 : H0 (Hipótese Nula) rejeitada, a evidência de que a distribuição de resíduos não segue uma distribuição normal é estatisticamente significante.
@@ -1535,18 +1459,11 @@ p-value < 0,05: H0 rejeitado em todos os testes de Kruskal-Wallis. Portanto, a d
 
 Vamos observar graficamente estes dados.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure26.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure26.png" alt="Distribuição de médias dos alunos por ano.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure26.png" alt="Distribuição de médias dos alunos por ano.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure27.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure27.png" alt="Distribuição de médias dos alunos por semestre.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure27.png" alt="Distribuição de médias dos alunos por semestre.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure28.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure28.png" alt="Distribuição de médias dos alunos por ano e semestre.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure28.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 
 É possível observar que no caso dos semestres, as distribuições possuem alguma semelhança. Por isso o p-value dos semestres como tratamento resultou em um valor mais próximo de 0.05. Ao verificarmos ano e ambos ano e semestre, as diferenças entre os grupos se mostraram mais significativas. 
 
@@ -1588,16 +1505,11 @@ O <- cldList(P.adj ~ Comparison,
           remove.zero = FALSE)
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure29.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure29.png" alt="Resultados do teste de Dunncan.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure29.png" alt="Resultados do teste de Dunncan.">
 
 As médias dos alunos em anos que pertencem a mesma label não possuem diferença estatística significativa. Este é o resultado que o teste nos trouxe. 
 
 Infelizmente não é possível utilizar mais de uma variável dependente neste teste, mas a solução do problema é uma simples manipulação do dataframe, conforme apresento abaixo.
-
-
 
 ```R
 merged_data <- transform(DT1, ANO_PERIODO = paste(ANO, '.', PERIODO))
@@ -1612,10 +1524,7 @@ O <- cldList(P.adj ~ Comparison,
              remove.zero = FALSE)
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure30.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure30.png" alt="Resultados do teste de Dunncan.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure30.png" alt="Resultados do teste de Dunncan.">
 
 Agora vamos proceder as mesmas análises, porém com os alunos de Desenho Técnico II.
 
@@ -1642,10 +1551,7 @@ data:  residuals(aov_result)
 W = 0.88, p-value <0.0000000000000002
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure31.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure31.png" alt="Histograma dos resíduos.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure31.png" alt="Histograma dos resíduos.">
 
 <p style = "color: #d2ff4d">
 p-value < 0.05 : H0 (Hipótese Nula) rejeitada, a evidência de que a distribuição de resíduos não segue uma distribuição normal é estatisticamente significante.
@@ -1719,18 +1625,11 @@ data:  MEDIA_FINAL by interaction(ANO, PERIODO)
 Kruskal-Wallis chi-squared = 142, df = 23, p-value <0.0000000000000002
 ```
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure32.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure32.png" alt="Distribuição de médias dos alunos por ano.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure32.png" alt="Distribuição de médias dos alunos por ano.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure33.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure33.png" alt="Distribuição de médias dos alunos por semestre.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure33.png" alt="Distribuição de médias dos alunos por semestre.">
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure34.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure34.png" alt="Distribuição de médias dos alunos por ano e semestre.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure34.png" alt="Distribuição de médias dos alunos por ano e semestre.">
 
 No caso dos semestres, as distribuições das médias possuem alguma semelhança. Ao verificarmos ano e ambos ano e semestre, as diferenças entre os grupos se mostraram mais significativas. Um resultado semelhante ao de Desenho Técnico I.
 
@@ -1751,11 +1650,7 @@ O <- cldList(P.adj ~ Comparison,
              remove.zero = FALSE)
 ```
 
-
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post9/figure35.png)" >
-  <img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure35.png" alt="Resultados do teste de Dunncan.">
-</figure>
-
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post9/figure35.png" alt="Resultados do teste de Dunncan.">
 
 Os resultados até o momento são compatíveis com o que visualizamos na etapa dos gráficos, não é mesmo? Essa é uma das numerosas importâncias da estatística em nossas vidas: extrair valiosas informações de amostras de um universo de infinitas possibilidades, e esboçar possíveis considerações sobre elas.
 

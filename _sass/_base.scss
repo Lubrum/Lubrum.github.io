@@ -75,6 +75,7 @@ figure.zoom {
  */
 
 li {
+  padding-top: 1em;
   > ul,
   > ol {
     margin-bottom: 0;
@@ -133,7 +134,7 @@ blockquote {
  */
 
 pre, code {
-  @include fluid-typography(12, 20, 300, 1600);
+  @include fluid-typography(12, 15, 300, 1600);
   color: rgb(68, 148, 36);
   background-color: rgb(0, 0, 0);
 }
@@ -259,6 +260,10 @@ p {
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $min-width-large-devices) {
   /* scrollbar */
+::-webkit-scrollbar-corner {
+  background: black;
+}
+
 ::-webkit-scrollbar {
   display: block;
   width: 20px;

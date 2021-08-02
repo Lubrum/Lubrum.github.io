@@ -108,9 +108,7 @@ Na figura abaixo, é apresentada a quantidade de trabalhos publicados por autor.
 
 Na Figura abaixo, desenvolvida com a linguagem R, é apresentada a rede de colaboração entre os autores dos 29 artigos mais relevantes selecionados. A cor representa o país de filiação do primeiro autor, os nós representam os autores, as arestas representam uma publicação conjunta dos autores representados pelos nós conectados e o tamanho do nó representa a quantidade de colaborações do autor em questão. 
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure6.png)" >
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Gráfico apresentando uma rede de colaboração entre autores, com nós representando o autor, arestas representando uma publicação conjunta entre autores, cor representando país de filiação do primeiro autor e tamanho do nó representando o número de colaborações.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure6.png" alt="Gráfico apresentando uma rede de colaboração entre autores, com nós representando o autor, arestas representando uma publicação conjunta entre autores, cor representando país de filiação do primeiro autor e tamanho do nó representando o número de colaborações.">
 
 É possível observar o destaque da França e da Índia em publicações sobre BI e DW aplicados no setor agrário de uma forma geral. Também observa-se uma forte rede de colaboração em torno dos autores Bimonte, Miralles, Vernier e Molla, todos de instituições da França. As publicações da Índia e demais paises aparentemente possuem menos colaborações com instituições de outros paises. Claro que uma análise mais aprofundada, incluindo uma amostra maior de artigos, é necessária para revelar tendências e possíveis considerações sobre este fenômeno.
 
@@ -138,25 +136,19 @@ O gráfico acima, portanto, apresenta os grupos de artigos que possuem mais cita
 
 A Figura abaixo, também desenvolvida com a linguagem R, apresenta a relação entre o número de artigos por revista/periódico e o número de citações a artigos destes periódicos nas referências bibliográficas dos trabalhos selecionados. Também foi destacado o fator de impacto de cada periódico através do tamanho de cada shape no gráfico.
 
-<figure class='zoom' style="background: url({{ site.baseurl }}/assets/img/post3/figure9.png)" >
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos por periódico e número de publicações nas referências dos artigos, por periódico, com destaque para o tamanho dos círculos no gráfico representando o fator de impacto de cada periódico.">
-</figure>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure9.png" alt="Número de publicações/artigos por periódico e número de publicações nas referências dos artigos, por periódico, com destaque para o tamanho dos círculos no gráfico representando o fator de impacto de cada periódico.">
 
 Visualmente observa-se que a revista *Computers and Eletronics in Agriculture* possui não só uma maior quantidade de artigos sobre o tema como também um maior número de citações nas referências dos trabalhos selecionados. Já a *Environmental Modelling and Software* se destacou apenas nas referências, pois apenas um artigo do conjunto final selecionado era deste periódico (revista com maior fator de impacto das destacadas). A *Ecological Informatics* se destacou por ter dois trabalhos presentes no conjunto final selecionado. Os periódicos restantes foram agrupados no conjunto sem destaque relevante neste tipo de análise.
 
 A Figura a seguir apresenta uma nuvem de palavras (*Word Cloud*) em que foram utilizadas as palavras-chave dos 29 artigos. A Figura foi gerada com o auxílio da ferramenta online [WordArt](https://wordart.com/).
 
-<div class="imgbox">
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure10.png" alt="Nuvem de palavras gerada com as palavras-chave dos artigos selecionados.">
-</div>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure10.png" alt="Nuvem de palavras gerada com as palavras-chave dos artigos selecionados.">
 
 Cabe destacar palavras como *multidimensional* e *OLAP*, extremamente relevantes no contexto de BI e que não foram incluídas no conjunto de termos de busca. Esta é uma sugestão de melhoria no processo de análise da literatura, em que podem ser ajustados os termos de busca com base nas palavras-chave dos artigos inicialmente selecionados.
 
 A Figura abaixo apresenta um compilado das tecnologias que foram mencionadas ou aplicadas nos artigos selecionados.
 
-<div class="imgbox">
-    <img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure11.png" alt="Tecnologias open-source e proprietárias utilizadas como soluções em trabalhos envolvendo a temática BI e DW no setor agrário, em um gráfico de barras com cores distintas para tecnologias open e proprietárias.">
-</div>
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post3/figure11.png" alt="Tecnologias open-source e proprietárias utilizadas como soluções em trabalhos envolvendo a temática BI e DW no setor agrário, em um gráfico de barras com cores distintas para tecnologias open e proprietárias.">
 
 É interessante observar que as tecnologias gratuitas e de código aberto tem maior predominância em comparação com soluções proprietárias nos trabalhos de BI e DW aplicados no setor agrário selecionados. É claro que tal afirmação é válida apenas para este caso, e não engloba, por exemplo, soluções desenvolvidas fora do ambiente acadêmico, como em setores governamentais ou empresas privadas.
 

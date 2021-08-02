@@ -9,6 +9,11 @@
     transition: all 0.3s ease-in-out;
 }
 
+/* this solves the gap with anchor links when we have fixed header */
+html {
+    scroll-padding-top: 70px;
+}
+
 .post-header {
     margin-bottom: $spacing-unit / 8;
 }
@@ -31,14 +36,12 @@
     position: relative;
     transform: translate(-50%, 0%);
     left: 50%;
-    width: 100%;
 }
 
 .post {
     margin-left: 8%;
     margin-right: 8%;
-    padding-bottom: $spacing-unit / 8;
-    padding-top: $spacing-unit / 8;
+    padding-bottom: 3%;
 }
 
 .post-meta {
@@ -57,10 +60,10 @@
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: $min-width-large-devices) {
     .post {
-        margin-left: $spacing-unit;
-        margin-right: $spacing-unit;
-        padding-bottom: $spacing-unit / 8;
-        padding-top: $spacing-unit / 8;
+        margin-left: 25%;
+        margin-right: 25%;
+        padding-bottom: 3%;
+        padding-top: 0;
     }
 }
 
