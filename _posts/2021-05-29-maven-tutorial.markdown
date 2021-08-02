@@ -989,7 +989,7 @@ mvn install
 [INFO] ------------------------------------------------------------------------
 ```
 
-Após a mensagem de sucesso, podemos verificar no diretório apresentado acima (*/home/lu/.m2/repository/com/luciano/app/example-project/0.0.1-SNAPSHOT/example-project-0.0.1-SNAPSHOT.jar*) o conteúdo dessa instalação do Maven.
+Após a mensagem de sucesso, podemos verificar no diretório apresentado acima o conteúdo dessa instalação do Maven (em /home/lu/.m2...).
 
 ###### * Conforme mencionado anteriormente no tutorial, o diretório **(~/.m2/repository)** geralmente é o padrão de instalação de dependências no ambiente local.
 
