@@ -113,7 +113,7 @@ Vamos seguir o passo a passo para criar um projeto de exemplo com o Maven como g
 
 5- Preencher os seguintes campos:
 
-a) Group Id: é o identificador do projeto. O padrão de nomenclatura utilizado é **com.NOME_DA_EMPRESA.NOME_DO_PROJETO** OU **br.com.NOME_DA_EMPRESA.NOME_DO_PROJETO**, que geralmente é a hierarquia de diretórios do projeto. Aqui vou colocar **com.luciano.app**.
+a) Group Id: é o identificador do projeto. O padrão de nomenclatura utilizado é **com.EMPRESA.PROJETO** OU **br.com.EMPRESA.PROJETO**, que geralmente é a hierarquia de diretórios do projeto. Aqui vou colocar **com.luciano.app**.
 
 b) Artifact Id: é o identificador do projeto em si. Nomes compostos são geralmente separados por traços. Vou colocar **example-app**.
 
