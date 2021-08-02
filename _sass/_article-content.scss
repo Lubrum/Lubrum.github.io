@@ -19,7 +19,7 @@ html {
 }
 
 .post-title {
-    @include fluid-typography(50, 60, $max-width-extra-small-devices, 1600);
+    @include fluid-typography(30, 45, $max-width-extra-small-devices, 1600);
     letter-spacing: -1px;
     line-height: 1.5;
     color: white;
