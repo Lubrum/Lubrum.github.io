@@ -1079,7 +1079,7 @@ Com essas tags, estamos informando ao Maven que o repositório **archiva.interna
 Por fim, para testar se o deploy vai funcionar, basta executarmos abaixo o comando:
 
 ```bash
-mvn install
+mvn deploy
 ```
 
 ```java
