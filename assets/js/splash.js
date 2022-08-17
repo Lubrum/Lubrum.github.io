@@ -8,7 +8,7 @@ function splash_screen() {
   let box = document.getElementById('splash');
   if (window.location.pathname === "/") {
     if (getCook('valid') != 'true') {   
-      //document.cookie = "valid=true";
+      document.cookie = "valid=true";
       box.classList.add('show');  
       setTimeout(function () {
         box.classList.add('hidding'); 
