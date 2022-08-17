@@ -11,7 +11,9 @@ subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnolo
   <form class="search-form" action="{{site.baseurl}}/search.html" method="get">
     <div class="search-box">
       <input class="search-input" type="text" id="search-box" name="query" placeholder="Digite o termo de busca" />
-         <button class="search-button" />
+         <button class="search-button">
+          <img src="{{site.baseurl}}/assets/img/png/search-icon.png" alt="Submit">
+         </button>
     </div>
   </form>
   <article class="post-home" itemscope itemtype="http://schema.org/BlogPosting">

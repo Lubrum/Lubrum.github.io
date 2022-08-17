@@ -1,8 +1,7 @@
 .skill {
-    margin-bottom: 35px;
     position: relative;
     overflow: hidden;
-    >p {
+    > p {
         margin: 0;
         font-size: 18px;
     }
@@ -63,8 +62,8 @@
     background: $dark;
 }
 
-@for $i from 0 through 100 {
+@for $i from 0 through 4 {
     .skill-#{$i} {
-        width: percentage($i/100);
+        width: percentage($i/4);
     }
 }

@@ -19,9 +19,7 @@ html {
 }
 
 .post-title {
-    @include fluid-typography(30, 45, $max-width-extra-small-devices, 1600);
-    letter-spacing: -1px;
-    line-height: 1.5;
+    @include fluid-typography(20, 35, $max-width-extra-small-devices, 1600);
     color: white;
     text-align: center;
 }
@@ -45,7 +43,7 @@ html {
 }
 
 .post-meta {
-    @include fluid-typography(15, 20, $max-width-extra-small-devices, 1600);
+    @include fluid-typography(11, 16, $max-width-extra-small-devices, 1600);
 }
 
 

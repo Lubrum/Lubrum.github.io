@@ -44,7 +44,7 @@
 			}
 			
 			.description {
-				font-size: 20px;
+				@include fluid-typography(10, 16, 300, 1600);
 			}
 		}
 	}

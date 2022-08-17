@@ -4,7 +4,13 @@
       <div class="skill">
         <p>{{ skill.name }}</p>
         <div class="skill-bar skill-bar-{{ skill.color }} skill-{{ skill.percentage }} wow animate__animated animate__slideInLeft" data-wow-delay="{{ forloop.index | divided_by: 20.0 }}">
-          <span>{{ skill.percentage }}%</span>
+          <span>
+            {%- if skill.percentage > 1 -%}
+            {{ skill.percentage }} anos
+            {%- else -%}
+            {{ skill.percentage }} ano
+            {%- endif -%}
+          </span>
         </div>
       </div>
     {% endfor %}

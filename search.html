@@ -1,17 +1,22 @@
 ---
 layout: default
+subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnologias recentes 
 ---
 <div class="home">
   <h1 class="post-home-title">Tek Broon</h1>
+  <h5 class="post-home-subtitle"> {{ page.subtitle }} </h5>
+  
   <form action="{{site.baseurl}}/search.html" method="get">
   <!-- <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2> -->
       <div class="search-box">
           <input class="searchInput" type="text" id="search-box" name="query" placeholder="Busca por Posts">
-              <button class="search-button"></button>
+          <button class="search-button">
+            <img src="{{site.baseurl}}/assets/img/png/search-icon.png" alt="Submit">
+           </button>
       </div>
   </form>
   <br /><br />
-  <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     <ul class="post-list">
       <ul id="search-results"></ul>
     </ul>

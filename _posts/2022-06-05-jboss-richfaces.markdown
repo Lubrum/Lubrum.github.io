@@ -21,9 +21,9 @@ A ideia deste post é compartilhar com vocês sobre como eu resolvi (temporariam
 
 O Richfaces é uma biblioteca antiga para projetos web que utilizava JSF (JavaServer Faces) com suporte para AJAX (Asynchronous JavaScript And XML).
 
-[Em junho 2016 ela deixou de ser mantida](https://richfaces.jboss.org/). Isso significa que os responsáveis por projetos que utilizam Richfaces deveriam ver alguma forma de substituir essa tecnologia.
+[Em junho 2016 ela deixou de ser mantida](https://richfaces.jboss.org/). Isso significa que os responsáveis por projetos que utilizavam Richfaces deveriam ver alguma forma de substituir essa tecnologia.
 
-Nesse meio tempo, podem surgir bugs pontuais que devem ser resolvidos sem substituir a biblioteca inteira, pois o tempo para fazer essa troca, dependendo do tamanho do projeto, poderia significar não atender demandas mais urgentes que poderiam significar a perda de um cliente.
+Nesse meio tempo poderiam surgir bugs pontuais que poderiam serem resolvidos sem substituir a biblioteca inteira, pois o tempo para fazer essa troca, dependendo do tamanho do projeto, poderia significar não atender demandas mais urgentes acarretando na perda de um ou vários clientes.
 
 Um desses problemas que surgiram foi o uso Google Maps no modo híbrido integrado com a biblioteca do Richfaces na versão 3.3.3.Final.
 
@@ -79,7 +79,7 @@ Isso basicamente não altera mais o comportamento do Array.from nos navegadores 
 
 A mesma alteração do prototype.js foi feita no arquivo framework.pack.js, só que na linha 343. Esse arquivo é, aparentemente, a versão obfuscada e minificada dos scripts do richfaces-impl.
 
-Ao realizar essas duas modificações pontuais, gerar uma nova versão do artefato do **richfaces-impl** e atualizar as dependências do projeto original (apontando para essa versão corrigida do **richfaces-impl**), o modo híbrido e satélite do Google Maps voltou a funcionar normalmente.
+Ao realizar essas duas modificações pontuais, gerar uma nova versão do artefato do **richfaces-impl** e atualizar as dependências do projeto original (apontando para essa versão corrigida do **richfaces-impl**), os modos híbrido e satélite do Google Maps voltaram a funcionar normalmente.
 
 # Considerações Finais 
 

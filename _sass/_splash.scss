@@ -55,36 +55,12 @@
       top: 50%;
       z-index: 5;
       left: 50%;
-      width: 200px;
       text-align: left;
-      height: 30px;
-      font-size: 20px;
+      font-size: 30px;
       color: #ffffff;
       opacity: 1;
       will-change: opacity;
       @include animation('logo .3s ease-in 1.5s forwards, off .6s ease-in-out 3.2s forwards');
-      &:before {
-        display: block;
-        position: absolute;
-        left: 15px;
-        bottom: -5px;
-        width: 20px;
-        height: 1px;
-        background-color: $lines;
-        content: "";
-      }
-      &:after {
-        display: block;
-        position: absolute;
-        left: 15px;
-        top: -5px;
-        width: 20px;
-        height: 1px;
-        background-color: $lines;
-        content: "";
-        will-change: width;
-        z-index:-10000;
-      }
     }
     &_svg {
       position: relative;
@@ -136,7 +112,7 @@
     &:after{
         @include animation('vi 1.0s ease-out forwards 1.2s');
     }
-}
+  }
   
   @include keyframes(scale) {
     100% {
@@ -210,8 +186,8 @@
       &_svg {
         svg {
           rect {
-            -webkit-clip-path: polygon(45% 40%, 55% 40%, 55% 60%, 45% 60%);
-            clip-path: polygon(45% 40%, 55% 40%, 55% 60%, 45% 60%);
+            -webkit-clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%);
+            clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%);
           }
         }
       }
@@ -219,8 +195,8 @@
     
     @include keyframes(scale) {
       100% {
-        -webkit-clip-path: polygon(45% 40%, 55% 40%, 55% 60%, 45% 60%);
-        clip-path: polygon(45% 40%, 55% 40%, 55% 60%, 45% 60%);
+        -webkit-clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%);
+        clip-path: polygon(40% 40%, 60% 40%, 60% 60%, 40% 60%);
       }
     }
   }

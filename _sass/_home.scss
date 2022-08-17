@@ -5,8 +5,8 @@
 }
 
 .post-home-title {
-  @include fluid-typography(25, 60, 300, 1600);
-  padding-top: $spacing-unit / 4;
+  @include fluid-typography(30, 50, 300, 1600);
+  padding-top: $spacing-unit;
   padding-bottom: 0;
   text-align: center;
   font-weight: 1000;
@@ -16,12 +16,9 @@
 }
 
 .post-home-subtitle {
-  @include fluid-typography(18, 35, 300, 1600);
+  @include fluid-typography(15, 30, 300, 1600);
   color: $text-color;
-  padding-left: $spacing-unit / 4;
-  padding-right: $spacing-unit / 4;
-  padding-top: $spacing-unit / 4;
-  padding-bottom: $spacing-unit / 4;
+  padding: $spacing-unit / 2 0;
   display: block;
   text-align: center;
   line-height: normal;
@@ -40,13 +37,13 @@
   padding-bottom: 15px;
   padding-left: 20px;
   padding-right: 20px;
-  margin-top: 20px;
+  margin-top: 15px;
   text-align: justify;
   -webkit-transition: all 1.5s;
   -moz-transition: all 1.5s;
   -o-transition: all 1.5s;
   transition: all 1.5s;
-  background-color: $background-color;
+  background-color: rgba(26, 26, 26, 0.8); //$background-color;
   box-shadow: $base-box-shadow;
   font-family: $base-font-family;
 
@@ -56,7 +53,7 @@
 }
 
 .post-link {
-  @include fluid-typography(15, 30, 300, 1600);
+  @include fluid-typography(18, 25, 300, 1600);
   color: inherit;
   -webkit-transition: all 5s ease-in-out;
   -moz-transition: all 5s ease-in-out;
@@ -320,22 +317,14 @@
     }
   }
 
-  span,
-  h3,
-  h6 {
+  span, h3, h6 {
     display: block;
     line-height: normal;
-    padding: 0px;
-  }
-
-  h3 {
-    font-weight: 600;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 6px 0 0 0;
   }
 
   span {
-    @include fluid-typography(18, 28, 300, 1600);
+    @include fluid-typography(14, 25, 300, 1600);
   }
 
   :not(:hover) {
@@ -364,11 +353,12 @@
 @media only screen and (min-width: $min-width-extra-large-devices) {
 
   .post-home-title {
-    @include relative-font-size(3.4);
+    @include fluid-typography(25, 50, 300, 1600);
+    padding-top: $spacing-unit / 4;
   }
 
   .post-home-subtitle {
-    @include relative-font-size(2.2);
+    @include fluid-typography(25, 30, 300, 1600);
+    padding: $spacing-unit / 4;
   }
-
 }

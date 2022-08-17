@@ -25,16 +25,10 @@ Abaixo, segue um resumo da minha trajetória e uma autoavaliação das minhas "s
         {% include about/skills.html title="Linguagens" source=site.data.about.programming-skills %}
     </div>
     <div class="col-lg">
-        {% include about/skills.html title="Tecnologia" source=site.data.about.tools-skills %}  
+        {% include about/skills.html title="Tecnologias" source=site.data.about.tools-skills %}  
     </div>
-</div>
-
-<div class="row">
     <div class="col-lg">
         {% include about/skills.html title="Ferramentas (Projeto)" source=site.data.about.management-tools %} 
-    </div>
-    <div class="col-lg">
-        {% include about/skills.html title="Soft skills" source=site.data.about.other-skills %}
     </div>
 </div>
 

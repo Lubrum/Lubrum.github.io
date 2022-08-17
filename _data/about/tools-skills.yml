@@ -1,35 +1,47 @@
-- name: Eclipse
-  percentage: 80
-  color: success
-
-- name: Android Studio
-  percentage: 50
+- name: JavaFx
+  percentage: 2
   color: warning
 
-- name: Postman 
-  percentage: 70
+- name: VueJS
+  percentage: 1
+  color: danger
+
+- name: Eclipse
+  percentage: 2
+  color: warning
+
+- name: Android Studio
+  percentage: 3
   color: info
 
-- name: PgAdmin
-  percentage: 80
-  color: success
+- name: Postman 
+  percentage: 2
+  color: warning
 
-- name: Office
-  percentage: 80
-  color: success
+- name: PgAdmin
+  percentage: 2
+  color: warning
 
 - name: RStudio
-  percentage: 80
-  color: success
+  percentage: 2
+  color: warning
 
 - name: Github
-  percentage: 80
-  color: success
+  percentage: 3
+  color: info
 
 - name: Gitlab
-  percentage: 90
-  color: success
+  percentage: 3
+  color: info
 
 - name: Maven
-  percentage: 80
-  color: success
+  percentage: 3
+  color: info
+
+- name: Gradle
+  percentage: 2
+  color: warning
+
+- name: Ant
+  percentage: 1
+  color: danger

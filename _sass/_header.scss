@@ -13,6 +13,7 @@
 }
 
 .trigger {
+    padding: 0em;
     position: absolute;
     width: 100%;
     left: 0%;
@@ -31,7 +32,7 @@
 
 .page-link {
     white-space: nowrap;
-    @include fluid-typography(12, 25, 300, 1600);
+    @include fluid-typography(12, 20, 300, 1600);
     color: $text-color;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -73,7 +74,7 @@
     .show-hide-sidebar {
         display: inline-block;
         position: absolute;
-        font-size: 1.5vw;
+        @include fluid-typography(15, 25, 300, 1600);
         cursor: pointer;
         background-color: $background-color;
         color: white;
@@ -95,5 +96,6 @@
     .trigger {
         width: 70%;
         left: 20%;
+        padding: 0em;
     }
 }

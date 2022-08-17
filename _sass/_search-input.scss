@@ -80,26 +80,29 @@
 
   .search-button {
     float: right;   
-    width: 30px;
-    height: 90%;
-    line-height: 30px;
-    border-radius: 50%;
+    width: 20px;
+    height: 25px;
+    border-radius: 35%;
     // icon source: https://www.iconsdb.com/white-icons/search-3-icon.html
     background-image: url(../img/png/search-icon.png);
-    background-color: #262626;
-    -webkit-transition: 0.4s;
-    -moz-transition: 0.4s;
-    -o-transition: 0.4s;
-    transition: 0.4s;
     background-repeat: no-repeat;
-    background-size: 80% 100%;
+    background: none;
+    background-size: 90% 100%;
     background-position: center;
-    -o-background-size: 80% 100%;
-    -webkit-background-size: 80% 100%;
+    -o-background-size: 90% 100%;
+    -webkit-background-size: 90% 100%;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 
   .search-box:hover>.search-button {
-    color: #2f3640;
+    background: $background-color;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
   }
 }
 
