@@ -64,6 +64,7 @@
 
 @for $i from 0 through 4 {
     .skill-#{$i} {
-        width: percentage(calc($i/4));
+        $test : calc($i/4);
+        width: percentage($test);
     }
 }
