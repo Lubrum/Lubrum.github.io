@@ -122,10 +122,6 @@ Eu não teria nem ideia de como resolver se não fossem os conceitos de computa�
 
 Obrigado e até o próximo post !! 
 
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>
-
 <h1> Referências Bibliográficas </h1>
 
 [TIBIA. Latest News. Acesso em: 27 set. 2019.](https://www.tibia.com/news/?subtopic=latestnews)

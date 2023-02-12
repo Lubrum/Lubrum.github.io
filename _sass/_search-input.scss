@@ -13,8 +13,8 @@
   }
 
   .search-box {
-    margin-left: $spacing-unit / 4;
-    margin-right: $spacing-unit / 4;
+    margin-left: calc($spacing-unit / 4);
+    margin-right: calc($spacing-unit / 4);
     position: relative;
     height: 30px;
     border-radius: 15px;

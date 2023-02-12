@@ -206,7 +206,3 @@ Bom pessoal, a ideia era apresentar um passo a passo bem resumido e sucinto sobr
 O próximo post será dedicado em apresentar a utilização do [RStudio Server Edição Open Source](https://rstudio.com/products/rstudio/#rstudio-server) para o seu app, com um exemplo funcional localmente na máquina.
 
 Valeu e até o próximo post !! :-)
-
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>

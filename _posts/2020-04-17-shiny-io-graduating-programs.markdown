@@ -881,7 +881,3 @@ Abordei as fases de coleta dos dados, organização dos dados, persistência dos
 Espero que vocês tenham gostado do post e que ele tenha auxiliado vocês de alguma forma. Quaisquer dúvidas, podem deixar comentários logo abaixo :-)
 
 Valeu !! Até o próximo post !! :-)
-
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>

@@ -18,7 +18,7 @@
 .post-home-subtitle {
   @include fluid-typography(15, 30, 300, 1600);
   color: $text-color;
-  padding: $spacing-unit / 2 0;
+  padding: calc($spacing-unit / 2) 0;
   display: block;
   text-align: center;
   line-height: normal;
@@ -354,11 +354,11 @@
 
   .post-home-title {
     @include fluid-typography(25, 50, 300, 1600);
-    padding-top: $spacing-unit / 4;
+    padding-top: calc($spacing-unit / 4);
   }
 
   .post-home-subtitle {
     @include fluid-typography(25, 30, 300, 1600);
-    padding: $spacing-unit / 4;
+    padding: calc($spacing-unit / 4);
   }
 }

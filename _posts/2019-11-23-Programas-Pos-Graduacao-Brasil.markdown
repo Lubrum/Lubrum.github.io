@@ -234,10 +234,6 @@ Para os interessados em contribuir, servirá como experiência prática com o R 
 
 Obrigado e até o próximo post !! 
 
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>
-
 <h1> Referências Bibliográficas </h1>
 
 [Github. Built for developers. Acesso em: 08 set. 2019.](https://github.com/)

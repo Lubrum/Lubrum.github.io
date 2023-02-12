@@ -47,7 +47,8 @@ $on-laptop: 1100px !default;
 /// Source: https://css-tricks.com/snippets/sass/strip-unit-function/
 @function strip-unit($number) {
   @if type-of($number) == 'number' and not unitless($number) {
-    @return $number / ($number * 0 + 1);
+    $test: $number * 0 + 1;
+    @return calc($number / $test);
   }
 
   @return $number;
@@ -69,7 +70,7 @@ $on-laptop: 1100px !default;
   $maxLessOne: $maxBreakpoint - 1;
   
   /* Define variable for fallback */
-  $avg: ($maxFont + $minFont) / 2;
+  $avg: calc(($maxFont + $minFont) / 2);
  
   /* Base font size */
   font-size: #{$minFont}px;
@@ -100,6 +101,5 @@ $on-laptop: 1100px !default;
 "article-content",
 "home",
 "skills",
-"timeline",
-"horizontal-rule"
+"timeline"
 ;

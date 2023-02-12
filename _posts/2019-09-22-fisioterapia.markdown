@@ -47,11 +47,11 @@ Após uma série de tratamentos nos dados, envolvendo manipulação de strings, 
 
 <h3> 1 - Número de fisioterapeutas nos municípios do Rio Grande do Sul.</h3>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure4.png" alt="Mapa com cinco categorias de números de fisioterapeutas por município no estado do Rio Grande do Sul, Brasil.">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure5.png" alt="Mapa com cinco categorias de taxas de fisioterapeutas/população, por município, no estado do Rio Grande do Sul, Brasil.">
 
 <h3> 2 - Taxa população/fisioterapeuta nos municípios do Rio Grande do Sul.</h3>
 
-<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure5.png" alt="Mapa com cinco categorias de taxas de fisioterapeutas/população, por município, no estado do Rio Grande do Sul, Brasil.">
+<img class="img_content" src="{{ site.baseurl }}/assets/img/post4/figure4.png" alt="Mapa com cinco categorias de números de fisioterapeutas por município no estado do Rio Grande do Sul, Brasil.">
 
 É possível também gerar outras informações envolvendo o número de terapeutas ocupacionais, consultórios, entidades filantrópicas, órgaõs públicos e empresas, além da relação destas variáveis com o número de fisioterapeutas.
 
@@ -62,10 +62,6 @@ A ideia do post foi apresentar de forma sucinta um exemplo objetivo do processo 
 Se compararmos a forma de apresentação dos dados nas tabelas do PDF e a forma apresentada nos mapas, podemos dizer que conseguimos comprimir um volume razoável de informações em um mapa e apresentá-las  de forma mais eficiente. Qualquer pessoa pode comparar o dado de um município específico com a região ou outros municípios de forma praticamente instantânea com um mapa, agora imaginem fazer isso no arquivo PDF? (Ctrl-F pra lá e pra cá...). Para melhores resultados, é possível gerar mapas interativos, de forma que o usuário possa analisar o dado de cada município de forma mais individualizada.
 
 Pessoal, então era isso. Abaixo cito as referências utilizadas para estas análises. Obrigado e até o próximo post !! 
-
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>
 
 <h1> Referências Bibliográficas </h1>
 

@@ -1696,10 +1696,6 @@ Quaisquer dúvidas, podem deixar comentários logo abaixo :-)
 
 Valeu !! Até o próximo post !! :-) (refêrencias logo abaixo).
 
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>
-
 # Referências
 
 - [Conjunto de dados de alunos de Desenho Técnico](https://github.com/Lubrum/Data_Analysis-Technical-Drawing). Acesso em: 15 de maio de 2020.

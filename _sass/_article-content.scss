@@ -15,7 +15,7 @@ html {
 }
 
 .post-header {
-    margin-bottom: $spacing-unit / 8;
+    margin-bottom: calc($spacing-unit / 8);
 }
 
 .post-title {
@@ -26,7 +26,7 @@ html {
 
 .post-content {
     overflow-x: unset;
-    margin-bottom: $spacing-unit / 10;
+    margin-bottom: calc($spacing-unit / 10);
     text-align: justify;
 }
 

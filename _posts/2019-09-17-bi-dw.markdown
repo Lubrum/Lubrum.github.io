@@ -164,10 +164,6 @@ Observa-se uma predominância maior de soluções de BI e DW para análise de cu
 
 Bom pessoal, a ideia deste post foi apresentar de forma sucinta um exemplo objetivo de processo de revisão da literatura. Foi apresentada a forma de obtenção dos dados, orientação no uso das ferramentas necessárias, metodologia completa e apresentação e análise dos resultados. Outros resultados, trabalhos referenciados e as teorias que embasaram o estudo podem ser verificadas no [link deste artigo](http://www.ccsenet.org/journal/index.php/jas/article/view/0/38109). Abaixo cito as referências utilizadas para estas análises. Obrigado e até o próximo post !! 
 
-<div class="skills">
-    <hr class="hr-text" data-content="############">
-</div>
-
 <h1> Referências Bibliográficas </h1>
 
 [BRUM, L. M. da L.; LAMPERT, V. do N.; CAMARGO, S. da S. Business intelligence and data warehouse in agrarian sector: a bibliometric study. Journal of Agricultural Science, Richmond Hill, v. 11, n. 2, p. 353-368, 2019. Acesso em: 17 set. 2019.](https://doi.org/10.5539/jas.v11n2p353)
