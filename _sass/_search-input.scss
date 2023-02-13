@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Ultra small devices (up to 300px) */
 @media only screen and (max-width: 300px) {
   .search-form {
@@ -13,8 +15,8 @@
   }
 
   .search-box {
-    margin-left: calc($spacing-unit / 4);
-    margin-right: calc($spacing-unit / 4);
+    margin-left: calc(#{$spacing-unit} / 4);
+    margin-right: calc(#{$spacing-unit} / 4);
     position: relative;
     height: 30px;
     border-radius: 15px;

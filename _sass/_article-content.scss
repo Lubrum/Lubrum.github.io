@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .main-content {
     width: 100%;
     grid-column: 1 / 2;
@@ -15,7 +17,7 @@ html {
 }
 
 .post-header {
-    margin-bottom: calc($spacing-unit / 8);
+    margin-bottom: calc(#{$spacing-unit} / 8);
 }
 
 .post-title {
@@ -26,7 +28,7 @@ html {
 
 .post-content {
     overflow-x: unset;
-    margin-bottom: calc($spacing-unit / 10);
+    margin-bottom: calc(#{$spacing-unit} / 10);
     text-align: justify;
 }
 
