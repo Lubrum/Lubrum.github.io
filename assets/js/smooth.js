@@ -1,13 +1,13 @@
 // Import Highway
 import Highway from '@dogstudio/highway';
-import { TweenMax } from 'gsap';
+import gsap from 'gsap';
 
 class Fade extends Highway.Transition {
 
   in({ from, to, done }) {
-    TweenMax.fromTo(to,
-      0.5,
-      { opacity: 0 },
+    gsap.fromTo(
+      to,
+      { duration: 0.25 , opacity: 0 },
       {
         opacity: 1, onComplete: function () {
           done();
@@ -17,9 +17,9 @@ class Fade extends Highway.Transition {
   }
 
   out({ from, done }) {
-    TweenMax.fromTo(from, 
-      0.5,
-      { opacity: 1 },
+    gsap.fromTo(
+      from, 
+      { duration: 0.25 , opacity: 1 },
       {
         opacity: 0,
         onComplete: function () {

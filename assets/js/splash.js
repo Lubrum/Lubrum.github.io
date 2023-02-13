@@ -1,6 +1,6 @@
 // Source code of dynamic cookie: https://stackoverflow.com/questions/10730362/get-cookie-by-name //
 function getCook(cookiename) {  
-  var cookiestring=RegExp(cookiename+"=[^;]+").exec(document.cookie);
+  var cookiestring = RegExp(cookiename+"=[^;]+").exec(document.cookie);
   return decodeURIComponent(!!cookiestring ? cookiestring.toString().replace(/^[^=]+./,"") : "");
 }
 
