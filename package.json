@@ -5,7 +5,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack --watch | bundle exec jekyll serve --incremental",
-    "build": "webpack"
+    "build": "webpack",
+    "jekyll:build": "bundle exec jekyll build"
   },
   "repository": {
     "type": "git",

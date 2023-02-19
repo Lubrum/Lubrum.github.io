@@ -123,10 +123,10 @@ a {
  */
 
 blockquote {
-  color: $grey-color;
+  color: #b9c2ca;
   border-left: 4px solid $grey-color-light;
   padding-left: calc(#{$spacing-unit} / 2);
-  letter-spacing: -1px;
+  letter-spacing: 0px;
   font-style: italic;
 
   > :last-child {
