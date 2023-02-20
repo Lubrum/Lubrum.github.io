@@ -17,7 +17,6 @@ author: luciano_brum
 
 A ideia deste post é mostrar como habilitar a comunicação de um aplicativo feito com React Native (executando localmente com a ajuda do expo) com um serviço backend containerizado com Docker. O serviço é uma aplicação feita com Spring Boot em Java, mas a dica é válida para um serviço em qualquer linguagem.  
   
-<br/>
 
 > *Este setup é apenas para ambientes de desenvolvimento. Não use esse tutorial como exemplo para implantação em ambientes de produção.*
 
@@ -26,7 +25,7 @@ A ideia deste post é mostrar como habilitar a comunicação de um aplicativo fe
 
 Antes de containerizar a aplicação Spring Boot no Docker, o aplicativo acessava as APIs normalmente através do IP da máquina (pode ser obtido com o comando <span style = "color: #ff8080">ifconfig</span>  ou nas configurações de rede do SO) e a porta da aplicação Spring (por exemplo - 192.168.0.9:8000). Isso só funcionava porque ambos serviços estavam na mesma rede.
 
-O problema surgiu quando o serviço do Spring Boot foi containerizado. Não fazia mais sentido utilizar o IP da máquina + porta da aplicação, pois agora essa comunicação depende de como o Docker e sua rede foram configurados e se há proxy reverso no caminho (como Nginx, HAProxy, etc). Vamos ver na sequência ambos os cenários.
+O problema surgiu quando o serviço do Spring Boot foi containerizado. Não fazia mais sentido utilizar o IP da máquina + porta da aplicação, pois agora essa comunicação dependeria de como o Docker e sua rede foram configurados e se há proxy reverso no caminho (como Nginx, HAProxy, etc). Vamos ver na sequência ambos os cenários.
 
 # Solução
 
@@ -58,7 +57,7 @@ para descobrir o IP privado (podem aparecer vários, basta tentar cada um deles)
 http://192.168.100.17:8001
 ```
 
-Outro cenário possível é o de existir um proxy reverso (Nginx) em um container no host. Segue abaixo um arquivo de configuração de exemplo do Nginx:
+Outro cenário possível é o de existir um proxy reverso (Nginx) em um container no host. Segue abaixo um arquivo de configuração de exemplo do Nginx (geralmente salvo em /etc/nginx/conf.d):
 
 ```conf
 upstream my_app {
@@ -102,7 +101,7 @@ services:
       - "443:443"
     hostname: nginx
     volumes:
-      - ./nginx/conf.d:/etc/nginx/conf.d
+      - /etc/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - app
 
@@ -179,11 +178,11 @@ sudo cp localhost.crt /etc/ssl/certs/localhost.crt
 
 Observe os parâmetros essenciais para este exemplo:
 
-default_keyfile     = localhost.key
+*default_keyfile*    = <span style = "color: #ff8080">localhost.key</span>
 
-commonName          = localhost
+*commonName*          = <span style = "color: #ff8080">localhost</span>
 
-subjectAltName      = DNS:localhost,IP:10.0.2.2
+*subjectAltName*      = <span style = "color: #ff8080">DNS:localhost,IP:10.0.2.2</span>
 
 Utilizamos aqui, além do localhost, o IP 10.0.2.2 porque é o [IP que o emulador do Android utiliza para se comunicar com o localhost da máquina HOST](https://developer.android.com/studio/run/emulator-networking?hl=pt-br).
 
@@ -191,21 +190,21 @@ Para testar o serviço no Browser, vamos precisar importar o certificado de auto
 
 Os passos no Google Chrome são os seguintes.
 
-1- menu de opções do Chrome (três pontinhos no canto superior direito)
+*1- menu de opções do Chrome (três pontinhos no canto superior direito)*
 
-2- Settings (Configurações)
+*2- Settings (Configurações)*
 
-3- Privacy and Security (Privacidade e Segurança - menu esquerdo)
+*3- Privacy and Security (Privacidade e Segurança - menu esquerdo)*
 
-4- Security (Segurança - no grupo Privacy and Security)
+*4- Security (Segurança - no grupo Privacy and Security)*
 
-5- Manage certificates (Gerenciar certificados)
+*5- Manage certificates (Gerenciar certificados)*
 
-6- Authorities (Autoridades - selecionar a aba)
+*6- Authorities (Autoridades - selecionar a aba)*
 
-7- Import (Importar)
+*7- Import (Importar)*
 
-8- Buscar o certificado gerado anteriormente, o localhost.crt, e dar ok
+*8- Buscar o certificado gerado anteriormente, o localhost.crt, e dar ok*
 
 Adicionamos os volumes */etc/ssl/certs:/etc/ssl/certs* e */etc/ssl/private:/etc/ssl/private* no docker-compose.yml para que o container do Nginx possa acessar os certificados gerados. 
 
