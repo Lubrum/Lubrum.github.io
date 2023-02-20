@@ -77,7 +77,7 @@ figure.zoom {
  */
 
 li {
-  padding-top: 1em;
+  padding-top: 0em;
   > ul,
   > ol {
     margin-bottom: 0;
@@ -85,7 +85,7 @@ li {
 }
 
 ul {
-  padding: 1em 0em;
+  padding: 0em 0em;
 }
 
 /**
@@ -243,7 +243,7 @@ table.paleBlueRows tfoot td {
 }
 
 p {
-  margin: 0.5rem auto 1rem;
+  margin: 2rem auto 2rem;
 }
 
 ::-webkit-scrollbar {

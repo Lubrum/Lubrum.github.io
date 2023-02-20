@@ -119,11 +119,7 @@ As configurações do Nginx apresentadas anteriormente farão um redirecionament
 
 Então, de acordo com o exemplo acima, para acessar o serviço backend através do aplicativo rodando no emulador do Android, basta usar o IP da máquina + porta 80 nas chamadas de API no código do app.
 
-<br />
-
 ___
-
-<br />
 
 Podemos ir além e testar as chamadas de API com o Nginx e com HTTPS (e redirecionar chamadas HTTP para HTTPS). Uma forma de fazer esse teste é com o <span style = "color: #ff8080">openssl</span>.
 
