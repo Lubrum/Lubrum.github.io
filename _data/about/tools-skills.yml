@@ -7,7 +7,7 @@
   color: danger
 
 - name: Eclipse
-  percentage: 2
+  percentage: 3
   color: warning
 
 - name: Android Studio
@@ -15,11 +15,11 @@
   color: info
 
 - name: Postman 
-  percentage: 2
+  percentage: 3
   color: warning
 
 - name: PgAdmin
-  percentage: 2
+  percentage: 3
   color: warning
 
 - name: RStudio
@@ -27,15 +27,15 @@
   color: warning
 
 - name: Github
-  percentage: 3
+  percentage: 5
   color: info
 
 - name: Gitlab
-  percentage: 3
+  percentage: 5
   color: info
 
 - name: Maven
-  percentage: 3
+  percentage: 5
   color: info
 
 - name: Gradle
@@ -43,5 +43,5 @@
   color: warning
 
 - name: Ant
-  percentage: 1
+  percentage: 2
   color: danger

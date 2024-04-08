@@ -93,13 +93,16 @@ $on-laptop: 1100px !default;
 // Import partials.
 @import 
 "base",
+"article-content",
+"code",
+"container",
 "header",
+"home",
+"images",
+"list",
 "sidebar",
 "syntax-highlighting",
-"splash",
-"container",
-"article-content",
-"home",
 "skills",
-"timeline"
-;
+"splash",
+"table",
+"timeline";

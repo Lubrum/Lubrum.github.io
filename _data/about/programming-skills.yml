@@ -1,5 +1,5 @@
 - name: Java
-  percentage: 4
+  percentage: 5
   color: success
 
 - name: R
@@ -7,7 +7,7 @@
   color: warning
 
 - name: Javascript
-  percentage: 3
+  percentage: 5
   color: info
 
 - name: C
@@ -15,7 +15,7 @@
   color: success
 
 - name: CSS3 
-  percentage: 4
+  percentage: 5
   color: success
 
 - name: SASS 
@@ -23,7 +23,7 @@
   color: danger
 
 - name: HTML5
-  percentage: 4
+  percentage: 6
   color: success
 
 - name: Python
@@ -31,9 +31,9 @@
   color: danger
 
 - name: Bash/Shell
-  percentage: 2
+  percentage: 4
   color: warning
 
 - name: Markdown
-  percentage: 2
+  percentage: 3
   color: warning

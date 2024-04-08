@@ -43,52 +43,6 @@ ul, ol, dl, figure,
 }
 
 /**
- * Images
- */
-img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-
-/**
- * Figures
- */
-
-figure > img {
-  display: block;
-}
-
-figcaption {
-  font-size: $base-font-size;
-}
-
-figure.zoom {
-  img {
-    display: block;
-    width: 100%;
-  }
-  position: relative;
-  width: 100%;
-  margin: 30px 0px;
-}
-
-/**
- * Lists
- */
-
-li {
-  padding-top: 0em;
-  > ul,
-  > ol {
-    margin-bottom: 0;
-  }
-}
-
-ul {
-  padding: 0em 0em;
-}
-
-/**
  * Headings
  */
 
@@ -135,113 +89,8 @@ blockquote {
 }
 
 /**
- * Code formatting
- */
-
-pre, code {
-  @include fluid-typography(12, 14, 300, 1600);
-  color: rgb(68, 148, 36);
-  background-color: rgb(0, 0, 0);
-}
-
-code {
-  padding: 1px 5px;
-}
-
-pre {
-  padding: 8px 12px;
-  overflow-x: auto;
-  overflow-y: auto;
-  max-height: 200px;
-  box-shadow:
-    #000000 4px 4px 8px,
-    #4d4d4d -4px -4px 8px;
-  > code {
-    border: 0;
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
-
-/**
  * Tables
  */
- 
-table {
-  width: 100%;
-  text-align: $table-text-align;
-  border-collapse: collapse;
-  border: 1px solid $grey-color-light;
-  tr {
-    &:nth-child(even) {
-      background-color: #111816;
-    }
-  }
-  th, td {
-    padding: calc(#{$spacing-unit} / 3) calc(#{$spacing-unit} / 2);
-  }
-  th {
-    background-color: #505092;
-    border: 1px solid darken($grey-color-light, 4%);
-    border-bottom-color: darken($grey-color-light, 12%);
-  }
-  td {
-    border: 1px solid $grey-color-light;
-  }
-}
-
-// tables //
-
-table.paleBlueRows {
-  font-family: "Times New Roman", Times, serif;
-  border: 1px solid #FFFFFF;
-  color: rgb(255, 255, 255);
-  width: 100%;
-  height: 200px;
-  text-align: center;
-  border-collapse: collapse;
-  position: relative;
-}
-
-table.paleBlueRows td,
-table.paleBlueRows th {
-  border: 1px solid rgb(0, 0, 0);
-  padding: 3px 2px;
-}
-
-table.paleBlueRows tbody td {
-  font-size: 14px;
-}
-
-table.paleBlueRows tr:nth-child(even) {
-  background: rgb(46, 51, 56);
-}
-
-table.paleBlueRows thead {
-  background: #0B6FA4;
-  border-bottom: 3px solid rgb(0, 0, 0);
-}
-
-table.paleBlueRows thead th {
-  font-size: 16px;
-  font-weight: bold;
-  color: #FFFFFF;
-  text-align: center;
-  border-left: 2px solid rgb(0, 0, 0);
-}
-
-table.paleBlueRows tfoot {
-  font-size: 14px;
-  font-weight: bold;
-  color: #333333;
-  background: #D0E4F5;
-  border-top: 3px solid #444444;
-}
-
-table.paleBlueRows tfoot td {
-  font-size: 14px;
-}
-
 p {
   margin: 2rem auto 2rem;
 }
@@ -301,25 +150,8 @@ p {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: $min-width-extra-large-devices) {
-
   iframe {
     display: inline-block;
-  }
-
-  table.paleBlueRows tbody td {
-    font-size: 18px;
-  }
-
-  table.paleBlueRows thead th {
-    font-size: 20px;
-  }
-
-  table.paleBlueRows tfoot {
-    font-size: 14px;
-  }
-
-  table.paleBlueRows tfoot td {
-    font-size: 14px;
   }
 }
 

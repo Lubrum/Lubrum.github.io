@@ -26,9 +26,14 @@
 - title: WPLEX Software - Analista Desenvolvedor
   from: 2019
   to: 2021
-  description: Desenvolvimento de soluções para o transporte público, em especial, para os produtos WPLEX-INFO (módulo de informação aos passageiros) e o WPLEX-CO (módulo de monitoramento e controle da operação das frotas de veículos). Keywords - Java (8, 11 e 17), Swift, Maven, Gradle, Ant, HTML, CSS, Javascript, VueJS, Android Sdk e iOS, Ubuntu (Linux), SQL, PostgreSQL, MySQL, Oracle, Git, Gitlab, Jira, Slack e Confluence.
+  description: Desenvolvimento de soluções para o transporte público, em especial, para os produtos WPLEX-INFO (módulo de informação aos passageiros) e o WPLEX-CO (módulo de monitoramento e controle da operação das frotas de veículos). 
 
 - title: WPLEX Software - Analista de Sistemas
   from: 2021
-  to: 2023
-  description: Atuação no desenvolvimento dos produtos WPLEX-INFO (módulo de informação aos passageiros), WPLEX-CO (módulo de monitoramento e controle da operação das frotas de veículos) e WPLEX-EP (escala de tripulantes). Keywords - Java (8, 11 e 17), Spring Boot, Maven, Ant, HTML, CSS, Javascript, Android Sdk, JavaFX, Ubuntu (Linux), SQL, PostgreSQL, MySQL, Oracle, Git, Gitlab, Jira, Slack, Confluence, Amazon EC2, Amazon S3, Amazon Route53, Nginx, Certbot, Docker, Docker compose, Gitlab-runner (CI/CD), testes automatizados (unidade e de integração).  
+  to: 2024
+  description: Atuação no desenvolvimento dos produtos WPLEX-INFO (módulo de informação aos passageiros), WPLEX-CO (módulo de monitoramento e controle da operação das frotas de veículos) e WPLEX-EP (escala de tripulantes). 
+
+- title: Wise Systems - Desenvolvedor Java
+  from: 2024
+  to: 2024
+  description: Atuação no desenvolvimento de produtos da Fábrica de Software, um deles é o SIO (Sistema Integrado Odontológico).

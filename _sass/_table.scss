@@ -1,0 +1,91 @@
+table {
+  width: 100%;
+  text-align: $table-text-align;
+  border-collapse: collapse;
+  border: 1px solid $grey-color-light;
+  tr {
+    &:nth-child(even) {
+      background-color: #111816;
+    }
+  }
+  th, td {
+    padding: calc(#{$spacing-unit} / 3) calc(#{$spacing-unit} / 2);
+  }
+  th {
+    background-color: #505092;
+    border: 1px solid darken($grey-color-light, 4%);
+    border-bottom-color: darken($grey-color-light, 12%);
+  }
+  td {
+    border: 1px solid $grey-color-light;
+  }
+}
+
+table.paleBlueRows {
+  font-family: "Times New Roman", Times, serif;
+  border: 1px solid #FFFFFF;
+  color: rgb(255, 255, 255);
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  border-collapse: collapse;
+  position: relative;
+}
+
+table.paleBlueRows td,
+table.paleBlueRows th {
+  border: 1px solid rgb(0, 0, 0);
+  padding: 3px 2px;
+}
+
+table.paleBlueRows tbody td {
+  font-size: 14px;
+}
+
+table.paleBlueRows tr:nth-child(even) {
+  background: rgb(46, 51, 56);
+}
+
+table.paleBlueRows thead {
+  background: #0B6FA4;
+  border-bottom: 3px solid rgb(0, 0, 0);
+}
+
+table.paleBlueRows thead th {
+  font-size: 16px;
+  font-weight: bold;
+  color: #FFFFFF;
+  text-align: center;
+  border-left: 2px solid rgb(0, 0, 0);
+}
+
+table.paleBlueRows tfoot {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333333;
+  background: #D0E4F5;
+  border-top: 3px solid #444444;
+}
+
+table.paleBlueRows tfoot td {
+  font-size: 14px;
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $min-width-extra-large-devices) {
+  table.paleBlueRows tbody td {
+    font-size: 18px;
+  }
+
+  table.paleBlueRows thead th {
+    font-size: 20px;
+  }
+
+  table.paleBlueRows tfoot {
+    font-size: 14px;
+  }
+
+  table.paleBlueRows tfoot td {
+    font-size: 14px;
+  }
+}
