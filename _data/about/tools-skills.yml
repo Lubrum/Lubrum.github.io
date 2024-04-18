@@ -7,7 +7,7 @@
   color: danger
 
 - name: Eclipse
-  percentage: 3
+  percentage: 4
   color: warning
 
 - name: Android Studio
@@ -15,11 +15,11 @@
   color: info
 
 - name: Postman 
-  percentage: 3
+  percentage: 4
   color: warning
 
 - name: PgAdmin
-  percentage: 3
+  percentage: 4
   color: warning
 
 - name: RStudio

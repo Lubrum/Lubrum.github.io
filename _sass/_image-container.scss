@@ -1,0 +1,75 @@
+.img-container {
+  position: relative;
+  display: inline-block;
+}
+
+.img-amplified-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  transition: transform 0.5s ease, opacity 0.5s ease; 
+  opacity: 0;
+}
+
+.small-img {
+  height: 150px;
+  cursor: pointer;
+}
+
+.img-amplified {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.glass {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  z-index: 998;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Grid */
+.grid {
+	display: grid;
+}
+
+.grid-template-columns-1 {
+	grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item {
+	margin: 5px;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: $min-width-small-devices) {
+}
+  
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: $min-width-medium-devices) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: $min-width-large-devices) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: $min-width-extra-large-devices) {
+}

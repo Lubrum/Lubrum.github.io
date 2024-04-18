@@ -1,0 +1,30 @@
+
+<section class="grid grid-template-columns-1">
+    {% for i in (1..11) %}
+    {% capture img_path %}assets/img/about/figure{{ i }}.png{% endcapture %}
+    <div class="item">
+        {% include about/certificates.html img=img_path %}
+    </div>
+    {% endfor %}
+</section>
+
+<script>
+    function toggleImage(element) {
+        var imgContainer = element.parentElement;
+        var largeImageContainer = imgContainer.querySelector('.img-amplified-container');
+        
+        if (!largeImageContainer.classList.contains('hidden')) {
+            setTimeout(function() {
+                largeImageContainer.style.opacity = '0';
+            }, 50);
+            setTimeout(function() {
+                largeImageContainer.classList.toggle('hidden');
+            }, 500);
+        } else {
+            largeImageContainer.classList.toggle('hidden');
+            setTimeout(function() {
+                largeImageContainer.style.opacity = '1';
+            }, 50);
+        }
+    }
+</script>
