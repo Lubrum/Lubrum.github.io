@@ -24,6 +24,4 @@ Abaixo, um resumo completo da minha trajetória.
 
 Abaixo, certificados de cursos que tenho realizado para manter-me atualizado com o mercado e as tecnologias do momento, além de diploma e premiações na carreira:
 
-<!-- ![Mapa com cinco categorias de números de fisioterapeutas por município no estado do Rio Grande do Sul, Brasil.]({{ site.baseurl }}/assets/img/about/figure1.png#img_content) -->
-
 {% include about/all-certificates-container.html %}
