@@ -69,20 +69,7 @@ html {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: $min-width-extra-large-devices) {
-    .without-sidebar .main-content {
-        width: calc(119%);
-        transform: translateX(-16%);
-    }
     #btntheme {
         grid-row: 8/9;
-    }
-    .main-content {
-        grid-column: 2 / 3;
-        width: 100%;
-        -webkit-transition: all 0.3s ease-in-out;
-        -moz-transition: all 0.3s ease-in-out;
-        -o-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        display: block;
     }
 }

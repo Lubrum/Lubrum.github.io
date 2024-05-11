@@ -34,7 +34,6 @@
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: $min-width-extra-large-devices) {
     .cosmos-container {
-        grid-template-columns: 16% 84%;
         grid-template-rows: 7% auto;
     }
 }

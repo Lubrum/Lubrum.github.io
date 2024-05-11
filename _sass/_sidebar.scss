@@ -25,9 +25,7 @@
 
 .author-name,
 .author-description,
-.author-email,
-.profile-pic,
-.box {
+.author-email {
     display: none;
 }
 
@@ -132,46 +130,6 @@
         padding: 0.5%;
         br {
             display: inline;
-        }
-    }
-    .without-sidebar .sidebar {
-        -webkit-transition: all 0.35s ease-in-out;
-        -moz-transition: all 0.35s ease-in-out;
-        -o-transition: all 0.35s ease-in-out;
-        transition: all 0.35s ease-in-out;
-        transform: translateX(-100%);
-    }
-    .box {
-        position: relative;
-        display: inline-block;
-        grid-row: 2 / 3;
-        width: 60%;
-        margin-left: 20%;
-        margin-right: 20%;
-        align-content: center;
-        overflow: hidden;
-        border-radius: 10% 10% 10% 10% / 10% 10% 10% 10%;
-        box-shadow: $base-box-shadow;
-    }
-    .profile-pic {
-        -webkit-transition: all .2s ease;
-        -moz-transition: all .2s ease;
-        -o-transition: all .2s ease;
-        transition: all .2s ease;
-        display: block;
-        width: 100%;
-        height: auto;
-        box-shadow: $base-box-shadow;
-        &:hover {
-            -webkit-transform: scale(1.3);
-            /* Safari and Chrome */
-            -moz-transform: scale(1.3);
-            /* Firefox */
-            -ms-transform: scale(1.3);
-            /* IE 9 */
-            -o-transform: scale(1.3);
-            /* Opera */
-            transform: scale(1.3);
         }
     }
     .social-media-list {

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Home
+title: Blog
 subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnologias recentes 
 ---
 <div data-router-view="name" class="home">

@@ -10,10 +10,10 @@
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Tek Broon">
+  <meta property="og:site_name" content="Tek Broon Solutions">
   <meta property="og:url" content="https://lubrum.github.io/">
-  <meta property="og:title" content="Tek Broon">
-  <meta name="description" property="og:description" content="O propósito do site Tek Broon é compartilhar artigos técnicos sobre desenvolvimento de software e análise de dados com a comunidade brasileira.">
+  <meta property="og:title" content="Tek Broon Solutions">
+  <meta name="description" property="og:description" content="O propósito do site Tek Broon Solutions é compartilhar artigos técnicos sobre desenvolvimento de software e análise de dados com a comunidade brasileira.">
   <meta property="og:image" content="{{site.url}}assets/img/png/preview_image_tek_broon.png">
   <meta property="og:image:type" content="image/png" /> 
   <meta property="og:image:width" content="1200" /> 
@@ -26,9 +26,11 @@
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://lubrum.github.io/">
-  <meta property="twitter:title" content="Tek Broon">
-  <meta property="twitter:description" content="O propósito do site Tek Broon é compartilhar artigos técnicos sobre desenvolvimento de software e análise de dados com a comunidade brasileira.">
+  <meta property="twitter:title" content="Tek Broon Solutions">
+  <meta property="twitter:description" content="O propósito do site Tek Broon Solutions é compartilhar artigos técnicos sobre desenvolvimento de software e análise de dados com a comunidade brasileira.">
   <meta property="twitter:image" content="{{site.url}}assets/img/png/preview_image_tek_broon.png">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
   <!-- Cosmos CSS - made by Luciano Brum --> 
   <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" type="text/css">
@@ -36,15 +38,36 @@
   <!-- Animate CSS CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-MLFYB05V1L"></script>
+
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-MLFYB05V1L');
-  </script>
 
+    function toggleImage(element) {
+        var imgContainer = element.parentElement;
+        var largeImageContainer = imgContainer.querySelector('.img-amplified-container');
+        
+        if (!largeImageContainer.classList.contains('hidden')) {
+            setTimeout(function() {
+                largeImageContainer.style.opacity = '0';
+            }, 50);
+            setTimeout(function() {
+                largeImageContainer.classList.toggle('hidden');
+            }, 800);
+        } else {
+            largeImageContainer.classList.toggle('hidden');
+            setTimeout(function() {
+                largeImageContainer.style.opacity = '1';
+            }, 50);
+        }
+    }
+  </script>
   {%- feed_meta -%}
 
   {%- if jekyll.environment == 'production' and site.google_analytics -%}

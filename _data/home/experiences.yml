@@ -1,0 +1,23 @@
+- company: Wise Systems
+  color: #ffffff
+  logo: "/assets/img/home/wise.png"
+  position: Desenvolvedor Java
+  from: Abr. 2024
+  to: Presente
+  description: Atuação no desenvolvimento, manutenção e evolução de produtos da Fábrica de Software. Atualmente, um desses produtos é o SIO (Sistema Integrado Odontológico).
+
+- company: WPLEX Software
+  color: #ffffff
+  logo: "/assets/img/home/wplex.png"
+  position: Analista de Sistemas
+  from: Out. 2019
+  to: Mar. 2024
+  description: Atuação no desenvolvimento dos produtos WPLEX-INFO (sistema de informação aos passageiros), WPLEX-CO (monitoramento de frotas de ônibus) e WPLEX-EP (escala de tripulantes). 
+
+- company: Embrapa
+  color: #ffffff
+  logo: "/assets/img/home/embrapa.png"
+  position: Estágio em Desenvolvimento de Sistemas
+  from: Ago. 2015
+  to: Dez. 2015
+  description: Na Embrapa Pecuária Sul, atuei na manipulação de dados e automação de tarefas em planilhas Excel e no desenvolvimento de um Sistema web de Apoio à Tomada de Decisão para produtores rurais com foco na pecuária de corte.

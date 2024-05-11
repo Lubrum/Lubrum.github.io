@@ -18,3 +18,7 @@ plugins:
 
 exclude: []
 include: ["node_modules"]
+
+languages:
+  - pt
+  - en
