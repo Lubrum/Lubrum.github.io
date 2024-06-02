@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Análise Exploratória de Dados (EDA) e Técnicas Estatísticas com o R
-subtitle: É apresentado um exemplo completo de EDA com dados de estudantes de disciplinas de Desenho Técnico de uma Universidade Federal. Também são utilizadas alguns métodos estatísticos como anova, kruskal wallis, teste t e outros.
+subtitle: É apresentado um exemplo completo de EDA com dados reais de uma universidade. São utilizados alguns métodos estatísticos como anova, kruskal wallis, teste t e outros.
 date: 2020-05-17 02:00:00 -0300
 categories: análise de dados
 language: R

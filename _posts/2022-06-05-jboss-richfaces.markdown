@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Resolução do problema do mapa híbrido do Google Maps no Richfaces 3.x
-subtitle: Explico neste artigo os passos que eu segui para fazer funcionar o Google Maps junto ao Richfaces versão 3.x (I know, it is old stuff).
+subtitle: É abordado o funcionamento do Google Maps com o Richfaces versão 3.x (I know, it is old stuff).
 date: 2022-08-07 12:19:00 -0300
 categories: software
 language: Java

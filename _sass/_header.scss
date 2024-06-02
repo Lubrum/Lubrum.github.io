@@ -31,8 +31,6 @@
 }
 
 .cosmos-page-link {
-    white-space: nowrap;
-    @include fluid-typography(12, 20, 300, 1600);
     color: $text-color;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -74,7 +72,6 @@
     .show-hide-sidebar {
         display: inline-block;
         position: absolute;
-        @include fluid-typography(15, 25, 300, 1600);
         cursor: pointer;
         background-color: $background-color;
         color: white;

@@ -19,8 +19,8 @@ subtitle: Um blog sobre Desenvolvimento de Software, Ciência de Dados e tecnolo
           {%- endif -%}
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span>{{ post.date | date: date_format }}</span>
-            <h3> {{ post.title | escape }} </h3>
-            <h6> {{ post.subtitle | strip_html | strip_newlines }} </h6>
+            <h4 style="margin-top: 5px;"> {{ post.title | escape }} </h4>
+            <h6 style="margin-top: 5px;color: #bfbfbf;">{{ post.subtitle | strip_html | strip_newlines }}</h6>
             {%- if site.show_excerpts -%}
               {{ post.excerpt }}
             {%- endif -%}

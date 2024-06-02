@@ -7,9 +7,7 @@
 }
 
 .post-home-title {
-  @include fluid-typography(30, 50, 300, 1600);
-  padding-top: $spacing-unit;
-  padding-bottom: 0;
+  padding: $spacing-unit 0 !important;
   text-align: center;
   font-weight: 1000;
   line-height: 1;
@@ -18,9 +16,8 @@
 }
 
 .post-home-subtitle {
-  @include fluid-typography(15, 30, 300, 1600);
   color: $text-color;
-  padding: calc(#{$spacing-unit} / 2) 0;
+  padding: 0 0 $spacing-unit 0;
   display: block;
   text-align: center;
   line-height: normal;
@@ -55,7 +52,6 @@
 }
 
 .post-link {
-  @include fluid-typography(18, 25, 300, 1600);
   color: inherit;
   -webkit-transition: all 5s ease-in-out;
   -moz-transition: all 5s ease-in-out;
@@ -326,7 +322,6 @@
   }
 
   span {
-    @include fluid-typography(14, 25, 300, 1600);
   }
 
   :not(:hover) {
@@ -355,12 +350,10 @@
 @media only screen and (min-width: $min-width-extra-large-devices) {
 
   .post-home-title {
-    @include fluid-typography(25, 50, 300, 1600);
-    padding-top: calc(#{$spacing-unit} / 4);
+    padding: $spacing-unit 0 !important;
   }
 
   .post-home-subtitle {
-    @include fluid-typography(25, 30, 300, 1600);
-    padding: calc(#{$spacing-unit} / 4);
+    padding: 0 0 $spacing-unit 0 !important;
   }
 }

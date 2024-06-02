@@ -1,7 +1,7 @@
 ---
 layout: post
 title: O que eu aprendi como desenvolvedor em 18 meses
-subtitle: Neste post vou falar brevemente as experiências que tive como desenvolvedor em uma empresa privada, além de um pouco da minha história antes de ser desenvolvedor.
+subtitle: Abordarei as experiências como desenvolvedor em uma empresa privada e um pouco da minha história.
 date: 2021-04-18 20:40:00 -0300
 categories: personal
 language: Java

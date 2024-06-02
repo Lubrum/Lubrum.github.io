@@ -1,8 +1,12 @@
-<section class="grid grid-template-columns-1">
-    {% for i in (1..11) %}
-    {% capture img_path %}assets/img/about/figure{{ i }}.png{% endcapture %}
-    <div class="item">
-        {% include about/certificates.html img=img_path %}
+<div class="container">
+    <div class="row">
+        {% for i in (1..11) %}
+        <div class="col-12 col-xl-4 d-flex justify-content-center">
+            {% capture img_path %}assets/img/about/figure{{ i }}.png{% endcapture %}
+            <div class="item">
+                {% include about/certificates.html img=img_path %}
+            </div>
+        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-</section>
+</div>

@@ -21,7 +21,6 @@ html {
 }
 
 .post-title {
-    @include fluid-typography(20, 35, $max-width-extra-small-devices, 1600);
     color: white;
     text-align: center;
 }
@@ -45,7 +44,6 @@ html {
 }
 
 .post-meta {
-    @include fluid-typography(11, 16, $max-width-extra-small-devices, 1600);
 }
 
 

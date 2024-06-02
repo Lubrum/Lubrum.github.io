@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Um tutorial completo sobre o Maven e o gerenciamento de dependências
-subtitle: Explico em detalhes sobre como o Maven funciona e os fundamentos básicos por trás do gerenciamento de dependências com exemplos com a linguagem Java.
+subtitle: Explico em detalhes sobre como o Maven funciona e os fundamentos do gerenciamento de dependências com a linguagem Java.
 date: 2021-08-02 01:22:00 -0300
 categories: dependency management
 language: Maven, Java

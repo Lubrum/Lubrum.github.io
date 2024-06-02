@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como posso hospedar meu app no shinyapps.io ?
-subtitle: É apresentado o passo-a-passo necessário para hospedar o seu App desenvolvido com o R e o shiny de forma gratuita com o shinyapps.io, com algumas limitações para a versão gratuita.
+subtitle: É apresentado o passo-a-passo necessário para hospedar um App desenvolvido com R e Shiny de forma gratuita com o shinyapps.io.
 date: 2020-03-03 23:55:00 -0300
 categories: análise de dados
 language: R

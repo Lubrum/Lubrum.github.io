@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Comunicação entre o frontend no Netlify (HTTPS) e backend na AWS EC2 (HTTP)
-subtitle: Explico neste artigo os passos que eu segui para permitir a comunicação de um serviço no Netlify (por padrão em HTTPS) e um serviço na Amazon EC2 (free tier).
+subtitle: É apresentado um exemplo de comunicação de um serviço no Netlify (por padrão em HTTPS) e um na Amazon EC2 (free tier).
 date: 2023-02-13 00:10:00 -0300
 categories: software
 language: Java, Spring Boot, Netlify, AWS, EC2, Ubuntu, React

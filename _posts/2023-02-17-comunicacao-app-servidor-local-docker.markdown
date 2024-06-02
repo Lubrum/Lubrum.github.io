@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Comunicação de um aplicativo com um serviço em execução no Docker (sem e com Nginx)
-subtitle: Neste artigo forneço uma dica rápida de como permitir a comunicação de um aplicativo com um serviço containerizado com Docker na mesma rede em ambiente local. Também é apresentado um exemplo com HTTPS com o openssl.
+title: Comunicação de um aplicativo com um serviço em execução no Docker e Nginx
+subtitle: Os exemplos são feitos em ambiente local, na mesma rede, e um deles com HTTPS com o openssl.
 date: 2023-02-19 19:15:00 -0300
 categories: software
 language: Docker, Docker-compose, Nginx, Openssl, Android

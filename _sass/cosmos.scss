@@ -17,7 +17,7 @@ $base-font-size: 16px !default;
 $base-font-weight: 300 !default;
 $base-letter-spacing: 0.1em;
 $base-line-height: 1.7 !default;
-$spacing-unit: percentage(0.1) !default;
+$spacing-unit: 2rem !default;
 $text-color: rgb(255, 255, 255) !default;
 
 $background-color: #262626 !default;
@@ -39,54 +39,6 @@ $on-laptop: 1100px !default;
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
     @content;
-  }
-}
-
-/// Remove the unit of a length
-/// @param {Number} $number - Number to remove unit from
-/// @return {Number} - Unitless number
-/// Source: https://css-tricks.com/snippets/sass/strip-unit-function/
-@function strip-unit($number) {
-  @if type-of($number) == 'number' and not unitless($number) {
-    $test: $number * 0 + 1;
-    @return calc($number / $test);
-  }
-
-  @return $number;
-}
-
-/// Responsive font size with Mixins and SASS. 
-/// @param {Number} $minFont - Minimun font size
-/// @param {Number} $maxFont - Maximum font size
-/// @param {Number} $minBreakpoint - Minimum breakpoint to do calculations
-/// @param {Number} $maxBreakpoint - Maximum breakpoint to do calculations
-/// @return {Number} - font-size with adapted size
-/// Source: https://ryanfeigenbaum.com/easy-responsive-typography/ 
-@mixin fluid-typography($minFont, $maxFont, $minBreakpoint, $maxBreakpoint) {
-
-  $minBreakpoint: strip-unit($minBreakpoint);
-  $maxBreakpoint: strip-unit($maxBreakpoint);
-
-  /* Define variable for media query */
-  $maxLessOne: $maxBreakpoint - 1;
-  
-  /* Define variable for fallback */
-  $avg: calc(($maxFont + $minFont) / 2);
- 
-  /* Base font size */
-  font-size: #{$minFont}px;
-  
-  @media (min-width: #{$minBreakpoint}px) and (max-width: #{$maxLessOne}px) {
-    
-    /* Adds a fallback for unsupported browsers */
-    font-size: #{$avg}px;
-      
-    /* The fluid typography magic 🌟  */
-    font-size: calc(#{$minFont}px + (#{$maxFont} - #{$minFont}) * (100vw - #{$minBreakpoint}px) / (#{$maxBreakpoint} - #{$minBreakpoint}))
-  }
-  
-  @media (min-width: #{$maxBreakpoint}px) {
-    font-size: #{$maxFont}px;
   }
 }
 

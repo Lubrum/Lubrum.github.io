@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como extrair dados de documentos em PDF com o R?
-subtitle: Foi realizada a extração de dados de um documento em PDF do Conselho Regional de Fisioterapia e Terapia Ocupacional (CREFITO) do Rio Grande do Sul. Tais dados foram combinados com o mapa do RS. Além dos resultados interessantes, o how-to (como fazer) e ferramentas utilizadas são apresentadas.
+subtitle: Foi realizada a extração de dados de um documento em PDF do Conselho Regional de Fisioterapia e Terapia Ocupacional (CREFITO) do Rio Grande do Sul. Tais dados foram combinados com o mapa do RS.
 date: 2019-09-22 12:00:00 -0300
 categories: análise de dados
 language: R

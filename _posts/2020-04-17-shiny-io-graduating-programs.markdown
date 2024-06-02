@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Investigando Programas de Pós-Graduação em Computação no Brasil (PT 2)
-subtitle: É apresentada uma aplicação de consulta à informações específicas dos Programas de Pós-Graduação em Computação do Brasil inteiramente desenvolvida com o R e o shiny e publicado de forma gratuita com o shinyapps.io. É abordado todo o passo a passo deste processo.
+subtitle: É apresentada uma aplicação de consulta à informações específicas dos Programas de Pós-Graduação em Computação do Brasil desenvolvida com o R e o shiny e publicado com o shinyapps.io. É abordado todo o passo a passo deste processo.
 date: 2020-04-17 23:55:00 -0300
 categories: análise de dados
 language: R

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Como fazer uma Revisão da Literatura? 
-subtitle: Foi realizada uma análise das publicações científicas sobre a aplicação de Business Intelligence e Data Warehouse no Setor Agrário internacional e diversos resultados interessantes são apresentados, assim como o how-to (como fazer) e ferramentas utilizadas.
+subtitle: Foi realizada uma análise das publicações científicas sobre a aplicação de Business Intelligence e Data Warehouse no Setor Agrário internacional e resultados interessantes são apresentados, assim como o how-to (como fazer) e ferramentas utilizadas.
 date: 2019-09-17 07:00:00 -0300
 categories: análise de dados
 language: R

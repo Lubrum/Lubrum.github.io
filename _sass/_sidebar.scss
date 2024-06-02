@@ -35,7 +35,6 @@
 }
 
 .social-description {
-    @include fluid-typography(15, 20, 300px, $max-width-extra-small-devices);
     grid-column: 1 / 5;
     grid-row: 1 / 2;
     margin-right: calc(#{$spacing-unit} / 3);
@@ -139,7 +138,6 @@
         grid-row: 7 / 8;
     }
     .social-description {
-        @include fluid-typography(12, 14, $min-width-extra-large-devices, 1600);
         grid-column: 1 / 2;
         grid-row: 6 / 7;
         margin-right: calc(#{$spacing-unit} / 3);
@@ -151,7 +149,6 @@
     }
     .author-name {
         display: block;
-        @include fluid-typography(18, 25, $min-width-extra-large-devices, 1600);
         grid-row: 3 / 4;
         color: $text-color;
     }
@@ -160,7 +157,6 @@
         grid-row: 4 / 5;
         text-justify: distribute;
         word-spacing: -2px;
-        @include fluid-typography(12, 16, $min-width-extra-large-devices, 1600);
         margin-top: calc(#{$spacing-unit} / 2);
         margin-right: calc(#{$spacing-unit} / 3);
         margin-left: calc(#{$spacing-unit} / 3);
@@ -176,7 +172,6 @@
         grid-column: 1 / 2;
         padding-right: calc(#{$spacing-unit} / 3);
         padding-left: calc(#{$spacing-unit} / 3);
-        @include fluid-typography(12, 14, $min-width-extra-large-devices, 1600);
         -webkit-transition: all 1.5s;
         -moz-transition: all 1.5s;
         -o-transition: all 1.5s;
