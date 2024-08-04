@@ -16,7 +16,9 @@ figure.zoom {
     display: block;
     width: 100%;
   }
-  position: relative;
-  width: 100%;
-  margin: 30px 0px;
+  & {
+    position: relative;
+    width: 100%;
+    margin: 30px 0px;
+  }
 }
