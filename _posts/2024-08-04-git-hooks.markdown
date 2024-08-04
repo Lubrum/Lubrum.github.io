@@ -1,0 +1,122 @@
+---
+layout: post
+title: Git Hooks
+subtitle: O que são os Hooks e exemplo de sua utilidade.
+date: 2024-08-04 17:15:00 -0300
+categories: software
+language: Git, Github, Gitlab
+author: luciano_brum
+---
+
+- [Resumo](#resumo)
+- [O que são os Hooks](#o-que-são-os-hooks)
+- [Exemplo de hook](#exemplo-de-hook)
+- [Considerações Finais](#considerações-finais)
+
+## Resumo
+
+A ideia deste post é mostrar o que são os Hooks do Git e algumas das suas utilidades no dia a dia da produção de software. Assumo aqui que o leitor tenha um conhecimento básico de Git e de versionamento de código.
+
+## O que são os Hooks
+
+Os hooks são scripts personalizados que são executados automaticamente em momentos específicos do ciclo de vida de um repositório Git. Eles são úteis para automatizar tarefas, impor políticas, e garantir a consistência do código. Neste post, veremos como criar um hook simples para validar mensagens de commit.
+
+Hooks do Git são scripts localizados no diretório .git/hooks de um repositório. Eles são ativados por diferentes ações, como commits, pushs, e merges. Existem dois tipos principais de hooks:
+
+Hooks do lado do cliente: São executados em operações locais, como commits e merges.
+
+Hooks do lado do servidor: São executados em operações de rede, como pushs e recepções de dados de repositórios remotos.
+
+## Exemplo de hook
+
+Vamos criar um exemplo simples de hook que valida mensagens de commit. Suponha que queremos que todas as mensagens de commit sigam um formato específico, por exemplo, que comecem com um prefixo como FIX, FEAT, ou DOC.
+
+### Passo 1: Navegue até o diretório de hooks
+
+Primeiro, navegue até o diretório .git/hooks do seu repositório:
+
+```bash
+cd /caminho/do/seu/repositorio/.git/hooks
+```
+
+### Passo 2: Crie o script do hook commit-msg
+
+Crie um novo arquivo chamado commit-msg e abra-o em seu editor de texto favorito:
+
+```bash
+touch commit-msg
+nano commit-msg
+```
+
+### Passo 3: Escreva o script do hook
+
+Adicione o seguinte código ao arquivo commit-msg:
+
+```bash
+#!/bin/sh
+
+# Leia a mensagem de commit
+commit_message=$(cat $1)
+
+# Verifique se a mensagem de commit começa com um dos prefixos permitidos
+if ! echo "$commit_message" | grep -qE "^(FIX|FEAT|DOC):"; then
+  echo "Erro: A mensagem de commit deve começar com um dos seguintes prefixos: FIX, FEAT, DOC."
+  exit 1
+fi
+```
+
+### Passo 4: Torne o script executável
+
+Para garantir que o script possa ser executado, você precisa alterar suas permissões:
+
+```bash
+chmod +x commit-msg
+```
+
+### Como funciona o script?
+
+O script lê a mensagem de commit do arquivo temporário passado como argumento ($1).
+
+Ele verifica se a mensagem de commit começa com um dos prefixos permitidos (FIX, FEAT, DOC) usando uma expressão regular.
+
+Se a mensagem não corresponder ao formato esperado, o script exibirá uma mensagem de erro e retornará um código de saída diferente de zero (exit 1), o que impede o commit de prosseguir.
+
+### Testando o Hook
+
+Vamos fazer um commit com uma mensagem que não siga o formato especificado:
+
+```bash
+git commit -m "Atualizando documentação"
+```
+
+Você deverá ver uma mensagem de erro e o commit será bloqueado.
+
+Tente novamente com uma mensagem válida:
+
+```bash
+git commit -m "DOC: Atualizando documentação"
+```
+
+Este commit deve ser bem-sucedido.
+
+Um exemplo bem interessante de hook nas mensagens de commit é o de você adicionar na mensagem de commit a hashtag e o número da issue que você está trabalhando.
+
+Isso ajuda na rastreabilidade das tarefas e modificações, melhora a comunicação em equipe e transparência, facilita a revisão de código e melhora a documentação do que é feito. Mesmo em um cenário com poucos desenvolvedores, todos ficam cientes da relação das issues com cada commit, sobre qual problema cada commit resolveu (ou criou rsrs).
+
+Em ferramentas como o Gitlab, você tem um destaque com um link para a issue quando você tem o uso do #, por exemplo, nas mensagens de commit, facilitando a experiência do desenvolvedor que busca entender o contexto daquele commit.
+
+Outras possibilidades:
+
+- pre-commit - Hook para Verificação de Estilo de Código;
+
+- pre-push - Hook para Rodar Testes Automatizados;
+
+- post-merge - Hook para Atualização de Dependências;
+
+- pre-rebase - Hook para Verificar Branch Protegida;
+
+## Considerações Finais
+
+Sobre os hooks era isso. Se você deseja apoiar o meu trabalho de escrita sobre os mais diversos assuntos de tecnologia, compartilhe meus artigos em suas redes sociais. O objetivo é o de contribuir com o compartilhamento de experiências práticas em desenvolvimento de software e sobre tecnologia com a comunidade.
+
+Valeu pessoal e até o próximo post !
