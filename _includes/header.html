@@ -1,7 +1,7 @@
 <header class="site-header" role="banner">
 
-    {%- assign default_paths = site.pages | map: "path" -%}
-    {%- assign page_paths = site.header_pages | default: default_paths -%}
+    {%- assign ordered_page_paths = "index.html,blog.html,about.html" | split: "," -%}
+    {%- assign page_paths = site.header_pages | default: ordered_page_paths -%}
 
     {%- if page_paths -%}
       <ul class="trigger">

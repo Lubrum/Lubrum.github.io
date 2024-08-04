@@ -16,7 +16,6 @@ Saudações pessoal. A ideia deste post é apresentar a metodologia e os resulta
 
 Os dados obtidos foram de um arquivo no formato PDF que informa, por município, o número de Consultórios, Empresas, Entidades Filantrópicas, Fisioterapeutas, Órgãos Públicos e Terapeutas Ocupacionais (CREFITO, 2019). O shapefile do mapa do Rio Grande do Sul (RS) foi obtido através do [site da FEPAM (Fundação Estadual de Proteção Ambiental Henrique Luiz Roessler - RS)](http://www.fepam.rs.gov.br/biblioteca/geo/bases_geo.asp) (FEPAM, 2019). Ainda, foram integrados os dados da estimativa populacional dos municípios do RS, presentes no [Censo Demográfico](https://sidra.ibge.gov.br/tabela/200) disponível no [portal SIDRA (Sistema de Recuperação Automática)](https://sidra.ibge.gov.br) do IBGE (Instituto Brasileiro de Geografia e Estatística) (IBGE, 2019).
 
-
 <h1> Metodologia </h1>
 
 As seguintes ferramentas e linguagens foram utilizadas para a extração e organização dos dados, realização das análises e geração dos gráficos:
@@ -57,7 +56,7 @@ Após uma série de tratamentos nos dados, envolvendo manipulação de strings, 
 
 <h1> Considerações Finais </h1>
 
-A ideia do post foi apresentar de forma sucinta um exemplo objetivo do processo de extração de informações de arquivos em formato PDF. Infelizmente, não foi possível realizar todo o processo de forma automática e, ao mesmo tempo, reutilizável para outros casos, porém é um exercício válido pelo processo de aprendizagem e extração de informação. 
+A ideia do post foi apresentar de forma sucinta um exemplo objetivo do processo de extração de informações de arquivos em formato PDF. Infelizmente, não foi possível realizar todo o processo de forma automática e, ao mesmo tempo, reutilizável para outros casos, porém é um exercício válido pelo processo de aprendizagem e extração de informação.
 
 Se compararmos a forma de apresentação dos dados nas tabelas do PDF e a forma apresentada nos mapas, podemos dizer que conseguimos comprimir um volume razoável de informações em um mapa e apresentá-las  de forma mais eficiente. Qualquer pessoa pode comparar o dado de um município específico com a região ou outros municípios de forma praticamente instantânea com um mapa, agora imaginem fazer isso no arquivo PDF? (Ctrl-F pra lá e pra cá...). Para melhores resultados, é possível gerar mapas interativos, de forma que o usuário possa analisar o dado de cada município de forma mais individualizada.
 
