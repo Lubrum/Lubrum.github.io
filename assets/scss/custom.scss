@@ -1,0 +1,121 @@
+$primary:   #007bff;
+$secondary: #6c757d;
+$success:   #28a745;
+$info:      #17a2b8;
+$warning:   #ffc107;
+$danger:    #dc3545;
+$light:     #f8f9fa;
+$dark:      #343a40;
+$darkest: #101010;
+
+.skill {
+    position: relative;
+    overflow: hidden;
+    > p {
+        margin: 0;
+        font-size: 18px;
+    }
+    &:before {
+        width: 100%;
+        height: 5px;
+        content: "";
+        display: block;
+        position: absolute;
+        background: $light;
+        bottom: 0;
+    }
+}
+
+.skill-bar {
+    width: 100%;
+    height: 5px;
+    background: $primary;
+    display: block;
+    position: relative;
+    span {
+        position: absolute;
+        border-top: 5px solid inherit;
+        top: -30px;
+        padding: 0;
+        font-size: 18px;
+        padding: 3px 0;
+        font-weight: 500;
+        right: 0;
+    }
+}
+
+.skill-bar.skill-bar-secondary {
+    background: $secondary;
+}
+
+.skill-bar.skill-bar-success {
+    background: $success;
+}
+
+.skill-bar.skill-bar-info {
+    background: $info;
+}
+
+.skill-bar.skill-bar-warning {
+    background: $warning;
+}
+
+.skill-bar.skill-bar-danger {
+    background: $danger;
+}
+
+.skill-bar.skill-bar-light {
+    background: $light;
+}
+
+.skill-bar.skill-bar-dark {
+    background: $dark;
+}
+
+@for $i from 0 through 4 {
+    .skill-#{$i} {
+        width: percentage($i * 0.25);
+    }
+}
+
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.certificate-item img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform .2s ease;
+}
+
+.certificate-item img:hover {
+  transform: scale(1.05);
+}
+
+.article-content a {
+  color: #0099cc;
+}
+
+.article-content a:hover {
+  background: linear-gradient(
+    90deg,
+    red,
+    orange,
+    yellow,
+    green,
+    cyan,
+    blue,
+    violet
+  );
+  background-size: 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowFlow 2s linear infinite;
+}
+
+@keyframes rainbowFlow {
+  0% { background-position: 0%; }
+  100% { background-position: 100%; }
+}

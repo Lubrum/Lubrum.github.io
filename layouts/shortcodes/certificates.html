@@ -1,0 +1,8 @@
+<div class="img-container">
+    <img src="{{ .Get "src" | relURL }}" class="small-img" onclick="toggleImage(this)">
+    
+    <div class="img-amplified-container hidden" onclick="toggleImage(this)">
+        <div class="glass"></div>
+        <img src="{{ .Get "src" | relURL }}" class="img-amplified">
+    </div>
+</div>

@@ -1,7 +1,51 @@
-_site
-.cache
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-node_modules
-vendor
+# Hugo generated files
+/public/
+/resources/_gen/
+
+# Hugo cache
+.hugo_build.lock
+
+# Node dependencies (if using npm, tailwind, etc.)
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Temporary files
+tmp/
+temp/
+
+# Hugo modules cache
+/.hugo_cache/
+
+# Optional: if you install themes via git submodules
+/themes/*/resources/_gen/
+
+# Backup files
+*~
+*.bak
+
+# Build artifacts
+dist/
+build/
+
+# Local testing files
+*.local

@@ -1,0 +1,21 @@
+<div>
+  <h2>{{ .title }}</h2>
+
+  {{ range $index, $skill := .source }}
+    <div class="skill">
+      <p>{{ $skill.name }}</p>
+
+      <div class="skill-bar skill-bar-{{ $skill.color }} skill-{{ $skill.percentage }}">
+
+        <span>
+          {{ if gt $skill.percentage 1 }}
+            {{ $skill.percentage }} anos
+          {{ else }}
+            {{ $skill.percentage }} ano
+          {{ end }}
+        </span>
+
+      </div>
+    </div>
+  {{ end }}
+</div>

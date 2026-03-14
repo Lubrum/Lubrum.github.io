@@ -1,0 +1,22 @@
+<div>
+  <div>
+      {{ partial "about/skills.html" (dict 
+            "title" "Linguagens"
+            "source" .Page.Site.Data.about.programming_skills
+      ) }}
+  </div>
+
+  <div>
+      {{ partial "about/skills.html" (dict 
+            "title" "Tecnologias"
+            "source" .Page.Site.Data.about.tools_skills
+      ) }}
+  </div>
+
+  <div>
+      {{ partial "about/skills.html" (dict 
+            "title" "Ferramentas (Projeto)"
+            "source" .Page.Site.Data.about.management_tools
+      ) }}
+  </div>
+</div>
