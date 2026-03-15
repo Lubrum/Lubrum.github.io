@@ -1,0 +1,14 @@
+{{ $key := .Get 0 }}
+{{ $job := index site.Data.about.jobs $key }}
+
+<div class="timeline-item">
+
+<div class="date">
+{{ $job.from }} — {{ $job.to }}
+</div>
+
+<div class="description">
+{{ $job.description | markdownify }}
+</div>
+
+</div>
