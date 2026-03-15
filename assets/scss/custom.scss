@@ -1,3 +1,4 @@
+// ─── Variáveis ────────────────────────────────────────────────────────────────
 $primary:   #007bff;
 $secondary: #6c757d;
 $success:   #28a745;
@@ -6,78 +7,73 @@ $warning:   #ffc107;
 $danger:    #dc3545;
 $light:     #f8f9fa;
 $dark:      #343a40;
-$darkest: #101010;
+$darkest:   #101010;
 
+$theme-colors: (
+  "primary":   $primary,
+  "secondary": $secondary,
+  "success":   $success,
+  "info":      $info,
+  "warning":   $warning,
+  "danger":    $danger,
+  "light":     $light,
+  "dark":      $dark,
+);
+
+// ─── Skill bar ────────────────────────────────────────────────────────────────
 .skill {
-    position: relative;
-    overflow: hidden;
-    > p {
-        margin: 0;
-        font-size: 18px;
-    }
-    &:before {
-        width: 100%;
-        height: 5px;
-        content: "";
-        display: block;
-        position: absolute;
-        background: $light;
-        bottom: 0;
-    }
+  position: relative;
+  overflow: hidden;
+
+  > p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 5px;
+    background: $light;
+  }
 }
 
 .skill-bar {
-    width: 100%;
-    height: 5px;
-    background: $primary;
-    display: block;
-    position: relative;
-    span {
-        position: absolute;
-        border-top: 5px solid inherit;
-        top: -30px;
-        padding: 0;
-        font-size: 18px;
-        padding: 3px 0;
-        font-weight: 500;
-        right: 0;
-    }
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 5px;
+  background: $primary;
+
+  span {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    padding: 3px 0;
+    font-size: 18px;
+    font-weight: 500;
+    // Herda a cor do texto normalmente; remova se quiser colorir com a cor da barra
+  }
 }
 
-.skill-bar.skill-bar-secondary {
-    background: $secondary;
+// Variantes de cor via @each — elimina repetição
+@each $name, $color in $theme-colors {
+  .skill-bar-#{$name} {
+    background: $color;
+  }
 }
 
-.skill-bar.skill-bar-success {
-    background: $success;
+// ─── Larguras em steps de 5% (0 a 100) ───────────────────────────────────────
+@for $i from 0 through 5 {
+  .skill-#{$i} {
+    width: percentage($i * 0.2);
+  }
 }
 
-.skill-bar.skill-bar-info {
-    background: $info;
-}
-
-.skill-bar.skill-bar-warning {
-    background: $warning;
-}
-
-.skill-bar.skill-bar-danger {
-    background: $danger;
-}
-
-.skill-bar.skill-bar-light {
-    background: $light;
-}
-
-.skill-bar.skill-bar-dark {
-    background: $dark;
-}
-
-@for $i from 0 through 4 {
-    .skill-#{$i} {
-        width: percentage($i * 0.25);
-    }
-}
-
+// ─── Grid de certificados ─────────────────────────────────────────────────────
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -87,35 +83,47 @@ $darkest: #101010;
 .certificate-item img {
   width: 100%;
   border-radius: 8px;
-  transition: transform .2s ease;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 }
 
-.certificate-item img:hover {
-  transform: scale(1.05);
-}
-
+// ─── Links de artigo com efeito arco-íris ─────────────────────────────────────
 .article-content a {
   color: #0099cc;
-}
+  text-decoration: none;
+  transition: color 2.8s ease;
 
-.article-content a:hover {
-  background: linear-gradient(
-    90deg,
-    red,
-    orange,
-    yellow,
-    green,
-    cyan,
-    blue,
-    violet
-  );
-  background-size: 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: rainbowFlow 2s linear infinite;
+  &:hover {
+    background: linear-gradient(
+      90deg,
+      red,
+      orange,
+      yellow,
+      green,
+      cyan,
+      blue,
+      violet,
+      red // fecha o loop suavemente
+    );
+    background-size: 400% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbowFlow 2s linear infinite;
+  }
 }
 
 @keyframes rainbowFlow {
-  0% { background-position: 0%; }
-  100% { background-position: 100%; }
+  0%   { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+a.link {
+    box-shadow: none;
+    &:hover {
+        box-shadow: none;
+    }
 }

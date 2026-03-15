@@ -19,3 +19,7 @@ hasCJKLanguage = false
 
 [params]
     gtm = "GTM-P23GTFP9"
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"

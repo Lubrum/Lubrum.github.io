@@ -2,8 +2,9 @@
 title: O dia que utilizei a linguagem C em um jogo online
 description: Quando eu jogava Tibia, tinha a necessidade de estimar, pelo menos, algumas informações sobre as hunts que eu fazia, para saber se eu estava obtendo lucro nas mesmas. Então decidi utilizar o que eu havia aprendido na graduação - a linguagem C.
 date: 2019-09-27 08:00:00 -0300
-categories: análise de dados
-tags: [C]
+categories:
+  - Programming
+tags: [C, Programming, Algorithms]
 draft: false
 ---
 

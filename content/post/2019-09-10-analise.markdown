@@ -2,8 +2,15 @@
 title: "Análise da Produção Leiteira Brasileira e Gaúcha - Parte 1"
 description: "Foram explorados dados publicos do IBGE sobre Pecuária Leiteira, específicamente informações dos Censos Agropecuários e da Pesquisa Pecuária Municipal."
 date: 2019-09-10 00:50:00 -0300
-categories: análise de dados
-tags: [R]
+tags:
+  - R
+  - DataAnalysis
+  - DataScience
+  - Statistics
+  - IBGE
+  - Visualization
+categories:
+  - DataScience
 widget: true
 draft: false
 ---

@@ -2,8 +2,14 @@
 title: Tutorial de instalação do Ubuntu 20.04.1 LTS do Zero
 description: Neste post são demonstrados os passos para instalar e utilizar o Ubuntu como Sistema Operacional principal da sua máquina
 date: 2020-09-28 22:11:00 -0300
-categories: linux
-tags: [Ubuntu]
+tags:
+  - Linux
+  - Ubuntu
+  - Tutorial
+  - DevEnvironment
+  - Terminal
+categories:
+  - DevOps
 draft: false
 ---
 
